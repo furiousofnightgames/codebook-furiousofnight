@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda sobre background-attachment e shorthand em CSS. Domine efeitos de rolagem e simplificação de código para fundos de site.">
+    <meta name="keywords" content="background-attachment, CSS shorthand, efeitos de rolagem, web design, CODEBOOK, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-008.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-008.html">
+    <meta property="og:title" content="Background-attachment e Shorthand | CODEBOOK">
+    <meta property="og:description" content="Aprenda sobre background-attachment e shorthand em CSS. Domine efeitos de rolagem e simplificação de código para fundos de site.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-008.html">
+    <meta property="twitter:title" content="Background-attachment e Shorthand | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda sobre background-attachment e shorthand em CSS. Domine efeitos de rolagem e simplificação de código para fundos de site.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Background-attachment e Shorthand | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilos para os exemplos */
+        .example-container {
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            margin: 24px auto;
+            height: 400px;
+        }
+
+        /* Grid de comparação */
+        .comparacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* Exemplo de rolagem */
+        .scroll-container {
+            height: 400px;
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            overflow-y: scroll;
+        }
+
+        .scroll-content {
+            min-height: 800px;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            padding: 20px;
+        }
+
+        /* Fixed container */
+        .fixed-container {
+            height: 400px;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Local container */
+        .local-container {
+            height: 300px;
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            overflow-y: scroll;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: cover;
+            background-attachment: local;
+        }
+
+        /* Scroll container */
+        .scroll-only-container {
+            height: 300px;
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            overflow-y: scroll;
+        }
+
+        .scroll-only-content {
+            min-height: 800px;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        /* Espaçador */
+        .spacer {
+            height: 200px;
+        }
+
+        /* Caixas de texto */
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        /* Título dos exemplos */
+        .example-title {
+            color: #4dff00;
+            margin-bottom: 10px;
+        }
+
+        /* Parallax demo */
+        .parallax-demo {
+            height: 500px;
+            background: url('imagens/wallpaper002.jpg') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 40px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Estilos para a seção de valores e comportamentos */
+        .text-box ul, .text-box ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .text-box ul li, .text-box ol li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .text-box ul ul, .text-box ol ul {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .text-box h3 {
+            color: #4dff00;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        /* Estilos para a tabela de comparação */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            border: 1px solid #4dff00;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: rgba(77, 255, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .comparison-table tr:hover {
+            background-color: rgba(77, 255, 0, 0.05);
+        }
+
+        .text-box code {
+            background-color: rgba(77, 255, 0, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .text-box strong {
+            color: #4dff00;
+        }
+
+        .parallax-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            color: #4dff00;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+
+        .parallax-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #4dff00;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+
+        .demo-scroll {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin: 40px;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .demo-attachment-scroll {
+            background-attachment: scroll;
+        }
+
+        .demo-attachment-fixed {
+            background-attachment: fixed;
+        }
+
+        .demo-attachment-local {
+            background-attachment: local;
+        }
+
+        .attachment-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #4dff00;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .shorthand-example {
+            background: #112233;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .shorthand-example code {
+            color: #4dff00;
+        }
+
+        .comparacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* Responsividade simplificada mantendo parallax */
+        @media (max-width: 768px) {
+            .comparacao-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .text-box {
+                margin: 15px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scroll-container,
+            .fixed-container,
+            .local-container,
+            .scroll-only-container {
+                height: 300px;
+            }
+
+            .text-box {
+                margin: 10px;
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            .text-box h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Garantindo que o parallax funcione em todos os dispositivos */
+        @supports (-webkit-overflow-scrolling: touch) {
+            .parallax-demo {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">🏠 Início</a></li>
+                    <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+                    <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-008')">⚖ Política</a></li>
+                    <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-008')">👤 Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>📘 Aula 8 MD-3: Background Attachment e Shorthand 📘</h1>
+<hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#attachment">Background Attachment</a></li>
+                    <li><a href="#valores">Valores e Comportamentos</a></li>
+                    <li><a href="#shorthand">Background Shorthand</a></li>
+                    <li><a href="#exemplos">Exemplos Práticos</a></li>
+                    <li><a href="#dicas">Dicas e Boas Práticas</a></li>
+                </ul>
+            </strong>
+        </nav>
+
+        <section class="explicacao">
+            <h2 id="attachment">1. O que é Background Attachment?</h2>
+            <p class="destaque">A propriedade <code>background-attachment</code> determina se a imagem de fundo rola com o conteúdo ou permanece fixa durante a rolagem. Esta propriedade é fundamental para criar efeitos de paralaxe e melhorar a experiência visual do usuário.</p>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="valores">2. Valores e Comportamentos</h2>
+            <p class="destaque">A propriedade background-attachment é fundamental para controlar como uma imagem de fundo se comporta durante a rolagem. Vamos explorar em detalhes cada um dos valores possíveis:</p>
+
+            <div class="text-box">
+                <h3>💫 Os 3 Valores Principais:</h3>
+                <ul>
+                    <li><strong>scroll (padrão)</strong>: 
+                        <ul>
+                            <li>A imagem rola com o documento</li>
+                            <li>Permanece fixa em relação ao elemento que a contém</li>
+                            <li>Ideal para fundos que devem se mover naturalmente com o conteúdo</li>
+                        </ul>
+                    </li>
+                    <li><strong>fixed</strong>: 
+                        <ul>
+                            <li>A imagem fica fixa em relação à viewport</li>
+                            <li>Não se move quando a página é rolada</li>
+                            <li>Perfeito para efeitos parallax e seções de destaque</li>
+                        </ul>
+                    </li>
+                    <li><strong>local</strong>: 
+                        <ul>
+                            <li>A imagem rola com o conteúdo dentro do elemento</li>
+                            <li>Útil para elementos com rolagem própria</li>
+                            <li>Comportamento similar ao scroll, mas limitado ao container</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-box">
+                <h3>🎯 Quando Usar Cada Valor:</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Valor</th>
+                        <th>Melhor Uso</th>
+                        <th>Considerações</th>
+                    </tr>
+                    <tr>
+                        <td><code>scroll</code></td>
+                        <td>Páginas regulares, blogs, seções de conteúdo</td>
+                        <td>Comportamento natural e esperado pelos usuários</td>
+                    </tr>
+                    <tr>
+                        <td><code>fixed</code></td>
+                        <td>Headers, seções de destaque, efeitos parallax</td>
+                        <td>Pode impactar performance em dispositivos móveis</td>
+                    </tr>
+                    <tr>
+                        <td><code>local</code></td>
+                        <td>Modais, cards com scroll, sidebars</td>
+                        <td>Suporte mais recente, verificar compatibilidade</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="text-box">
+                <h3>⚡ Dicas de Performance:</h3>
+                <ol>
+                    <li><strong>Tamanho das Imagens:</strong> 
+                        <ul>
+                            <li>Use imagens otimizadas para web</li>
+                            <li>Considere formatos modernos como WebP</li>
+                            <li>Forneça diferentes tamanhos para diferentes dispositivos</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mobile First:</strong>
+                        <ul>
+                            <li>Em dispositivos móveis, prefira <code>scroll</code> ao invés de <code>fixed</code></li>
+                            <li>Use media queries para ajustar o comportamento</li>
+                            <li>Teste em diferentes dispositivos</li>
+                        </ul>
+                    </li>
+                    <li><strong>Acessibilidade:</strong>
+                        <ul>
+                            <li>Garanta contraste suficiente com o texto</li>
+                            <li>Forneça alternativas para leitores de tela</li>
+                            <li>Considere usuários com motion sickness ao usar efeitos parallax</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+<hr>
+        <!-- Exemplo Scroll -->
+        <section class="explicacao" id="exemplo-scroll">
+            <h3>2.1. Background Attachment: Scroll (Padrão)</h3>
+            <p class="destaque">No modo scroll, a imagem de fundo rola junto com a página.</p>
+            
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <div class="text-box">
+                        <h4>Primeira caixa de texto</h4>
+                        <p>• A imagem de fundo rola junto</p>
+                        <p>• Este é o comportamento padrão</p>
+                        <p>• Role para ver o efeito</p>
+                        <p>• A imagem move conforme você rola</p>
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="text-box">
+                        <h4>Segunda caixa de texto</h4>
+                        <p>• Continue rolando...</p>
+                        <p>• Observe como a imagem se move</p>
+                        <p>• Este é o verdadeiro efeito scroll</p>
+                        <p>• A imagem acompanha o conteúdo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<hr>
+        <!-- Exemplo Fixed -->
+        <section class="explicacao" id="exemplo-fixed">
+            <h3>2.2. Background Attachment: Fixed</h3>
+            <p class="destaque">No modo fixed, a imagem permanece fixa enquanto o conteúdo rola.</p>
+            
+            <div class="fixed-container">
+                <div class="text-box">
+                    <h4>Comportamento Fixed</h4>
+                    <p>• A imagem de fundo fica fixa na viewport</p>
+                    <p>• Role a página para ver o efeito parallax</p>
+                    <p>• A imagem não se move com o conteúdo</p>
+                    <p>• Muito usado em efeitos de parallax</p>
+                </div>
+            </div>
+        </section>
+<hr>
+        <!-- Exemplo Local vs Scroll -->
+        <section class="explicacao" id="exemplo-local">
+            <h3>2.3. Background Attachment: Local vs Scroll</h3>
+            <p class="destaque">Compare a diferença entre local e scroll rolando cada caixa separadamente 👇</p>
+            
+            <div class="comparacao-grid">
+                <!-- Exemplo com Local -->
+                <div>
+                    <h4 class="example-title">Local:</h4>
+                    <div class="local-container">
+                        <div class="text-box">
+                            <h4>Com background-attachment: local</h4>
+                            <p>• Role esta caixa usando sua barra lateral</p>
+                            <p>• A imagem se move APENAS nesta caixa</p>
+                        </div>
+                        <div class="spacer"></div>
+                        <div class="text-box">
+                            <p>• Continue rolando...</p>
+                            <p>• Note que o efeito é contido</p>
+                            <p>• A imagem só rola aqui dentro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exemplo com Scroll -->
+                <div>
+                    <h4 class="example-title">Scroll:</h4>
+                    <div class="scroll-only-container">
+                        <div class="scroll-only-content">
+                            <div class="text-box">
+                                <h4>Com background-attachment: scroll</h4>
+                                <p>• Role esta caixa usando sua barra lateral</p>
+                                <p>• A imagem rola com a página toda</p>
+                            </div>
+                            <div class="spacer"></div>
+                            <div class="text-box">
+                                <p>• Continue rolando...</p>
+                                <p>• A imagem rola globalmente</p>
+                                <p>• Diferente do local</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>     
+<hr>   
+        <section class="explicacao">
+            <h2 id="shorthand">3. Background Shorthand</h2>
+            <p class="destaque">O shorthand <code>background</code> permite definir várias propriedades de fundo em uma única linha. A ordem correta dos valores é importante!</p>
+
+            <div class="shorthand-example">
+                <h3>Sintaxe moderna do shorthand:</h3>
+                <pre><code>background: color image position / size repeat attachment;</code></pre>
+                <p class="destaque">Exemplo prático:</p>
+                <pre><code>background: #ffffff url("imagem.jpg") center / cover no-repeat fixed;</code></pre>
+            </div>
+
+            <div class="comparacao-grid">
+                <div class="shorthand-example">
+                    <h3>Forma Tradicional:</h3>
+                    <pre><code>background-color: #ffffff;
+background-image: url("imagem.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;</code></pre>
+                </div>
+
+                <div class="shorthand-example">
+                    <h3>Forma Shorthand:</h3>
+                    <pre><code>background: #ffffff 
+    url("imagem.jpg") 
+    center / cover 
+    no-repeat 
+    fixed;</code></pre>
+                </div>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="exemplos">4. Exemplos Práticos</h2>
+            <p class="destaque">Vamos ver alguns exemplos práticos de uso do background-attachment e shorthand:</p>
+
+            <div class="shorthand-example">
+                <h3>Efeito Paralaxe Simples:</h3>
+                <pre><code>background: url("imagem.jpg") center / cover fixed;</code></pre>
+                <p class="destaque">Este é um dos usos mais comuns do <code>fixed</code>, criando o efeito de paralaxe onde a imagem permanece fixa enquanto o conteúdo rola.</p>
+            </div>
+
+            <div class="shorthand-example">
+                <h3>Fundo com Padrão Repetido:</h3>
+                <pre><code>background: url("pattern.png") center / auto repeat scroll;</code></pre>
+                <p class="destaque">Útil para texturas e padrões que precisam se repetir e rolar com o conteúdo.</p>
+            </div>
+
+            <div class="parallax-demo">
+                <div class="parallax-content">
+                    <h3>Efeito Parallax em Ação</h3>
+                    <p>Role a página para ver o efeito parallax. A imagem de fundo permanecerá fixa enquanto o conteúdo se move, criando uma sensação de profundidade.</p>
+                </div>
+                <div class="scroll-indicator">⬇️ Role para ver o efeito</div>
+            </div>
+
+            <div class="shorthand-example">
+                <h3>Código do Efeito Parallax:</h3>
+                <pre><code>/* CSS do efeito parallax */
+.parallax-demo {
+    height: 500px;
+    background: url('imagem.jpg') center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</code></pre>
+                <p class="destaque">A chave para o efeito está no valor <code>fixed</code> do background-attachment!</p>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="dicas">5. Dicas e Boas Práticas</h2>
+            <ul class="lista-praticas">
+                <li>Use <code>fixed</code> com moderação - pode afetar a performance em dispositivos móveis</li>
+                <li>Sempre forneça uma cor de fundo como fallback</li>
+                <li>Teste em diferentes dispositivos e velocidades de conexão</li>
+                <li>Considere o tamanho das imagens ao usar <code>fixed</code></li>
+                <li>Use o shorthand para código mais limpo e manutenível</li>
+                <li>Lembre-se da ordem correta no shorthand para evitar problemas</li>
+            </ul>
+        </section>
+    </main>
+    <hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m3-007.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m3-009.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/PzJwwA6LVts" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html"
+               onclick="sessionStorage.setItem('ultimaAula','m3-008')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Criando Site Real | Módulo 2 Aula 7</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar um site real do zero. Tutorial prático sobre desenvolvimento web com exemplos reais e aplicação de conceitos.">
+    <meta name="keywords" content="CODEBOOK, criar site, desenvolvimento web, site real, exemplo prático, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-007.html">
+    <meta property="og:title" content="CODEBOOK - Site Real na Prática">
+    <meta property="og:description" content="Aprenda a desenvolver um site real do zero. Tutorial prático com exemplos concretos de desenvolvimento.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-007.html">
+    <meta property="twitter:title" content="CODEBOOK - Projeto Real">
+    <meta property="twitter:description" content="Crie um site real com o CODEBOOK. Tutorial hands-on de desenvolvimento web com exemplos práticos.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-007.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <script src="modal.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-007')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-007')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>📘 Aula 7 MD-2: Criando um Exemplo Real de Site 📘</h1>
+    <hr>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li>
+                    <a href="#introducao">Introdução ao Desafio</a>
+                </li>
+                <li>
+                    <a href="#video-referencia">Vídeo de Referência</a>
+                </li>
+                <li>
+                    <a href="#exemplo-visual">Exemplo Visual de Site</a>
+                </li>
+                <li>
+                    <a href="#dicas-importantes">Dicas Importantes</a>
+                </li>
+            </ul>
+        </strong>
+    </nav>
+    <!-- Introdução do desafio -->
+    <section class="explicacao">
+        <h2 id="introducao">Introdução ao Desafio</h2>
+        <p class="destaque">
+            Nesta aula você irá criar um site real simples, aplicando os conceitos de HTML e CSS que aprendeu nas aulas anteriores. 
+            O objetivo é compreender como estruturar um documento HTML, estilizar elementos com CSS e organizar o conteúdo de forma clara e harmoniosa.
+        </p>
+        <p class="destaque">
+            Durante o desafio, você terá liberdade para experimentar cores, fontes e layouts, criando seu próprio estilo visual.
+        </p>
+    </section>
+    <!-- Vídeo do Guanabara -->
+<section class="explicacao">
+<h2 id="video-referencia">Vídeo de Referência</h2>
+<p class="destaque">
+    Assista ao vídeo do Gustavo Guanabara para ver a implementação prática passo a passo.
+</p>
+<div class="video-iframe">
+<iframe src="https://www.youtube.com/embed/reFQrqxOzsg?si" sandbox="allow-scripts allow-same-origin"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen> title="Vídeo Aula Gustavo Guanabara"></iframe>
+</div>
+<p class="destaque">
+    🔹 No vídeo, ele cria um site simples com título, parágrafos, listas e aplica estilos básicos como cores, fontes e espaçamentos, é legal que veja o video completo.
+</section>
+        <!-- Exemplo visual -->
+        <section class="explicacao">
+            <h2 id="exemplo-visual">Exemplo Visual do Projeto</h2>
+            <p class="destaque">
+                Este é um exemplo visual de como seu site pode ficar, inspirado no projeto que você acabou de criar:
+            </p>
+    <div style="width: 50%; max-width: 500px; margin: 0 auto; border: 2px solid #ccc; border-radius: 12px; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        <img src="../imagens/exemplo-site.png" alt="Exemplo Visual do Site" style="width:100%; height:auto; display:block; margin:auto;" onclick="openModal(this)">
+    <figcaption class="centralizado"><strong>Exemplo Visual do Site</strong></figcaption>
+    <h2 class="centralizado">Clique para ampliar</h2>
+</div>
+</section>
+<!-- Reforço de dicas -->
+<section class="explicacao">
+    <h2 id="dicas-importantes">Dicas Importantes</h2>
+    <ul>
+        <li>
+            <p class="destaque">Mantenha seu HTML semântico e organizado para facilitar futuras alterações.</p>
+        </li>
+        <li>
+            <p class="destaque">Experimente combinar cores e sombras para tornar o site mais atrativo.</p>
+        </li>
+        <li>
+            <p class="destaque">Centralize conteúdos importantes e use espaçamentos consistentes.</p>
+        </li>
+        <li>
+            <p class="destaque">Teste seu site em diferentes tamanhos de tela para garantir responsividade.</p>
+        </li>
+        <li>
+            <p class="destaque">Lembre-se: menos é mais. Evite poluir visualmente a página com elementos desnecessários.</p>
+        </li>
+        <li>
+            <p class="destaque">Utilize comentários no código para marcar seções e facilitar a manutenção.</p>
+        </li>
+    </ul>
+</section>
+<!-- Modal -->
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
+<hr>
+<nav class="proxima-aula">
+    <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-m2-006.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-008.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+    </p>
+</nav>
+</main>
+<hr>
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/reFQrqxOzsg?si=CjgtxI7fl_8MIdND" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-007')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

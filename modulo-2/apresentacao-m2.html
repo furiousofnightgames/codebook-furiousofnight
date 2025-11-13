@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apresentação do Módulo 2 do curso CODEBOOK. Aprenda HTML5 e CSS3 avançado, incluindo estruturação de páginas, estilização, cores, tipografia e design responsivo.">
+    <meta name="keywords" content="HTML5, CSS3, web design, desenvolvimento web, design responsivo, CODEBOOK, front-end">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/apresentacao-m2.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/apresentacao-m2.html">
+    <meta property="og:title" content="Módulo 2 - Apresentação | CODEBOOK">
+    <meta property="og:description" content="Apresentação do Módulo 2 do curso CODEBOOK. Aprenda HTML5 e CSS3 avançado, incluindo estruturação de páginas, estilização, cores, tipografia e design responsivo.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/apresentacao-m2.html">
+    <meta property="twitter:title" content="Módulo 2 - Apresentação | CODEBOOK">
+    <meta property="twitter:description" content="Apresentação do Módulo 2 do curso CODEBOOK. Aprenda HTML5 e CSS3 avançado, incluindo estruturação de páginas, estilização, cores, tipografia e design responsivo.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Módulo 2 - Apresentação | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00ffff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+            background-color: #ffe815;
+            color: #033144;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #43ff14;
+            transform: scale(1.05);
+        }
+
+        /* Estilo do iframe */
+        .video-wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ffdd00, 0 0 60px #43ff14;
+    border: 3px solid #00ffff;
+}
+
+/* Mantendo proporção 16:9 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Responsividade do texto e botão */
+@media (max-width: 768px) {
+    .video-wrapper { width: 90%; }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper { width: 95%; }
+}
+
+        /* Estilo principal para hr */
+hr {
+    border: none;
+    height: 2px;
+    width: 80%; /* largura inicial */
+    max-width: 800px; /* não ultrapassa o tamanho máximo */
+    background: linear-gradient(90deg, #00ffff, #ffdd00, #43ff14);
+    margin: 40px auto; /* centralizado */
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ffdd00;
+    transition: all 0.3s ease;
+}
+
+hr:hover {
+    height: 4px;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #ffdd00, 0 0 45px #43ff14;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    hr {
+        width: 90%;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    hr {
+        width: 95%;
+        margin: 20px auto;
+        height: 1.5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Módulo 2</h1>
+
+    <!-- Container do vídeo -->
+    <div class="video-wrapper">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/vPNIAJ9B4hg" 
+                title="Vídeo do Módulo 2" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+    </div>
+<hr>
+    <p>
+        No Módulo 2, você aprofundará seus conhecimentos em <strong>HTML5 e CSS3</strong>, explorando conceitos avançados de estruturação de páginas, estilização, cores, tipografia e design responsivo.  
+        O objetivo deste módulo é capacitar você a criar sites modernos, harmoniosos e acessíveis, aplicando técnicas de layout, efeitos visuais e boas práticas de desenvolvimento.  
+        Ao final, você estará preparado para transformar projetos do planejamento à implementação, garantindo estética, funcionalidade e compatibilidade em diferentes dispositivos.
+    </p>
+    <a href="indice-geral-m2.html" class="btn"><strong>Índice Geral Módulo 2</strong></a>
+</body>
+</html>

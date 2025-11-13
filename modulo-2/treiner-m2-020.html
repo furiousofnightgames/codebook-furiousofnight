@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Pseudo-classes em CSS | Módulo 2 Aula 20</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar pseudo-classes em CSS para criar interações dinâmicas. Tutorial sobre hover, active, focus e outros estados.">
+    <meta name="keywords" content="CODEBOOK, pseudo-classes, hover, active, focus, CSS interativo, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-020.html">
+    <meta property="og:title" content="CODEBOOK - Pseudo-classes em CSS">
+    <meta property="og:description" content="Aprenda a usar pseudo-classes em CSS para criar interações dinâmicas. Tutorial sobre estados dos elementos.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-020.html">
+    <meta property="twitter:title" content="CODEBOOK - Pseudo-classes em CSS">
+    <meta property="twitter:description" content="Domine o uso de pseudo-classes em CSS com o CODEBOOK. Tutorial sobre interatividade e estados.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Pseudo-classes em CSS | Módulo 2 Aula 20</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">🏠 Início</a></li>
+      <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+      <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-020')">⚖ Política</a></li>
+      <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-020')">👤 Sobre</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>📘 Aula 20 MD-2: Pseudo-classes em CSS 📘</h1>
+  <hr>
+
+  <nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#hover">Pseudo-classe :hover</a></li>
+        <li><a href="#active">Pseudo-classe :active</a></li>
+        <li><a href="#focus">Pseudo-classe :focus</a></li>
+        <li><a href="#visited">Pseudo-classe :visited</a></li>
+        <li><a href="#first-child">Pseudo-classe :first-child</a></li>
+        <li><a href="#last-child">Pseudo-classe :last-child</a></li>
+        <li><a href="#nth-child">Pseudo-classe :nth-child()</a></li>
+        <li><a href="#checked">Pseudo-classe :checked</a></li>
+        <li><a href="#conclusao">Conclusão</a></li>
+      </ul>
+    </strong>
+  </nav>
+
+  <hr>
+  <section class="explicacao" id="introducao">
+    <h2>Introdução</h2>
+    <p class="destaque">
+      Pseudo-classes em CSS permitem aplicar estilos especiais a elementos em estados específicos, sem a necessidade de adicionar classes extras no HTML. 
+    </p>
+    <p class="destaque">
+      Elas são muito úteis para criar interatividade e destacar elementos de acordo com ações do usuário ou posições na hierarquia do documento.
+    </p>
+    <p class="destaque">Alguns extras foram adicionados nessa aula caso veja o video de créditos.</p>
+  </section>
+  <hr>
+
+  <!-- :hover -->
+<section class="explicacao" id="hover">
+  <h2> Pseudo-classe :hover</h2>
+  <p>
+    A pseudo-classe <strong>:hover</strong> é acionada quando o usuário passa o mouse sobre um elemento. 
+    É muito utilizada para criar interatividade em menus, botões e links.
+  </p>
+
+  <pre><code>/* Estilo padrão */
+div {
+  background-color: navy;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Quando o mouse passa por cima */
+div:hover {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}</code></pre>
+
+  <style>
+    .ex-hover {
+      display: inline-block;
+      padding: 20px;
+      background: rgb(26, 26, 249);
+      border: 5px solid black;
+      cursor: pointer;
+      color: white;
+      border-radius: 7px;
+      transition: 0.3s;
+      font-weight: bolder;
+    }
+    .ex-hover:hover {
+      background: yellow;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+  <div class="ex-hover">Passe o mouse aqui</div>
+  <p class="destaque">💡 Muito usado em botões e links para indicar que são clicáveis.</p>
+  <p class="destaque"><strong>Observação:</strong> em dispositivos móveis o comportamento será de cliques fora e dentro do botão</p>
+</section>
+<hr>
+<section class="explicacao" id="hover-paragrafo">
+  <h2>Exemplo :hover revelando parágrafo</h2>
+  <p>Ao passar o mouse, o texto escondido aparece.</p>
+
+  <pre><code>div > p {
+  display: none;
+}
+
+div:hover > p {
+  display: block;
+  background: black;
+  color: white;
+  padding: 5px;
+}</code></pre>
+
+  <style>
+    .ex-hover-p {
+      margin: 10px;
+      padding: 10px;
+      background: rgb(255, 23, 23);
+      width: 200px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .ex-hover-p p {
+      display: none;
+    }
+    .ex-hover-p:hover p {
+      display: block;
+      background: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  </style>
+
+  <div class="ex-hover-p">
+    Passe o mouse aqui
+    <p>💡 Texto escondido revelado com hover.</p>
+  </div>
+    <p class="destaque">Aqui o texto é revelado ao passar o mouse sobre o botão e fecha ao tirar o mouse de cima do botão.</p>
+    <p class="destaque"><strong>Observação:</strong> em dispositivos móveis o comportamento será de cliques fora e dentro do botão</p>
+</section>
+<hr>
+<!-- :active -->
+<section class="explicacao" id="active">
+  <h2>Pseudo-classe :active</h2>
+  <p>
+    A pseudo-classe <strong>:active</strong> representa o momento em que o elemento está sendo 
+    <strong>clicado</strong> (pressionado). Ela desaparece quando o clique é solto.
+  </p>
+
+  <pre><code>/* Estilo normal do botão */
+button {
+  background-color: #2a9d8f;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Enquanto o botão está sendo pressionado */
+button:active {
+  background-color: red;
+  transform: scale(0.95); /* efeito de clique */
+}</code></pre>
+
+  <style>
+    .ex-active {
+      padding: 10px 20px;
+      background: #2a9d8f;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.2s;
+      font-weight: bolder;
+    }
+    .ex-active:active {
+      background: red;
+      transform: scale(0.95);
+    }
+  </style>
+  <button class="ex-active">Clique aqui</button>
+  <p class="destaque">💡 Muito útil em botões de formulários e menus interativos.</p>
+</section>
+<hr>
+
+<!-- :focus -->
+<section class="explicacao" id="focus">
+  <h2>Pseudo-classe :focus</h2>
+  <p>
+    A pseudo-classe <strong>:focus</strong> é aplicada quando um elemento recebe foco — normalmente ao clicar 
+    ou navegar com a tecla <kbd>Tab</kbd>. Essencial para <strong>acessibilidade</strong>.
+  </p>
+
+  <pre><code>/* Estado padrão do input */
+input {
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Quando o campo recebe foco */
+input:focus {
+  border: 3px solid blue;
+  background-color: lightyellow;
+  outline: none; /* remove a borda padrão do navegador */
+}</code></pre>
+
+  <style>
+    .ex-focus {
+      padding: 5px;
+      border: 4px solid rgb(98, 255, 0);
+      border-radius: 5px;
+    }
+    .ex-focus:focus {
+      border: 5px solid rgb(0, 51, 255);
+      background: rgb(255, 255, 0);
+      outline: none;
+    }
+  </style>
+  <input class="ex-focus" type="text" placeholder="Digite algo...">
+  <p class="destaque">💡 Importante para destacar o campo ativo em formulários.</p>
+</section>
+<hr>
+<section class="explicacao" id="focus-paragrafo">
+  <h2>Exemplo :focus revelando parágrafo</h2>
+  <p>Ao clicar na caixa, o parágrafo escondido aparece.</p>
+
+  <pre><code>div {
+  outline: none;
+}
+
+div > p {
+  display: none;
+}
+
+div:focus > p {
+  display: block;
+  background: black;
+  color: white;
+  padding: 5px;
+}</code></pre>
+
+  <style>
+    .ex-focus-p {
+      margin: 10px;
+      padding: 10px;
+      background: rgb(3, 102, 135);
+      width: 200px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .ex-focus-p:focus {
+      outline: 2px solid blue;
+    }
+    .ex-focus-p p {
+      display: none;
+    }
+    .ex-focus-p:focus p {
+      display: block;
+      background: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  </style>
+
+  <div class="ex-focus-p" tabindex="0">
+    Clique aqui
+    <p>💡 Texto escondido revelado com clique (focus).</p>
+  </div>
+  <p class="destaque">Aqui o texto é revelado ao clicar no botão e fecha ao clicar fora do botão.</p>
+</section>
+<hr>
+<!-- :visited -->
+<section class="explicacao" id="visited">
+  <h2>Pseudo-classe :visited</h2>
+  <p>
+    A pseudo-classe <strong>:visited</strong> aplica estilos a links que já foram visitados pelo usuário. 
+    É muito útil para diferenciar links já acessados em listas de navegação.
+  </p>
+
+  <pre><code>/* Link ainda não visitado */
+a:link {
+  color: green;
+  text-decoration: none;
+}
+
+/* Link já visitado */
+a:visited {
+  color: purple;
+}</code></pre>
+
+  <style>
+    .ex-visited a:link { color: green; }
+    .ex-visited a:visited { color: purple; }
+  </style>
+  <div class="ex-visited">
+    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Visite este link</a>
+  </div>
+  <p class="destaque">💡 Após visitar o link, a cor muda para roxo.</p>
+</section>
+<hr>
+
+<!-- :first-child -->
+<section class="explicacao" id="first-child">
+  <h2>Pseudo-classe :first-child</h2>
+  <p>
+    A pseudo-classe <strong>:first-child</strong> seleciona o <strong>primeiro filho</strong> de um elemento pai.
+    Muito útil para destacar o primeiro item de uma lista ou tabela.
+  </p>
+
+  <pre><code>/* O primeiro parágrafo dentro de um container */
+p:first-child {
+  font-weight: bold;
+  color: darkgreen;
+}</code></pre>
+
+  <style>
+    .ex-first p:first-child {
+      font-weight: bold;
+      color: rgb(0, 255, 0);
+    }
+  </style>
+  <div class="ex-first">
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+  </div>
+  <p class="destaque">💡 Apenas o primeiro parágrafo foi estilizado.</p>
+</section>
+<hr>
+
+<!-- :last-child -->
+<section class="explicacao" id="last-child">
+  <h2>Pseudo-classe :last-child</h2>
+  <p>
+    A pseudo-classe <strong>:last-child</strong> seleciona o <strong>último filho</strong> de um elemento pai.
+  </p>
+
+  <pre><code>/* O último parágrafo dentro de um container */
+p:last-child {
+  color: red;
+  font-style: italic;
+}</code></pre>
+
+  <style>
+    .ex-last p:last-child {
+      color: rgb(255, 33, 33);
+      font-style: italic;
+      font-weight: bolder;
+    }
+  </style>
+  <div class="ex-last">
+    <p>Primeiro parágrafo</p>
+    <p>Último parágrafo</p>
+  </div>
+  <p class="destaque">💡 Muito usado em tabelas e listas para aplicar estilo apenas no último item.</p>
+</section>
+<hr>
+
+<!-- :nth-child -->
+<section class="explicacao" id="nth-child">
+  <h2>Pseudo-classe :nth-child()</h2>
+  <p>
+    A pseudo-classe <strong>:nth-child()</strong> permite selecionar elementos de acordo com sua posição. 
+    Aceita números fixos (<code>2</code>, <code>3</code>) ou fórmulas como <code>2n</code> (pares) e <code>2n+1</code> (ímpares).
+  </p>
+
+  <pre><code>/* Destaca apenas o segundo item */
+li:nth-child(2) {
+  background-color: lightcoral;
+}
+
+/* Destaca itens pares */
+li:nth-child(2n) {
+  background-color: lightblue;
+}</code></pre>
+
+  <style>
+    .ex-nth li:nth-child(2) {
+      background: lightcoral;
+      width: 100px;
+      padding: 5px;
+      font-weight: bold;
+      color: rgb(30, 255, 0);
+    }
+    .ex-nth li:nth-child(2n) {
+      background: lightblue;
+      width: 100px;
+      padding: 5px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+  </style>
+  <ul class="ex-nth">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <p class="destaque">💡 Muito usado em tabelas para criar efeitos "zebrado".</p>
+</section>
+  <hr>
+<hr>
+<!-- :checked -->
+<section class="explicacao" id="checked">
+  <h2>Pseudo-classe :checked</h2>
+  <p>
+    A pseudo-classe <strong>:checked</strong> é aplicada a elementos de formulário que podem ser 
+    <strong>marcados</strong>, como <code>checkbox</code>, <code>radio</code> ou <code>option</code>. 
+    Ela permite alterar o estilo desses elementos ou até revelar conteúdo sem precisar de JavaScript.
+  </p>
+
+  <pre><code>/* Quando o checkbox está marcado */
+input:checked + label {
+  color: white;
+  background: green;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}</code></pre>
+
+  <style>
+    .ex-checked {
+      margin: 15px 0;
+    }
+    .ex-checked input {
+      display: none; /* esconde o checkbox padrão */
+    }
+    .ex-checked label {
+      cursor: pointer;
+      background: rgb(254, 126, 126);
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+    .ex-checked input:checked + label {
+      color: white;
+      background: green;
+      font-weight: bold;
+    }
+  </style>
+
+  <div class="ex-checked">
+    <input type="checkbox" id="chk1">
+    <label for="chk1">Opção 1</label>
+
+    <input type="checkbox" id="chk2">
+    <label for="chk2">Opção 2</label>
+  </div>
+
+  <p class="destaque">
+    💡 Ao marcar a caixa, o estilo do <code>label</code> muda automaticamente. 
+    Esse recurso é muito usado em botões de ativar/desativar ou menus ocultos.
+  </p>
+</section>
+<hr>
+  <section class="explicacao" id="conclusao">
+    <h2>Conclusão</h2>
+    <p class="destaque">
+      As pseudo-classes são ferramentas poderosas no CSS, permitindo criar interações dinâmicas, estilizar elementos em estados específicos e destacar conteúdos de forma prática sem alterar o HTML.
+    </p>
+  </section>
+  <hr>
+
+  <section class="explicacao">
+    <h2>Referências</h2>
+    <p class="link-bloco"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes" target="_blank" rel="noopener noreferrer">MDN Web Docs - Pseudo-classes</a></p>
+  </section>
+
+  <hr>
+  <nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-019.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-021.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+  </nav>
+</main>
+
+<hr>
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/WPtRX4n0UJs?si=xNetLBOxiq6SVCKg" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-020')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!-- Página 1 Secundária -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Secundária - Reprodução de Vídeos</title>
+  <link rel="icon" type="image/x-icon" href="../../imagens/logo-sitebook.ico">
+
+  <style>
+    /* ==============================
+       RESET E BASE
+    ============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(180deg, #031619, #0a2a2e);
+      color: #00ff0d;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* ==============================
+       BOTÃO VOLTAR
+    ============================== */
+    .btn-voltar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 0, 0.3);
+      background: rgba(255, 255, 0, 0.05);
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+      transform: translateY(-2px);
+      text-shadow: 0 0 6px #fff;
+    }
+
+    /* ==============================
+       CABEÇALHOS
+    ============================== */
+    h1, h2 {
+      color: #00ffff;
+      margin: 20px 0;
+      text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    }
+
+    h2 {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+    }
+
+    /* ==============================
+       VÍDEO
+    ============================== */
+    iframe {
+      display: none;
+      width: 90%;
+      max-width: 1000px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    iframe.active {
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* ==============================
+       TEXTO E LINKS
+    ============================== */
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #d4ffd4;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 0, 0.3);
+      background: rgba(255, 255, 0, 0.05);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+      text-shadow: 0 0 6px #fff;
+      transform: translateY(-2px);
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border: none;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    /* ==============================
+       RESPONSIVIDADE
+    ============================== */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      iframe {
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      .btn-voltar {
+        top: 15px;
+        left: 15px;
+        padding: 6px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      a {
+        padding: 8px 14px;
+      }
+
+      .btn-voltar {
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="../treiner-m2-026.html" class="btn-voltar">⬅ Voltar</a>
+
+  <h1>Introdução do Desafio & Material Para Download</h1>
+
+  <iframe id="video1"
+          src="https://www.youtube.com/embed/xS2D9x8odoE"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+
+  <p>
+    Link do material para download:
+    <a href="material.zip" download="material.zip" type="application/zip">Download do Material</a>
+  </p>
+
+  <hr>
+
+  <h2>
+    <a href="passo-1.html">Ir ao primeiro passo</a>
+  </h2>
+</body>
+</html>

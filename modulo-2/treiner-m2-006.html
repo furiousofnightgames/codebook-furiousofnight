@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Criando Degradês CSS | Módulo 2 Aula 6</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar degradês e gradientes em CSS. Tutorial sobre linear-gradient, radial-gradient e técnicas de transição de cores.">
+    <meta name="keywords" content="CODEBOOK, degradê CSS, gradient CSS, linear-gradient, radial-gradient, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-006.html">
+    <meta property="og:title" content="CODEBOOK - Gradientes CSS">
+    <meta property="og:description" content="Aprenda a criar efeitos de degradê profissionais em CSS. Tutorial completo sobre gradientes.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-006.html">
+    <meta property="twitter:title" content="CODEBOOK - Degradês em CSS">
+    <meta property="twitter:description" content="Domine a criação de gradientes em CSS com o CODEBOOK. Tutorial sobre transições suaves de cores.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-006.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <script src="modal.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-006')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-006')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>📘 Aula 6 MD-2: Como Criar Degradê com CSS 📘</h1>
+    <hr>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li>
+                    <a href="#introducao">Introdução</a>
+                </li>
+                <li>
+                    <a href="#o-que-e-um-degrade">O Que é Um Degradê?</a>
+                </li>
+                <li>
+                    <a href="#sintaxe-basica">Sintaxe Básica do linear-gradient</a>
+                </li>
+                <li>
+                    <a href="#exemplos-visuais">Exemplos Visuais de Degradê</a>
+                </li>
+                <li>
+                    <a href="#dicas">Dicas para Criar Degradês Profissionais</a>
+                </li>
+                <li>
+                    <a href="#segredos">Segredos de um Degradê Impactante</a>
+                </li>
+                <li>
+                    <a href="#exercicio-pratico">Exercício Prático</a>
+                </li>
+            </ul>
+        </strong>
+
+    </nav>
+    <section class="explicacao">
+    <h2 id="introducao">Introdução</h2>
+    <p class="destaque">
+        🎨Bem-vindo à aula sobre <strong>degradês em CSS 🎨</strong><br>  
+        Hoje você vai aprender como criar transições suaves entre cores, utilizando técnicas de <strong>linear-gradient</strong> e <strong>radial-gradient</strong>.  
+        Você verá exemplos práticos, dicas profissionais e exercícios para aplicar o degradê em fundos, banners e botões, deixando seus projetos mais modernos e atraentes.
+    </p>
+    <p class="destaque">
+        Ao final desta aula, você será capaz de:  
+    </p>
+    <ul>
+        <li>
+            <p class="destaque">Entender o conceito de degradê e suas aplicações visuais.</p>
+        </li>
+        <li>
+            <p class="destaque">Aplicar diferentes tipos de degradê usando cores, direções e múltiplos tons.</p>
+        </li>
+        <li>
+            <p class="destaque">Produzir designs com degradês equilibrados e profissionais.</p>
+        </li>
+    </ul>
+</section>
+    <hr>
+    <section class="explicacao">
+    <h2 id="o-que-e-um-degrade">1. O que é um degradê?</h2>
+    <p class="destaque">
+        Um <strong>degradê</strong> é a transição suave entre duas ou mais cores.  
+        Ele é muito usado em **fundos, botões, banners e elementos gráficos** para dar profundidade e modernidade ao design.
+    </p>
+    <p class="destaque">
+        Existem dois tipos principais de degradê em CSS:
+    </p>
+    <ul>
+        <li>
+            <p class="destaque">
+                <strong>Linear:</strong> a transição ocorre em linha reta (horizontal, vertical ou diagonal).
+            </p>
+        </li>
+        <li>
+            <p class="destaque">
+                <strong>Radial:</strong> a transição ocorre a partir de um ponto central, como círculos concêntricos.
+            </p>
+        </li>
+    </ul>
+    </section>
+    <hr>
+    <section class="explicacao">
+        <h2 id="sintaxe-basica">2. Sintaxe básica do linear-gradient</h2>
+        <pre class="destaque">
+background: linear-gradient(to right, red, blue);</pre>
+        <p class="destaque">
+            🔹 <em>to right</em> → direção do degradê (pode ser <strong>to left</strong>, <strong>to bottom</strong>, <strong>45deg ou 90deg</strong>, etc).
+            🔹 Você pode usar cores em <strong>nome</strong>, <strong>HEX</strong>, <strong>RGB</strong> ou <strong>HSL</strong>.
+        </p>
+    </section>
+
+    <hr>
+    <section class="explicacao">
+        <h2 id="exemplos-visuais">3. Exemplos visuais de degradê</h2>
+        <div class="exemplo-visual">
+            <h3>Linear horizontal</h3>
+            <div style="width: 100%; height: 60px; background: linear-gradient(to right, #FF4D4D, #FF9933, #FFFF66); border-radius: 8px;"></div>
+            <p class="destaque">Transição de vermelho → laranja → amarelo</p>
+        </div>
+        <div class="exemplo-visual">
+            <h3>Linear diagonal</h3>
+            <div style="width: 100%; height: 60px; background: linear-gradient(45deg, #4D79FF, #66CC66, #9966CC); border-radius: 8px;"></div>
+            <p class="destaque">Transição diagonal com azul → verde → roxo</p>
+        </div>
+        <div class="exemplo-visual">
+            <h3>Radial</h3>
+            <div style="width: 100%; height: 60px; background: radial-gradient(circle, #FF4D4D, #FF9933, #FFFF66); border-radius: 8px;"></div>
+            <p class="destaque">Radial, a partir do centro, vermelho → laranja → amarelo</p>
+        </div>
+    </section>
+
+    <hr>
+    <section class="explicacao">
+        <h2 id="dicas">4. Dicas para criar degradês profissionais</h2>
+        <ul>
+            <li>
+                <p class="destaque">Escolha cores que <strong>harmonizem</strong>. Use ferramentas como <em>Adobe Color</em> ou <em>Coolors.co</em>.</p>
+            </li>
+            <li>
+                <p class="destaque">Evite transições com cores muito contrastantes se o objetivo é <strong>suavidade</strong>.</p>
+            </li>
+            <li>
+                <p class="destaque">Para degradês modernos, use <strong>HSL ou Lab</strong> em vez de RGB puro; eles dão transições mais naturais.</p>
+            </li>
+            <li>
+                <p class="destaque">Experimente <strong>três ou mais cores</strong> para degradês ricos, mas evite poluição visual.</p>
+            </li>
+            <li>
+                <p class="destaque">Use a direção do degradê para guiar o olhar do usuário (<em>to right, to bottom, 45deg</em>).</p>
+            </li>
+            <li>
+                <p class="destaque">Lembre-se do contraste: se o degradê for fundo de texto, teste legibilidade usando cores neutras ou semi-transparência.</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+    <section class="explicacao">
+        <h2 id="segredos">5. Segredos de um degradê impactante</h2>
+        <ul>
+            <li>
+                <p class="destaque">Use cores da <strong>mesma família</strong> para suavidade ou cores <strong>opostas</strong> para impacto.</p>
+            </li>
+            <li>
+                <p class="destaque">Para botões e highlights, degradês diagonais ou radiais costumam dar mais dinamismo.</p>
+            </li>
+            <li>
+                <p class="destaque">Transições de tons escuros para claros podem criar <strong>profundidade e sensação de espaço</strong>.</p>
+            </li>
+            <li>
+                <p class="destaque">Não exagere em muitas cores diferentes; degrade simples (2-3 cores) costuma ser mais elegante.</p>
+            </li>
+            <li>
+                <p class="destaque">Combine degradês com sombras suaves e bordas arredondadas para um resultado profissional.</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+    <section class="explicacao">
+    <h2 id="exercicio-pratico">6. Exercício Prático</h2>
+    <p class="destaque">
+        Crie um banner de fundo usando <strong>linear-gradient</strong> com três cores que representem energia e confiança.
+    </p>
+    <ul>
+        <li>
+            <p  class="destaque">Escolha as cores (ex.: vermelho, laranja, amarelo ou azul, roxo, verde).</p>
+        </li>
+        <li>
+            <p class="destaque">Experimente diferentes direções (<em>to right, to bottom, 45deg ou 90deg</em>).</p>
+        </li>
+        <li>
+            <p class="destaque">Adicione bordas arredondadas para avaliar estética visual.</p>
+        </li>
+        <li>
+            <p class="destaque">Teste aplicando degradê em botões, cards e backgrounds de seção para ver o efeito em contexto real.</p>
+        </li>
+    </ul>
+    <h3 class="centralizado">Exemplo visual sugerido:</h3>
+    <div style="text-align: center;width: 100%;max-width: 500px; height: 120px; 
+                background: linear-gradient(to right, #FF4D4D, #FF9933, #FFFF66); 
+                border-radius: 12px; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                color: #fff; 
+                font-weight: bold; 
+                font-size: 1.2em; 
+                margin-top: 10px; margin-left:auto; margin-right:auto;">
+        Banner de Exemplo
+    </div>
+    <p class="destaque">
+        🔹 Nesse exemplo, usamos um degradê horizontal vermelho → laranja → amarelo, com bordas arredondadas e texto centralizado para mostrar como o banner poderia ficar.
+    </p>
+</section>
+    <hr>
+    <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                    <a href="treiner-m2-005.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-007.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+</p>
+<hr>
+    <footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/_P-guJX-TtU?si=gEDbDcZHDsWQlTA6" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-006')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

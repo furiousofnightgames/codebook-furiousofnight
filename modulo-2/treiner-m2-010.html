@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Fontes em CSS | Módulo 2 Aula 10</title>
+  <meta name="description" content="CODEBOOK: Aprenda a trabalhar com fontes em CSS. Tutorial sobre font-family, font-size, font-weight e outras propriedades de fonte.">
+  <meta name="keywords" content="CODEBOOK, fontes CSS, font-family, font-size, estilização fontes, módulo 2">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-010.html">
+  <meta property="og:title" content="CODEBOOK - Propriedades de Fonte">
+  <meta property="og:description" content="Domine as propriedades de fonte em CSS. Tutorial sobre estilização e formatação de texto.">
+  <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-010.html">
+  <meta property="twitter:title" content="CODEBOOK - CSS Fonts">
+  <meta property="twitter:description" content="Aprenda a manipular fontes em CSS com o CODEBOOK. Tutorial completo sobre propriedades de fonte.">
+  <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-010.html">
+  <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Início</a></li>
+        <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+        <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-010')">⚖ Política</a></li>
+        <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-010')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+    <h1>📘 Aula 10 MD-2: Trabalhando com Fontes em CSS 📘</h1>
+<hr>
+    <!-- Índice -->
+    <nav class="indice-simples">
+      <h2>Índice</h2>
+      <strong>
+        <ul>
+          <li>
+            <a href="#introducao">Introdução</a>
+          </li>
+          <li>
+            <a href="#font-family">Propriedade font-family</a>
+          </li>
+          <li>
+            <a href="#tamanhos">Tamanhos e pesos de fonte</a>
+          </li>
+          <li>
+            <a href="#combinacoes">Combinações de fontes</a>
+          </li>
+          <li>
+            <a href="#exemplos-praticos">Exemplos práticos de combinações</a>
+          </li>
+          <li>
+            <a href="#referencias">Referências</a>
+          </li>
+          <li>
+            <a href="#conclusao">Conclusão</a>
+          </li>
+        </ul>
+      </strong>
+    </nav>
+    <hr>
+
+    <!-- Introdução -->
+    <section id="introducao" class="explicacao">
+      <h2>Introdução</h2>
+      <p class="destaque">
+        Trabalhar com fontes em CSS vai além de escolher um estilo bonito.  
+        Cada fonte transmite <strong>personalidade</strong> e afeta a <strong>legibilidade</strong> do texto.  
+        Saber combinar fontes de forma harmônica garante um design mais profissional e agradável.
+      </p>
+    </section>
+<hr>
+    <!-- Propriedade font-family -->
+    <section id="font-family" class="explicacao">
+      <h2>Propriedade <code>font-family</code></h2>
+      <p class="destaque">
+        Define a família de fontes de um elemento. É possível listar múltiplas fontes separadas por vírgula para criar um fallback.  
+        Exemplo:
+      </p>
+      <div style="margin:10px 0; padding:10px; border-radius:6px; background:#1e1e1e; color:#ffffff !important;">
+        <code style="color:#ff5555 !important;">font-family: 'Arial', 'Helvetica', sans-serif;</code>
+      </div>
+      <p class="destaque">
+        O navegador usa a primeira fonte disponível da lista.
+      </p>
+    </section>
+<hr>
+    <!-- Tamanhos e pesos -->
+    <section id="tamanhos" class="explicacao">
+      <h2>Tamanhos e pesos de fonte</h2>
+      <ul>
+        <li>
+          <strong>font-size</strong>: define o tamanho do texto.
+        </li>
+        <li>
+          <strong>font-weight</strong>: define a espessura (normal, bold, 100-900).
+        </li>
+        <li>
+          <strong>line-height</strong>: altura da linha, essencial para leitura.
+        </li>
+        <li>
+          <strong>letter-spacing</strong>: espaçamento entre caracteres.
+        </li>
+      </ul>
+      <div style="font-family: Arial, sans-serif; font-size:16px; font-weight:400; margin:6px 0;">Exemplo: normal 16px</div>
+      <div style="font-family: Arial, sans-serif; font-size:16px; font-weight:700; margin:6px 0;">Exemplo: bold 16px</div>
+      <div style="font-family: Arial, sans-serif; font-size:24px; font-weight:700; margin:6px 0;">Exemplo: bold 24px</div>
+    </section>
+<hr>
+    <!-- Combinações de fontes -->
+    <section id="combinacoes" class="explicacao">
+      <h2>Combinações de fontes</h2>
+      <p class="destaque">
+        Combinar fontes corretamente cria contraste e hierarquia visual.  
+        Algumas regras práticas:
+      </p>
+      <ul>
+        <li>
+          Combine uma fonte serifada com uma sans-serif para contraste elegante.
+        </li>
+        <li>
+          Evite usar mais de duas ou três famílias de fontes no mesmo layout.
+        </li>
+        <li>
+          Combine fontes com personalidades complementares.
+        </li>
+        <li>
+          Adapte o estilo ao projeto: moderno, clássico, informal ou corporativo.
+        </li>
+      </ul>
+    </section>
+<hr>
+    <!-- Exemplos práticos -->
+    <section id="exemplos-praticos" class="explicacao">
+      <h2>Exemplos práticos de combinações</h2>
+
+      <p><strong>1. Serif + Sans-serif</strong>: ideal para títulos e corpo de texto.</p>
+      <div style="margin:10px 0; padding:12px; border-radius:6px; background:#1e1e1e;">
+        <h3 style="font-family:'Times New Roman', serif; color:#ff5555 !important;">Título Clássico</h3>
+        <p style="font-family:Arial, sans-serif; color:#ffffff !important;">
+          Corpo de texto moderno e legível usando sans-serif.
+        </p>
+      </div>
+
+      <p><strong>2. Display + Monospace</strong>: títulos chamativos com detalhes técnicos.</p>
+      <div style="margin:10px 0; padding:12px; border-radius:6px; background:#1e1e1e;">
+        <h3 style="font-family:'Impact', 'Arial Black', sans-serif; color:#d755ff !important;">Título Impactante</h3>
+        <p style="font-family:'Courier New', monospace; color:#ffffff !important;">
+          Código ou detalhe técnico em monoespaçada.
+        </p>
+      </div>
+
+      <p><strong>3. Duas fontes modernas</strong>: combinações harmoniosas sem serifas.</p>
+      <div style="margin:10px 0; padding:12px; border-radius:6px; background:#1e1e1e;">
+        <h3 style="font-family:'Open Sans', sans-serif; color:#5599ff !important;">Título Open Sans</h3>
+        <p style="font-family:'Roboto', sans-serif; color:#ffffff !important;">
+          Corpo de texto em Roboto, criando harmonia visual.
+        </p>
+      </div>
+
+      <p><strong>4. Serifadas diferentes</strong>: para projetos formais ou editoriais.</p>
+      <div style="margin:10px 0; padding:12px; border-radius:6px; background:#1e1e1e;">
+        <h3 style="font-family:'Georgia', serif; color:#ffbb55 !important;">Título Georgia</h3>
+        <p style="font-family:'Times New Roman', serif; color:#ffffff !important;">
+          Texto com Times New Roman, mantendo a sofisticação clássica.
+        </p>
+      </div>
+    </section>
+<hr>
+    <!-- Referências -->
+    <section id="referencias" class="explicacao">
+      <h2>Mais Sobre Combinações de Fontes</h2>
+      <p class="destaque">
+        Para aprofundar-se em combinações de fontes e ver exemplos visuais, consulte o link:
+      </p>
+        <p class="link-bloco">
+          <a href="https://www.w3schools.com/css/css_font_pairings.asp" target="_blank" rel="noopener noreferrer">W3Schools - Font Pairings</a>
+        </p>
+
+    </section>
+<hr>
+    <!-- Conclusão -->
+    <section id="conclusao" class="explicacao">
+      <h2>Conclusão</h2>
+      <p class="destaque">
+        Dominar fontes em CSS e suas combinações é essencial para criar layouts legíveis e esteticamente agradáveis.  
+        Sempre teste as combinações em contexto real e escolha fontes que transmitam a personalidade do projeto.
+      </p>
+    </section>
+    <hr>
+    <nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br>
+        <a href="treiner-m2-009.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-011.html"><strong>Próxima</strong> ➡</a>
+    </strong>
+</p>
+</nav>
+</main>
+<hr>
+  <footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/dMp1UFD8_lE?si=fKCbK-Pg7cID6Cji" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-010')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

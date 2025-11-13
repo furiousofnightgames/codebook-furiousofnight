@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notícia: HTML & CSS — Estado Atual e Motivação</title>
+  <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <style>
+  /* Reset e base */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background:#071526; color:#e6f7ff; line-height:1.5; padding:16px;
+  }
+  main {
+    max-width:980px; margin:0 auto;
+    background:linear-gradient(180deg,#07273a 0%, #03121a 100%);
+    border-radius:12px; padding:24px; box-shadow:0 8px 30px rgba(0,0,0,0.7);
+  }
+  h1,h2,h3,h4,h5,h6 { color:#fff; margin-bottom:8px; }
+  p { margin-bottom:8px; color:#cfeefb; }
+  a { color:#00e5ff; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  /* Header */
+  header { display:flex; align-items:center; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+  .icon {
+    width:68px; height:68px; border-radius:12px;
+    background:linear-gradient(135deg,#00b4d8,#7afcff);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; color:#021; font-size:28px;
+  }
+  header h1 { font-size:1.5rem; }
+  header p { font-size:0.95rem; color:#bfefff; }
+
+  /* Notícias */
+  .news-card {
+    background:#082a36; border:1px solid rgba(122,207,255,0.08);
+    padding:18px; border-radius:10px; margin-bottom:18px;
+  }
+  .news-card footer { font-size:0.82rem; color:#9fe8ff; margin-top:8px; }
+
+  /* Exemplos código/resultado */
+  .example-section { display:grid; gap:14px; margin-bottom:18px; }
+  .example-block { display:flex; gap:12px; flex-wrap:wrap; width:100%; }
+  .example-code, .example-render { flex:1 1 0; min-width:0; max-width:100%; }
+  .example-code {
+    background:#021826; padding:12px; border-radius:8px;
+    border:1px solid rgba(255,255,255,0.02);
+    word-wrap: break-word;
+  }
+  .example-render {
+    background:linear-gradient(180deg,#042f3b,#022029);
+    padding:14px; border-radius:8px;
+    display:flex; flex-direction:column; justify-content:center; gap:8px;
+  }
+  .example-render article {
+    background:#072a34; padding:10px 12px; border-radius:8px;
+    border-left:4px solid #00c3ff;
+    word-wrap: break-word;
+  }
+  pre { margin:0; background:#00121a; color:#bfefff; padding:10px; border-radius:6px; font-size:0.88rem; white-space:pre-wrap; word-break:break-word; overflow-wrap:break-word; }
+
+  /* Guia rápido */
+  .quick-guide {
+    background:linear-gradient(180deg, rgba(2,28,38,0.45), rgba(1,14,20,0.4));
+    padding:14px; border-radius:8px; margin-bottom:18px;
+  }
+  .quick-guide ul { padding-left:18px; list-style:disc; }
+
+  /* Mensagem motivacional */
+  .motivation {
+    padding:14px; border-radius:8px;
+    background:linear-gradient(90deg,#063644,#01323b);
+    border:1px solid rgba(255,255,255,0.03);
+    margin-bottom:18px;
+  }
+
+  /* Footer e referências */
+  footer { margin-top:16px; font-size:0.9rem; color:#9fe8ff; }
+  footer h3 { color:#cfeefb; margin-bottom:6px; }
+  footer ul { padding-left:18px; list-style:disc; }
+  .proxima-aula a {
+    display:inline-block; padding:8px 16px; background:#eeff02; color:#120a88;
+    border-radius:8px; font-weight:bold; text-decoration:none; transition:0.3s;
+  }
+  .proxima-aula a:hover { background:#c4ff00; }
+
+  /* Responsividade */
+  @media (max-width:768px) {
+    header { flex-direction:column; align-items:flex-start; }
+    .example-block { flex-direction:column; }
+    .example-code, .example-render { min-width:100%; max-width:100%; }
+    main { padding:16px; }
+  }
+  @media (max-width:480px) {
+    body { padding:8px; }
+    header h1 { font-size:1.25rem; }
+    header p { font-size:0.9rem; }
+    .news-card, .example-code, .example-render, .quick-guide, .motivation { padding:10px; }
+    pre { font-size:0.75rem; }
+    .example-render h4, .example-render h5 { font-size:0.85rem; }
+    .quick-guide ul li { font-size:0.85rem; }
+    .proxima-aula a { padding:6px 12px; font-size:0.85rem; }
+  }
+</style>
+
+</head>
+<body>
+
+<main>
+  <header>
+    <div class="icon">&lt;/&gt;</div>
+    <div>
+      <h1>Notícias curtas — HTML & CSS (Resumo)</h1>
+      <p>Atualizações e tendências relevantes para quem estuda front-end.</p>
+    </div>
+  </header>
+  <section class="news-card" aria-labelledby="news-title">
+    <h2 id="news-title">O que há de novo em CSS e no ecossistema web</h2>
+    <p>O desenvolvimento de CSS está acelerando: recursos como <strong>container queries</strong>, <strong>subgrid</strong>, pseudo-classes relacionais (ex.: <code>:has()</code>), cascade layers e melhorias no Grid tornam o design responsivo e modular mais poderoso — recursos já documentados e com adoção crescente em 2024–2025.</p>
+    <p>O W3C mantém atualizações e rascunhos que consolidam novas especificações (ex.: módulos de bordas e decoração de caixas), indicando continuidade na evolução das ferramentas de layout e estilos.</p>
+    <p>Tendências 2025 destacam crescimento de PWA, WebAssembly, e uso de AI/automação nas ferramentas — mas a base (HTML + CSS) segue central para qualquer interface web.</p>
+    <footer>Nota: discussões sobre o papel da IA no futuro do desenvolvimento têm ganhado espaço — isso reforça a importância de dominar os fundamentos (HTML/CSS) para saber usar IA com eficácia.</footer>
+  </section>
+
+  <section class="example-section" aria-labelledby="example-title">
+    <h2 id="example-title">Exemplo prático: small-card com HTML + CSS (código ⇢ resultado)</h2>
+    <div class="example-block">
+      <div class="example-code">
+        <h3>Código (HTML)</h3>
+        <pre>&lt;article class="card"&gt;
+  &lt;h4&gt;CSS: container queries &amp; subgrid&lt;/h4&gt;
+  &lt;p&gt;Novas ferramentas para layouts responsivos mais precisos.&lt;/p&gt;
+&lt;/article&gt;</pre>
+      </div>
+      <div class="example-render">
+        <h4>Resultado</h4>
+        <article>
+          <h5>CSS: container queries &amp; subgrid</h5>
+          <p>Novas ferramentas que facilitam layouts responsivos por componente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-guide">
+    <h2>Guia rápido — o que estudar agora</h2>
+    <ul>
+      <li><strong>HTML semântico:</strong> tags corretas para conteúdo (article, section, header, nav).</li>
+      <li><strong>CSS moderno:</strong> Flexbox, Grid, Container Queries, <code>:has()</code>, cascade layers.</li>
+      <li><strong>Acessibilidade:</strong> leitura por leitores de tela e estrutura lógica de títulos.</li>
+      <li><strong>Prática:</strong> construa pequenos componentes reutilizáveis (cards, menus, formulários).</li>
+    </ul>
+  </section>
+
+  <section class="motivation">
+    <h2>Mensagem para quem está começando em Front-End</h2>
+    <p>Aprender HTML e CSS é construir a base de toda interface — é a habilidade que transforma ideias em experiências visuais.  
+      Seja paciente: pratique desafios pequenos, leia exemplos, copie projetos simples e, sobretudo, repita. A consistência vence
+      a velocidade. Quando surgirem dúvidas complexas, volte ao básico: estrutura, semântica e layout. Você está no caminho certo — continue codando.</p>
+    <p style="margin-top:10px; color:#bdf3ff; font-weight:600;">Continue pequeno. Construa sempre. Você vai surpreender a si mesmo.</p>
+  </section>
+
+  <footer>
+    <h3>Fontes e leituras rápidas</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/" target="_blank" rel="noopener noreferrer">Documentação sobre container queries — MDN</a></li>
+      <li><a href="https://www.w3.org" target="_blank" rel="noopener noreferrer">Visão atual das especificações CSS (CSS Snapshot 2025)</a></li>
+      <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/" target="_blank" rel="noopener noreferrer">Artigos sobre novas features CSS (:has, subgrid, etc.)</a></li>
+      <li><a href="https://web.dev/learn/" target="_blank" rel="noopener noreferrer">Tendências web 2025: PWAs, WebAssembly, AI e mais</a></li>
+      <li><a href="https://www.zdnet.com/article/is-ai-the-end-of-programming/" target="_blank" rel="noopener noreferrer">Discussões sobre IA e futuro das linguagens tradicionais</a></li>
+    </ul>
+    <div class="proxima-aula" style="margin-top:12px; text-align:center;">
+      <a href="../treiner-016.html"><strong>Voltar Para Aula</strong></a>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>

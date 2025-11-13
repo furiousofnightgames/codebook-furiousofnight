@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade</title>
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f1a25;
+            color: #e6f7ff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffdd00;
+            margin-bottom: 16px;
+        }
+        h1 { text-align: center; margin-bottom: 24px; }
+        section {
+            background-color: #112233;
+            padding: 20px 24px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #0006;
+            margin-bottom: 24px;
+        }
+        section p {
+            margin-bottom: 16px;
+            line-height: 1.7;
+            color: #c8d6e5;
+        }
+        a { color: #00e1ff; text-decoration: none; font-weight: bold; }
+        a:hover { color: #fff700; text-decoration: underline; }
+        .roda-pe {
+            font-size: 0.9em;
+            color: #c8c8c8;
+            text-align: center;
+            margin: 24px 0 12px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        .roda-pe a { color: #ffdd00; font-weight: bold; }
+        .roda-pe a:hover { color: #ffffff; text-decoration: underline; }
+        .botao-voltar {
+            display: inline-block;
+            background-color: rgb(11, 65, 11);
+            color: #e6ff0a;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+        }
+        .botao-voltar:hover {
+            background-color: #00f7b9;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px #0004;
+        }
+        @media (max-width: 768px) { body { padding: 12px; } section { padding: 16px; } h1, h2, h3 { font-size: 1.2em; } section p { font-size: 0.95em; } }
+        @media (max-width: 480px) { h1, h2, h3 { font-size: 1em; } section { padding: 12px; } }
+    </style>
+</head>
+<body>
+
+    <h1>Política de Privacidade</h1>
+
+    <section>
+        <h2>1. Introdução</h2>
+        <p>
+            Este site é destinado apenas à visualização de conteúdos educativos. Respeitamos a privacidade de todos os usuários e não coletamos dados pessoais.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Uso do Site</h2>
+        <p>
+            Ao acessar o site, o usuário tem apenas permissão para visualizar conteúdos e clicar nos botões disponíveis para navegação entre aulas.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Segurança</h2>
+        <p>
+            Não armazenamos informações do usuário, e todas as funcionalidades são acessadas sem necessidade de cadastro ou fornecimento de dados.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Alterações</h2>
+        <p>
+            Esta política pode ser atualizada quando necessário. Recomendamos consultar esta página periodicamente para verificar alterações.
+        </p>
+    </section>
+
+    <a href="#" class="botao-voltar" id="voltar-aula">Voltar</a>
+
+    <div class="roda-pe">
+        &copy; 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    </div>
+
+<a id="voltar-aula" class="btn">Voltar para a última aula</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const botao = document.getElementById('voltar-aula');
+  if (!botao) return;
+
+  const ultima = sessionStorage.getItem('ultimaAula');
+  let href = "index.html"; // fallback
+
+  if (ultima) {
+    // Módulos 2, 3, 4, 5 → prefixo m2-, m3-, m4-, m5-
+    if (ultima.startsWith("m2-")) {
+      href = "modulo-2/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m3-")) {
+      href = "modulo-3/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m4-")) {
+      href = "modulo-4/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m5-")) {
+      href = "modulo-5/treiner-" + ultima + ".html";
+    } else {
+      // Qualquer outra aula → assume módulo 1 (raiz)
+      href = "treiner-" + ultima + ".html";
+    }
+  }
+
+  botao.href = href;
+});
+</script>
+
+</body>
+</html> 

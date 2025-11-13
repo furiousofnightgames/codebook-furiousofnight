@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Bordas Arredondadas com border-radius | Módulo 2 Aula 25</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar elementos com bordas arredondadas usando border-radius. Tutorial sobre cantos arredondados em CSS.">
+    <meta name="keywords" content="CODEBOOK, border-radius, bordas arredondadas, CSS moderno, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-025.html">
+    <meta property="og:title" content="CODEBOOK - Bordas Arredondadas em CSS">
+    <meta property="og:description" content="Aprenda a criar elementos com bordas arredondadas. Tutorial sobre border-radius e design moderno.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-025.html">
+    <meta property="twitter:title" content="CODEBOOK - Bordas Arredondadas em CSS">
+    <meta property="twitter:description" content="Domine o uso de border-radius com o CODEBOOK. Tutorial sobre cantos arredondados em CSS.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Bordas Arredondadas com border-radius | Módulo 2 Aula 25</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* CSS interno apenas para exemplos específicos */
+        div#exemplo-arredondado {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            background-color: cadetblue;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+        }
+
+        div#exemplo-circulo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: darkcyan;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5),
+                        inset -2px -2px 5px rgba(255,255,255,0.2);
+        }
+
+        div#exemplo-variado {
+            width: 250px;
+            height: 120px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: darkorange;
+            border-radius: 10px 30px 50px 70px;
+            text-align: center;
+            line-height: 120px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.4);
+        }
+    @media (max-width: 480px) {
+        div#exemplo-arredondado {
+            width: 90%;
+            height: 80px;
+            line-height: 80px;
+            font-size: 14px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        div#exemplo-circulo {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 12px;
+            margin: 15px auto;
+        }
+
+        div#exemplo-variado {
+            width: 90%;
+            height: 100px;
+            line-height: 100px;
+            font-size: 14px;
+            border-radius: 8px 20px 40px 50px;
+            margin: 15px auto;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-025')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-025')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+        <h1>📘 Aula 25 MD-2: Caixas com vértices arredondados 📘</h1>
+    </header>
+    <hr>
+    <nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#sintaxe">Sintaxe do border-radius</a></li>
+            <li><a href="#exemplos">Exemplos Práticos</a></li>
+            <li><a href="#dicas">Dicas Importantes</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#extra">Extra Bordas Decoradas</a></li>
+        </ul>
+    </strong>
+</nav>
+
+    <main>
+        <section id="introducao" class="explicacao">
+            <h2>📘 Introdução</h2>
+            <p class="destaque">
+                Nesta aula, vamos aprender sobre como arredondar os cantos de caixas e elementos em HTML usando CSS.  
+                A propriedade principal utilizada é <code>border-radius</code>. Ela é muito útil para deixar os layouts mais modernos, suaves e visualmente agradáveis.
+            </p>
+            <p class="destaque">
+                Podemos aplicar bordas arredondadas em <strong>divs, sections, articles, imagens, botões</strong> e praticamente qualquer elemento em bloco.
+            </p>
+        </section>
+<hr>
+        <section id="sintaxe" class="explicacao">
+            <h2>⚙️ Sintaxe do border-radius</h2>
+            <p class="destaque">
+                A forma mais simples de usar <code>border-radius</code> é definindo um valor único que se aplica a todos os cantos:
+            </p>
+            <pre>
+elemento {
+    border-radius: 20px;
+}</pre>
+            <p class="destaque">
+                Também podemos definir valores individuais para cada canto, na ordem:
+            </p>
+            <pre>
+elemento {
+    border-radius: topo-esquerdo topo-direito 
+                   baixo-direito baixo-esquerdo;
+}
+            </pre>
+            <p class="destaque">
+                Exemplos de valores individuais:
+            </p>
+            <ul>
+                <li><p class="destaque"><code>10px 20px 30px 40px</code> → Cantos com arredondamentos diferentes</p></li>
+                <li><p class="destaque"><code>50%</code> → Torna elementos quadrados em círculos perfeitos</p></li>
+            </ul>
+        </section>
+<hr>
+        <section id="exemplos" class="explicacao">
+            <h2>🎨 Exemplos Práticos</h2>
+
+            <p><strong>1️⃣ Caixa arredondada padrão:</strong></p>
+            <div id="exemplo-arredondado">Caixa</div>
+            <pre>
+div#exemplo-arredondado {
+    width: 200px;
+    height: 100px;
+    background-color: cadetblue;
+    border-radius: 20px;
+}
+            </pre>
+<hr>
+            <p><strong>2️⃣ Caixa circular:</strong></p>
+            <div id="exemplo-circulo">Lua</div>
+            <pre>
+div#exemplo-circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: darkcyan;
+}
+            </pre>
+<hr>
+            <p><strong>3️⃣ Vértices diferentes:</strong></p>
+            <div id="exemplo-variado">Vértices</div>
+            <pre>
+div#exemplo-variado {
+    width: 250px;
+    height: 120px;
+    border-radius: 10px 30px 50px 70px;
+    background-color: darkorange;
+}
+            </pre>
+        </section>
+<hr>
+        <section id="dicas" class="explicacao">
+            <h2>💡 Dicas Importantes</h2>
+            <p class="destaque">
+                - Use <code>border-radius</code> em imagens para criar avatares ou botões arredondados.  
+                - Experimente porcentagens para formas circulares ou elípticas.  
+                - Combine com <code>box-shadow</code> para dar profundidade às caixas.  
+                - Lembre-se de que <code>border-radius</code> funciona melhor em elementos com dimensões definidas.
+            </p>
+        </section>
+
+        <section id="conclusao" class="explicacao">
+            <h2>🧠 Conclusão</h2>
+            <p class="destaque">
+                O <code>border-radius</code> é uma ferramenta poderosa e simples para deixar seus layouts mais suaves e modernos.  
+                Com ele, você pode criar desde cantos levemente arredondados até círculos perfeitos e formas complexas combinadas com sombras e cores.
+            </p>
+        </section>
+    <hr>
+    <section id="extra" class="explicacao">
+    <h2>Extra: Bordas Decoradas</h2>
+    <p class="destaque">
+        Nesta seção você verá um exemplo prático de como aplicar bordas decoradas usando a propriedade <code>border-image</code> em seus títulos e elementos. O vídeo abaixo demonstra o passo a passo da técnica e suas possibilidades criativas.
+    </p>
+    <p class="destaque"><em>Dica:</em> Experimente variar a imagem da borda e os valores de <code>border-image-slice</code> para obter efeitos únicos em seu layout.</p>
+    <div class="video-iframe">
+        <iframe src="https://www.youtube.com/embed/n0rjAs_Im4w"
+            title="Aula prática - curso em vídeo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="link-bloco"><p>Ferramenta usada: <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener noreferrer">GIMP Download</a></p></div>
+</section>
+
+</main>
+
+<hr>
+<nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-024.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-026.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/PGIrTzQqpqo?si=dTNegiUyITYhg3Hv" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-025')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>

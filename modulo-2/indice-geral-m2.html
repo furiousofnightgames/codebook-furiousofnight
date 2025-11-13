@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Índice geral do Módulo 2 do curso CODEBOOK. Lista completa de aulas sobre HTML5 e CSS3 avançado, incluindo cores, tipografia, design responsivo e projetos práticos.">
+    <meta name="keywords" content="HTML5, CSS3, web design, desenvolvimento web, índice de aulas, CODEBOOK, front-end">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/indice-geral-m2.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/indice-geral-m2.html">
+    <meta property="og:title" content="Índice Geral Módulo 2 | CODEBOOK">
+    <meta property="og:description" content="Índice geral do Módulo 2 do curso CODEBOOK. Lista completa de aulas sobre HTML5 e CSS3 avançado, incluindo cores, tipografia, design responsivo e projetos práticos.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/indice-geral-m2.html">
+    <meta property="twitter:title" content="Índice Geral Módulo 2 | CODEBOOK">
+    <meta property="twitter:description" content="Índice geral do Módulo 2 do curso CODEBOOK. Lista completa de aulas sobre HTML5 e CSS3 avançado, incluindo cores, tipografia, design responsivo e projetos práticos.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Índice Geral Módulo 2 | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <!-- Estilos CSS embutidos para o índice geral -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f1a25;
+            color: #e6f7ff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #ffdd00;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        ol.indice {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        ol.indice li {
+            background-color: #112233;
+            margin-bottom: 12px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0006;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        ol.indice li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px #0008;
+        }
+
+        ol.indice li h2 {
+            margin: 0 0 6px;
+            font-size: 1.1em;
+            color: #00ff99;
+        }
+
+        ol.indice li p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #c8d6e5;
+        }
+
+        ol.indice li a {
+            color: #ffdd00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ol.indice li a:hover {
+            color: #fff700;
+            text-decoration: underline;
+        }
+    /* Estilos para a sublista do desafio */
+    .sublista-desafio {
+        display: none;
+        margin: 15px 0;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        list-style-type: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sublista-desafio.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-toggle-desafio {
+        background: linear-gradient(135deg, #00ccff33, #00ff9933);
+        border: 1px solid #00ff9955;
+        color: #00ff99;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .btn-toggle-desafio:hover {
+        background: linear-gradient(135deg, #00ccff55, #00ff9955);
+        transform: translateY(-2px);
+    }
+
+    .sublista-desafio li {
+        background: rgba(0, 0, 0, 0.3);
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+
+    .sublista-desafio .intro-desafio {
+        border-left: 3px solid #00ff99;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Responsividade apenas para a sublista */
+    @media (max-width: 768px) {
+        .sublista-desafio {
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .sublista-desafio li {
+            padding: 8px;
+            margin: 6px 0;
+            font-size: 0.85em;
+        }
+
+        .sublista-desafio .intro-desafio {
+            padding-left: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sublista-desafio {
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .sublista-desafio li {
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 0.8em;
+        }
+
+        .sublista-desafio .intro-desafio {
+            padding-left: 10px;
+            margin-bottom: 10px;
+            border-left-width: 2px;
+        }
+
+        .btn-toggle-desafio {
+            padding: 6px 12px;
+            font-size: 0.85em;
+        }
+    }
+
+    /* Links dentro do parágrafo do rodapé */
+        .roda-pe p {
+    font-size: 0.9em;
+    color: #c8c8c8;
+    text-align: center;
+    margin: 6px 0;
+    line-height: 1.4;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+    .roda-pe p a {
+        color: #ffdd00;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .roda-pe p a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            ol.indice li { padding: 10px 12px; }
+            ol.indice li h2 { font-size: 1em; }
+            ol.indice li p { font-size: 0.9em; }
+        }
+
+        @media (max-width: 480px) {
+            ol.indice li { padding: 8px 10px; }
+            ol.indice li h2 { font-size: 0.95em; }
+            ol.indice li p { font-size: 0.85em; }
+        }
+        .modulos-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0 40px 0;
+}
+
+.btn-modulo {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #00ff99, #00ccff);
+    color: #0f1a25;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #0005;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+}
+
+.btn-modulo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px #0007;
+    background: linear-gradient(135deg, #00ccff, #00ff99);
+}
+    </style>
+</head>
+<body>
+    <h1>Módulo 2: Introdução ao HTML5 & CSS3</h1>
+    <h2>Restante dos módulos no fim da página!</h2>
+    <ol class="indice">
+        <li>
+            <h2>Psicologia das Cores</h2>
+            <p>Psicologia das Cores Guia Completo</p><a href="treiner-m2-001.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Representando Cores com CSS3</h2>
+            <p>Como Representar as Cores</p> 
+            <a href="treiner-m2-002.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Harmonia de cores</h2>
+            <p>Harmonia das Cores: Teoria e Prática</p>
+            <a href="treiner-m2-003.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Paleta de Cores</h2>
+            <p>Como Criar uma Paleta de Cores</p>
+            <a href="treiner-m2-004.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Capturando Cores da Tela</h2>
+            <p>Como Capturar Cores da Tela</p>
+            <a href="treiner-m2-005.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Degradê com CSS3</h2>
+            <p>Como Criar Degradê com CSS3</p> 
+            <a href="treiner-m2-006.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Criando um Exemplo Real de Site</h2>
+            <p>Como Criar um Exemplo Real de Site</p>
+            <a href="treiner-m2-007.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Estudo básico e teórico de Tipografia</h2>
+            <p>Primeiros Passos na Tipografia</p>
+            <a href="treiner-m2-008.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Anatomia do Tipo</h2>
+            <p>Estudo da Anatomia do Tipo</p>
+            <a href="treiner-m2-009.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Trabalhando com Fontes em CSS</h2>
+            <p>Trabalhando com Fontes & Combinações de Fontes em CSS</p>
+            <a href="treiner-m2-010.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Tamanho de Fonte e Medida em CSS</h2>
+            <p>Como Trabalhar com Tamanhos de Fonte e Medidas em CSS</p> <a href="treiner-m2-011.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Peso, Estilo, Decoração & Shorthand Font em CSS</h2>
+            <p>Como Trabalhar com Peso, Estilo, Decoração e Shorthand Font em CSS</p> <a href="treiner-m2-012.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Usando Google Fonts</h2>
+            <p>Como Usar Google Fonts em Seus Projetos</p>
+            <a href="treiner-m2-013.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Usando Fontes Externas Personalizadas</h2>
+            <p>Como Usar Fontes Externas Personalizadas em Seus Projetos</p>
+            <a href="treiner-m2-014.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Capturando fontes usadas em sites</h2>
+            <p>Como Capturar fontes usadas em sites</p>
+            <a href="treiner-m2-015.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Detectando fontes dentro de imagens</h2>
+            <p>Como Detectar fontes dentro de uma imagem</p>
+            <a href="treiner-m2-016.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Alinhamento de textos com CSS</h2>
+            <p>Como fazer alinhamento de textos com CSS</p>
+            <a href="treiner-m2-017.html">Ver Aula</a>
+        </li>
+        <li>
+            <h2>Usando o ID com CSS</h2>
+            <p>Como usar ID no CSS Corretamente</p>
+            <a href="treiner-m2-018.html"><strong>Ver Aula</strong></a><a href=""></a>
+        </li>
+        <li>
+            <h2>Diferenças Entre ID e CLASS</h2>
+            <p>Quais as diferenças entre ID & CLASS no CSS</p>
+            <a href="treiner-m2-019.html">Ver Aula</a>
+        </li>
+        <li>
+            <h2>Pseudo-classes em CSS</h2>
+            <p>Usando Pseudo-classes em CSS</p>
+            <a href="treiner-m2-020.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Pseudo-elementos em CSS</h2>
+            <p>Usando Pseudo-elementos em CSS</p>
+            <a href="treiner-m2-021.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Modelo de Caixas: primeiros passos</h2>
+            <p>Criando Caixas Box-Model, Block-Level & Inline-Level, Com aprendizado prático em video.</p>
+            <p></p>
+            <a href="treiner-m2-022.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Grouping Tags em HTML5</h2>
+            <p>Aprendendo sobre tags de agrupamento, Exemplos práticos e explicações detalhadas.</p>
+            <a href="treiner-m2-023.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Sombra nas Caixas (box-shadow)</h2>
+            <p>Aprenda a aplicar sombras em caixas HTML usando CSS com efeitos variados.</p>
+            <a href="treiner-m2-024.html"><strong>Ver Aula</strong></a>
+        </li>
+        <li>
+            <h2>Aula 25: Caixas com vértices arredondados</h2>
+            <p>Aprendemos a usar <code>border-radius</code> para arredondar cantos e criar círculos.</p>
+            <a href="treiner-m2-025.html">Ver aula</a>
+        </li>
+        <li>
+            <h2>Aula 26: Criando um Projeto a Partir do Zero</h2>
+            <p>Desafio criando um site do zero com muita experiência prática</p>
+            <a href="treiner-m2-026.html">Ver Aula</a>
+            <button class="btn-toggle-desafio" onclick="toggleDesafio()">Ver Passos do Desafio</button>
+            <ul class="sublista-desafio" id="sublistaDesafio">
+                <li class="intro-desafio">
+                    <h3>Introdução ao Desafio</h3>
+                    <p>Neste desafio, você irá criar um site completo do zero, aplicando todos os conceitos aprendidos até agora. Siga os passos abaixo para uma construção progressiva e organizada.</p>
+                    <a href="passos-desafio/introducao-desafio.html">Ver Introdução</a>
+                </li>
+                <li><a href="passos-desafio/passo-1.html">Passo 1: Preparação do Ambiente</a></li>
+                <li><a href="passos-desafio/passo-2.html">Passo 2: Estrutura Básica HTML</a></li>
+                <li><a href="passos-desafio/passo-3.html">Passo 3: Cabeçalho e Navegação</a></li>
+                <li><a href="passos-desafio/passo-4.html">Passo 4: Conteúdo Principal</a></li>
+                <li><a href="passos-desafio/passo-5.html">Passo 5: Estilização Inicial</a></li>
+                <li><a href="passos-desafio/passo-6.html">Passo 6: Cores e Fontes</a></li>
+                <li><a href="passos-desafio/passo-7.html">Passo 7: Layout e Posicionamento</a></li>
+                <li><a href="passos-desafio/passo-8.html">Passo 8: Imagens e Mídia</a></li>
+                <li><a href="passos-desafio/passo-9.html">Passo 9: Responsividade</a></li>
+                <li><a href="passos-desafio/passo-10.html">Passo 10: Efeitos e Animações</a></li>
+                <li><a href="passos-desafio/passo-11.html">Passo 11: Otimização</a></li>
+                <li><a href="passos-desafio/passo-12.html">Passo 12: Finalização</a></li>
+            </ul>
+        </li>
+
+    </ol>
+    <hr>
+    <h2>Fim Do Modulo 2</h2>
+    <div class="modulos-botoes">
+    <a href="../indice-geral.html" class="btn-modulo">Ir Módulo 1</a>
+    <a href="../modulo-3/apresentacao.html" class="btn-modulo">Ir Módulo 3</a>
+    <a href="modulo-4/apresentacao-m4.html" class="btn-modulo">Ir Módulo 4</a>
+    <a href="modulo-5/apresentacao-m5.html" class="btn-modulo">Ir Módulo 5</a>
+</div>
+
+<script>
+    function toggleDesafio() {
+        const sublista = document.getElementById('sublistaDesafio');
+        sublista.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

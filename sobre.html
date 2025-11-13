@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBook FuriousOfNight - Sobre</title>
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #f0f0f0;
+    }
+
+    .sobre-section {
+        padding: 60px 20px;
+        background-color: #1a1a1a;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre-titulo {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ffff;
+    }
+
+    .sobre-subtitulo {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #9fe8ff;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        max-width: 800px; 
+    }
+
+    .sobre-lista {
+        margin-top: 20px;
+        padding-left: 0;
+        list-style-position: inside;
+        color: #00ffff;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    .cta-container {
+        margin-top: 30px;
+    }
+
+    .cta-button {
+    padding: 12px 25px;
+    background-color: #e6ff03;
+    color: #0e19af;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+    margin: 8px 6px;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+
+@media (max-width: 600px) {
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .cta-button {
+        min-width: 70vw;
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+}
+    .cta-button:hover {
+        background-color: #d4e600;
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre-section">
+        <div class="container">
+
+            <!-- Título principal -->
+            <h2 class="sobre-titulo" >CodeBook FuriousOfNight</h2>
+
+            <!-- Subtítulo -->
+            <p class="sobre-subtitulo">
+                Uma iniciativa para aprender e praticar HTML5 e CSS3 de forma estruturada e prática.
+            </p>
+
+            <!-- Parágrafos explicativos -->
+            <p class="sobre-paragrafo">
+                Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em HTML5 e CSS3, permitindo a criação de páginas web modernas, semânticas e responsivas.
+            </p>
+            <p class="sobre-paragrafo">
+                Ao longo do estudo, são exploradas boas práticas de estruturação de conteúdo, utilização de tags semânticas, estilização avançada com CSS3 e técnicas de layout adaptativo.
+            </p>
+            <p class="sobre-paragrafo">
+                O foco é oferecer uma base sólida para projetos futuros, garantindo que o aprendizado seja aplicável em situações reais de desenvolvimento web.
+            </p>
+
+            <!-- Lista de objetivos -->
+            <ul class="sobre-lista">
+                <li>Dominar a estrutura semântica de páginas HTML5.</li>
+                <li>Aplicar estilos e layouts responsivos com CSS3.</li>
+                <li>Explorar cores, tipografia e efeitos visuais modernos.</li>
+                <li>Praticar boas práticas de desenvolvimento web.</li>
+                <li>Preparar projetos para aplicações reais.</li>
+            </ul>
+
+           <!-- Botões de call-to-action -->
+<div class="cta-container">
+    <a href="indice-geral.html" class="cta-button">
+        Ir Índice de Aulas
+    </a>
+    <a href="#" id="voltar-aula" class="cta-button">
+        Voltar para Aula
+    </a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const botao = document.getElementById('voltar-aula');
+  if (!botao) return;
+
+  const ultima = sessionStorage.getItem('ultimaAula');
+  let href = "index.html"; // fallback
+
+  if (ultima) {
+    // Módulos 2, 3, 4, 5 → prefixo m2-, m3-, m4-, m5-
+    if (ultima.startsWith("m2-")) {
+      href = "modulo-2/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m3-")) {
+      href = "modulo-3/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m4-")) {
+      href = "modulo-4/treiner-" + ultima + ".html";
+    } else if (ultima.startsWith("m5-")) {
+      href = "modulo-5/treiner-" + ultima + ".html";
+    } else {
+      // Qualquer outra aula → assume módulo 1 (raiz)
+      href = "treiner-" + ultima + ".html";
+    }
+  }
+
+  botao.href = href;
+});
+</script>
+
+</body>
+</html>

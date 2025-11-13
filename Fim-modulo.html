@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fim do Módulo 1 - HTML5 e CSS3</title>
+<link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+<style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body flexível para rodapé sempre no fim */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteúdo principal cresce para empurrar rodapé */
+main, section {
+    flex: 1;
+}
+
+/* Cabeçalhos */
+h1 {
+    font-size: 3rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffdd00;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 12px auto;
+    line-height: 1.6;
+}
+
+em {
+    color: #43ff14;
+    font-style: normal;
+}
+
+/* Linha de separação */
+hr {
+    border: none;
+    height: 2px;
+    width: 80%;
+    max-width: 800px;
+    background: linear-gradient(90deg, #00ffff, #ffdd00, #43ff14);
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ffdd00;
+    transition: all 0.3s ease;
+}
+
+hr:hover {
+    height: 4px;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #ffdd00, 0 0 45px #43ff14;
+}
+
+/* Vídeo responsivo */
+.video-wrapper {
+    width: 55vw;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ffdd00, 0 0 60px #43ff14;
+    border: 3px solid #00ffff;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Botões estilo cyberpunk */
+.btn, .proxima-aula a {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #ffe815;
+    color: #033144;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 10px 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap; /* evita quebra de linha */
+}
+
+/* Hover */
+.btn:hover, .proxima-aula a:hover {
+    background-color: #43ff14;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #43ff14, 0 0 20px #ffdd00, 0 0 30px #00ffff;
+}
+
+/* Responsividade dos botões */
+@media (max-width: 768px) {
+    .btn, .proxima-aula a {
+        padding: 9px 17px; /* reduz ~30% */
+        font-size: 0.7rem; /* reduz o texto proporcionalmente */
+    }
+    .video-wrapper { max-width: 90%; width: 90vw; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .btn, .proxima-aula a {
+        padding: 8px 14px; /* menor para celular */
+        font-size: 0.65rem; /* texto proporcional */
+    }
+    .video-wrapper { max-width: 95%; width: 95vw; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+    p { font-size: 0.95rem; }
+}
+
+/* Créditos */
+.creditos {
+    max-width: 700px;
+    margin: 10px auto 5px auto;
+    text-align: center;
+}
+
+.creditos h2, .creditos h3 {
+    color: #00ffff;
+    margin-bottom: 5px;
+}
+
+.creditos a {
+    color: #ffdd00;
+    text-decoration: underline;
+}
+
+/* Rodapé compacto */
+footer.roda-pe {
+    margin: 0px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Centralização */
+.centralizado { text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="centralizado">
+    <h1>Parabéns! Você concluiu o Módulo 1</h1>
+</header>
+
+<hr>
+
+<section class="explicacao">
+    <p>Você completou seu primeiro módulo de <strong>HTML5 e CSS3</strong>. Cada passo que você dá é uma conquista importante!</p>
+    <p><em>"Aprender é o começo da riqueza, e perseverar é o caminho para o sucesso."</em></p>
+</section>
+
+<section>
+    <h2 class="centralizado">Vídeo Fim do Módulo 1</h2>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/xYLizixflv4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="explicacao">
+    <p>Continue praticando e se dedicando! O próximo módulo vai consolidar ainda mais seus conhecimentos.</p>
+</section>
+
+<hr>
+
+<div class="proxima-aula centralizado">
+    <a href="treiner-027.html">⬅ <strong>Anterior</strong></a> |
+    <a href="modulo-2/apresentacao-m2.html"><strong>Ir Módulo 2</strong> ➡</a>
+</div>
+
+<hr>
+
+<div class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>
+        Curso recomendado: 
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+</div>
+
+<hr>
+
+<footer class="roda-pe">
+    <p>© 2025 CodeBook FuriousOfNight. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

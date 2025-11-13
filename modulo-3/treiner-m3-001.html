@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda o que são Git e GitHub, ferramentas essenciais para controle de versão e colaboração em projetos de desenvolvimento web.">
+    <meta name="keywords" content="Git, GitHub, controle de versão, desenvolvimento web, CODEBOOK, colaboração, programação">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-001.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-001.html">
+    <meta property="og:title" content="O que é Git e GitHub? | CODEBOOK">
+    <meta property="og:description" content="Aprenda o que são Git e GitHub, ferramentas essenciais para controle de versão e colaboração em projetos de desenvolvimento web.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-001.html">
+    <meta property="twitter:title" content="O que é Git e GitHub? | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda o que são Git e GitHub, ferramentas essenciais para controle de versão e colaboração em projetos de desenvolvimento web.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>O que é Git e GitHub? | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-001')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-001')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+        <h1>📘 Aula 1 MD-3: O que é Git e GitHub? 📘</h1>
+        <hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#git">Por que usar Git?</a></li>
+                    <li><a href="#github">Por que usar GitHub?</a></li>
+                    <li> <a href="#conceitos">Conceitos básicos</a></li>
+                    <li> <a href="#instalacao">Instalação</a></li>
+                    <li><a href="#exemplo">Exemplo prático de uso</a></li>
+                    <li> <a href="#resumo">Resumo Geral</a></li>
+                </ul>
+            </strong>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section class="explicacao" id="introducao">
+            <h2>Introdução</h2>
+            <p class="destaque">
+                Git é um sistema de controle de versão, que permite acompanhar todas as alterações feitas em um projeto, 
+                registrando o histórico de mudanças. Já o GitHub é uma plataforma online que hospeda repositórios Git, 
+                possibilitando colaboração, compartilhamento e gerenciamento de projetos com equipes ou individualmente.
+            </p>
+        </section>
+<hr>
+        <section class="explicacao" id="git">
+            <h2>Por que usar Git?</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Rastrear todas as alterações do seu projeto.</p>
+                </li>
+                <li>
+                    <p class="destaque">Reverter mudanças ou recuperar versões anteriores.</p>
+                </li>
+                <li>
+                    <p class="destaque">Trabalhar em equipe sem perder informações.</p>
+                </li>
+                <li>
+                    <p class="destaque">Evitar conflitos ao editar arquivos simultaneamente.</p>
+                </li>
+                <li>
+                    <p class="destaque">Manter um histórico seguro e organizado do desenvolvimento.</p>
+                </li>
+            </ul>
+        </section>
+<hr>
+        <section class="explicacao" id="github">
+            <h2>Por que usar GitHub?</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Hospedar repositórios de projetos na nuvem.</p>
+                </li>
+                <li>
+                    <p class="destaque">Compartilhar seu trabalho com outros desenvolvedores.</p>
+                </li>
+                <li>
+                    <p class="destaque">Colaborar com equipes usando recursos de branch, pull request e merge.</p>
+                </li>
+                <li>
+                    <p class="destaque">Acompanhar issues, bugs e tarefas de desenvolvimento.</p>
+                </li>
+                <li>
+                    <p class="destaque">Portfólio público: mostrar projetos para recrutadores ou clientes.</p>
+                </li>
+            </ul>
+        </section>
+<hr>
+        <section class="explicacao" id="conceitos">
+            <h2>Conceitos básicos</h2>
+            <p class="destaque">
+                Para começar a usar Git e GitHub, é importante conhecer alguns conceitos fundamentais:
+            </p>
+            <ul>
+                <li>
+                    <p class="destaque"><strong>Repositório (Repository):</strong> local onde os arquivos do projeto são armazenados e versionados.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Commit:</strong> registro de alterações no repositório.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Branch:</strong> ramificação do projeto para desenvolver funcionalidades separadamente.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Merge:</strong> processo de unir alterações de diferentes branches.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Clone:</strong> copiar um repositório remoto para o seu computador.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Pull e Push:</strong> puxar (download) e enviar (upload) alterações entre repositório local e remoto.</p>
+                </li>
+            </ul>
+        </section>
+<hr>
+        
+        <section class="explicacao" id="instalacao">
+            <h2>Instalando Git e GitHub no PC</h2>
+            <p class="destaque">
+                Para começar a usar Git e GitHub no seu computador, é necessário instalar tanto o Git quanto o GitHub Desktop.
+                O Git é o sistema de controle de versão e repositório local que registra alterações no seu projeto, enquanto o GitHub Desktop facilita a 
+                interface com o GitHub, permitindo gerenciar repositórios remotamente de forma gráfica.
+            </p>
+            <h3>Recursos e links úteis</h3>
+            <div class="link-bloco">
+                <ol>
+                    <li>
+                        <p><strong>Instalar o Git:</strong> Acesse o site oficial e baixe a versão adequada para o seu sistema operacional.</p>
+                        <a href="https://git-scm.com/install/" target="_blank" rel="noopener noreferrer">Download Git</a>
+                    </li>
+                    <li>
+                        <p><strong>Instalar o GitHub Desktop:</strong> Esta aplicação gráfica ajuda a gerenciar seus repositórios no GitHub de forma mais intuitiva.</p>
+                        <a href="https://desktop.github.com/download/" target="_blank" rel="noopener noreferrer">GitHub Desktop 64bits</a>
+                    </li>
+                    <li>
+                        <p>Vídeo tutorial mostrando a instalação passo a passo do Git e GitHub Desktop.</p>
+                        <a href="https://youtu.be/NgWExh3bswg" target="_blank" rel="noopener noreferrer"> Video Tutorial</a>
+                    </li>
+                    <li>
+                        <p>Vídeo tutorial Gerenciando Repositórios GitHub passo a passo no GitHub Desktop.</p>
+                        <a href="https://youtu.be/P0Hvrf8T3zo" target="_blank" rel="noopener noreferrer"> Video Tutorial</a>
+                    </li>
+                    <li>
+                        <p>Vídeo tutorial mostrando como criar repositórios passo a passo no GitHub Desktop.</p>
+                        <a href="https://youtu.be/P0Hvrf8T3zo" target="_blank" rel="noopener noreferrer"> Video Tutorial</a>
+                    </li>
+                    <li>
+                        <p>Tutorial Interativo GitBranch.</p><a href="https://learngitbranching.js.org/" target="_blank" rel="external noopener noreferrer">Aprenda Git de forma interativa</a>
+                    </li>
+                </ol>
+            </div>
+            <p class="destaque">
+                Agora seu ambiente está pronto para criar repositórios, fazer commits e sincronizar com o GitHub.
+            </p>
+        </section>
+<hr>
+        <section class="explicacao" id="exemplo">
+            <h2>Exemplo prático de uso</h2>
+            <p class="destaque">Imagine que você está desenvolvendo um site:</p>
+            <ol>
+                <li>
+                    <p class="destaque">Cria um repositório local com <code>git init</code>.</p>
+                </li>
+                <li>
+                    <p class="destaque">Adiciona arquivos ao repositório com <code>git add .</code>.</p>
+                </li>
+                <li>
+                    <p class="destaque">Registra as alterações com <code>git commit -m "Mensagem do commit"</code>.</p>
+                </li>
+                <li>
+                    <p class="destaque">Conecta o repositório local ao GitHub com <code>git remote add origin URL_DO_REPOSITORIO</code>.</p>
+                </li>
+                <li>
+                    <p class="destaque">Envia as alterações para o GitHub com <code>git push -u origin main</code>.</p>
+                </li>
+            </ol>
+            <p class="destaque">Com esses passos, você mantém seu projeto seguro, versionado e pronto para colaboração.</p>
+        </section>
+<hr>
+        <section class="explicacao" id="resumo">
+            <h2>Resumo</h2>
+            <p class="destaque">
+                Git e GitHub são ferramentas essenciais para qualquer desenvolvedor moderno.  
+                Elas garantem controle de versões, organização, colaboração e segurança nos projetos.  
+                Aprender a usar essas ferramentas desde o início do Módulo 3 permitirá que você desenvolva projetos 
+                de forma eficiente e profissional.
+            </p>
+        </section>
+    <nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br> 
+    <a href="treiner-m3-002.html"><strong>Próxima Aula</strong> ➡</a>
+    </strong>
+</p>
+</nav>
+</main>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima → 
+    <a href="https://youtu.be/GDGMf2bnHlE?si=SllVf6EQvnXdnU1h" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+    <hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m3-001')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

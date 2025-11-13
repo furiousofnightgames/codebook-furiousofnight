@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Aprenda HTML5 e CSS3 | Curso Completo de Desenvolvimento Web</title>
+    <meta name="description" content="CODEBOOK: Sua plataforma completa para aprender desenvolvimento web. Domine HTML5 e CSS3 com exemplos práticos e projetos reais. Curso gratuito e completo.">
+    <meta name="keywords" content="CODEBOOK, curso HTML5, curso CSS3, desenvolvimento web, programação web, aprender HTML, aprender CSS">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/">
+    <meta property="og:title" content="CODEBOOK - Plataforma de Ensino de HTML5 e CSS3">
+    <meta property="og:description" content="CODEBOOK: Aprenda desenvolvimento web do zero. Curso completo de HTML5 e CSS3 com projetos práticos e exemplos reais.">
+    <meta property="og:image" content="imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/">
+    <meta property="twitter:title" content="CODEBOOK - Aprenda HTML5 e CSS3">
+    <meta property="twitter:description" content="CODEBOOK: A melhor plataforma para aprender desenvolvimento web. Curso completo e gratuito de HTML5 e CSS3.">
+    <meta property="twitter:image" content="imagens/logo-sitebook.ico">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="apple-touch-icon" href="imagens/logo-sitebook.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/">
+
+    <!-- CSS interno -->
+    <style>
+        /* Texto estático em ciano para o botão */
+        .static-cyan {
+            color: #00fff7 !important;
+            text-shadow: none !important;
+            animation: none !important;
+        }
+        /* Reset básico para remover margens e paddings padrões e garantir consistência */
+        * {
+            margin: 0; /* Remove margem padrão de todos os elementos */
+            padding: 0; /* Remove padding padrão de todos os elementos */
+            box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão moderna */
+        }
+
+        /* Estilização do corpo da página */
+        body {
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* Fundo com gradiente escuro */
+            color: #f1f1f1; /* Cor do texto principal */
+            display: flex; /* Usa flexbox para centralizar conteúdo */
+            flex-direction: column; /* Organiza em coluna */
+            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; /* Centraliza verticalmente */
+            height: 100vh; /* Ocupa toda a altura da tela */
+            text-align: center; /* Centraliza texto */
+        }
+
+        /* Logo no cabeçalho */
+        header img {
+            width: 300px; /* Largura fixa do logo */
+            height: auto; /* Mantém proporção */
+            margin-bottom: 20px; /* Espaço abaixo do logo */
+        }
+
+
+        /* Animação de pulsação neon cyberpunk */
+        @keyframes neon-pulse {
+            0%, 100% {
+                text-shadow:
+                    0 0 2px #ff00ea,
+                    0 0 4px #00fff7,
+                    0 0 8px #ff00ea,
+                    0 0 12px #00fff7;
+                color: #ff00ea;
+            }
+            50% {
+                text-shadow:
+                    0 0 4px #00fff7,
+                    0 0 8px #ff00ea,
+                    0 0 16px #00fff7,
+                    0 0 20px #ff00ea;
+                color: #00fff7;
+            }
+        }
+
+        /* Título principal com efeito neon cyberpunk pulsante */
+        h1 {
+            font-size: 2.1rem; /* Tamanho grande para destaque */
+            color: #ff00ea; /* Cor base neon rosa */
+            text-shadow:
+                0 0 2px #ff00ea,
+                0 0 4px #00fff7,
+                0 0 8px #ff00ea,
+                0 0 12px #00fff7;
+            margin-bottom: 10px; /* Espaço abaixo do título */
+            animation: neon-pulse 3s infinite alternate; /* Animação pulsante mais lenta */
+            letter-spacing: 2px;
+        }
+
+        /* Subtítulo */
+        h2 {
+            font-size: 1.2rem; /* Tamanho menor */
+            color: #888; /* Cinza suave */
+            margin-bottom: 50px; /* Espaço abaixo do subtítulo */
+        }
+
+
+        /* Botão de entrada nas aulas com efeito neon cyberpunk pulsante */
+        a.button {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff00ea 0%, #00fff7 100%); /* Degradê neon */
+            color: #0f0f0f;
+            box-shadow:
+                0 0 2px #ff00ea,
+                0 0 4px #00fff7,
+                0 0 8px #ff00ea;
+            transition: all 0.3s ease-in-out;
+            animation: neon-pulse 3s infinite alternate; /* Igual ao título */
+            border: 2px solid #ff00ea;
+            letter-spacing: 1px;
+        }
+
+        /* Texto estático em ciano para o botão */
+        .static-cyan {
+            color: #00fff7 !important;
+            text-shadow: none !important;
+            animation: none !important;
+            font-weight: bold;
+        }
+
+        a.button:hover {
+            background: linear-gradient(90deg, #00fff7 0%, #ff00ea 100%);
+            color: #ff00ea;
+            box-shadow:
+                0 0 4px #00fff7,
+                0 0 8px #ff00ea,
+                0 0 16px #00fff7;
+            border: 2px solid #00fff7;
+        }
+
+        /* Rodapé fixado na parte inferior */
+        /* Rodapé fixado na parte inferior */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #f8f8f8;
+    padding: 20px;
+    margin-top: 50px;
+    background: linear-gradient(to top, rgba(15, 15, 15, 1), rgba(15, 15, 15, 0));
+}
+
+/* Rodapé responsivo para telas menores */
+@media (max-width: 768px) {
+    footer {
+        padding: 8px 5px;      /* menos espaço interno */
+        font-size: 0.75rem;    /* fonte menor */
+        margin-top: 20px;      /* reduz a distância do conteúdo acima */
+    }
+
+    .roda-pe p {
+        font-size: 0.75em;     /* texto menor */
+        margin: 2px 0;         /* menos margem vertical */
+        line-height: 1.2;      /* menos espaçamento entre linhas */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>SEU TUTORIAL EM SUAS MÃOS</h1>
+    <header>
+        <!-- Substitua pelo logo oficial -->
+        <img src="imagens/logo-sitebook.png" alt="Logo CODEBOOK FuriousOfNight">
+        <h1>CODEBOOK FuriousOfNight</h1>
+        <h2>Seu guia de aprendizado em desenvolvimento <br> HTML5 & CSS3
+
+        </h2>
+    </header>
+
+<!-- Botão para entrar nas aulas -->
+        <!-- Botão para entrar nas aulas -->
+    <div style="margin-bottom: 37px;">
+        <a href="indice-geral.html" class="button">
+            <img src="imagens/logo-sitebook.ico" alt="Ícone Livro" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 8px;">
+            <span class="static-cyan">Entrar nas Aulas</span>
+            <img src="imagens/logo-sitebook.ico" alt="Ícone Livro" style="width: 22px; height: 22px; vertical-align: middle; margin-left: 8px;">
+        </a>
+    </div>
+
+    <footer>
+        <div class="roda-pe">
+            <p>© 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" style="color: aqua;"><strong>Política de Privacidade</strong></a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Representando Cores em CSS3 | Módulo 2 Aula 2</title>
+    <meta name="description" content="CODEBOOK: Aprenda todos os métodos de representação de cores em CSS3. Explore RGB, RGBA, Hexadecimal, HSL e nomes de cores.">
+    <meta name="keywords" content="CODEBOOK, cores CSS3, RGB, RGBA, hexadecimal, HSL, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-002.html">
+    <meta property="og:title" content="CODEBOOK - Cores em CSS3">
+    <meta property="og:description" content="Domine todos os métodos de representação de cores em CSS3. Tutorial completo sobre sistemas de cores.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-002.html">
+    <meta property="twitter:title" content="CODEBOOK - Sistemas de Cores">
+    <meta property="twitter:description" content="Aprenda RGB, RGBA, Hexadecimal e HSL em CSS3. Tutorial prático sobre cores no desenvolvimento web.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-002.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-002')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-002')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>📘 Aula 2 MD-2: Representando Cores 📘</h1>
+    <hr>
+
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <strong>
+            <ul>
+            <li>
+                <a href="#fundamentos-cor">Fundamentos da Cor</a>
+            </li>
+            <li>
+                <a href="#representacao">Formatos de Representação de Cores</a>
+            </li>
+            <li>
+                <a href="#exemplos-visuais">Exemplos Visuais & Representação</a>
+            </li>
+            <li>
+                <a href="#combinacoes-de-cores">Combinações de Cores</a>
+            </li>
+            <li>
+                <a href="#exemplo-codigos">Exemplos de Códigos de Combinações</a>
+            </li>
+            <li>
+                <a href="#gradientes-transparencia">Gradientes e Transparência</a>
+            </li>
+            <li>
+                <a href="#acessibilidade">Acessibilidade</a>
+            </li>
+            <li>
+                <a href="#aplicacao-cores-ui">Aplicação de Cores em UI</a>
+            </li>
+            <li>
+                <a href="#paletas-cores-sugeridas">Paletas de Cores Sugeridas</a>
+            </li>
+            <li>
+                <a href="#boas-praticas">Boas Práticas Finais</a>
+            </li>
+            <li>
+                <a href="#conclusao">Conclusão</a>
+            </li>
+        </strong>
+    </nav>
+    <hr>
+
+    <!-- Introdução -->
+    <section class="explicacao">
+        <p class="destaque">
+            A <mark class="verde">representação de cores</mark> é um dos elementos mais importantes do design web. 
+            As cores influenciam emoções, percepção de marca, hierarquia visual e a <mark class="verde">legibilidade</mark> de conteúdos.
+        </p>
+    </section>
+
+    <!-- Fundamentos -->
+    <section class="explicacao">
+        <h2 id="fundamentos-cor">Fundamentos da Cor</h2>
+        <p>Antes de aplicar cores, é importante entender alguns conceitos:</p>
+        <ul>
+            <li><mark class="amarelo">Matiz (Hue):</mark> A cor pura, como vermelho, azul ou verde.</li>
+            <li><mark class="amarelo">Saturação (Saturation):</mark> Intensidade da cor (quanto mais saturada, mais viva).</li>
+            <li><mark class="amarelo">Luminosidade (Lightness):</mark> Clareza ou escuridão da cor.</li>
+            <li><mark class="verde">Cores quentes:</mark> vermelho, laranja e amarelo, que transmitem energia e ação.</li>
+            <li><mark class="verde">Cores frias:</mark> azul, verde e roxo, que transmitem calma e confiabilidade.</li>
+            <li><mark class="verde">Cores neutras:</mark> branco, preto, cinza, que equilibram paletas e melhoram a legibilidade.</li>
+        </ul>
+    </section>
+    <hr>
+
+    <!-- Formatos -->
+    <section class="explicacao">
+        <h2 id="representacao">Formatos de Representação de Cores</h2>
+        <p>Existem diferentes maneiras de representar cores em HTML e CSS:</p>
+        <ul>
+            <li><mark class="amarelo">Nome da cor:</mark> <code>red</code>, <code>blue</code>, <code>green</code>.</li>
+            <li><mark class="amarelo">Hexadecimal:</mark> <code>#FF0000</code> para vermelho, <code>#00FF00</code> para verde.</li>
+            <li><mark class="amarelo">RGB:</mark> Red, Green, Blue. Ex.: <code>rgb(255,0,0)</code>.</li>
+            <li><mark class="amarelo">RGBA:</mark> RGB com transparência. Ex.: <code>rgba(255,0,0,0.5)</code>.</li>
+            <li><mark class="amarelo">HSL:</mark> Matiz, Saturação, Luminosidade. Ex.: <code>hsl(0,100%,50%)</code>.</li>
+            <li><mark class="amarelo">HSLA:</mark> HSL com transparência. Ex.: <code>hsla(120,100%,50%,0.5)</code>.</li>
+        </ul>
+    </section>
+<hr>
+    <!-- Exemplos Visuais -->
+    <section class="explicacao">
+        <section class="explicacao">
+            <h2 id="exemplos-visuais">Exemplos Visuais de Cores</h2>
+            <p>Veja exemplos aplicados de cores no HTML:</p>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:red;color:black;font-weight:900;">Red</div>
+                    <span class="cor-label">Nome</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">#00FF00</div>
+                    <span class="cor-label">Hexadecimal</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,0,255);color:black;font-weight:900;">RGB</div>
+                    <span class="cor-label">rgb(0,0,255)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgba(255,165,0,0.5);color:black;font-weight:900;">RGBA</div>
+                    <span class="cor-label">rgba(255,165,0,0.5)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(200,100%,50%);color:black;font-weight:900;">HSL</div>
+                    <span class="cor-label">hsl(200,100%,50%)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsla(120,100%,25%,0.6);color:black;font-weight:900;">HSLA</div>
+                    <span class="cor-label">hsla(120,100%,25%,0.6)</span>
+                </div>
+            </div>
+            <h2>Tipos de Representação de Cores</h2>
+            <p class="destaque">As cores podem ser representadas de diferentes formas em HTML e CSS. Cada formato tem suas vantagens dependendo do contexto:</p>
+        </section>
+        <!-- Por Nome -->
+        <section class="explicacao">
+            <h3>1. Por Nome</h3>
+            <p>Algumas cores possuem nomes padrões reconhecidos pelos navegadores:</p>
+<pre><code>&lt;p style="color:red"&gt;Texto vermelho&lt;/p&gt;
+&lt;p style="color:blue"&gt;Texto azul&lt;/p&gt;
+&lt;p style="color:green"&gt;Texto verde&lt;/p&gt;
+
+</code></pre>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:red;color:black;font-weight:900;">Red</div>
+                    <span class="cor-label">Vermelho</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:blue;color:black;font-weight:900;">Blue</div>
+                    <span class="cor-label">Azul</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:green;color:black;font-weight:900;">Green</div>
+                    <span class="cor-label">Verde</span>
+                </div>
+            </div>
+        </section>
+        <!-- Hexadecimal -->
+        <section class="explicacao">
+            <h3>2. Hexadecimal</h3>
+            <p>Usa códigos de 6 dígitos representando RGB em hexadecimal:</p>
+<pre><code>
+&lt;p style="color:#FF0000"&gt;Texto vermelho&lt;/p&gt;
+&lt;p style="color:#0000FF"&gt;Texto azul&lt;/p&gt;
+&lt;p style="color:#00FF00"&gt;Texto verde&lt;/p&gt;
+
+</code></pre>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#FF0000;color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">#FF0000</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#0000FF;color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">#0000FF</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">#00FF00</span>
+                </div>
+            </div>
+        </section>
+        <!-- RGB -->
+        <section class="explicacao">
+            <h3>3. RGB</h3>
+            <p>Define cores através de valores Red, Green e Blue de 0 a 255:</p>
+<pre><code>&lt;p style="color:rgb(255,0,0)"&gt;Texto vermelho&lt;/p&gt;
+&lt;p style="color:rgb(0,0,255)"&gt;Texto azul&lt;/p&gt;
+&lt;p style="color:rgb(0,255,0)"&gt;Texto verde&lt;/p&gt;
+
+</code></pre>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(255,0,0);color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">rgb(255,0,0)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,0,255);color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">rgb(0,0,255)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:rgb(0,255,0);color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">rgb(0,255,0)</span>
+                </div>
+            </div>
+        </section>
+        <!-- HSL -->
+        <section class="explicacao">
+            <h3>4. HSL</h3>
+            <p>HSL define Matiz (0°-360°), Saturação (%) e Luminosidade (%):</p>
+<pre><code>&lt;p style="color:hsl(0,100%,50%)"&gt;Vermelho&lt;/p&gt;
+&lt;p style="color:hsl(240,100%,50%)"&gt;Azul&lt;/p&gt;
+&lt;p style="color:hsl(120,100%,50%)"&gt;Verde&lt;/p&gt;
+
+</code></pre>
+            <div class="cores-grid">
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(0,100%,50%);color:black;font-weight:900;">Vermelho</div>
+                    <span class="cor-label">hsl(0,100%,50%)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(240,100%,50%);color:black;font-weight:900;">Azul</div>
+                    <span class="cor-label">hsl(240,100%,50%)</span>
+                </div>
+                <div class="cor-item">
+                    <div class="cor-box" style="background-color:hsl(120,100%,50%);color:black;font-weight:900;">Verde</div>
+                    <span class="cor-label">hsl(120,100%,50%)</span>
+                </div>
+            </div>
+            <p class="destaque">💡 <mark class="verde">Dica:</mark> Use HSL para ajustes dinâmicos de saturação e luminosidade em temas responsivos, ou quando quiser alterar tons facilmente.</p>
+        </section>
+    </section>
+<hr>
+<section class="explicacao">
+    <h2 id="combinacoes-de-cores">Combinações de Cores</h2>
+    <p>Para criar harmonia visual, utilize diferentes combinações:</p>
+    <ul>
+        <li>
+            <mark class="verde">Cores complementares:</mark> opostas no círculo cromático, criam contraste e atraem atenção (ex.: azul e laranja).</li>
+        <li>
+            <mark class="verde">Cores análogas:</mark> próximas no círculo cromático, criam harmonia e fluidez (ex.: azul, azul-claro e azul-esverdeado).</li>
+        <li>
+            <mark class="verde">Triádicas:</mark> três cores equidistantes no círculo, gerando equilíbrio visual.</li>
+        <li>
+            <mark class="verde">Cores neutras:</mark> usadas como base para equilibrar cores vibrantes e destacar elementos importantes.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="exemplo-codigos">Exemplos de Código de Combinação</h2>
+    <div class="exemplo-container">
+<pre class="exemplo-codigo"><code>
+&lt;div style="background-color:red; color:white"&gt;Erro&lt;/div&gt;
+&lt;div style="background-color:yellow; color:black"&gt;Aviso&lt;/div&gt;
+&lt;div style="background-color:green; color:white"&gt;Sucesso&lt;/div&gt;
+
+</code></pre>
+    
+    <div class="exemplo-render" style="background-color:#f5f5f5; padding:12px; border-radius:8px;">
+        <div style="background-color:red;color:rgb(255, 255, 255);padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Erro</div>
+        <div style="background-color:#FFD700;color:black;padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Aviso</div>
+        <div style="background-color:#28a745;color:rgb(255, 255, 255);padding:10px;margin:8px;border-radius:4px;font-weight:bold;text-align:center;">Sucesso</div>
+    </div>
+    </div>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="gradientes-transparencia">Gradientes e Transparência</h2>
+        <p>Gradientes permitem transições suaves e profundidade visual:</p>
+        <div class="cores-grid">
+            <div class="cor-item">
+                <div class="cor-box" style="background:linear-gradient(to right, red, yellow);color:black;font-weight:900;">Gradiente</div>
+                <span class="cor-label">linear-gradient(to right, red, yellow)</span>
+            </div>
+            <div class="cor-item">
+                <div class="cor-box" style="background-color:rgba(0,255,0,0.5);color:black;font-weight:900;">Semi-transparente</div>
+                <span class="cor-label">rgba(0,255,0,0.5)</span>
+            </div>
+        </div>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="acessibilidade">Acessibilidade</h2>
+    <p>Use cores de forma acessível:</p>
+    <ul>
+        <li>
+            <mark class="verde">Contraste:</mark> texto e fundo devem ter contraste suficiente (mínimo 4.5:1 para textos normais).</li>
+        <li>
+            <mark class="amarelo">Evite usar apenas cores para transmitir informações:</mark> combine ícones, bordas ou texto.</li>
+        <li>
+            Teste em diferentes dispositivos e simulações de daltonismo.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="aplicacao-cores-ui">Aplicação de Cores em UI</h2>
+    <p>Exemplos práticos de uso de cores em elementos de interface:</p>
+    <ul>
+        <li>
+            Botões de ação: vermelho ou laranja para chamar atenção.</li>
+        <li>
+            Informações secundárias: tons neutros como cinza ou azul-claro.</li>
+        <li>
+            Mensagens de alerta: vermelho para erro, amarelo para aviso, verde para sucesso.</li>
+        <li>
+            Backgrounds: neutros para destacar conteúdos principais.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="paletas-cores-sugeridas">Paletas de Cores Sugeridas</h2>
+    <p>Paletas consistentes ajudam a criar identidade visual clara:</p>
+    <div class="cores-grid">
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FF0000;color:black;font-weight:900;">Vermelho</div>
+            <span class="cor-label">#FF0000</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FFA500;color:black;font-weight:900;">Laranja</div>
+            <span class="cor-label">#FFA500</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#FFFF00;color:black;font-weight:900;">Amarelo</div>
+            <span class="cor-label">#FFFF00</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#00FF00;color:black;font-weight:900;">Verde</div>
+            <span class="cor-label">#00FF00</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#00FFFF;color:black;font-weight:900;">Ciano</div>
+            <span class="cor-label">#00FFFF</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#0000FF;color:black;font-weight:900;">Azul</div>
+            <span class="cor-label">#0000FF</span>
+        </div>
+        <div class="cor-item">
+            <div class="cor-box" style="background-color:#800080;color:black;font-weight:900;">Roxo</div>
+            <span class="cor-label">#800080</span>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="boas-praticas">Boas Práticas Finais</h2>
+    <ul>
+        <li>
+            Use cores consistentes em todo o site.
+        </li>
+        <li>
+            <mark class="verde">Destaque elementos importantes</mark> com cores fortes e contrastantes.
+        </li>
+        <li>
+            <mark class="amarelo">Evite excesso de cores vibrantes</mark> em blocos de texto longos.
+        </li>
+        <li>
+            Combine cores neutras com cores vivas para hierarquia visual.
+        </li>
+        <li>
+            Teste sempre acessibilidade, contraste e percepção em diferentes dispositivos.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="conclusao">Conclusão</h2>
+    <p class="destaque">Dominar a <mark class="verde">representação de cores</mark> em sites é essencial para criar interfaces <mark class="verde">atrativas, claras e acessíveis</mark>. Aplicar corretamente cores, gradientes, transparências e combinações melhora a experiência do usuário e fortalece a comunicação visual.</p>
+</section>
+<hr>
+<p>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m2-001.html">⬅ <strong>Anterior</strong></a>|
+                <a href="treiner-m2-003.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+</p>
+</main>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/uKjKnztS3cY?si=CbHMa61MJTsJPZxA" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+    <hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-002')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

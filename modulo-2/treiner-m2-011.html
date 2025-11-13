@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Unidades de Medida CSS | Módulo 2 Aula 11</title>
+  <meta name="description" content="CODEBOOK: Aprenda sobre unidades de medida em CSS. Tutorial sobre px, em, rem, vw, vh e outras unidades para tamanhos de fonte.">
+  <meta name="keywords" content="CODEBOOK, unidades CSS, px, em, rem, medidas CSS, módulo 2">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-011.html">
+  <meta property="og:title" content="CODEBOOK - Medidas em CSS">
+  <meta property="og:description" content="Domine as unidades de medida em CSS. Tutorial sobre diferentes tipos de medidas para fontes e elementos.">
+  <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-011.html">
+  <meta property="twitter:title" content="CODEBOOK - Tamanhos CSS">
+  <meta property="twitter:description" content="Aprenda sobre unidades de medida em CSS com o CODEBOOK. Guia completo de medidas responsivas.">
+  <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-011.html">
+  <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Início</a></li>
+        <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+        <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-011')">⚖ Política</a></li>
+        <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-011')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>📘 Aula 11 MD-2: Tamanho de Fonte e Medida em CSS 📘</h1>
+<hr>
+    <!-- Índice -->
+    <nav class="indice-simples">
+      <h2>Índice</h2>
+      <strong>
+        <ul>
+          <li>
+            <a href="#introducao">Introdução</a>
+          </li>
+          <li>
+            <a href="#medidas-absolutas">Medidas absolutas</a>
+          </li>
+          <li>
+            <a href="#medidas-relativas">Medidas relativas</a>
+          </li>
+          <li>
+            <a href="#comparacao-exemplos">Comparação visual / Exemplos</a>
+          </li>
+          <li>
+            <a href="#tabela-comparativa">Tabela comparativa</a>
+          </li>
+          <li>
+            <a href="#oque-e-pai">O que é "pai" das Unidades?</a>
+          </li>
+          <li>
+            <a href="#painel-interativo">Painel interativo</a>
+          </li>
+          <li>
+            <a href="#boas-praticas">Boas práticas e recomendações</a>
+          </li>
+        </ul>
+      </strong>
+    </nav>
+<hr>
+    <section class="explicacao" id="introducao">
+      <h2>Introdução</h2>
+      <p class="destaque">
+        A propriedade <code>font-size</code> controla o tamanho do texto em CSS. As unidades usadas definem como esse tamanho é interpretado — se fixo (absoluto) ou relativo (dinâmico).
+      </p>
+    </section>
+  <hr>
+    <section class="explicacao" id="medidas-absolutas">
+      <h2>Medidas absolutas</h2>
+      <ul>
+        <li>
+          <p class="destaque"><strong>cm</strong> — centímetros.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>mm</strong> — milímetros.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>in</strong> — polegadas.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>px</strong> — pixels.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>pt</strong> — pontos tipográficos.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>pc</strong> — picas.</p>
+        </li>
+      </ul>
+      <p class="destaque"><strong>Dica:</strong> para web, use <code>px</code>. As demais são mais adequadas para impressão.</p>
+  <hr>
+      <h2 id="medidas-relativas">Medidas relativas</h2>
+      <ul>
+        <li>
+          <p class="destaque"><strong>em</strong> — relativo ao tamanho do pai.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>rem</strong> — relativo ao tamanho da raiz (<code>html</code>).</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>ex</strong> — relativo à altura-x da fonte.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>%</strong> — percentual do pai.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>vw</strong> — 1% da largura da viewport.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>vh</strong> — 1% da altura da viewport.</p>
+        </li>
+      </ul>
+      <p class="destaque"><strong>Dica:</strong> prefira <code>rem</code> e <code>em</code> para textos acessíveis.</p>
+    </section>
+<hr>
+    <section class="explicacao" id="comparacao-exemplos">
+      <h2>Comparação visual</h2>
+      <div style="background:#1e1e1e; padding:12px; border-radius:8px; color:#fff !important;">
+        <p style="font-size:14px; color:#f17146 !important;">14px</p>
+        <p style="font-size:1rem; color:#42f86f !important;">1rem (≈16px)</p>
+        <p style="font-size:1.5em; color:#809ef8 !important;">1.5em (≈24px se pai for 16px)</p>
+        <p style="font-size:3vw; color:#f3c267 !important;">3vw (varia com largura da tela)</p>
+      </div>
+    </section>
+<hr>
+    <!-- Tabela comparativa -->
+    <section class="explicacao" id="tabela-comparativa">
+      <h2>Tabela comparativa de unidades</h2>
+      <p>Abaixo uma tabela comparativa resumida para consulta e impressão:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Uso recomendado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>px</td>
+            <td>Absoluta</td>
+            <td>Pixels fixos de tela</td>
+            <td>UI, elementos precisos</td>
+          </tr>
+          <tr>
+            <td>cm / mm / in</td>
+            <td>Absoluta</td>
+            <td>Medidas físicas</td>
+            <td>Impressão</td>
+          </tr>
+          <tr>
+            <td>pt / pc</td>
+            <td>Absoluta</td>
+            <td>Pontos tipográficos / picas</td>
+            <td>Editoração impressa</td>
+          </tr>
+          <tr>
+            <td>em</td>
+            <td>Relativa</td>
+            <td>Relativo ao pai</td>
+            <td>Componentes escaláveis</td>
+          </tr>
+          <tr>
+            <td>rem</td>
+            <td>Relativa</td>
+            <td>Relativo ao html</td>
+            <td>Tipografia global</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Relativa</td>
+            <td>Percentual do pai</td>
+            <td>Layouts fluídos</td>
+          </tr>
+          <tr>
+            <td>vw / vh</td>
+            <td>Relativa</td>
+            <td>1% da viewport</td>
+            <td>Títulos responsivos</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </section>
+  <hr>
+  <section class="explicacao">
+      <h2 id="oque-e-pai">O que é o pai?</h2>
+      <p class="destaque">Em CSS, o “pai” de um elemento é o contêiner ou bloco que envolve esse elemento diretamente. As propriedades relativas, como em ou %, dependem do tamanho ou estilo definido no elemento pai. Por exemplo, se um parágrafo está dentro de uma &lt;div&gt; com font-size: 20px, um texto definido com 1em dentro desse parágrafo terá exatamente 20px, pois está tomando como referência o tamanho do pai.</p>
+      <p class="destaque">Entender o conceito de pai é essencial para controlar corretamente unidades relativas e criar layouts escaláveis e consistentes.</p>
+  </section>
+<hr>
+<!-- Painel interativo -->
+<section class="explicacao" >
+  <h2 id="painel-interativo" style="color:#adf737 !important;">Painel interativo: veja unidades em tempo real</h2>
+  <p style="color:#ffffff !important;">
+    Redimensione a janela e observe como os valores de <code style="color:#ffbb55 !important;">rem</code>, 
+    <code style="color:#ffbb55 !important;">em</code> e <code style="color:#ffbb55 !important;">vw</code> se comportam.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:12px;">
+    <div style="flex:1 1 300px; background:#111; color:#ffffff !important; padding:12px; border-radius:8px;">
+      <h3 style="color:#ff5555 !important;">Modo Real</h3>
+      <p style="color:#55ff55 !important;"><strong>Largura da viewport:</strong> <span id="real-largura"></span> px</p>
+      <p style="color:#5599ff !important;"><strong>1rem:</strong> <span id="real-rem"></span> px</p>
+      <p style="color:#ffbb55 !important;"><strong>1em (pai 120%):</strong> <span id="real-em"></span> px</p>
+      <p style="color:#ffffff !important;"><strong>5vw:</strong> <span id="real-vw"></span> px</p>
+    </div>
+
+    <div style="flex:1 1 300px; background:#111; color:#ffffff !important; padding:12px; border-radius:8px;">
+      <h3 style="color:#55ff55 !important;">Modo Simulado</h3>
+      <p style="color:#55ff55 !important;"><strong>Largura da viewport:</strong> <span id="sim-largura"></span> px</p>
+      <p style="color:#5599ff !important;"><strong>1rem:</strong> <span id="sim-rem"></span> px</p>
+      <p style="color:#ffbb55 !important;"><strong>1em (pai 120%):</strong> <span id="sim-em"></span> px</p>
+      <p style="color:#ffffff !important;"><strong>5vw:</strong> <span id="sim-vw"></span> px</p>
+    </div>
+  </div>
+  <script>
+    function atualizarPainel() {
+      const largura = window.innerWidth;
+      const raiz = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+      const container = document.createElement("div");
+      container.style.fontSize = "120%";
+      container.style.display = "none";
+      document.body.appendChild(container);
+
+      const exemplo = document.createElement("span");
+      exemplo.style.fontSize = "1em";
+      container.appendChild(exemplo);
+
+      const emVal = parseFloat(getComputedStyle(exemplo).fontSize);
+
+      document.getElementById("real-largura").innerText = largura;
+      document.getElementById("real-rem").innerText = raiz.toFixed(2);
+      document.getElementById("real-em").innerText = emVal.toFixed(2);
+      document.getElementById("real-vw").innerText = (largura * 0.05).toFixed(2);
+
+      document.body.removeChild(container);
+
+      const simRem = 16 + largura * 0.01;
+      const simEm = 16 * 1.2 + largura * 0.012;
+      const simVw = largura * 0.05;
+
+      document.getElementById("sim-largura").innerText = largura;
+      document.getElementById("sim-rem").innerText = simRem.toFixed(2);
+      document.getElementById("sim-em").innerText = simEm.toFixed(2);
+      document.getElementById("sim-vw").innerText = simVw.toFixed(2);
+    }
+
+    window.addEventListener("resize", atualizarPainel);
+    window.addEventListener("load", atualizarPainel);
+  </script>
+  <br>
+  <p class="destaque">Talvez o redimensionamento em dispositivos moveis não seja visto a diferença no painel interativo acima.</p>
+</section>
+
+<hr>
+    <section class="explicacao" id="boas-praticas">
+      <h2>Boas práticas</h2>
+      <p class="destaque">Prefira <code>rem</code> para escalas globais e <code>em</code> para componentes. Use <code>px</code> quando precisar de precisão. Evite cm/mm/in em web.</p>
+    <hr>
+      <h2 id="quando-nao-usar">Quando evitar</h2>
+      <p class="destaque">Evite <code>cm/mm/in</code> em telas, <code>ex</code> pela inconsistência, e <code>vw</code> para textos longos.</p>
+<hr>
+      <h2 id="resumo">Resumo</h2>
+      <ul>
+        <li>
+          <p class="destaque"><strong>px</strong> — fixo e previsível.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>rem/em</strong> — recomendados para acessibilidade.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>vw/vh</strong> — bom para títulos, use com cuidado.</p>
+        </li>
+      </ul>
+    </section>
+<nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br>
+        <a href="treiner-m2-010.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-012.html"><strong>Próxima</strong> ➡</a>
+    </strong>
+</p>
+</nav>
+  </main>
+<hr>
+  <footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/NGfPXJGiNH8?si=4GOH7oBRTF_R9H1-" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-011')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

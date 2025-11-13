@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda a adicionar e configurar imagens de fundo em seu site usando CSS. Tutorial completo sobre background-image e suas propriedades.">
+    <meta name="keywords" content="background-image, CSS3, imagem de fundo, web design, CODEBOOK, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-004.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-004.html">
+    <meta property="og:title" content="Colocando uma imagem de fundo no site | CODEBOOK">
+    <meta property="og:description" content="Aprenda a adicionar e configurar imagens de fundo em seu site usando CSS. Tutorial completo sobre background-image e suas propriedades.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-004.html">
+    <meta property="twitter:title" content="Colocando uma imagem de fundo no site | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda a adicionar e configurar imagens de fundo em seu site usando CSS. Tutorial completo sobre background-image e suas propriedades.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Colocando uma imagem de fundo no site | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <script src="modal.js"></script>
+    <style>
+        /* Estilos para os exemplos de background */
+        .blocos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        div.bloco {
+            border: 2px solid #00d5ff;
+            border-radius: 10px;
+            width: 300px;
+            height: 300px;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+        }
+
+        div.bloco::after {
+            content: "Clique para ampliar";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        div.bloco:hover::after {
+            opacity: 1;
+        }
+
+        div.bloco:hover {
+            transform: scale(1.05);
+        }
+
+        /* Exemplos básicos */
+        div#b1 {
+            background-color: rgb(197, 170, 249);
+        }
+
+        div#b2 {
+            background-image: linear-gradient(to bottom, rgb(139, 253, 139) , rgb(55, 128, 255));
+        }
+
+        div#b3 {
+           background-image: url("imagens/pattern003.png");
+        }
+
+        /* Exemplos avançados */
+        div#b4 {
+            background-image: url("imagens/wallpaper002.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        div#b5 {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background-size: 200% 200%;
+            animation: gradientBG 5s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        div#b6 {
+            background-image: url("imagens/pattern001.png");
+            background-repeat: repeat-x;
+            background-color: #4158D0;
+            background-position: center;
+        }
+
+        /* Área de demonstração */
+        .demo-section {
+            background-image: url("imagens/wallpaper001.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            width: 90%;
+            border-radius: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+        }
+        
+        .demo-section h2,
+        .demo-section h3 {
+            color: #00ff88;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,1);
+        }
+
+        .demo-section .destaque {
+            background-color: rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            /* Tablets e telas médias */
+            div.bloco {
+                width: calc(50% - 40px);
+                height: 250px;
+                margin: 10px;
+            }
+
+            .demo-section {
+                width: 95%;
+                padding: 15px;
+            }
+
+            pre code {
+                font-size: 14px;
+                padding: 10px;
+                overflow-x: auto;
+            }
+
+            h1 {
+                font-size: 1.8em;
+                padding: 10px;
+            }
+
+            .indice-simples ul {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Smartphones e telas pequenas */
+            div.bloco {
+                width: calc(100% - 20px);
+                height: 200px;
+                margin: 10px auto;
+            }
+
+            .demo-section {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+            }
+
+            pre code {
+                font-size: 13px;
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                padding: 5px;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            .indice-simples {
+                margin: 10px 0;
+            }
+
+            .indice-simples ul {
+                padding: 5px;
+            }
+
+            .indice-simples li {
+                margin: 5px 0;
+            }
+
+            /* Ajuste para exemplo de gradiente animado */
+            div#b5 {
+                background-size: 150% 150%;
+            }
+        }
+
+        /* Ajustes para dispositivos muito pequenos */
+        @media screen and (max-width: 320px) {
+            div.bloco {
+                height: 150px;
+            }
+
+            pre code {
+                font-size: 12px;
+            }
+
+            .demo-section .destaque {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-004')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-004')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+        <h1>📘 Aula 4 MD-3: Colocando uma imagem de fundo no seu site 📘</h1>
+    <hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#introducao">Introdução aos Backgrounds</a></li>
+                    <li><a href="#cores">Cores de Fundo</a></li>
+                    <li><a href="#gradientes">Gradientes</a></li>
+                    <li><a href="#imagens">Imagens de Fundo</a></li>
+                    <li><a href="#propriedades">Propriedades Avançadas</a></li>
+                    <li><a href="#video-aula">Vídeo Aula</a></li>
+                    <li><a href="#exemplos">Exemplos Práticos</a></li>
+                </ul>
+            </strong>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <section id="introducao" class="explicacao">
+            <h2>Introdução aos Backgrounds</h2>
+            <p class="destaque">
+                Em CSS, os fundos (backgrounds) são uma parte fundamental do design web. Eles podem ser simples cores sólidas, 
+                gradientes elegantes ou imagens complexas. Nesta aula, vamos explorar todas as possibilidades!
+            </p>
+        </section>
+<hr>
+        <section id="cores" class="explicacao">
+            <h2>Cores de Fundo</h2>
+            <p class="destaque">A forma mais básica de estilizar um fundo é usando cores sólidas:</p>
+            
+            <div class="blocos-container">
+                <div class="bloco" id="b1"></div>
+            </div>
+            
+            <p class="destaque">Código:</p>
+            <pre><code>
+background-color: rgb(197, 170, 249);
+            </code></pre>
+            
+            <ul class="destaque">
+                <li>Podemos usar diferentes formatos de cor:
+                    <ul>
+                        <li>Nome da cor: background-color: purple;</li>
+                        <li>Hexadecimal: background-color: #C5AAF9;</li>
+                        <li>RGB: background-color: rgb(197, 170, 249);</li>
+                        <li>HSL: background-color: hsl(260, 82%, 82%);</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+<hr>
+        <section id="gradientes" class="explicacao">
+            <h2>Gradientes</h2>
+            <p class="destaque">Gradientes criam transições suaves entre cores:</p>
+            
+            <div class="blocos-container">
+                <div class="bloco" id="b2"></div>
+                <div class="bloco" id="b5"></div>
+            </div>
+            
+            <p class="destaque">Exemplos de código:</p>
+            <pre><code>
+/* Gradiente linear simples */
+background-image: linear-gradient(to bottom, rgb(139, 253, 139), rgb(55, 128, 255));
+
+/* Gradiente animado */
+background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+background-size: 200% 200%;
+animation: gradientBG 5s ease infinite;
+            </code></pre>
+        </section>
+<hr>
+        <section id="imagens" class="explicacao">
+            <h2>Imagens de Fundo</h2>
+            <p class="destaque">Podemos usar imagens como fundo de diferentes maneiras:</p>
+            
+            <div class="blocos-container">
+                <div class="bloco" id="b3" onclick="openModal(this)" data-img="imagens/pattern003.png"></div>
+                <div class="bloco" id="b4" onclick="openModal(this)" data-img="imagens/wallpaper002.jpg"></div>
+                <div class="bloco" id="b6" onclick="openModal(this)" data-img="imagens/pattern001.png"></div>
+            </div>
+
+            <h3>Principais propriedades para imagens:</h3>
+            <ul class="destaque">
+                <li>background-image: Define a imagem</li>
+                <li>background-repeat: Controla a repetição</li>
+                <li>background-position: Posiciona a imagem</li>
+                <li>background-size: Ajusta o tamanho</li>
+                <li>background-attachment: Controla a rolagem</li>
+            </ul>
+        </section>
+<hr>
+        <section class="explicacao" id="propriedades">
+            <div class="explicacao demo-section">
+                <h2>Propriedades Avançadas</h2>
+                <p class="destaque">
+                    Esta seção tem um fundo fixo (background-attachment: fixed) que cria um efeito parallax simples.
+                    Observe como a imagem permanece fixa enquanto você rola a página!
+                </p>
+            
+                <h3>Valores comuns para background-size:</h3>
+                <ul class="destaque">
+                    <li>cover: Cobre todo o container</li>
+                    <li>contain: Mantém a imagem visível</li>
+                    <li>auto: Tamanho original</li>
+                    <li>Valores em px ou %</li>
+                </ul>
+            </div>
+            <p class="destaque">Inclusive esse fundo amadeirado é um fundo com imagem.</p>
+        </section>
+<hr>
+        <section class="explicacao" id="video-aula">
+            <h2>Aprenda na Prática com Gustavo Guanabara</h2>
+            <p class="destaque">
+                Nesta video aula, o Professor Guanabara demonstra na prática como trabalhar com imagens de fundo em CSS.
+                Você aprenderá sobre todas as propriedades importantes do background e verá exemplos reais de implementação.
+            </p>
+            <p class="destaque">
+                👨‍🏫 Temas abordados no vídeo:
+                <ul class="destaque">
+                    <li>Configuração correta de imagens de fundo</li>
+                    <li>Propriedades de background-image</li>
+                    <li>Dicas de otimização e boas práticas</li>
+                    <li>Exemplos práticos de implementação</li>
+                </ul>
+            </p>
+            <div class="video-iframe">
+                <iframe src="https://www.youtube.com/embed/9hV5oXi80-A" 
+                    sandbox="allow-scripts allow-same-origin"
+                    class="active"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    title="Vídeo Aula Gustavo Guanabara Colocando uma imagem de fundo no seu site">
+                </iframe>
+            </div>
+            <p class="destaque">📝 Dica: Assista o vídeo, faça anotações e pratique junto com o professor!</p>
+        </section>
+<hr>
+        <section id="exemplos" class="explicacao">
+            <h2>Exemplos Práticos</h2>
+            <p class="destaque">Experimente passar o mouse sobre os blocos acima!</p>
+            <p class="destaque">
+                Todos os blocos têm uma animação hover (transform: scale) que os faz aumentar 
+                levemente quando você passa o mouse por cima, criando uma interação agradável.
+            </p>
+        </section>
+    </main>
+    <hr>
+    <nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m3-003.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m3-005.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima → 
+    <a href="https://youtu.be/9hV5oXi80-A" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+    <hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m3-004')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</body>
+</html>

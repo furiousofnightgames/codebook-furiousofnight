@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda sobre hospedagem no GitHub, manutenção de repositórios e recursos avançados para melhorar seu fluxo de trabalho em desenvolvimento web.">
+    <meta name="keywords" content="GitHub, hospedagem, Git Pages, repositórios, desenvolvimento web, CODEBOOK, controle de versão">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-002.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-002.html">
+    <meta property="og:title" content="GitHub: Hospedagem, Manutenção e Recursos Avançados | CODEBOOK">
+    <meta property="og:description" content="Aprenda sobre hospedagem no GitHub, manutenção de repositórios e recursos avançados para melhorar seu fluxo de trabalho em desenvolvimento web.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-002.html">
+    <meta property="twitter:title" content="GitHub: Hospedagem, Manutenção e Recursos Avançados | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda sobre hospedagem no GitHub, manutenção de repositórios e recursos avançados para melhorar seu fluxo de trabalho em desenvolvimento web.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>GitHub: Hospedagem, Manutenção e Recursos Avançados | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <ul>
+        <li><a href="../index.html">🏠 Início</a></li>
+        <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+        <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-002')">⚖ Política</a></li>
+        <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-002')">👤 Sobre</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+<hr>
+<h1>📘 Aula 2 MD-3: Aula completa sobre Git & Github 📘</h1>
+<hr>
+<nav class="indice-simples">
+    <h2>Índice da Aula</h2>
+<strong>
+    <ul>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+        <li><a href="#manutencao">Manutenção</a></li>
+        <li><a href="#recursos-sociais">Recursos Sociais</a></li>
+        <li><a href="#clonagem">Clonagem</a></li>
+        <li><a href="#multiplos-pcs">Múltiplos PCs</a></li>
+    </ul>
+</strong>
+</nav>
+<hr>
+<!-- Seção 1: GitHub Pages -->
+<section id="github-pages" class="explicacao">
+    <h2>Hospedando Sites Gratuitamente com GitHub Pages</h2>
+    
+    <p class="destaque">O GitHub Pages é uma ferramenta poderosa que permite hospedar sites estáticos gratuitamente diretamente dos seus repositórios GitHub. Vamos aprender como utilizá-la de forma profissional.</p>
+
+    <h3>O que é o GitHub Pages?</h3>
+    <ul>
+        <li>
+            Serviço de hospedagem gratuito do GitHub
+        </li>
+        <li>
+            Ideal para sites estáticos (HTML, CSS, JavaScript)
+        </li>
+        <li>
+            Suporta Jekyll para sites dinâmicos
+        </li>
+        <li>
+            Permite usar domínio personalizado
+        </li>
+    </ul>
+
+    <h3>Como Configurar:</h3>
+    <ol>
+        <li>
+            Crie um repositório com o nome: username.github.io
+        </li>
+        <li>
+            Clone o repositório para sua máquina
+        </li>
+        <li>
+            Adicione seus arquivos HTML, CSS e JavaScript
+        </li>
+        <li>
+            Faça commit e push das alterações
+        </li>
+        <li>
+            Acesse: https://username.github.io
+        </li>
+    </ol>
+
+    <h3>Dicas Importantes:</h3>
+    <ul>
+        <li>
+            Use sempre um arquivo index.html na raiz
+        </li>
+        <li>
+            Organize bem a estrutura de pastas
+        </li>
+        <li>
+            Mantenha URLs relativas nos links
+        </li>
+        <li>
+            Teste localmente antes de publicar
+        </li>
+    </ul>
+
+    <div class="link-bloco">
+        <p>Passo a passo Hospedando site gratuitamente com GitHub Pages.</p>
+        <a href="https://youtu.be/P0Hvrf8T3zo" target="_blank" rel="noopener noreferrer"> Video Tutorial</a>
+    </div>
+</section>
+<hr>
+<!-- Seção 2: Manutenção -->
+<section id="manutencao" class="explicacao">
+    <h2>Manutenção em Sites Hospedados no GitHub Pages</h2>
+
+    <p class="destaque">Manter um site no GitHub Pages requer organização e boas práticas. Vamos ver como fazer isso de forma eficiente.</p>
+
+    <h3>Fluxo de Trabalho Recomendado:</h3>
+    <ol>
+        <li>
+            Sempre trabalhe em branches separados
+        <ul>
+            <li>
+                main: branch de produção
+            </li>
+            <li>
+                develop: branch de desenvolvimento
+            </li>
+            <li>
+                feature/nome: para novas funcionalidades
+            </li>
+        </ul>
+        </li>
+        <li>
+            Faça commits pequenos e frequentes
+        </li>
+        <li>
+            Use mensagens de commit descritivas
+        </li>
+        <li>
+            Teste todas as alterações localmente
+        </li>
+        <li>
+            Faça merge através de Pull Requests
+        </li>
+    </ol>
+
+    <h3>Boas Práticas de Manutenção:</h3>
+    <ul>
+        <li>
+            Mantenha backups regulares
+        </li>
+        <li>
+            Documente todas as alterações importantes
+        </li>
+        <li>
+            Monitore o desempenho do site
+        </li>
+        <li>
+            Verifique links quebrados periodicamente
+        </li>
+        <li>
+            Mantenha as dependências atualizadas
+        </li>
+    </ul>
+
+    <div class="link-bloco">
+        <p>Passo a passo sobre Manutenção e Boas Práticas em Sites no GitHub Pages.</p>
+        <a href="https://youtu.be/ejQwG2cvWxg" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
+    </div>
+</section>
+<hr>
+<!-- Seção 3: Recursos Sociais -->
+<section id="recursos-sociais" class="explicacao">
+    <h2>Recursos Sociais do GitHub</h2>
+
+    <p class="destaque">O GitHub não é apenas uma plataforma de código, mas também uma rede social para desenvolvedores. Vamos explorar seus recursos sociais.</p>
+
+    <h3>Principais Recursos:</h3>
+    <ul>
+        <li>
+            Seguir outros desenvolvedores
+        </li>
+        <li>
+            Dar estrelas em repositórios
+        </li>
+        <li>
+            Fork de projetos
+        </li>
+        <li>
+            Contribuir com Issues e Pull Requests
+        </li>
+        <li>
+            Participar de Discussões
+        </li>
+    </ul>
+
+    <h3>Como Construir sua Presença:</h3>
+    <ol>
+        <li>
+            Complete seu perfil profissional
+        </li>
+        <li>
+            Mantenha repositórios organizados
+        </li>
+        <li>
+            Contribua para projetos open source
+        </li>
+        <li>
+            Interaja com a comunidade
+        </li>
+        <li>
+            Compartilhe conhecimento
+        </li>
+    </ol>
+
+    <h3>Dicas de Networking:</h3>
+    <ul>
+        <li>
+            Participe de discussões construtivas
+        </li>
+        <li>
+            Ofereça ajuda em issues
+        </li>
+        <li>
+            Documente bem suas contribuições
+        </li>
+        <li>
+            Mantenha uma conduta profissional
+        </li>
+    </ul>
+
+    <div class="link-bloco">
+        <p>Como utilizar os recursos sociais do GitHub e interagir com a comunidade.</p>
+        <a href="https://youtu.be/g5orqzMzwkY" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
+    </div>
+</section>
+<hr>
+<!-- Seção 4: Clonando Repositórios -->
+<section id="clonagem" class="explicacao">
+    <h2>Clonando Repositórios GitHub</h2>
+
+    <p class="destaque">Clonar repositórios é uma habilidade fundamental para trabalhar com GitHub. Vamos aprender as melhores práticas.</p>
+
+    <h3>Métodos de Clonagem:</h3>
+    <ol>
+        <li>
+            HTTPS
+            <ul>
+                <li>
+                    Mais comum e simples
+                </li>
+                <li>
+                    Requer autenticação frequente
+                </li>
+                <li>
+                    Ideal para iniciantes
+                </li>
+            </ul>
+        </li>
+        <li>
+            SSH
+            <ul>
+                <li>
+                    Mais seguro
+                </li>
+                <li>
+                    Requer configuração inicial
+                </li>
+                <li>
+                    Melhor para uso frequente
+                </li>
+            </ul>
+        </li>
+        <li>
+            GitHub CLI
+            <ul>
+                <li>
+                    Interface de linha de comando moderna
+                </li>
+                <li>
+                    Mais recursos avançados
+                </li>
+                <li>
+                    Integração completa com GitHub
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Comandos Essenciais:</h3>
+    <ul>
+        <li>
+            git clone [URL] - Clona o repositório
+        </li>
+        <li>
+            git remote -v - Verifica origens
+        </li>
+        <li>
+            git fetch - Atualiza referências
+        </li>
+        <li>
+            git pull - Baixa alterações
+        </li>
+    </ul>
+
+    <div class="link-bloco">
+        <p>Como clonar repositórios do GitHub usando diferentes métodos.</p>
+        <a href="https://youtu.be/sRBSr9X5nAQ" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
+    </div>
+</section>
+<hr>
+<!-- Seção 5: Múltiplos PCs -->
+<section id="multiplos-pcs" class="explicacao">
+    <h2>GitHub em Vários PCs</h2>
+
+    <p class="destaque">Trabalhar com GitHub em múltiplos computadores requer organização e cuidados específicos. Vamos aprender como fazer isso de forma eficiente.</p>
+
+    <h3>Configuração Inicial em Cada PC:</h3>
+    <ol>
+        <li>
+            Configure seu git global
+            <ul>
+                <li>
+                    Nome de usuário
+                </li>
+                <li>
+                    Email
+                </li>
+                <li>
+                    Editor padrão
+                </li>
+            </ul>
+        </li>
+        <li>
+            Configure as credenciais
+            <ul>
+                <li>
+                    HTTPS: GitHub CLI ou credential manager
+                </li>
+                <li>
+                    SSH: Gere e configure chaves
+                </li>
+            </ul>
+        </li>
+        <li>
+            Clone seus repositórios principais
+        </li>
+    </ol>
+
+    <h3>Melhores Práticas:</h3>
+    <ul>
+        <li>
+            Sempre sincronize antes de começar a trabalhar
+        </li>
+        <li>
+            Use branches para evitar conflitos
+        </li>
+        <li>
+            Mantenha configurações consistentes
+        </li>
+        <li>
+            Faça backup de configurações importantes
+        </li>
+        <li>
+            Use .gitignore para arquivos específicos da máquina
+        </li>
+    </ul>
+
+    <h3>Evitando Problemas:</h3>
+    <ul>
+        <li>
+            Nunca deixe trabalho não commitado
+        </li>
+        <li>
+            Mantenha histórico de commits limpo
+        </li>
+        <li>
+            Use stash quando necessário
+        </li>
+        <li>
+            Documente configurações específicas
+        </li>
+    </ul>
+
+    <div class="link-bloco">
+        <p>Como trabalhar com GitHub em múltiplos computadores de forma segura e organizada.</p>
+        <a href="https://youtu.be/c-MATEcIuPQ" target="_blank" rel="noopener noreferrer">Video Tutorial</a>
+    </div>
+</section>
+<hr>
+</main>
+<nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m3-001.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m3-003.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+    </p>
+</footer>
+<hr>
+
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-002')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>

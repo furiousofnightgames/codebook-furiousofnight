@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Grouping Tags em HTML5 | Módulo 2 Aula 23</title>
+    <meta name="description" content="CODEBOOK: Aprenda sobre as tags semânticas de agrupamento no HTML5. Tutorial sobre header, nav, main, article, aside e footer.">
+    <meta name="keywords" content="CODEBOOK, HTML5 semântico, grouping tags, estrutura HTML, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-023.html">
+    <meta property="og:title" content="CODEBOOK - Tags Semânticas HTML5">
+    <meta property="og:description" content="Aprenda sobre as tags de agrupamento no HTML5. Tutorial sobre estrutura semântica.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-023.html">
+    <meta property="twitter:title" content="CODEBOOK - Tags Semânticas HTML5">
+    <meta property="twitter:description" content="Domine as tags de agrupamento HTML5 com o CODEBOOK. Tutorial sobre estruturação semântica.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Grouping Tags em HTML5 | Módulo 2 Aula 23</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Destaques para exemplos internos */
+        .exemplo {
+            border: 2px dashed #0077cc;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .exemplo a {
+            text-decoration: none;
+            color: aqua;
+
+        }
+        .exemplo a:hover{
+            color: chartreuse;
+        }
+        .exemplo-code {
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .destaque {
+            border-left: 4px solid #ffc107;
+            padding: 6px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-023')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-023')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+        <h1>📘 Aula 23 MD-2: Grouping Tags em HTML5 📘</h1>
+<hr>
+    <nav class="indice-simples">
+    <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#exemplo-div">Exemplo com &lt;div&gt;</a></li>
+                <li> <a href="#exemplo-section">Exemplo com &lt;section&gt;</a></li>
+                <li><a href="#exemplo-article-aside">Exemplo com &lt;article&gt; e &lt;aside&gt;</a></li>
+                <li><a href="#exemplo-header-footer-nav">Exemplos &lt;header&gt;, &lt;footer&gt; & &lt;nav&gt;</a></li>
+                <li><a href="#dicas">Dicas Importantes</a></li>
+                <li><a href="#laboratorio">Laboratório Prático</a></li>
+            </ul>
+        </strong>
+    </nav>
+<hr>
+    <main>
+        <section id="introducao" class="explicacao">
+            <h2>Introdução ao Grouping Tags</h2>
+            <p class="destaque">
+                Em HTML5, <strong>Grouping Tags</strong> são usadas para agrupar conteúdos relacionados em blocos lógicos.  
+                Elas ajudam na organização da estrutura do documento, melhorando a semântica, acessibilidade e layout.
+            </p>
+            <p>As principais tags de agrupamento são:</p>
+            <ul>
+                <li><strong>&lt;div&gt;</strong> → caixa genérica de bloco (block-level) sem significado semântico.</li>
+                <li><strong>&lt;section&gt;</strong> → define uma seção temática do documento.</li>
+                <li><strong>&lt;article&gt;</strong> → representa conteúdo independente, como notícias ou postagens.</li>
+                <li><strong>&lt;aside&gt;</strong> → conteúdo lateral ou complementar (ex: notas, dicas, anúncios).</li>
+                <li><strong>&lt;header&gt;</strong> → cabeçalho de página ou seção.</li>
+                <li><strong>&lt;footer&gt;</strong> → rodapé de página ou seção.</li>
+                <li><strong>&lt;nav&gt;</strong> → menu de navegação.</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section id="exemplo-div" class="explicacao">
+            <h2>Exemplo com &lt;div&gt;</h2>
+            <p class="destaque">
+                A tag <strong>&lt;div&gt;</strong> é um container genérico usado para agrupar elementos sem transmitir significado semântico.  
+                Frequentemente é utilizada junto com classes e IDs para estilização.
+            </p>
+            <div class="exemplo">
+                <h3>Minha Caixa com div</h3>
+                <p>Este conteúdo está dentro de um <strong>&lt;div&gt;</strong>.</p>
+            </div>
+            <pre class="exemplo-code">
+&lt;div class="exemplo"&gt;
+    &lt;h3&gt;Minha Caixa com div&lt;/h3&gt;
+    &lt;p&gt;Conteúdo dentro do div.&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+        <hr>
+
+        <section id="exemplo-section" class="explicacao">
+            <h2>Exemplo com &lt;section&gt;</h2>
+            <p class="destaque">
+                A tag <strong>&lt;section&gt;</strong> define uma seção temática, ideal para agrupar conteúdos relacionados.
+            </p>
+            <section class="exemplo">
+                <h3>Seção de Notícias</h3>
+                <p>Cada seção deve conter um título e seu conteúdo relacionado.</p>
+            </section>
+            <pre class="exemplo-code">
+&lt;section&gt;
+    &lt;h3&gt;Seção de Notícias&lt;/h3&gt;
+    &lt;p&gt;Conteúdo da seção...&lt;/p&gt;
+&lt;/section&gt;
+            </pre>
+        </section>
+        <hr>
+
+        <section id="exemplo-article-aside" class="explicacao">
+            <h2>Exemplo com &lt;article&gt; e &lt;aside&gt;</h2>
+            <p class="destaque">
+                <strong>&lt;article&gt;</strong> é usado para conteúdos independentes (notícias, posts, artigos).  
+                <strong>&lt;aside&gt;</strong> é conteúdo complementar ou lateral.
+            </p>
+            <article class="exemplo">
+                <h3>Artigo Principal</h3>
+                <p>Este é o conteúdo do artigo, independente do resto da página.</p>
+                <aside>
+                    <p>Nota ou informação adicional do artigo.</p>
+                </aside>
+            </article>
+            <pre class="exemplo-code">
+&lt;article&gt;
+    &lt;h3&gt;Artigo Principal&lt;/h3&gt;
+    &lt;p&gt;Conteúdo do artigo.&lt;/p&gt;
+    &lt;aside&gt;&lt;p&gt;Conteúdo complementar.&lt;/p&gt;&lt;/aside&gt;
+&lt;/article&gt;
+            </pre>
+        </section>
+        <hr>
+
+        <section id="exemplo-header-footer-nav" class="explicacao">
+            <h2>Exemplo com &lt;header&gt;, &lt;footer&gt; e &lt;nav&gt;</h2>
+            <p class="destaque">
+                Essas tags dão significado semântico ao documento e melhoram acessibilidade.
+            </p>
+            <header class="exemplo">
+                <h3>Cabeçalho do Site</h3>
+                <nav>
+                    <a href="#">Início</a> |
+                    <a href="#">Sobre</a> |
+                    <a href="#">Contato</a>
+                </nav>
+            </header>
+            <footer class="exemplo">
+                <p>Rodapé do site - todos os direitos reservados.</p>
+            </footer>
+            <pre class="exemplo-code">
+&lt;header&gt;
+    &lt;h3&gt;Cabeçalho&lt;/h3&gt;
+    &lt;nav&gt;&lt;a href="#"&gt;Início&lt;/a&gt; | ... &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Rodapé do site&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+        </section>
+        <hr>
+
+        <section id="dicas" class="explicacao">
+            <h2>Dicas Importantes</h2>
+            <ul class="destaque">
+                <li>Use <strong>&lt;div&gt;</strong> para agrupamento genérico, mas prefira tags semânticas quando possível.</li>
+                <li>Cada <strong>&lt;section&gt;</strong> ou <strong>&lt;article&gt;</strong> deve conter um título.</li>
+                <li>O uso correto melhora a acessibilidade e SEO do site.</li>
+                <li>Combine <strong>&lt;aside&gt;</strong> para informações complementares.</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section id="laboratorio" class="explicacao">
+            <h2>Laboratório Prático</h2>
+            <ol>
+                <li><p class="destaque">Crie uma página HTML com um <strong>&lt;header&gt;</strong> contendo título e menu de navegação.</p></li>
+                <li><p class="destaque">Crie 2 <strong>&lt;section&gt;</strong> com conteúdos diferentes, cada uma com título e parágrafo.</p></li>
+                <li><p class="destaque">Adicione 1 <strong>&lt;article&gt;</strong> dentro de uma seção e insira um <strong>&lt;aside&gt;</strong>.</p></li>
+                <li><p class="destaque">Finalize a página com um <strong>&lt;footer&gt;</strong>.</p></li>
+                <li><p class="destaque">Use <strong>&lt;div&gt;</strong> para agrupar conteúdos adicionais ou estilização quando necessário.</p></li>
+            </ol>
+        </section>
+    </main>
+<hr>
+<nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-022.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-024.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/JPMm-jyKOaM?si=4GpK95s8SoLLLoS6" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-023')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>

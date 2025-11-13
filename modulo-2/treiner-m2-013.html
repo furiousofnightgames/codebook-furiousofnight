@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Google Fonts em CSS | Módulo 2 Aula 13</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar Google Fonts em seus projetos web. Tutorial sobre importação, implementação e uso de fontes personalizadas.">
+    <meta name="keywords" content="CODEBOOK, Google Fonts, fontes web, importar fontes, CSS fonts, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-013.html">
+    <meta property="og:title" content="CODEBOOK - Fontes do Google">
+    <meta property="og:description" content="Aprenda a implementar Google Fonts em seus projetos. Tutorial completo sobre fontes web.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-013.html">
+    <meta property="twitter:title" content="CODEBOOK - Fontes Web">
+    <meta property="twitter:description" content="Domine o uso de Google Fonts com o CODEBOOK. Tutorial sobre fontes personalizadas na web.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-013.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Fonts sugeridas para exemplos -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-013')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-013')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+        <h1 class="centralizado">📘 Aula 13 MD-2: Usando Google Fonts 📘</h1>
+        <hr>
+
+        <!-- Índice -->
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li>
+                        <a href="#introducao">Introdução</a>
+                    </li>
+                    <li>
+                        <a href="#o-que-e">O que é Google Fonts</a>
+                    </li>
+                    <li>
+                        <a href="#exemplo-fontes">Exemplo de Fontes</a>
+                    </li>
+                    <li>
+                        <a href="#como-usar">Como Usar</a>
+                    </li>
+                    <li>
+                        <a href="#exemplo-pratico">Exemplo Prático</a>
+                    </li>
+                    <li>
+                        <a href="#dicas-avancadas">Dicas Avançadas</a>
+                    </li>
+                    <li>
+                        <a href="#boas-praticas">Boas Práticas</a>
+                    </li>
+                    <li>
+                        <a href="#resumo">Resumo</a>
+                    </li>
+                </ul>
+            </strong>
+        </nav>
+        <hr>
+
+        <!-- Introdução -->
+        <section id="introducao" class="explicacao">
+            <h2>Introdução</h2>
+            <p class="destaque">
+                Nesta aula, vamos aprender a **usar fontes do Google Fonts** para personalizar nossos projetos web. As fontes são fundamentais para estética e legibilidade, permitindo criar sites mais atraentes e profissionais.
+            </p>
+            <p class="destaque">
+                💡 Dica: Escolher fontes apropriadas melhora a experiência do usuário. Fontes limpas facilitam a leitura; fontes decorativas podem destacar títulos e seções importantes.
+            </p>
+        </section>
+        <hr>
+
+        <!-- O que é Google Fonts -->
+        <section id="o-que-e" class="explicacao">
+            <h2>O que é Google Fonts?</h2>
+            <p>
+                Google Fonts é uma biblioteca online gratuita fornecida pelo Google, que oferece:
+            </p>
+            <ul>
+                <li>
+                    <p class="destaque">Centenas de fontes de diferentes estilos: serif, sans-serif, display e monospace.</p>
+                </li>
+                <li>
+                    <p class="destaque">Integração fácil via HTML ou CSS.</p>
+                </li>
+                <li>
+                    <p class="destaque">Controle de peso, estilo e variantes para títulos, textos e elementos específicos.</p>
+                </li>
+                <li>
+                    <p class="destaque">Compatibilidade ampla entre navegadores modernos sem instalar nada.</p>
+                </li>
+                <li>
+                    <p class="destaque">Atualizações constantes com novas fontes disponíveis.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <!-- Exemplo de Fontes -->
+        <section id="exemplo-fontes" class="explicacao">
+            <h2 style="font-family: 'Roboto', sans-serif;">Exemplo de Fontes Aplicadas</h2>
+            <p>
+                <strong>Roboto (regular):</strong> <span style="font-family: 'Roboto', sans-serif;">Este é um texto usando Roboto, fonte limpa e legível.</span>
+            </p>
+            <br>
+            <p>
+                <strong>Roboto (negrito):</strong> <span style="font-family: 'Roboto', sans-serif; font-weight:700;">Este é um texto Roboto em negrito.</span>
+            </p>
+            <br>
+            <p>
+                <strong>Pacifico (decorativa):</strong> <span style="font-family: 'Pacifico', cursive;">Esta é uma fonte cursiva e decorativa, ótima para títulos.</span>
+            </p>
+            <br>
+            <p>
+                <strong>Montserrat:</strong> <span style="font-family: 'Montserrat', sans-serif;">Montseratt é moderna, ideal para textos de destaque e títulos.</span>
+            </p>
+        </section>
+        <hr>
+        <!-- Como usar -->
+        <section id="como-usar" class="explicacao">
+            <h2>Como Usar Google Fonts</h2>
+            <p class="destaque">
+                Existem duas formas principais de adicionar fontes do Google Fonts:
+            </p>
+            <ol>
+                <li>
+                    <p class="link-bloco"><strong>Via &lt;link&gt; no &lt;head&gt; do HTML:</strong> Copie o link da fonte desejada do <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">site Google Fonts</a> e cole dentro do &lt;head&gt; do seu HTML.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Via @import no CSS:</strong> Adicione no CSS usando <code>@import url('...');</code>. É útil em projetos grandes, mas pode adicionar atraso no carregamento.</p>
+                </li>
+            </ol>
+            <p class="destaque">
+                💡 Dica: Para iniciantes, usar o método via &lt;link&gt; é mais direto e simples.
+            </p>
+        </section>
+        <hr>
+
+        <!-- Exemplo Prático -->
+        <section id="exemplo-pratico" class="explicacao">
+            <h2>Exemplo Prático</h2>
+            <p class="link-bloco">
+                1️⃣ Acesse <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a> e escolha uma fonte para seu projeto.
+            </p>
+            <p class="destaque">2️⃣ Copie o link de importação e cole dentro do &lt;head&gt;:</p>
+<pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+
+</code></pre>
+
+            <p class="destaque">3️⃣ Aplique a fonte em títulos e parágrafos usando <code>style</code> inline ou classes:</p>
+<pre><code>&lt;h1 style="font-family: 'Roboto', sans-serif;"&gt;Título com Roboto&lt;/h1&gt;
+&lt;p style="font-family: 'Roboto', sans-serif;"&gt;Parágrafo com Roboto&lt;/p&gt;</code></pre>
+
+            <p class="destaque">4️⃣ Experimente diferentes pesos da fonte, como 400 (normal) e 700 (negrito), para criar hierarquia visual.</p>
+            <p class="destaque">5️⃣ Você também pode usar fontes diferentes para títulos, subtítulos e parágrafos, combinando estilo e legibilidade.</p>
+        </section>
+        <hr>
+
+        <!-- Dicas Avançadas -->
+        <section id="dicas-avancadas" class="explicacao">
+            <h2>Dicas Avançadas</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Combine fontes complementares: uma serif para títulos e uma sans-serif para corpo de texto.</p>
+                </li>
+                <li>
+                    <p class="destaque">Use fontes variáveis quando disponíveis: permitem controlar peso, largura e estilo com um único link.</p>
+                </li>
+                <li>
+                    <p class="destaque">Evite carregar muitas fontes ao mesmo tempo para não prejudicar o desempenho.</p>
+                </li>
+                <li>
+                    <p class="destaque">Teste a legibilidade em diferentes tamanhos e dispositivos.</p>
+                </li>
+                <li>
+                    <p class="destaque">Em projetos profissionais, mantenha consistência de fontes entre páginas para identidade visual.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Boas práticas -->
+        <section id="boas-praticas" class="explicacao">
+            <h2>Boas práticas</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Limite o número de fontes diferentes a 2 ou 3.</p>
+                </li>
+                <li>
+                    <p class="destaque">Use fontes para dar destaque apenas em títulos ou elementos importantes.</p>
+                </li>
+                <li>
+                    <p class="destaque">Prefira fontes legíveis para textos longos.</p>
+                </li>
+                <li>
+                    <p class="destaque">Sempre inclua uma fonte de fallback.</p>
+                </li>
+                <li>
+                    <p class="destaque">Verifique compatibilidade entre navegadores e dispositivos.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Resumo -->
+        <section id="resumo" class="explicacao">
+            <h2>Resumo</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Google Fonts oferece uma variedade de fontes gratuitas online.</p>
+                </li>
+                <li>
+                    <p class="destaque">Podemos importar fontes via &lt;link&gt; ou @import.</p>
+                </li>
+                <li>
+                    <p class="destaque">As fontes podem ser aplicadas com <code>style="font-family:'NomeFonte', fallback;"</code> ou classes CSS.</p>
+                </li>
+                <li>
+                    <p class="destaque">Boas práticas incluem limitar fontes, combinar estilos e garantir legibilidade.</p>
+                </li>
+                <li>
+                    <p class="destaque">Fontes bem escolhidas melhoram a estética e experiência de leitura do site.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Navegação próximas aulas -->
+        <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-012.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-014.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/FLuQonci9wU?si=byzjpdqQ-qyMeSEv" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-013')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

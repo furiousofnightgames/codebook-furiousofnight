@@ -1,0 +1,139 @@
+<!-- Página 2 Secundária -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Secundária Reprodução de Vídeos</title>
+   <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body { 
+      text-align: center; 
+      background: #0a2a2e;
+      color: #00ff0d; 
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1, h2 {
+      margin: 20px 0;
+      color: #00ffff;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    iframe { 
+      display: none; 
+      width: 90%; 
+      max-width: 1000px;
+      aspect-ratio: 16/9;
+      height: auto;
+      border: none; 
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      background: #000;
+      transition: all 0.3s ease;
+    }
+
+    iframe.active { 
+      display: block; 
+      margin: 20px auto; 
+    }
+
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    a { 
+      color: rgb(255, 255, 0); 
+      text-decoration: none; 
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 0, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    a:hover { 
+      color: #ffffff; 
+      text-shadow: 0 0 6px #fff;
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border: none;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      iframe {
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      a {
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Página de Reprodução de Vídeos</h1>
+     <iframe id="video3" src="https://www.youtube.com/embed/UMJgG-hp0f8" class="active" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     <p>
+        Curso completo disponível em: <a href="https://www.youtube.com/watch?v=UMJgG-hp0f8&list=PLHz_AreHm4dkYS6J9KeYgCCVpo5OXkvgE" target="_blank" rel="external noopener noreferrer">Curso em Vídeo</a>
+    </p>
+
+  <hr>
+  
+  <h2><a href="../treiner-024.html" style="color:rgb(255, 255, 0);">⬅ Voltar à Galeria</a></h2>
+</body>
+</html>

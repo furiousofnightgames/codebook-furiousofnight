@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Sombras em Elementos com box-shadow | Módulo 2 Aula 24</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar efeitos de sombra com a propriedade box-shadow do CSS. Tutorial sobre sombras e efeitos visuais.">
+    <meta name="keywords" content="CODEBOOK, box-shadow, sombras CSS, efeitos visuais, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-024.html">
+    <meta property="og:title" content="CODEBOOK - Sombras com box-shadow">
+    <meta property="og:description" content="Aprenda a criar efeitos de sombra com CSS. Tutorial sobre box-shadow e efeitos visuais.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-024.html">
+    <meta property="twitter:title" content="CODEBOOK - Sombras com box-shadow">
+    <meta property="twitter:description" content="Domine a criação de sombras em CSS com o CODEBOOK. Tutorial sobre efeitos visuais.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Sombras em Elementos com box-shadow | Módulo 2 Aula 24</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+
+ <style>
+     /* CSS apenas para demonstrar o efeito das sombras */
+     .exemplo {
+      width: 200px;
+      height: 100px;
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: rgb(255, 136, 0);
+      display: block;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+     }
+     
+     .sombra-suave {
+      box-shadow: 5px 5px 12px 6px rgba(0,0,0,0.3);
+     }
+     
+     .sombra-forte {
+      box-shadow: 10px 10px 25px 10px rgba(0,0,0,0.5);
+     }
+     
+     .sombra-colorida {
+      box-shadow: 5px 5px 10px rgba(0, 128, 255, 0.6);
+     }
+     
+     .sombra-interna {
+      box-shadow: inset 5px 5px 16px 5px rgba(0,0,0,0.4);
+     }
+     
+     .exemplo:hover {
+      box-shadow: 8px 8px 20px rgba(0,0,0,0.6);
+      cursor: pointer
+     }
+     
+     .exemplo:active {
+      box-shadow: inset 3px 3px 10px rgba(0,0,0,0.5);
+      transform: scale(0.97);
+     }
+     
+     @media (max-width: 480px) {
+      .exemplo {
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        margin: 15px auto;
+        font-size: 14px;
+      }
+     }
+     
+     main {
+      max-width: 900px;
+      margin: auto;
+      padding: 10px;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: justify;
+     }
+     
+     h1, h2 {
+      text-align: center;
+     }
+ </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-024')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-024')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    <h1>📘 Aula 24 MD-2: Sombra nas Caixas (box-shadow) 📘</h1>
+</header>
+<hr>
+    <nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+        
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#sintaxe-basica">Sintaxe Básica</a></li>
+            <li><a href="#exemplos-praticos">Exemplos Práticos</a></li>
+            <li><a href="#dicas">Dicas Importantes</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+        </ul>
+    </strong>
+</nav>
+<hr>
+  <main>
+    <section id="introducao" class="explicacao">
+      <h2>📘 Introdução</h2>
+      <p class="destaque">
+        Na aula de hoje, vamos aprender como adicionar <strong>sombras</strong> às caixas (ou blocos) dos nossos elementos em HTML usando CSS.  
+        Esse recurso é feito com a propriedade <code>box-shadow</code> e serve para criar profundidade e destaque visual.
+      </p>
+      <p class="destaque">
+        As sombras ajudam a simular luz e profundidade, deixando o design mais moderno e agradável aos olhos do usuário.
+      </p>
+    </section>
+
+    <section id="sintaxe-basica" class="explicacao">
+      <h2>⚙️ Sintaxe básica</h2>
+      <p class="destaque">A sintaxe geral da propriedade <code>box-shadow</code> é a seguinte:</p>
+
+<pre>
+box-shadow: deslocamentoX deslocamentoY desfoque cor;
+</pre>
+
+      <p>Os valores funcionam assim:</p>
+      <ul>
+        <li><strong>deslocamentoX</strong> → Move a sombra na horizontal (para direita ou esquerda).</li>
+        <li><strong>deslocamentoY</strong> → Move a sombra na vertical (para cima ou para baixo).</li>
+        <li><strong>desfoque</strong> → Define o quanto a sombra será suave.</li>
+        <li><strong>cor</strong> → Define a cor e a transparência da sombra (com <code>rgba()</code>).</li>
+      </ul>
+    </section>
+
+    <section id="exemplos-praticos" class="explicacao">
+      <h2>🎨 Exemplos Práticos</h2>
+
+      <p><strong>1️⃣ Sombra Suave:</strong></p>
+      <div class="exemplo sombra-suave">Suave</div>
+
+<pre>
+.exemplo {
+  box-shadow: 5px 5px 12px 6px rgba(0,0,0,0.3);
+}
+</pre>
+
+      <p><strong>2️⃣ Sombra Mais Forte:</strong></p>
+      <div class="exemplo sombra-forte">Forte</div>
+
+<pre>
+.exemplo {
+  box-shadow: 10px 10px 25px 10px rgba(0,0,0,0.5);
+}
+</pre>
+
+      <p><strong>3️⃣ Sombra Colorida:</strong></p>
+      <div class="exemplo sombra-colorida">Colorida</div>
+
+<pre>
+.exemplo {
+  box-shadow: 5px 5px 10px rgba(0, 128, 255, 0.6);
+}
+</pre>
+
+      <p><strong>4️⃣ Sombra Interna (inset):</strong></p>
+      <div class="exemplo sombra-interna">Interna</div>
+
+<pre>
+.exemplo {
+  box-shadow: inset 5px 5px 16px 5px rgba(0,0,0,0.4);
+}
+</pre>
+    </section>
+
+    <section id="dicas" class="explicacao">
+      <h2>💡Dicas Importantes</h2>
+      <p class="destaque">
+        Você pode combinar várias sombras na mesma caixa, separando-as por vírgula:
+      </p>
+<pre>
+box-shadow: 2px 2px 5px rgba(0,0,0,0.4),
+            -2px -2px 5px rgba(255,255,255,0.3);
+</pre>
+      <p class="destaque">
+        Isso cria um efeito de **luz dupla**, ótimo para botões, cards ou blocos com estilo “neumorphism”.
+      </p>
+    </section>
+
+    <section id="conclusao" class="explicacao">
+      <h2>🧠 Conclusão</h2>
+      <p class="destaque">
+        A propriedade <code>box-shadow</code> é simples, mas poderosa!  
+        Ela permite dar vida aos seus layouts, simulando luz e profundidade sem precisar de imagens.  
+        Experimente ajustar os valores e observe como pequenas mudanças criam efeitos completamente diferentes.
+      </p>
+    </section>
+  </main>
+<hr>
+<nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-023.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-025.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/JACiDRNWjjQ?si=k29f-ahgFuSGm2XQ" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-024')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>
+ 

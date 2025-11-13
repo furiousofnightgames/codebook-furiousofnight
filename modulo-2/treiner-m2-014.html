@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Fontes Externas em CSS | Módulo 2 Aula 14</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar fontes externas personalizadas em CSS. Tutorial sobre @font-face, formatos de fonte e hospedagem local.">
+    <meta name="keywords" content="CODEBOOK, fontes externas, @font-face, web fonts, fontes personalizadas, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-014.html">
+    <meta property="og:title" content="CODEBOOK - Fontes Personalizadas">
+    <meta property="og:description" content="Aprenda a implementar fontes externas em seus projetos web. Tutorial sobre formatos e hospedagem.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-014.html">
+    <meta property="twitter:title" content="CODEBOOK - Fontes Custom">
+    <meta property="twitter:description" content="Domine o uso de fontes personalizadas em CSS com o CODEBOOK. Tutorial sobre @font-face.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-014.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-014')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-014')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="centralizado">📘 Aula 14 MD-2: Usando Fontes Externas Personalizadas 📘</h1>
+        <hr>
+
+        <!-- Índice -->
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#o-que-sao">O que são fontes externas</a></li>
+                    <li><a href="#como-usar">Como usar com @font-face</a></li>
+                    <li><a href="#exemplo-pratico">Exemplo Prático</a></li>
+                    <li><a href="#dicas-avancadas">Dicas Avançadas</a></li>
+                    <li><a href="#boas-praticas">Boas Práticas</a></li>
+                    <li><a href="#resumo">Resumo</a></li>
+                </ul>
+            </strong>
+        </nav>
+        <hr>
+
+        <!-- Introdução -->
+        <section id="introducao" class="explicacao">
+            <h2>Introdução</h2>
+            <p class="destaque">Nesta aula vamos aprender a usar **fontes externas personalizadas**, ou seja, aquelas que você baixa do seu computador e aplica no site. Esse recurso permite criar identidade visual única e tornar seu projeto mais atraente.</p>
+            <p  class="link-bloco">💡 Dica: Sites como <a href="https://www.dafont.com/pt/" target="_blank" rel="noopener noreferrer">Dafont.com</a> oferecem milhares de fontes gratuitas para uso pessoal, perfeitas para teste e aprendizado.</p>
+        </section>
+        <hr>
+
+        <!-- O que são fontes externas -->
+        <section id="o-que-sao" class="explicacao">
+            <h2>O que são fontes externas?</h2>
+            <p class="destaque">Fontes externas são arquivos de fonte (.ttf, .otf, .woff, .woff2, .svg, etc.) que não estão instalados no sistema do usuário. Elas são adicionadas ao site com CSS usando <code>@font-face</code>.</p>
+            <p class="destaque">Principais formatos:</p>
+            <ul>
+                <li>
+                    <p class="destaque"><strong>TrueType (.ttf)</strong>: compatível com a maioria dos navegadores.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>OpenType (.otf)</strong>: suporta tipografia avançada, ligaduras e variações.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>Embedded OpenType (.eot)</strong>: usado historicamente no Internet Explorer.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>OpenType AAT (.ttc, Apple Advanced Typography)</strong>: usado em sistemas Apple.</p>
+                </li>
+                <li>
+                    <p class="destaque"><strong>SVG (.svg)</strong>: usado em ícones e fontes vetoriais escaláveis.</p>
+                </li>
+            </ul>
+            <p class="destaque">💡 Observação: você não precisa ter todos os formatos; um TTF ou WOFF2 geralmente é suficiente para projetos modernos.</p>
+        </section>
+        <hr>
+
+        <!-- Como usar -->
+        <section id="como-usar" class="explicacao">
+            <h2>Como usar com @font-face exemplo:</h2>
+            <p class="destaque">Para usar uma fonte externa no seu site, você deve:</p>
+            <ol>
+                <li>
+                    <p class="destaque">Baixar a fonte desejada (.ttf, .otf, etc.) do site confiável.</p>
+                </li>
+                <li>
+                    <p class="destaque">Criar uma pasta <code>fonts</code> no projeto e colocar os arquivos lá.</p>
+                </li>
+                <li>
+                    <p class="destaque">Declarar a fonte no CSS usando <code>@font-face</code> dessa forma abaixo:</p>
+                </li>
+            </ol>
+<pre><code>&lt;style&gt;
+    @font-face {
+    font-family: 'nome-da-fonte';
+    src: url('fonts/arquivo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;}
+&lt;/style&gt;
+</code></pre>
+            <p class="destaque">Depois, basta aplicar a fonte nos elementos desejados:</p>
+<pre><code>&lt;style&gt;
+h1 { font-family: 'nome-da-fonte', sans-serif; color: #E94E77; }
+p  { font-family: 'nome-da-fonte', sans-serif; color: #333; }
+&lt;/style&gt;
+</code></pre>
+        </section>
+        <hr>
+
+</code></pre>
+<hr>
+    <div  class="explicacao">
+        <h3>Importante!</h3>
+        <p class="destaque">
+            Sempre inclua uma fonte de fallback (ex: <code>sans-serif</code>) para garantir que o texto seja exibido corretamente caso a fonte personalizada não carregue.
+        </p>
+        <p class="destaque">
+            Se certifique de sempre colocar o nome correto da fonte, que deve ser igual ao do arquivo da fonte.
+        </p>
+    </div>
+    </section>
+    <hr>
+
+        <!-- Exemplo Prático -->
+        <section id="exemplo-pratico" class="explicacao">
+            <h2>Exemplo Prático</h2>
+            <p class="destaque">Aqui estão exemplos visuais aplicando as fontes externas baixadas:</p>
+            <div class="explicacao">
+                <p class="love">Fonte Love - ideal para títulos decorativos</p>
+                <p class="fitgirl">Fonte Fitgirl - ótima para destaque de parágrafos</p>
+                <p class="angelia">Fonte Angelia - cursiva elegante para subtítulos</p>
+                <p class="lovely">Fonte Lovely - romântica e delicada para seções especiais</p>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Dicas Avançadas -->
+        <section id="dicas-avancadas" class="explicacao">
+            <h2>Dicas Avançadas</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Combine fontes: use uma fonte decorativa para títulos e uma legível para corpo do texto.</p>
+                </li>
+                <li>
+                    <p class="destaque">Evite muitas fontes diferentes, isso prejudica a estética e a performance.</p>
+                </li>
+                <li>
+                    <p class="destaque">Use <code>font-display: swap;</code> para evitar que o texto fique invisível enquanto a fonte carrega.</p>
+                </li>
+                <li>
+                    <p class="destaque">Teste a renderização em diferentes navegadores e dispositivos.</p>
+                </li>
+                <li>
+                    <p class="destaque">Mantenha os nomes das fontes consistentes no CSS e arquivos.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Boas práticas -->
+        <section id="boas-praticas" class="explicacao">
+            <h2>Boas Práticas</h2>
+            <ul>
+                <li>
+                    <p class="destaque">Coloque os arquivos de fonte em uma pasta organizada, ex: <code>fonts/</code>.</p>
+                </li>
+                <li>
+                    <p class="destaque">Use fontes com licença adequada para seu projeto (Dafont.com indica licença de uso).</p>
+                </li>
+                <li>
+                    <p class="destaque">Limite o número de fontes externas para melhorar desempenho.</p>
+                </li>
+                <li>
+                    <p class="destaque">Evite espaços em nomes de arquivo ou use %20 se houver.</p>
+                </li>
+                <li>
+                    <p class="destaque">Inclua sempre uma fonte de fallback no CSS.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Resumo -->
+        <section id="resumo" class="explicacao">
+            <h2>Resumo</h2>
+            <ul>
+                <li>
+                    <p class="destaque">@font-face permite usar fontes externas baixadas em sites.</p>
+                </li>
+                <li>
+                    <p class="destaque">Fontes podem ser TTF, OTF, WOFF, WOFF2, EOT, SVG, etc.</p>
+                </li>
+                <li>
+                    <p class="destaque">Organize arquivos em pastas e nomeie corretamente.</p>
+                </li>
+                <li>
+                    <p class="destaque">Use boas práticas de performance e legibilidade.</p>
+                </li>
+                <li>
+                    <p class="link-bloco">Site confiável como <a href="https://www.dafont.com/pt/" target="_blank" rel="noopener noreferrer">Dafont.com</a> oferece milhares de opções de fontes gratuitas.</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- Navegação próximas aulas -->
+        <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-013.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-015.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/3YIXnxA1kqg?si=oNPnlPaqtjuER4jC" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-014')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

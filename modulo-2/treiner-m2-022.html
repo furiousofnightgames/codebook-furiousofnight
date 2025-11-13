@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Modelo de Caixas: Primeiros Passos | Módulo 2 Aula 22</title>
+    <meta name="description" content="CODEBOOK: Aprenda os conceitos fundamentais do Box Model em CSS. Tutorial sobre margin, padding, border e content.">
+    <meta name="keywords" content="CODEBOOK, box model, modelo de caixas, margin, padding, border, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-022.html">
+    <meta property="og:title" content="CODEBOOK - Modelo de Caixas em CSS">
+    <meta property="og:description" content="Aprenda os conceitos fundamentais do Box Model em CSS. Tutorial sobre dimensionamento e espaçamento.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-022.html">
+    <meta property="twitter:title" content="CODEBOOK - Modelo de Caixas em CSS">
+    <meta property="twitter:description" content="Domine o Box Model em CSS com o CODEBOOK. Tutorial sobre margin, padding e border.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Modelo de Caixas: Primeiros Passos | Módulo 2 Aula 22</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Apenas para exemplos visuais */
+        .caixa-exemplo {
+            width: 80%;
+            max-width: 300px;
+            min-width: 200px;
+            min-height: 100px;
+            padding: 15px;
+            border: 5px solid #f00;
+            margin: 20px auto;
+            background-color: rgb(14, 95, 177);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 400px) {
+            .caixa-exemplo {
+                width: 90%;
+                height: auto;
+                padding: 10px;
+                border-width: 3px;
+            }
+        }
+
+        .h1-exemplo {
+            width: 260px;
+            padding: 10px;
+            border: 8px solid #0048ff;
+            margin: 10px auto;   
+            outline: 5px solid rgb(0, 255, 34);
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 400px) {
+            .h1-exemplo {
+                width: 90%; 
+                padding: 8px;
+                border-width: 4px;
+                outline-width: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-022')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-022')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>📘 Aula 22 MD-2: Modelo de Caixas: primeiros passos 📘</h1>
+    <hr>
+    <!-- Índice interno da página -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#visualizacao">Visualização do Box Model</a></li>
+            <li><a href="#exemplos">Exemplos de Box Model em ação</a></li>
+            <li><a href="#block-inline">Diferença de Block-level & Inline-level</a></li>
+            <li><a href="#dicas">Dicas Importantes</a></li>
+            <li><a href="#extras">Extras / Observações</a></li>
+            <li><a href="#laboratorio">Laboratório de Prática</a></li>
+        </ul>
+    </strong>
+</nav>
+<hr>
+
+<section class="explicacao" id="introducao">
+    <h2>Introdução</h2>
+    <p class="destaque">
+        O <strong>Box Model</strong> é a forma como o CSS representa qualquer elemento na tela.  
+        Cada elemento HTML é tratado como uma "caixa" que possui quatro camadas principais:
+    </p>
+    <ul>
+        <li><strong>Content:</strong> o conteúdo do elemento (texto, imagem, vídeo, etc).</li>
+        <li><strong>Padding:</strong> espaço interno entre o conteúdo e a borda.</li>
+        <li><strong>Border:</strong> a borda visível em torno do padding.</li>
+        <li><strong>Margin:</strong> espaço externo entre a borda e outros elementos.</li>
+    </ul>
+</section>
+<hr>
+
+<section class="explicacao" id="visualizacao">
+    <h2>Visualização do Box Model</h2>
+    <pre><code>
++-------------------------+  ← margin
+|   [   Borda (border)   ]|
+|   +-----------------+   |
+|   |  Padding        |   |
+|   |   +---------+   |   |
+|   |   | Content |   |   |
+|   |   +---------+   |   |
+|   +-----------------+   |
++-------------------------+
+    </code></pre>
+    <p class="destaque">
+        Cada camada pode ser manipulada para ajustar a posição e tamanho da caixa.  
+        O conhecimento dessas camadas é essencial para criar layouts precisos e responsivos.
+    </p>
+</section>
+<hr>
+
+<section class="explicacao" id="exemplos">
+    <h2>Exemplos de Box Model em ação</h2>
+
+    <div class="explicacao">
+        <p class="destaque">Exemplo 1: uma caixa simples visualizando padding, border e margin:</p>
+        <div class="caixa-exemplo">Conteúdo da caixa</div>
+        <pre><code>
+.caixa-exemplo {
+    width: 200px;
+    height: 100px;
+    padding: 15px;
+    border: 5px solid #f00;
+    margin: 20px auto;
+    background-color: rgb(14, 95, 177);
+    text-align: center;
+}
+        </code></pre>
+    </div>
+<hr>
+    <div class="explicacao">
+        <p class="destaque">Exemplo 2: manipulando um H1 para visualizar o Box Model:</p>
+        <h1 class="h1-exemplo">Olá, mundo!</h1>
+        <pre><code>
+h1 {
+    width: 260px;
+    padding: 10px;
+    border: 8px solid #0048ff;
+    margin: 10px auto;   
+    outline: 5px solid rgb(0, 255, 34);
+}
+        </code></pre>
+    </div>
+</section>
+<hr>
+
+<section class="explicacao" id="block-inline">
+    <h2>Diferença entre Block-level e Inline-level</h2>
+    <p class="destaque">
+        Elementos <strong>block-level</strong> ocupam a largura inteira e quebram linha automaticamente.
+        Exemplos: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>.
+    </p>
+    <p class="destaque">
+        Elementos <strong>inline-level</strong> ocupam apenas o espaço necessário do conteúdo e não quebram linha.  
+        Exemplos: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>.
+    </p>
+    <pre><code>
+/* Block-level */
+div {
+  width: 300px;
+  border: 2px solid blue;
+  margin: 10px 0;
+}
+
+/* Inline-level */
+span {
+  border: 2px solid green;
+  padding: 5px;
+}
+    </code></pre>
+</section>
+<hr>
+
+<section class="explicacao" id="dicas">
+    <h2>Dicas Importantes</h2>
+    <ul>
+        <li>Use <code>outline</code> para depuração de caixas, pois não afeta o layout.</li>
+        <li>Lembre-se: se o conteúdo não cabe na caixa definida, o navegador quebra linhas automaticamente.</li>
+        <li>Experimente alterar apenas <code>padding</code>, <code>margin</code> ou <code>border</code> para entender o efeito de cada camada.</li>
+        <li>O conhecimento do Box Model é fundamental para trabalhar com layouts avançados e responsivos.</li>
+    </ul>
+</section>
+<hr>
+
+<section class="explicacao" id="extras">
+    <h2>Extras / Observações</h2>
+    <p class="destaque">
+        Existem propriedades CSS relacionadas ao Box Model que você verá mais adiante:  
+        <code>box-sizing</code> (content-box vs border-box), <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code>.  
+        Mas por enquanto, foque em compreender bem <strong>content, padding, border e margin</strong>.
+    </p>
+</section>
+<hr>
+<section class="explicacao">
+    <h2>Temos aqui um complemento prático em vídeo</h2>
+    <p class="destaque">Modelos de Caixas na prática — Parte 1</p>
+    <p class="destaque">Recomendo assistir com atenção: há detalhes muito valiosos na aplicação prática.</p>
+    <div class="video-iframe">
+        <iframe src="https://www.youtube.com/embed/rXF1okX0v9E"
+        title="Aula prática - curso em vídeo" 
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>></iframe>
+    </div>
+    <p class="destaque">Dica: Use o DevTools do navegador no (F12) explore com calma e sem medo.</p>
+</section>
+
+<hr>
+
+<section class="explicacao">
+    <h2>Parte 2 — Continuação da prática sobre Modelo de Caixas</h2>
+    <p class="destaque">
+        É essencial que você siga a sequência corretamente, pois ambos os vídeos complementam o aprendizado e contêm informações fundamentais para o seu desenvolvimento.
+    </p>
+    <div class="video-iframe">
+        <iframe src="https://www.youtube.com/embed/-CPoDvZLQ6k"
+        title="Aula prática - curso em vídeo (Parte 2)"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="explicacao" id="laboratorio">
+    <h2>Laboratório de Prática</h2>
+    <ol>
+        <li>Crie três caixas usando <code>&lt;div&gt;</code> com cores diferentes.</li>
+        <li>Altere apenas o <code>padding</code> de uma delas e observe a diferença no espaço interno.</li>
+        <li>Altere apenas a <code>margin</code> de outra e veja como muda o espaçamento externo.</li>
+        <li>Experimente uma caixa com <code>&lt;span&gt;</code> dentro de um parágrafo e observe a diferença entre inline e block.</li>
+        <li>Use <code>outline</code> em uma das caixas para depuração visual sem afetar o layout.</li>
+    </ol>
+</section>
+<hr>
+
+<nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-021.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-023.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/3ZFYXkzXhqE?si=s7D4QHnVcXjkGU3o" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-022')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</body>
+</html>

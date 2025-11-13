@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Pseudo-elementos em CSS | Módulo 2 Aula 21</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar pseudo-elementos em CSS para criar efeitos especiais. Tutorial sobre ::before, ::after e outros pseudo-elementos.">
+    <meta name="keywords" content="CODEBOOK, pseudo-elementos, before, after, first-letter, CSS avançado, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-021.html">
+    <meta property="og:title" content="CODEBOOK - Pseudo-elementos em CSS">
+    <meta property="og:description" content="Aprenda a usar pseudo-elementos em CSS para criar efeitos especiais. Tutorial sobre modificação avançada de elementos.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-021.html">
+    <meta property="twitter:title" content="CODEBOOK - Pseudo-elementos em CSS">
+    <meta property="twitter:description" content="Domine o uso de pseudo-elementos em CSS com o CODEBOOK. Tutorial sobre ::before, ::after e mais.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Pseudo-elementos em CSS | Módulo 2 Aula 21</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+<style>
+/* ===== Caixas de destaque da Aula 21 ===== */
+.aula21-box {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background: rgb(31, 116, 244); /* azul vibrante */
+  color: rgb(255, 255, 255); /* texto branco */
+  border-radius: 5px;
+  border: 4px solid rgb(18, 255, 38); /* borda verde chamativa */
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.aula21-box:hover {
+  background: rgb(45, 145, 255);
+  transform: translateY(-2px);
+}
+
+/* ===== Pseudo-elementos decorativos ===== */
+.aula21-decorativo::before {
+  content: '🔥';
+  margin-right: 5px;
+}
+.aula21-decorativo::after {
+  content: '✨';
+  margin-left: 5px;
+}
+
+/* ===== Primeira letra e primeira linha ===== */
+.aula21-first-letter::first-letter {
+  font-size: 2.5rem;
+  color: rgb(98, 98, 232);
+  font-weight: bold;
+}
+.aula21-first-line::first-line {
+  font-variant: small-caps;
+  color: rgb(32, 193, 252);
+  font-weight: bold;
+}
+
+/* ===== Links exclusivos da Aula 21 ===== */
+.aula21-link {
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+  color: rgb(9, 255, 0);
+  border-bottom: 2px solid transparent; /* linha invisível */
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.aula21-link:link   { color: rgb(9, 255, 0); }
+.aula21-link:visited { color: rgb(77, 147, 253); }
+.aula21-link:hover  { 
+  color: rgb(239, 11, 255);
+  border-bottom: 2px solid rgb(239, 11, 255); /* linha visível */
+  transform: scale(1.05);
+}
+.aula21-link:active { 
+  color: rgb(251, 77, 77);
+  border-bottom: 2px solid rgb(251, 77, 77);
+}
+
+/* ===== Pré-formatação para exemplos de código ===== */
+pre.aula21-pre { 
+  overflow-x: auto; 
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* ===== Comparativo de seletores e pseudo-elementos ===== */
+.aula21-comparativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+.aula21-comparativo div {
+  background: rgb(57, 162, 248); 
+  color: rgb(14, 11, 7);
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bolder;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 4px solid rgb(102, 255, 0);
+}
+.aula21-comparativo div:hover {
+  background: rgb(45, 145, 220);
+  transform: translateY(-2px);
+}
+.aula21-comparativo div h4::before {
+  content: '📌 ';
+}
+.aula21-comparativo div p::before {
+  content: '✔ ';
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Início</a></li>
+        <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+        <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-021')">⚖ Política</a></li>
+        <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-021')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>📘 Aula 21 MD-2: Pseudo-elementos em CSS 📘</h1>
+    <hr>
+ <nav class="indice-simples">
+      <h2>Índice</h2>
+      <strong>
+        <ul>
+          <li><a href="#introducao">Introdução</a></li>
+          <li><a href="#before-after">Pseudo-elemento ::before e ::after</a></li>
+          <li><a href="#first-letter">Pseudo-elemento ::first-letter</a></li>
+          <li><a href="#first-line">Pseudo-elemento ::first-line</a></li>
+          <li><a href="#seletores-css">Classificação de seletores</a></li>
+          <li><a href="#resumo">Resumo</a></li>
+          <li><a href="#comparativo">Quadro comparativo</a></li>
+          <li><a href="#exemplo-links">Exemplo prático com links</a></li>
+          <li><a href="#conclusao">Conclusão</a></li>
+        </ul>
+      </strong>
+    </nav>
+    <hr>
+    <!-- Introdução -->
+<section class="explicacao" id="introducao">
+  <h2>Introdução</h2>
+  <p class="destaque">
+    Pseudo-elementos são seletores do CSS que permitem estilizar partes específicas de um elemento ou inserir conteúdo visual sem alterar o HTML.
+  </p>
+  <p class="destaque">
+    Os principais são <strong>::before</strong> e <strong>::after</strong> (adicionam conteúdo antes ou depois de um elemento), <strong>::first-letter</strong> (estiliza a primeira letra) e <strong>::first-line</strong> (estiliza a primeira linha de um parágrafo).
+  </p>
+  <p class="destaque">
+    Diferem das pseudo-classes, que reagem a estados do elemento, como <strong>:hover</strong>.  
+    Exemplo prático: <code>a::before { content: '🔥'; margin-right: 5px; }</code>
+  </p>
+</section>
+
+    <hr>
+
+    <!-- ::before e ::after -->
+    <section class="explicacao" id="before-after">
+      <h2>Pseudo-elementos ::before e ::after</h2>
+      <p>Adicionam conteúdo antes ou depois do conteúdo real de um elemento. É obrigatório definir a propriedade <code>content</code>.</p>
+      <pre class="aula21-pre"><code>/* Exemplo de before e after */
+.aula21-decorativo::before { content: '🔥'; margin-right: 5px; }
+.aula21-decorativo::after { content: '✨'; margin-left: 5px; }
+
+</code></pre>
+
+      <div class="aula21-box aula21-decorativo">Link Decorado</div>
+      <p class="destaque">💡 Observe que os emojis aparecem sem alterar o HTML.</p>
+    </section>
+    <hr>
+
+    <!-- ::first-letter -->
+    <section class="explicacao" id="first-letter">
+      <h2>Pseudo-elemento ::first-letter</h2>
+      <pre class="aula21-pre"><code>p::first-letter {
+  font-size: 2rem;
+  color: darkblue;
+  font-weight: bold;
+}</code></pre>
+      <p class="aula21-first-letter">
+        Aqui a primeira letra é estilizada usando ::first-letter, criando destaque visual.
+      </p>
+    </section>
+    <hr>
+
+    <!-- ::first-line -->
+    <section class="explicacao" id="first-line">
+      <h2>Pseudo-elemento ::first-line</h2>
+      <pre class="aula21-pre"><code>p::first-line {
+  font-variant: small-caps;
+  color: rgb(32, 193, 252);
+  font-weight: bold;
+}</code></pre>
+      <p class="aula21-first-line">
+        Esta é a primeira linha de um parágrafo estilizada com ::first-line.
+      </p>
+    </section>
+    <hr>
+<section class="explicacao" id="seletores-css">
+  <h2>Classificando seletores em CSS: #ID, .Class, :Pseudo-class e ::Pseudo-element</h2>
+  <p class="destaque">
+    Em CSS, é fundamental entender a diferença entre tipos de seletores para aplicar estilos de forma precisa.
+  </p>
+
+<div class="explicacao">
+    <h3>#ID</h3>
+    <p>
+    Seletores de ID aplicam estilo a <strong>um único elemento</strong> que possua o atributo <code>id</code> correspondente.
+    Sempre precedidos de <code>#</code>.
+    </p>
+    <pre class="aula21-pre"><code>&lt;div id="cabecalho"&gt;Meu cabeçalho&lt;/div&gt;
+    
+    #cabecalho {
+    background-color: rgb(0, 120, 200);
+    color: white;
+    padding: 10px;
+    }</code></pre>
+</div>
+<div class="explicacao">
+    <h3>.Class</h3>
+    <p>
+        Seletores de classe aplicam estilo a <strong>um ou vários elementos</strong> que compartilhem a mesma classe.  
+        Sempre precedidos de <code>.</code>.
+    </p>
+    <pre class="aula21-pre"><code>&lt;div class="card"&gt;Card 1&lt;/div&gt;
+    &lt;div class="card"&gt;Card 2&lt;/div&gt;
+    
+    .card {
+    background-color: rgb(200, 220, 255);
+    padding: 10px;
+    border-radius: 5px;
+    }</code></pre>
+</div>
+
+<div class="explicacao">
+    <h3>:Pseudo-class</h3>
+    <p>
+    Seletores de pseudo-classe aplicam estilo a um elemento em um <strong>estado específico</strong> ou condição, como <code>:hover</code>, <code>:visited</code> ou <code>:first-child</code>.
+    </p>
+    <pre class="aula21-pre"><code>a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+    }</code></pre>
+</div>
+
+  <div class="explicacao">
+      <h3>::Pseudo-element</h3>
+      <p>
+        Seletores de pseudo-elemento aplicam estilo a uma <strong>parte específica do elemento</strong> ou adicionam conteúdo antes/depois sem alterar o HTML.
+        Exemplo: <code>::before</code>, <code>::after</code>, <code>::first-letter</code>, <code>::first-line</code>.
+      </p>
+      <pre class="aula21-pre"><code>p::first-letter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: darkblue;
+      }
+      
+      p::after {
+      content: ' ✨';
+      }</code></pre>
+  </div>
+</section>
+  <section class="explicacao" id="resumo">
+      <h3>Resumo</h3>
+      <div class="aula21-comparativo">
+        <div>
+          <h4>#ID</h4>
+          <p>Único elemento, estilo exclusivo.</p>
+        </div>
+        <div>
+          <h4>.Class</h4>
+          <p>Um ou vários elementos, reutilizável.</p>
+        </div>
+        <div>
+          <h4>:Pseudo-class</h4>
+          <p>Estado específico de um elemento.</p>
+        </div>
+        <div>
+          <h4>::Pseudo-element</h4>
+          <p>Parte do elemento ou conteúdo extra.</p>
+        </div>
+      </div>
+  </section>
+
+    <hr>
+    <!-- Quadro comparativo -->
+    <section class="explicacao" id="comparativo">
+      <h2>Quadro comparativo de pseudo-elementos</h2>
+      <div class="aula21-comparativo">
+        <div>
+          <h3>::before</h3>
+          <p>Adiciona conteúdo antes do elemento.</p>
+        </div>
+        <div>
+          <h3>::after</h3>
+          <p>Adiciona conteúdo depois do elemento.</p>
+        </div>
+        <div>
+          <h3>::first-letter</h3>
+          <p>Estiliza apenas a primeira letra de um bloco de texto.</p>
+        </div>
+        <div>
+          <h3>::first-line</h3>
+          <p>Estiliza apenas a primeira linha de um bloco de texto.</p>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Exemplo prático com links -->
+    <section class="explicacao" id="exemplo-links">
+      <h2>Exemplo prático com links</h2>
+      <pre class="aula21-pre"><code>.aula21-link::before { content: '🔥'; margin-right: 5px; }
+.aula21-link::after { content: '✨'; margin-left: 5px; }
+
+</code></pre>
+      <ul>
+        <li><a href="https://github.com/furiousofnightgames" class="aula21-link" target="_blank" rel="noopener noreferrer">Perfil GitHub</a></li>
+        <li><a href="https://www.tiktok.com/@furiousofnightgames" class="aula21-link aula21-decorativo" target="_blank" rel="noopener noreferrer">Perfil TikTok</a></li>
+        <li><a href="https://www.instagram.com/furiousofnightgames" class="aula21-link" target="_blank" rel="noopener noreferrer">Perfil Instagram</a></li>
+      </ul>
+    </section>
+    <hr>
+
+    <!-- Conclusão -->
+<section class="explicacao" id="conclusao">
+  <h2>Conclusão</h2>
+  <p class="destaque">
+    Pseudo-elementos são recursos poderosos do CSS que permitem criar efeitos visuais sofisticados, destacar partes específicas de um elemento ou inserir conteúdo extra sem modificar o HTML.
+  </p>
+  <p class="destaque">
+    Eles ampliam as possibilidades de design, tornando páginas mais interativas e esteticamente agradáveis, e ajudam a manter o código HTML mais limpo e sem redundâncias.
+  </p>
+  <p class="destaque">
+    Exemplos como <strong>::before</strong>, <strong>::after</strong>, <strong>::first-letter</strong> e <strong>::first-line</strong> demonstram como pequenos detalhes podem melhorar a experiência do usuário.
+  </p>
+</section>
+
+    <hr>
+
+    <!-- Referências -->
+    <section class="explicacao" id="referencias">
+      <h2>Referências</h2>
+      <p class="link-bloco">
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank" rel="noopener noreferrer">MDN Web Docs - Pseudo-elements</a>
+      </p>
+    </section>
+    <hr>
+
+    <nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m2-020.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m2-022.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+  </nav>
+</main>
+
+<hr>
+<footer class="creditos">
+  <h2>Créditos e Referências</h2>
+  <h3>Gustavo Guanabara</h3>
+  <p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+      <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+  </p>
+  <p>
+    Aula de referência → 
+    <a href="https://youtu.be/vMlrcOVr7po?si=-P4qGdFnf_pAB8Ol" target="_blank" rel="external noopener noreferrer">
+      <strong>Aula no Curso em vídeo</strong>
+    </a>
+  </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+  <p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+    <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-021')">
+       Política de Privacidade
+    </a>
+  </p>
+</footer>
+</main>
+</body>
+</html>

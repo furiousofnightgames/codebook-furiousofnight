@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CODEBOOK: Aprenda três técnicas eficientes de centralização vertical em CSS. Tutorial completo sobre Position Absolute, Flexbox e Grid com exemplos práticos.">
+    <meta name="keywords" content="CODEBOOK, centralização vertical, CSS, position absolute, flexbox, grid, alinhamento CSS">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-009.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-009.html">
+    <meta property="og:title" content="Centralização Vertical em CSS | CODEBOOK">
+    <meta property="og:description" content="Aprenda a dominar técnicas de centralização vertical em CSS com exemplos práticos de Position Absolute, Flexbox e Grid.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-009.html">
+    <meta property="twitter:title" content="Centralização Vertical em CSS | CODEBOOK">
+    <meta property="twitter:description" content="Domine técnicas de centralização vertical em CSS com o CODEBOOK. Tutorial prático com Position Absolute, Flexbox e Grid.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <title>CODEBOOK - Centralização Vertical | Módulo 3 Aula 9</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Exemplo 1: Método Position Relative/Absolute */
+        #exemplo1-container {
+            background-color: #3bc9c9;
+            position: relative;
+            height: 300px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #exemplo1-conteudo {
+            position: absolute;
+            height: 100px;
+            width: min(200px, 80%);
+            background-color: rgba(28, 1, 1, 0.6);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            /* Método de centralização */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Exemplo 2: Método Flexbox */
+        #exemplo2-container {
+            background-color: #ff9f43;
+            height: 300px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            width: 100%;
+            box-sizing: border-box;
+            /* Método de centralização */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #exemplo2-conteudo {
+            height: 100px;
+            width: min(200px, 80%);
+            background-color: rgba(28, 1, 1, 0.6);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* Exemplo 3: Método Grid */
+        #exemplo3-container {
+            background-color: #00b894;
+            min-height: 400px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            width: 100%;
+            box-sizing: border-box;
+            /* Método de centralização */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Força sempre 2 colunas */
+            gap: 20px;
+            padding: 20px;
+            place-items: center;
+        }
+
+        .grid-item {
+            height: 150px;
+            width: 100%; /* Usa toda a largura disponível na célula do grid */
+            max-width: 200px;
+            background-color: rgba(28, 1, 1, 0.6);
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 8px;
+        }
+
+        /* Demonstração Interativa */
+        #demo-container {
+            background-color: #6c5ce7;
+            position: relative;
+            height: 300px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #demo-conteudo {
+            position: absolute;
+            height: 100px;
+            width: min(200px, 80%);
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #demo-conteudo:hover {
+            transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            #exemplo1-container,
+            #exemplo2-container,
+            #demo-container {
+                height: 250px;
+            }
+
+            #exemplo3-container {
+                min-height: 300px;
+            }
+
+            .grid-item {
+                height: 120px;
+                line-height: 120px;
+            }
+
+            pre {
+                max-width: 100%;
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #exemplo1-container,
+            #exemplo2-container,
+            #demo-container {
+                height: 200px;
+            }
+
+            #exemplo1-conteudo,
+            #exemplo2-conteudo,
+            #demo-conteudo {
+                height: 80px;
+                line-height: 80px;
+                font-size: 14px;
+            }
+
+            #exemplo3-container {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .grid-item {
+                height: 80px;
+                line-height: 80px;
+                font-size: 14px;
+                max-width: 150px; /* Menor largura máxima para telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m3.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-009')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-009')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="centralizado">📘 Aula 9 MD-3: Centralização Vertical de Caixas 📘</h1>
+        <hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <ul>
+                <li><a href="#introducao"><strong>Introdução</strong></a></li>
+                <li><a href="#metodo-absolute"><strong>Método Position Absolute</strong></a></li>
+                <li><a href="#metodo-flexbox"><strong>Método Flexbox</strong></a></li>
+                <li><a href="#metodo-grid"><strong>Método Grid</strong></a></li>
+                <li><a href="#dicas"><strong>Dicas e Boas Práticas</strong></a></li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="introducao" class="explicacao">
+            <h2>Introdução à Centralização Vertical</h2>
+            <p class="destaque">A centralização vertical de elementos é um desafio comum no desenvolvimento web. Existem vários métodos para alcançar este objetivo, cada um com suas próprias vantagens. Nesta aula, vamos explorar três técnicas principais.</p>
+        </section>
+        <hr>
+        <section id="metodo-absolute" class="explicacao">
+            <h2>1. Método Position Relative/Absolute</h2>
+            <p class="destaque">Este método utiliza posicionamento absoluto com transform. É muito versátil e funciona bem em qualquer situação:</p>
+            <ul>
+                <li><code>position: relative</code> no container</li>
+                <li><code>position: absolute</code> no elemento filho</li>
+                <li><code>top: 50%</code> e <code>left: 50%</code> para posicionamento</li>
+                <li><code>transform: translate(-50%, -50%)</code> para ajuste fino</li>
+            </ul>
+            <div id="exemplo1-container">
+                <div id="exemplo1-conteudo">
+                    Exemplo 1
+                </div>
+            </div>
+            <p class="destaque">Este método é ideal quando você precisa de controle preciso sobre o posicionamento do elemento. O <code>transform: translate(-50%, -50%)</code> garante que o elemento fique exatamente centralizado, compensando sua própria largura e altura.</p>
+            <p class="destaque">Código utilizado no exemplo acima:</p>
+        <pre><code>/* CSS */
+    #exemplo1-container {
+    background-color: #3bc9c9;
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+    border: 2px solid #333;
+    }
+    
+    #exemplo1-conteudo {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: rgba(28, 1, 1, 0.6);
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    /* Método de centralização */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+</code></pre>
+        </section>
+        <hr>
+        <section id="metodo-flexbox" class="explicacao">
+            <h2>2. Método Flexbox</h2>
+            <p class="destaque">O Flexbox oferece uma maneira moderna e flexível de centralizar elementos:</p>
+            <ul>
+                <li><code>display: flex</code> no container</li>
+                <li><code>justify-content: center</code> para centralização horizontal</li>
+                <li><code>align-items: center</code> para centralização vertical</li>
+            </ul>
+            <div id="exemplo2-container">
+                <div id="exemplo2-conteudo">
+                    Exemplo 2
+                </div>
+            </div>
+            <p class="destaque">O Flexbox oferece uma solução moderna e mais intuitiva. As propriedades <code>justify-content</code> e <code>align-items</code> controlam o alinhamento horizontal e vertical, respectivamente.</p>
+            <p class="destaque">Código utilizado no exemplo acima:</p>
+        <pre><code>/* CSS */
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #ff9f43;
+    }
+    
+    .content {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(28, 1, 1, 0.6);
+    }
+
+</code></pre>
+        </section>
+        <hr>
+        <section id="metodo-grid" class="explicacao">
+            <h2>3. Método Grid</h2>
+            <p class="destaque">O Grid oferece uma solução ainda mais simples com apenas duas propriedades:</p>
+            <ul>
+                <li><code>display: grid</code> no container</li>
+                <li><code>place-items: center</code> para centralização total</li>
+            </ul>
+            <div id="exemplo3-container">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+            </div>
+            <p class="destaque">O Grid oferece um controle mais avançado do layout, permitindo centralizar múltiplos elementos em uma grade. Com <code>place-items: center</code>, cada item é centralizado em sua célula, e com <code>grid-template-columns</code>, definimos quantas colunas queremos.</p>
+            <p class="destaque">Código utilizado no exemplo acima:</p>
+        <pre><code>/* CSS */
+    .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grid 2x2 */
+    gap: 20px;
+    padding: 20px;
+    place-items: center;
+    height: 400px;
+    background-color: #00b894;
+    }
+    
+    .grid-item {
+    width: 200px;
+    height: 150px;
+    background-color: rgba(28, 1, 1, 0.6);
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    }
+
+</code></pre>
+        </section>
+        <hr>
+        <section id="dicas" class="explicacao">
+            <h2>Demonstração Interativa</h2>
+            <p class="destaque">Este exemplo combina várias técnicas e adiciona interatividade:</p>
+            <ul>
+                <li>Usa posicionamento absoluto para centralização</li>
+                <li>Inclui efeitos de hover com transform</li>
+                <li>Demonstra transições suaves</li>
+            </ul>
+            <div id="demo-container">
+                <div id="demo-conteudo">
+                    Passe o mouse!
+                </div>
+            </div>
+            <h3>Dicas Importantes:</h3>
+            <ul>
+                <li>Escolha o método baseado no suporte dos navegadores e no contexto do layout</li>
+                <li>O método position/transform funciona bem para elementos únicos</li>
+                <li>Flexbox é ótimo para layouts unidimensionais</li>
+                <li>Grid é perfeito para layouts bidimensionais</li>
+                <li>Sempre considere o comportamento responsivo ao escolher um método</li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m3-007.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m3-009.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/-w0Qo_qQiRg" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html"
+               onclick="sessionStorage.setItem('ultimaAula','m3-009')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda a redimensionar imagens de fundo em seu site usando CSS. Domine background-size e técnicas de redimensionamento responsivo.">
+    <meta name="keywords" content="background-size, CSS3, redimensionamento de imagens, web design responsivo, CODEBOOK, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-007.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-007.html">
+    <meta property="og:title" content="Mudando o tamanho da imagem de fundo do site | CODEBOOK">
+    <meta property="og:description" content="Aprenda a redimensionar imagens de fundo em seu site usando CSS. Domine background-size e técnicas de redimensionamento responsivo.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-007.html">
+    <meta property="twitter:title" content="Mudando o tamanho da imagem de fundo do site | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda a redimensionar imagens de fundo em seu site usando CSS. Domine background-size e técnicas de redimensionamento responsivo.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Mudando o tamanho da imagem de fundo do site | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilos específicos para esta aula */
+        .demo-grid {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .demo-box {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            background-repeat: no-repeat;
+        }
+
+        .demo-box h3 {
+            color: #333;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .demo-box p {
+            color: #666;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.9);
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            max-width: 80%;
+            margin: 10px 0;
+        }
+
+        .comparacao {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+            background: none;
+            border: none;
+        }
+
+        .contain-info, .cover-info {
+            background: rgba(77, 255, 0, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contain-info h3, .cover-info h3 {
+            color: #4dff00;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .contain-info ul, .cover-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contain-info li, .cover-info li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .contain-info li:before, .cover-info li:before {
+            content: "•";
+            color: #4dff00;
+            position: absolute;
+            left: 0;
+        }
+
+        .lista-praticas li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Exemplos específicos */
+        .exemplo-pixels {
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: 300px 200px;
+            background-position: center;  /* Centraliza a imagem */
+        }
+
+        .exemplo-porcentagem {
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: 100% 100%;
+        }
+
+        .exemplo-contain {
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 200px;
+            background-color: rgba(0, 0, 0, 0.05);
+            width: 100%;
+            display: block;
+        }
+
+        .exemplo-cover {
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: cover;
+        }
+
+        .exemplo-auto {
+            background-image: url('imagens/wallpaper002.jpg');
+            background-size: auto;
+        }
+
+        .example-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        /* Responsividade */
+        /* Tablets (768px e abaixo) */
+        @media (max-width: 768px) {
+            .demo-grid {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .comparacao {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-box {
+                height: 180px;
+            }
+
+            .example-container {
+                padding: 12px;
+            }
+
+            .demo-box h3 {
+                font-size: 1.1em;
+                padding: 4px 8px;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+
+            .contain-info, .cover-info {
+                padding: 15px;
+            }
+
+            /* Ajustes nos exemplos específicos */
+            .exemplo-pixels {
+                background-size: 240px 160px; /* 80% do tamanho original */
+            }
+        }
+
+        /* Celulares grandes (576px e abaixo) */
+        @media (max-width: 576px) {
+            .demo-grid {
+                gap: 12px;
+                padding: 10px;
+                margin: 15px 0;
+            }
+
+            .demo-box {
+                min-height: 150px;
+                height: auto;
+                padding: 15px;
+            }
+
+            .exemplo-contain {
+                min-height: 180px; /* Altura específica para contain em telas menores */
+            }
+
+            .example-container {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+
+            .demo-box h3 {
+                font-size: 1em;
+                padding: 3px 6px;
+            }
+
+            pre {
+                font-size: 0.85em;
+                padding: 6px;
+                overflow-x: auto;
+            }
+
+            .contain-info, .cover-info {
+                padding: 12px;
+            }
+
+            .contain-info ul, .cover-info ul {
+                padding-left: 20px;
+                font-size: 0.9em;
+            }
+
+            /* Ajustes nos exemplos específicos */
+            .exemplo-pixels {
+                background-size: 200px 133px; /* Reduzido para telas menores */
+            }
+        }
+
+        /* Celulares pequenos (375px e abaixo) */
+        @media (max-width: 375px) {
+            .demo-grid {
+                gap: 10px;
+                padding: 8px;
+            }
+
+            .demo-box {
+                height: 130px;
+                padding: 12px;
+            }
+
+            .example-container {
+                padding: 8px;
+                margin-bottom: 12px;
+            }
+
+            .demo-box h3 {
+                font-size: 0.9em;
+                padding: 2px 5px;
+            }
+
+            pre {
+                font-size: 0.8em;
+                padding: 5px;
+            }
+
+            .contain-info, .cover-info {
+                padding: 10px;
+            }
+
+            .contain-info ul, .cover-info ul {
+                padding-left: 15px;
+                font-size: 0.85em;
+            }
+
+            /* Ajustes nos exemplos específicos */
+            .exemplo-pixels {
+                background-size: 160px 107px; /* Ainda menor para celulares pequenos */
+            }
+        }
+
+        /* Telas muito pequenas (320px e abaixo) */
+        @media (max-width: 320px) {
+            .demo-box {
+                height: 120px;
+                padding: 10px;
+            }
+
+            .demo-box h3 {
+                font-size: 0.85em;
+                padding: 2px 4px;
+            }
+
+            pre {
+                font-size: 0.75em;
+            }
+
+            /* Ajustes nos exemplos específicos */
+            .exemplo-pixels {
+                background-size: 140px 93px; /* Mínimo para visualização */
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">🏠 Início</a></li>
+                    <li><a href="Indice-geral-m3.html">Índice</a></li>
+                    <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-007')">⚖ Política</a></li>
+                    <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-007')">👤 Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>📘 Aula 7 MD-3: Mudando o tamanho da imagem de fundo 📘</h1>
+<hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#conceito">O que é background-size?</a></li>
+                    <li><a href="#valores">Valores principais</a></li>
+                    <li><a href="#exemplos">Exemplos práticos</a></li>
+                    <li><a href="#contain-cover">Contain vs Cover</a></li>
+                    <li><a href="#responsivo">Imagens responsivas</a></li>
+                    <li><a href="#praticas">Boas práticas</a></li>
+                </ul>
+            </strong>
+        </nav>
+<hr>
+        <section class="explicacao">
+            <h2 id="conceito">1. O que é background-size?</h2>
+            <p class="destaque">A propriedade <code>background-size</code> permite controlar como uma imagem de fundo se ajusta ao seu container. É uma ferramenta essencial para criar layouts responsivos e garantir que as imagens de fundo sejam exibidas corretamente em diferentes tamanhos de tela.</p>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="valores">2. Valores principais</h2>
+            <p class="destaque">O <code>background-size</code> aceita diferentes tipos de valores, cada um com seu propósito específico. Vamos entender cada um deles:</p>
+            
+            <div class="demo-grid">
+                <div class="example-container">
+                    <div class="demo-box exemplo-pixels">
+                        <h3>Valores em pixels (px)</h3>
+                    </div>
+                    <pre><code>background-size: 300px 200px;</code></pre>
+                    <p class="destaque">Define um tamanho fixo e exato para a imagem. Útil quando você precisa de controle total sobre as dimensões da imagem, independente do tamanho do container. Ideal para casos onde a precisão do tamanho é crucial, como logos corporativos ou ícones que precisam manter dimensões específicas.</p>
+                </div>
+
+                <div class="example-container">
+                    <div class="demo-box exemplo-porcentagem">
+                        <h3>Valores em porcentagem (%)</h3>
+                    </div>
+                    <pre><code>background-size: 100% 100%;</code></pre>
+                    <p class="destaque">Define o tamanho em relação ao container. 100% significa que a imagem ocupará toda a largura/altura disponível. Esta é uma opção flexível para layouts responsivos, pois a imagem se adapta automaticamente ao tamanho do seu container. Muito útil em designs fluidos e adaptáveis.</p>
+                </div>
+
+                <div class="example-container">
+                    <div class="demo-box exemplo-contain">
+                        <h3>Contain</h3>
+                    </div>
+                    <pre><code>background-size: contain;</code></pre>
+                    <p class="destaque">Ajusta a imagem para caber completamente dentro do container, mantendo sua proporção original. A imagem será redimensionada para que sua dimensão maior (largura ou altura) se ajuste ao container, garantindo que nenhuma parte seja cortada. Ideal para exibição de imagens onde todos os detalhes precisam estar visíveis.</p>
+                </div>
+
+                <div class="example-container">
+                    <div class="demo-box exemplo-cover">
+                        <h3>Cover</h3>
+                    </div>
+                    <pre><code>background-size: cover;</code></pre>
+                    <p class="destaque">Redimensiona a imagem para cobrir todo o container, mantendo a proporção. A imagem crescerá ou diminuirá para garantir que não haja espaços vazios, mesmo que isso signifique que parte da imagem fique fora da vista. Perfeito para imagens de fundo em headers, banners e seções de destaque.</p>
+                </div>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="exemplos">3. Exemplos práticos</h2>
+            <p class="destaque">Vamos ver como cada valor se comporta em situações reais e quando é mais apropriado usar cada um:</p>
+            
+            <div class="demo-grid">
+                <div class="example-container">
+                    <div class="demo-box exemplo-auto">
+                        <h3>Auto (Padrão)</h3>
+                    </div>
+                    <pre><code>background-size: auto;</code></pre>
+                    <p class="destaque">O valor 'auto' mantém o tamanho original da imagem, sem nenhum redimensionamento. É a escolha padrão do navegador e respeita as dimensões naturais do arquivo. Ideal para situações onde você quer preservar a qualidade original da imagem, como em logos de alta resolução ou quando o tamanho original da imagem já é adequado para seu uso.</p>
+                </div>
+
+                <div class="example-container">
+                    <div class="demo-box exemplo-contain">
+                        <h3>Contain em Ação</h3>
+                    </div>
+                    <pre><code>background-size: contain;</code></pre>
+                    <p class="destaque">O modo 'contain' é especialmente útil em galerias de imagens ou apresentações de produtos onde cada detalhe importa. A imagem sempre será exibida por completo, criando espaços vazios se necessário. Isso garante que o usuário veja a imagem inteira, sem cortes ou distorções, mantendo a proporção original.</p>
+                </div>
+
+                <div class="example-container">
+                    <div class="demo-box exemplo-cover">
+                        <h3>Cover na Prática</h3>
+                    </div>
+                    <pre><code>background-size: cover;</code></pre>
+                    <p class="destaque">O 'cover' é a escolha perfeita para criar fundos imersivos e profissionais. A imagem preencherá todo o espaço disponível, sem deixar espaços vazios. Muito usado em headers de sites modernos, cards de destaque e seções hero. Embora partes da imagem possam ficar fora da vista, o resultado visual é mais impactante e limpo.</p>
+                </div>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="contain-cover">4. Contain vs Cover: Quando usar cada um?</h2>
+            <div class="comparacao">
+                <div class="contain-info">
+                    <h3>Contain</h3>
+                    <ul>
+                        <li>Mantém a imagem inteira visível</li>
+                        <li>Pode deixar espaços vazios</li>
+                        <li>Ideal para logos e ícones</li>
+                        <li>Preserva detalhes importantes</li>
+                    </ul>
+                </div>
+                <div class="cover-info">
+                    <h3>Cover</h3>
+                    <ul>
+                        <li>Cobre todo o container</li>
+                        <li>Pode cortar partes da imagem</li>
+                        <li>Ideal para fotos de fundo</li>
+                        <li>Elimina espaços vazios</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="responsivo">5. Imagens responsivas</h2>
+            <p class="destaque">Para criar backgrounds responsivos, combine <code>background-size</code> com outras propriedades:</p>
+            <div class="codigo-exemplo">
+                <pre><code>body {
+    background-image: url('imagem.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="explicacao">
+            <h2 id="praticas">6. Boas práticas</h2>
+            <ul class="lista-praticas">
+                <li>Use <code>cover</code> para imagens de fundo que precisam preencher todo o espaço</li>
+                <li>Prefira <code>contain</code> quando todos os detalhes da imagem são importantes</li>
+                <li>Combine com <code>background-position</code> para melhor controle</li>
+                <li>Considere o desempenho ao usar imagens grandes</li>
+                <li>Teste em diferentes tamanhos de tela</li>
+            </ul>
+        </section>
+    </main>
+<hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m3-006.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m3-008.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/lNaoi5AUCsc" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html"
+               onclick="sessionStorage.setItem('ultimaAula','m3-007')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

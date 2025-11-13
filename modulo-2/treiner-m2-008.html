@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Fundamentos de Tipografia | Módulo 2 Aula 8</title>
+  <meta name="description" content="CODEBOOK: Aprenda os fundamentos de tipografia para web. Tutorial sobre tipos de fontes, anatomia tipográfica e teoria básica do design de texto.">
+  <meta name="keywords" content="CODEBOOK, tipografia web, fontes CSS, design texto, anatomia tipográfica, módulo 2">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-008.html">
+  <meta property="og:title" content="CODEBOOK - Tipografia Web">
+  <meta property="og:description" content="Aprenda os fundamentos da tipografia para web design. Tutorial sobre fontes e design de texto.">
+  <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-008.html">
+  <meta property="twitter:title" content="CODEBOOK - Design Tipográfico">
+  <meta property="twitter:description" content="Domine os conceitos básicos de tipografia para web com o CODEBOOK. Teoria e prática.">
+  <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-008.html">
+  <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-008')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-008')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1>📘Aula 8 MD-2: Estudo básico e teórico de Tipografia 📘</h1>
+<hr>
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+    <ul>
+        <li>
+            <a href="#introducao">Introdução</a>
+        </li>
+        <li>
+            <a href="#emocao-das-fontes">Emoção das fontes</a>
+        </li>
+        <li>
+            <a href="#moda-da-tipografia">Moda da Tipografia</a>
+        </li>
+        <li>
+            <a href="#categorias-de-fontes">Categorias de fontes</a>
+        </li>
+        <li>
+            <a href="#boas-praticas">Boas práticas e legibilidade</a>
+        </li>
+        <li>
+            <a href="#exercicios-praticos">Exercícios práticos</a>
+        </li>
+        <li>
+            <a href="#recursos-e-leitura-recomendada">Recursos e leitura recomendada</a>
+        </li>
+        <li>
+            <a href="#conclusao-e-recomendacoes-finais">Conclusão e recomendações finais</a>
+        </li>
+    </ul>
+    </strong>
+</nav>
+<!-- Introdução -->
+<section class="explicacao">
+    <h2 id="introducao">Introdução à Tipografia</h2>
+    <p class="destaque">
+    Esta aula apresenta conceitos fundamentais de tipografia aplicados ao design e ao desenvolvimento web.
+    Você aprenderá como as fontes comunicam emoções, quais são as tendências atuais, como categorizar famílias tipográficas
+    e como aplicar boas práticas em projetos digitais.
+    </p>
+    <p>
+    Objetivos da aula:
+    <ul>
+        <li>
+        Entender a função e o impacto da tipografia na comunicação visual;
+    </li>
+        <li>
+            Reconhecer categorias tipográficas e quando usá-las;
+        </li>
+        <li>
+            Aplicar regras práticas de legibilidade e hierarquia tipográfica;
+        </li>
+        <li>
+            Executar pequenos exemplos com stacks de fontes e propriedades CSS.
+        </li>
+    </ul>
+    </p>
+</section>
+<hr>
+<!-- Emoção das fontes -->
+<section class="explicacao">
+    <h2 id="emocao-das-fontes">Emoção das fontes</h2>
+    <p>
+    As fontes transmitem personalidade — elas não são neutras. A escolha tipográfica influencia a percepção da marca,
+    o tom da mensagem e a experiência do usuário.
+    </p>
+    <div class="explicacao">
+    <h3>Exemplos práticos (amostras)</h3>
+    <hr>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;gap:12px;align-items:center;">
+                <div style="min-width:160px;">
+                <strong>Formal / Tradicional</strong>
+                <div style="font-family: 'Times New Roman', Times, serif; font-size:18px; margin-top:6px;">Amostra: Garamond / Times</div>
+                <div style="font-size:0.85em;color:#ddd;">Transmite: autoridade, tradição, seriedade</div>
+                </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+            <div style="min-width:160px;">
+            <strong>Moderno / Limpo</strong>
+            <div style="font-family: Arial, Helvetica, 'Segoe UI', sans-serif; font-size:18px; margin-top:6px;">Amostra: Arial / Helvetica</div>
+            <div style="font-size:0.85em;color:#ddd;">Transmite: clareza, objetividade, tecnologia</div>
+            </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+            <div style="min-width:160px;">
+            <strong>Expressivo / Display</strong>
+            <div style="font-family: 'Impact', 'Arial Black', sans-serif; font-size:20px; margin-top:6px;">Amostra: Display / Impact</div>
+            <div style="font-size:0.85em;color:#ddd;">Transmite: atenção, promoção, emoção</div>
+            </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+            <div style="min-width:160px;">
+            <strong>Manuscrito / Humanizado</strong>
+            <div style="font-family: 'Brush Script MT', 'Comic Sans MS', cursive; font-size:18px; margin-top:6px;">Amostra: Script / Handwriting</div>
+            <div style="font-size:0.85em;color:#ddd;">Transmite: proximidade, informalidade, criatividade</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <h3>Dicas rápidas</h3>
+    <ul>
+    <li>
+        <p class="destaque">Combine <strong>uma fonte de título</strong> (display) com <strong>uma fonte de texto</strong> (serif ou sans-serif) para equilibrar personalidade e legibilidade.</p>
+    </li>
+    <li>
+        <p class="destaque">Evite usar muitas fontes diferentes — <strong>2 a 3 famílias</strong> são suficientes para a maioria dos projetos.</p>
+    </li>
+    <li>
+        <p class="destaque">Considere o público e o contexto: formalidade requer fontes com serifa; apps modernos muitas vezes preferem sans-serif.</p>
+    </li>
+    </ul>
+</section>
+
+<hr>
+
+<!-- Moda da Tipografia -->
+<section class="explicacao">
+    <h2 id="moda-da-tipografia">Moda da Tipografia</h2>
+    <p>
+    Tendências mudam, mas alguns movimentos recentes merecem atenção pois impactam projetos digitais:
+    </p>
+    <ul>
+    <li><strong>Tipografia variável:</strong> fontes que permitem ajustar peso, largura e outros eixos via CSS (font-variation-settings).</li>
+    <li><strong>Contrastes marcantes:</strong> títulos com peso extra e textos com fontes neutras para criar hierarquia forte.</li>
+    <li><strong>Fonts geometricas e grotescas:</strong> uso crescente em interfaces pela clareza em pixels.</li>
+    <li><strong>Retorno do serif contemporâneo:</strong> serifs revigoradas para marcas premium e editoriais digitais.</li>
+    <li><strong>Microtipografia:</strong> atenção em letter-spacing, line-height e kerning para melhorar legibilidade em telas pequenas.</li>
+    </ul>
+
+    <h3>Exemplo de código — importando uma fonte do Google (referência)</h3>
+    <pre><code>&lt;!-- Exemplo (colocar no head do HTML caso queira usar) --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"&gt;
+
+body {
+font-family: 'Inter', Arial, sans-serif;
+}</code></pre>
+<p>
+Para usar fontes externas, como as do Google Fonts, é necessário adicioná-las no arquivo de estilos global do seu site.
+Dessa forma, todas as páginas poderão utilizar a mesma tipografia sem repetir código onde quer que seja necessário.
+</p>
+</section>
+<hr>
+<!-- Categorias de fontes -->
+<section class="explicacao">
+<h2 id="categorias-de-fontes">Categorias de fontes</h2>
+<p>
+A tipografia pode ser dividida em diferentes categorias, cada uma transmitindo uma emoção e sendo adequada para usos específicos. 
+Veja os exemplos abaixo:
+</p>
+
+<h3>Serif</h3>
+<p>
+Fontes com pequenos traços nas extremidades das letras. Transmitem tradição, confiança e seriedade. 
+Muito utilizadas em livros, jornais e documentos acadêmicos.
+</p>
+<div style="font-family: 'Times New Roman', Times, serif; font-size:18px; padding:10px; border:1px solid #ddd; border-radius:6px; margin-bottom:12px;">
+“O jornal do futuro também conta histórias do passado.”  
+<br><small>(Exemplo em <strong>Serif</strong>)</small>
+</div>
+
+<h3>Sans-serif</h3>
+<p>
+Fontes sem serifas; modernas, limpas e altamente legíveis em telas digitais. 
+Padrão para sites, aplicativos e interfaces.
+</p>
+<div style="font-family: Arial, Helvetica, sans-serif; font-size:18px; padding:10px; border:1px solid #ddd; border-radius:6px; margin-bottom:12px;">
+“A tecnologia aproxima as pessoas em um clique.”  
+<br><small>(Exemplo em <strong>Sans-serif</strong>)</small>
+</div>
+
+<h3>Monospace</h3>
+<p>
+Fontes de largura fixa; cada caractere ocupa o mesmo espaço. Ideais para código, tabelas ou contextos técnicos.
+</p>
+<div style="font-family: 'Courier New', Courier, monospace; font-size:16px; padding:10px; border:1px solid #555; border-radius:6px; margin-bottom:12px;">
+<code>
+function soma(a, b) {<br>
+&nbsp;&nbsp;return a + b;<br>
+}<br>
+console.log(soma(2, 3));
+</code>  
+<br><small>(Exemplo em <strong>Monospace</strong>)</small>
+</div>
+
+
+<h3>Display / Decorative</h3>
+<p>
+Fontes criadas para chamar atenção. São impactantes e cheias de personalidade, 
+mas devem ser usadas apenas em títulos e peças gráficas curtas.
+</p>
+<div style="font-family: 'Impact', 'Arial Black', sans-serif; font-size:22px; color:#444; padding:10px; border:1px solid #ddd; border-radius:6px; margin-bottom:12px; text-align:center;">
+“MEGA PROMOÇÃO HOJE!”  
+<br><small>(Exemplo em <strong>Display</strong>)</small>
+</div>
+
+<h3>Script / Handwriting</h3>
+<p>
+Fontes que imitam a escrita manual. São delicadas, elegantes e transmitem proximidade, 
+mas precisam ser usadas com moderação para não prejudicar a leitura.
+</p>
+<div style="font-family: 'Brush Script MT', 'Segoe Script', cursive; 
+        font-size:22px; 
+        padding:10px; 
+        border:1px dashed #888; 
+        border-radius:6px; 
+        margin-bottom:12px;">
+“Com carinho, sua amiga para sempre.”  
+<br><small>(Exemplo em <strong>Script / Handwriting</strong>)</small>
+</div>
+</section>
+<hr>
+<!-- Boas práticas e legibilidade -->
+<section class="explicacao">
+    <h2 id="boas-praticas">Boas práticas e legibilidade</h2>
+    <ul>
+    <li>
+        <strong>Tamanho:</strong> no corpo de texto web recomenda-se entre 16px e 18px como base.
+    </li>
+    <li>
+        <strong>Altura da linha (line-height):</strong> 1.4–1.8 para textos longos; ajuda a leitura.
+    </li>
+    <li>
+        <strong>Contraste:</strong> texto sobre fundo deve ter contraste suficiente (WCAG 2.1 recomenda 4.5:1 para corpo).
+    </li>
+    <li>
+        <strong>Espaçamento entre letras (letter-spacing):</strong> use leve aumento em textos grandes; reduz em corpos pequenos se necessário.
+    </li>
+    <li>
+        <strong>Hierarquia:</strong> combine variações de peso e tamanho para guiar o leitor (H1 > H2 > H3).
+    </li>
+    <li>
+        <strong>Fallbacks:</strong> sempre declare uma pilha de fontes (font-family) terminando em uma família genérica.
+    </li>
+    </ul>
+
+    <h3>Exemplo de stacks recomendados</h3>
+    <pre><code>/* Stack para corpo legível */
+body {
+font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Stack para texto monoespaçado */
+code, pre {
+font-family: "Fira Code", "Courier New", Courier, monospace;
+}</code></pre>
+</section>
+<hr>
+<!-- Exercícios -->
+<section class="explicacao">
+    <h2 id="exercicios-praticos">Exercícios práticos</h2>
+    <ol>
+    <li>
+        <p class="destaque">Escolha uma marca fictícia (3 palavras) e defina 2 fontes: uma para título e outra para corpo. Explique por que escolheu cada uma (emoção/legibilidade).</p>
+    </li>
+    <li>
+        <p class="destaque">Implemente uma pequena página HTML (apenas markup) aplicando a pilha de fontes e ajuste line-height e letter-spacing para melhorar leitura.</p>
+    </li>
+    <li>
+        <p class="destaque">Teste contraste das cores (texto x fundo). Anote os resultados e ajuste até conseguir boa legibilidade.</p>
+    </li>
+    </ol>
+
+    <h3>Exemplo de implementação (HTML snippet)</h3>
+    <pre><code>&lt;!-- Exemplo simples --&gt;
+&lt;h1 style="font-family: 'Georgia', serif; font-weight:700;"&gt;Título da Marca&lt;/h1&gt;
+&lt;p style="font-family: Arial, sans-serif; font-size:16px; line-height:1.6;"&gt;Parágrafo de exemplo para avaliar legibilidade e ritmo do texto.&lt;/p&gt;
+
+</code></pre>
+</section>
+<hr>
+<!-- Recursos -->
+<section class="explicacao">
+    <h2 id="recursos-e-leitura-recomendada">Recursos e leitura recomendada</h2>
+    <ul>
+    <li>
+        <div  class="link-bloco"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/font-family" target="_blank" rel="noopener">MDN — font-family (referência)</a></div>
+    </li>
+    <li>
+        <div  class="link-bloco"><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">WebAIM — Contrast Checker (acessibilidade)</a></div>
+    </li>
+    <li>
+        <p class="destaque">Sites de fontes: Google Fonts, Adobe Fonts, Font Squirrel.</p>
+    </li>
+    </ul>
+</section>
+<hr>
+<!-- Conclusão -->
+<section class="explicacao">
+    <h2 id="conclusao-e-recomendacoes-finais">Conclusão e recomendações finais</h2>
+    <p class="destaque">
+    A tipografia é uma ferramenta estratégica: bem utilizada melhora a comunicação, a usabilidade e a identidade visual.
+    Pratique combinando famílias, testando tamanhos e avaliando contraste — e documente suas escolhas em um pequeno guia de estilo.
+    </p>
+</section>
+<hr>
+<nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br>
+        <a href="treiner-m2-007.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-009.html"><strong>Próxima</strong> ➡</a>
+    </strong>
+</p>
+</nav>
+  </main>
+<hr>
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/m54omTveWa8?si=HE75cys2jJkMtiBB" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-008')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

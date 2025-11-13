@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Diferenças entre ID e Class | Módulo 2 Aula 19</title>
+    <meta name="description" content="CODEBOOK: Entenda as diferenças fundamentais entre os seletores ID e Class no CSS. Tutorial sobre escolha e uso correto dos seletores.">
+    <meta name="keywords" content="CODEBOOK, ID vs Class, seletores CSS, especificidade CSS, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-019.html">
+    <meta property="og:title" content="CODEBOOK - ID vs Class em CSS">
+    <meta property="og:description" content="Aprenda as diferenças fundamentais entre os seletores ID e Class no CSS. Tutorial sobre escolha de seletores.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-019.html">
+    <meta property="twitter:title" content="CODEBOOK - ID vs Class em CSS">
+    <meta property="twitter:description" content="Domine as diferenças entre ID e Class com o CODEBOOK. Tutorial sobre uso correto de seletores.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Diferenças entre ID e Class | Módulo 2 Aula 19</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+            <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-019')">⚖ Política</a></li>
+            <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-019')">👤 Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>📘 Aula 19 MD-2: Diferenças entre <code>ID</code> e <code>CLASS</code> 📘</h1>
+<hr>
+    <nav class="indice-simples">
+      <h2>Índice</h2>
+      <strong>
+          <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#unicidade">Unicidade</a></li>
+            <li><a href="#selecao">Seleção no CSS</a></li>
+            <li><a href="#especificidade">Especificidade</a></li>
+            <li><a href="#uso">Uso recomendado</a></li>
+            <li><a href="#exemplos">Exemplos práticos</a></li>
+            <li><a href="#referencias">Referências</a></li>
+          </ul>
+      </strong>
+    </nav>
+    <hr>
+    <section class="explicacao" id="introducao">
+    <h2>Introdução</h2>
+    <p class="destaque">
+        Em HTML e CSS, os atributos id e class desempenham papéis essenciais na identificação e estilização de elementos. Enquanto o id é um identificador único que permite aplicar estilos ou manipulações específicas a um único elemento, a class possibilita agrupar elementos semelhantes para compartilhar estilos ou comportamentos.
+    </p>
+    <p class="destaque">
+        Compreender essas diferenças é fundamental para criar páginas bem organizadas, sem conflitos de estilos, e para facilitar a manutenção e a escalabilidade do código, além de tornar o design mais consistente e intuitivo.
+    </p>
+    </p>
+</section>
+
+    <hr>
+    <section class="explicacao" id="unicidade">
+        <h2>1. Unicidade</h2>
+        <ul>
+            <li><strong>id:</strong> Deve ser único na página. Cada elemento só pode ter um <code>id</code> e ele não pode se repetir.</li>
+            <li><strong>class:</strong> Pode ser usado em vários elementos, permitindo aplicar estilos comuns a múltiplos elementos.</li>
+        </ul>
+    </section>
+    <hr>
+    <section class="explicacao" id="selecao">
+        <h2>2. Seleção no CSS</h2>
+        <ul>
+            <li><strong>id:</strong> Selecionado com <strong>#</strong>. Exemplo: <code>#meu-id { color: red; }</code></li>
+            <li><strong>class:</strong> Selecionada com <strong>.</strong>. Exemplo: <code>.minha-classe { color: blue; }</code></li>
+        </ul>
+    </section>
+    <hr>
+    <section class="explicacao" id="especificidade">
+        <h2>3. Especificidade</h2>
+        <ul>
+            <li><strong>id:</strong> Possui especificidade maior que uma <code>class</code>, prevalecendo em caso de conflito de estilos.</li>
+            <li><strong>class:</strong> Especificidade menor, sendo sobrescrita por estilos aplicados via <code>id</code>.</li>
+        </ul>
+    </section>
+    <hr>
+    <section class="explicacao" id="uso">
+        <h2>4. Uso recomendado</h2>
+        <ul>
+            <li><strong>id:</strong> Para identificar elementos únicos, como cabeçalhos, rodapés ou seções específicas.</li>
+            <li><strong>class:</strong> Para agrupar elementos que compartilham estilos ou comportamentos, como botões, caixas de texto ou itens de lista.</li>
+        </ul>
+    </section>
+    <hr>
+<section class="explicacao" id="exemplos">
+<h2>Exemplos práticos</h2>
+
+<div class="explicacao">
+<h3>Exemplo 1: Usando <code>id</code></h3>
+<pre><code>&lt;div id="header"&gt;Cabeçalho&lt;/div&gt;
+&lt;div id="footer"&gt;Rodapé&lt;/div&gt;
+
+#header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px;
+}
+
+#footer {
+    background-color: #264653;
+    color: white;
+    padding: 10px;
+}</code></pre>
+<p class="destaque">💡 Cada elemento tem um <code>id</code> único (<code>header</code> e <code>footer</code>) que permite aplicar estilos específicos sem afetar outros elementos da página.</p>
+</div>
+
+<div class="explicacao">
+<h3>Exemplo 2: Usando <code>class</code></h3>
+<pre><code>&lt;div class="box"&gt;Caixa 1&lt;/div&gt;
+&lt;div class="box"&gt;Caixa 2&lt;/div&gt;
+
+.box {
+    background-color: #e76f51;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+}</code></pre>
+<p class="destaque">💡 A mesma <code>class</code> (<code>box</code>) é aplicada em múltiplos elementos, permitindo que todos compartilhem o mesmo estilo visual.</p>
+</div>
+
+<div class="explicacao">
+<h3>Exemplo 3: Herança de classes</h3>
+<pre><code>&lt;div class="explicacao"&gt;
+    &lt;p&gt;Texto dentro da explicação&lt;/p&gt;
+&lt;/div&gt;
+
+.explicacao {
+    color: green;
+    font-family: Arial, sans-serif;
+}</code></pre>
+<p class="destaque">💡 O parágrafo herda os estilos da classe <code>explicacao</code>, mostrando como estilos de uma classe podem afetar elementos filhos, a menos que sejam sobrescritos por um <code>id</code> ou outro estilo mais específico.</p>
+</div>
+</section>
+    <hr>
+    <section class="explicacao" id="referencias">
+        <h2>Referências</h2>
+        <p class="link-bloco">Docs ID: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id" target="_blank" rel="noopener noreferrer">MDN Web Docs - id</a></p>
+        <p class="link-bloco">Docs Class: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/class" target="_blank" rel="noopener noreferrer">MDN Web Docs - class</a></p>
+    </section>
+    <hr>
+
+    <!-- Navegação próximas aulas -->
+    <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-018.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-020.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer" aria-label="Abrir curso em video em nova aba">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/zXfTjPrMC_0?si=ILZnj02pCtLNiAdQ" target="_blank" rel="external noopener noreferrer" aria-label="Abrir Aula em video em nova aba">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-019')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</main>
+</body>
+</html>

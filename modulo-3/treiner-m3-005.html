@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda a controlar a repetição de imagens de fundo em sites usando CSS. Domine as propriedades background-repeat e padrões de fundo.">
+    <meta name="keywords" content="background-repeat, CSS3, padrões de fundo, web design, CODEBOOK, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-005.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-005.html">
+    <meta property="og:title" content="Imagens que se repetem no fundo do site | CODEBOOK">
+    <meta property="og:description" content="Aprenda a controlar a repetição de imagens de fundo em sites usando CSS. Domine as propriedades background-repeat e padrões de fundo.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-005.html">
+    <meta property="twitter:title" content="Imagens que se repetem no fundo do site | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda a controlar a repetição de imagens de fundo em sites usando CSS. Domine as propriedades background-repeat e padrões de fundo.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Imagens que se repetem no fundo do site | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Estilos da página (somente para a aula) */
+    
+    /* Estilos base responsivos */
+    :root {
+      --demo-gap: 16px;
+      --demo-width: min(300px, 90vw);
+      --demo-height: min(200px, 60vw);
+    }
+
+    .demo-row {
+      display: flex;
+      gap: var(--demo-gap);
+      flex-wrap: wrap;
+      margin-top: 12px;
+      justify-content: center;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    /* grade 2x2 centralizada para os quatro primeiros exemplos */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 320px));
+      gap: var(--demo-gap);
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    
+    /* Ajuste responsivo para o grid 2x2 */
+    @media (max-width: 640px) {
+      .grid-2x2 {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+      }
+      
+      .demo {
+        transform: scale(0.85);
+      }
+    }
+
+    .demo {
+      width: var(--demo-width);
+      height: var(--demo-height);
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+      margin: 0 auto;
+    }
+
+    /* container para demo + legenda */
+    .demo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .demo-caption {
+      font-weight: 700;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      text-align: center;
+      width: 100%;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
+
+    .note {
+      border-left: 4px solid #ffd54f;
+      padding: clamp(8px, 2vw, 10px);
+      margin: 12px 0;
+      border-radius: 4px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    /* Ajustes responsivos para pré-formatação e código */
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+      padding: clamp(8px, 2vw, 16px);
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Media queries para diferentes tamanhos de tela */
+    @media (max-width: 768px) {
+      :root {
+        --demo-width: calc(100% - 20px);
+        --demo-height: 180px;
+      }
+
+      .demo {
+        transform: scale(0.9);
+        transform-origin: center;
+      }
+
+      .grid-2x2 {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      .demo-row {
+        padding: 0;
+      }
+
+      .demo-wrap {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .demo-wrap {
+        width: 100%;
+      }
+
+      .demo-row:not(.grid-2x2) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .explicacao {
+        padding: 0 clamp(10px, 3vw, 20px);
+      }
+
+      h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        padding: 0 10px;
+      }
+
+      h2 {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --demo-gap: 12px;
+      }
+
+      .indice-simples ul {
+        padding-left: 20px;
+      }
+
+      .indice-simples li {
+        margin-bottom: 8px;
+      }
+    }
+
+    /* exemplos */
+    .demo.repeat {
+      background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+      background-repeat: repeat;
+      background-size: 40px 40px;
+      background-color: #4a90e2;
+    }
+
+    .demo.repeat-x {
+      background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+      background-repeat: repeat-x;
+      background-size: 60px 60px;
+      background-color: #ff6b6b;
+    }
+
+    .demo.repeat-y {
+      background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+      background-repeat: repeat-y;
+      background-size: 60px 60px;
+      background-color: #f5a623;
+    }
+
+    .demo.no-repeat {
+      background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80px 80px;
+      background-color: #34c759;
+    }
+
+    /* exemplo com URL externa (pode ficar offline) */
+    .demo.external {
+      background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=200&q=60");
+      background-repeat: repeat;
+      background-size: 60px 60px;
+      background-color: #6c5ce7;
+    }
+
+    /* fallback usando múltiplas imagens (local primeiro, depois externa) */
+    .demo.fallback {
+      background-image: url("imagens/mascote-local.png"), url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+      background-repeat: repeat, repeat;
+      background-size: 40px 40px, 40px 40px;
+      background-color: #2d3436;
+    }
+
+    a.source {
+      display: inline-block;
+      margin-right: 10px;
+      color: #0a66c2;
+    }
+  </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-005')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-005')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+        </header>
+        <h1>📘 Aula 5 MD-3: Imagens que se repetem no fundo do site 📘</h1>
+<hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#conceito">1. Conceito básico</a></li>
+                    <li><a href="#exemplos">2. Exemplos práticos</a></li>
+                    <li><a href="#urls">3. Usando URLs externas</a></li>
+                    <li><a href="#praticas">4. Boas práticas</a></li>
+                    <li><a href="#exemplo-completo">5. Exemplo completo</a></li>
+                    <li><a href="#observacoes">6. Observações finais</a></li>
+                </ul>
+            </strong>
+        </nav>
+<hr>
+        <section class="explicacao">
+            <p class="destaque">Nesta aula vamos ver como usar <strong>imagens de fundo que se repetem</strong> (tiling) no <code>background</code> do seu site. Também mostraremos que é possível usar <em>links para imagens externas</em> (URLs completas) e quais são as vantagens e riscos dessa abordagem.</p>
+        </section>
+<hr>
+        <section class="explicacao" id="conceito">
+            <h2>1. Conceito básico</h2>
+            <p class="destaque">Uma imagem de fundo pode ser repetida automaticamente no eixo X e Y quando você usa <code>background-repeat: repeat;</code>. Isso é muito útil para criar padrões (patterns) que cobrem a área inteira sem precisar de uma imagem grande.</p>
+            
+<pre>&lt;!-- CSS básico --&gt;
+body {
+    background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+    background-repeat: repeat; /* repete em X e Y */
+    background-size: 40px 40px; /* controla o tamanho do tile (reduzido 50%) */
+}
+</pre>
+        </section>
+<hr>
+        <section class="explicacao" id="exemplos">
+            <h2>2. Exemplos práticos</h2>
+            <p class="destaque">Veja abaixo demonstrações com o mesmo padrão aplicado de formas diferentes:</p>
+            
+              <div class="demo-row grid-2x2">
+                  <div class="demo-wrap">
+            <div class="demo repeat" aria-hidden="true"></div>
+            <div class="demo-caption">repeat</div>
+                  </div>
+                  <div class="demo-wrap">
+            <div class="demo repeat-x" aria-hidden="true"></div>
+            <div class="demo-caption">repeat-x</div>
+                  </div>
+                  <div class="demo-wrap">
+            <div class="demo repeat-y" aria-hidden="true"></div>
+            <div class="demo-caption">repeat-y</div>
+                  </div>
+                  <div class="demo-wrap">
+            <div class="demo no-repeat" aria-hidden="true"></div>
+            <div class="demo-caption">no-repeat</div>
+                  </div>
+                </div>
+            <p class="destaque">As caixas acima usam a mesma imagem em diferentes modos de repetição. Experimente alterar <code>background-repeat</code> e <code>background-size</code> para ver o efeito do tile.</p>
+        </section>
+<hr>
+        <section class="explicacao" id="urls">
+            <h2>3. Usando URLs externas</h2>
+            <p class="destaque">Além de usar arquivos locais (relativos ao seu projeto), você pode apontar para imagens hospedadas em outros sites usando uma URL absoluta (<code>https://...</code>):</p>
+<pre>/* URL externa */
+body { background-image: url("https://exemplo.com/padrao.png"); }
+</pre>
+            <div class="note">
+                <strong>Atenção:</strong> se o servidor que hospeda a imagem externa sair do ar, a imagem não estará disponível no seu site — o navegador mostrará um fundo vazio ou o próximo recurso em pilha. Por isso, para produção, prefira hospedar assets importantes no mesmo servidor ou em um CDN confiável.
+            </div>
+            <h3>Demo com URL externa</h3>
+                <div class="demo-row" style="margin-bottom:6px">
+                  <div class="demo-wrap">
+            <div class="demo external" aria-hidden="true"></div>
+            <div class="demo-caption">externa</div>
+                  </div>
+                  <div class="demo-wrap">
+            <div class="demo fallback" aria-hidden="true"></div>
+            <div class="demo-caption">fallback</div>
+                  </div>
+                </div>
+            <p class="destaque">No exemplo <em>fallback</em> usamos duas imagens na propriedade <code>background-image</code>: a primeira é local (<code>imagens/mascote-local.png</code>) e a segunda é externa. Se a primeira não carregar (por exemplo por não existir), a segunda pode aparecer (ou vice-versa, dependendo da disponibilidade). Esta técnica pode ser usada para fornecer alternativas, mas teste em diferentes navegadores.</p>
+        </section>
+<hr>
+        <section class="explicacao" id="praticas">
+            <h2>4. Boas práticas</h2>
+            <ul>
+                <li>Prefira hospedar imagens críticas (logos, padrões principais) no mesmo domínio ou em CDN confiáveis.</li>
+                <li>Use imagens pequenas para patterns (PNG ou SVG vetorial) para reduzir latência.</li>
+                <li>Forneça uma cor de fundo de fallback com <code>background-color</code> enquanto a imagem carrega ou quando não estiver disponível.</li>
+                <li>Teste diferentes <code>background-size</code> para garantir boa aparência em telas de diferentes densidades.</li>
+            </ul>
+        </section>
+<hr>
+        <section class="explicacao" id="exemplo-completo">
+            <h2>5. Exemplo completo</h2>
+<pre>&lt;!-- HTML simples --&gt;
+&lt;!doctype html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style&gt;
+    .page {
+        background-color:#f0f0f0; /* fallback */
+        background-image: url('imagens/mascote-local.png'), url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+        background-repeat: repeat, repeat;
+        background-size: 40px 40px, 40px 40px; /* reduzido 50% para melhor visual nos exemplos */
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class="page"&gt;
+    &lt;h1&gt;Minha página com padrão repetido&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        </section>
+<hr>
+        <section class="explicacao" id="observacoes">
+            <h2>6. Observações finais</h2>
+
+            <p class="destaque">Usar URLs externas é prático para protótipos, compartilhamento rápido e economizar espaço no seu repositório. Porém, para sites em produção, prefira ter controle sobre os assets (hospedar imagens localmente ou em CDN gerenciáveis) para evitar desaparecimento de conteúdo. Outra alternativa é usar <strong>SVG</strong> embutido ou <strong>data URLs</strong> para padrões muito pequenos.</p>
+
+            <p class="destaque">Fontes de imagens usadas neste material: imagem de exemplo do Gustavo Guanabara (host externo) e uma imagem do Unsplash para demonstração externa — sempre verifique licenças ao usar imagens.</p>
+        </section>
+    </main>
+    <hr>
+    <nav class="proxima-aula">
+    <p>
+      <strong>Próxima Aula: <br>
+      <a href="treiner-m3-004.html">⬅ <strong>Anterior</strong></a> | 
+      <a href="treiner-m3-006.html"><strong>Próxima</strong> ➡</a>
+      </strong>
+    </p>
+</nav>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula referente ao conteúdo acima → 
+    <a href="https://youtu.be/_5KoMUMCTG0" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+    <hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m3-005')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</body>
+</html>

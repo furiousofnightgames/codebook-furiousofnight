@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Harmonia de Cores | Módulo 2 Aula 3</title>
+    <meta name="description" content="CODEBOOK: Aprenda sobre harmonia e combinação de cores no design web. Explore círculo cromático, cores complementares e esquemas de cores.">
+    <meta name="keywords" content="CODEBOOK, harmonia cores, círculo cromático, cores complementares, design web, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-003.html">
+    <meta property="og:title" content="CODEBOOK - Harmonia de Cores">
+    <meta property="og:description" content="Domine a harmonia e combinação de cores no design web. Tutorial sobre círculo cromático e esquemas de cores.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-003.html">
+    <meta property="twitter:title" content="CODEBOOK - Combinação de Cores">
+    <meta property="twitter:description" content="Aprenda a criar combinações harmoniosas de cores no design web com o CODEBOOK.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-003.html">
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <script src="modal.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+    .cores-exemplo {
+        margin: 20px 0;
+    }
+    .bolinhas {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    .cor {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-003')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-003')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>📘 Aula 3 MD-2: Harmonia de cores 📘</h1>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+            <strong>
+                <li>
+                    <a href="#Circulo-cromatico">Círculo Cromático</a>
+                </li>
+                <li>
+                    <a href="#Cores-Principais">Cores Principais</a>
+                </li>
+                <li>
+                    <a href="#Cromatico-Triadico">Cromático Triádico</a>
+                </li>
+                <li>
+                    <a href="#Cores-Secundarias">Cores Secundárias</a>
+                </li>
+                <li>
+                    <a href="#Cores-Terciarias">Cores Terciárias</a>
+                </li>
+                <li>
+                    <a href="#Temperatura-De-Cores">Temperatura De Cores</a>
+                </li>
+                <li>
+                    <a href="#Cores-Complementares">Cores Complementares</a>
+                </li>
+                <li>
+                    <a href="#Cores-Análogas">Cores Análogas</a>
+                </li>
+                <li>
+                    <a href="#Cores-Monocromáticas">Cores Monocromáticas</a>
+                </li>
+                <li>
+                    <a href="#Exemplos-Praticos">Exemplos Práticos de Combinações</a>
+                </li>
+            </strong>
+        </ul>
+    </nav>
+<hr>
+<section class="explicacao">
+        <figure class="explicacao">
+        <h2 id="Circulo-cromatico">Círculo Cromático</h2>
+        <p class="destaque">O círculo cromático é uma representação visual das cores, organizadas de forma a mostrar as relações entre elas.</p>
+        <img src="../imagens/circulo-cromatico.png" alt="Círculo Cromático" onclick="openModal(this)">
+        <br>
+        <figcaption>Círculo Cromático</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+    </figure>
+    <hr>
+        
+        <figure class="explicacao">
+        <h2 id="Cores-Principais">Cores Principais</h2>
+        <p class="destaque">O círculo cromático é composto por 12 cores principais: três cores primárias <br>(vermelho, azul e amarelo), três cores secundárias (laranja, verde e roxo) e seis cores terciárias.</p>
+        <img src="../imagens/circulo-principal.png" alt="Círculo Cromático Principais" onclick="openModal(this)">
+        <br>
+        <figcaption>Cromático Principais</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+
+        </figure>
+    <hr>
+        <figure class="explicacao">
+        <h2 id="Cromatico-Triadico">Cromático Triádico</h2>
+        <p class="destaque">O círculo cromático triádico são cores primárias A combinação das cores tríades consiste em unir três ou mais tons com a mesma distância entre si no círculo, como azul-arroxeado + vermelho-alaranjado + amarelo-esverdeado, por exemplo.</p>
+        <img src="../imagens/circulo-triadico.png" alt="Círculo Cromático Triádico" onclick="openModal(this)">
+        <br>
+        <figcaption>Cromático Triádico</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">Essa é uma versão mais abrangente da harmonia entre cores complementares e possibilita inúmeros visuais que unem contrastes e semelhanças entre os tons escolhidos.</p>
+    </figure>
+<hr>
+    <figure class="explicacao">
+        <h2 id="Cores-Secundarias">Cores Secundárias</h2>
+        <p class="destaque">As cores secundárias são obtidas pela mistura de duas cores primárias em partes iguais. As cores secundárias são: verde (mistura de azul e amarelo), laranja (mistura de vermelho e amarelo) e roxo (mistura de vermelho e azul).</p>
+        <img src="../imagens/cores-secundarias.png" alt="Cores Secundárias" onclick="openModal(this)">
+        <br>
+        <figcaption>Cores Secundárias</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">
+            Entender as cores secundárias é essencial para artistas, designers gráficos e profissionais de design de interiores, pois permite a criação de combinações de cores que são visualmente agradáveis e eficazes em transmitir emoções e mensagens. Além disso, as cores secundárias podem ser usadas para criar cores terciárias, que são formadas pela mistura de uma cor primária com uma cor secundária adjacente. 
+
+        </p>
+    </figure>
+<hr>
+    <figure>
+        <h2 id="Cores-Terciarias">Cores Terciárias</h2>
+        <p class="destaque">
+            As cores terciárias são obtidas pela mistura de uma cor primária com uma cor secundária adjacente no círculo cromático. As cores terciárias são: vermelho-alaranjado (mistura de vermelho e laranja), amarelo-alaranjado (mistura de amarelo e laranja), amarelo-esverdeado (mistura de amarelo e verde), azul-esverdeado (mistura de azul e verde), azul-arroxeado (mistura de azul e roxo) e vermelho-arroxeado (mistura de vermelho e roxo).
+        </p>
+        <img src="../imagens/cores-terciarias.png" alt="Cores Terciárias" onclick="openModal(this)">
+        <br>
+        <figcaption>Cores Terciárias</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">
+            As cores terciárias são importantes para a criação de paletas de cores mais complexas e sofisticadas, permitindo uma maior variedade de combinações e nuances. Elas são amplamente utilizadas em design gráfico, moda, decoração de interiores e arte para criar efeitos visuais interessantes e transmitir diferentes emoções. Além disso, o conhecimento das cores terciárias é essencial para entender a teoria das cores e como as cores interagem entre
+        </p>
+    </figure>
+<hr>
+<figure class="explicacao">
+        <h2 id="Temperatura-De-Cores">Temperatura De Cores</h2>
+        <p class="destaque">
+            No que diz respeito a temperatura, as cores do disco cromático são divididas em dois grupos: as cores quentes e as cores frias.
+            <br>
+            Por isso, ao combinar cores com o círculo cromático, é importante ter em mente que cada grupo de cores pode transmitir uma sensação diferente para quem olha para elas.
+        </p>
+        <img src="../imagens/temperatura-de-cores.png" alt="Temperatura De Cores" onclick="openModal(this)"> <br>
+        <figcaption>Temperatura De Cores</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+    <p class="destaque">
+        As cores frias, por exemplo, costumam ser mais discretas e transmitir seriedade, sobriedade e exatidão. Além disso, essas cores têm uma tendência de contrair ou diminuir as superfícies que colorem.
+        <br>
+        Por outro lado, as cores quentes costumam transmitir ímpeto, entusiasmo e ação. No geral, elas costumam causar o efeito de dilatação nas superfícies que colorem e, portanto, devem ser usadas em áreas que queremos chamar a atenção.
+    </p>
+</figure>
+<hr>
+<figure class="explicacao">
+        <h2 id="Cores-Complementares">Cores Complementares</h2>
+        <p class="destaque">As cores complementares são as que se contrastam, pois não apresentam vestígios de pigmentos em comum entre ambas.<br>
+        Para identificar uma cor complementar, basta examinar o círculo cromático – onde estão dispostas as cores primárias, secundárias e terciárias – e achar as cores que estão de lados opostos no círculo.</p>
+        <img src="../imagens/circulos-complementares.png" alt="Cores Complementares" onclick="openModal(this)">
+        <br>
+        <figcaption>Cores Complementares</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">A mistura de cores complementares pode gerar cores neutras, que variam entre tonalidades de cinza, do marrom e do bege, por exemplo.</p>
+    </figure>
+<hr>
+    <figure class="explicacao">
+        <h2 id="Cores-Análogas">Cores Análogas</h2>
+        <p class="destaque">As cores análogas são aquelas que estão localizadas próximas umas das outras no círculo cromático. Essas cores compartilham uma cor primária em comum, o que cria uma harmonia visual quando usadas juntas.</p>
+        <img src="../imagens/circulo-analoga.png" alt="Cores Análogas" onclick="openModal(this)">
+        <br>
+        <figcaption>Cores Análogas</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">
+            As cores análogas são frequentemente usadas em design de interiores, moda e arte para criar paletas de cores harmoniosas e agradáveis aos olhos. Elas podem ser usadas para transmitir diferentes emoções e atmosferas, dependendo das cores escolhidas. Por exemplo, uma paleta de cores análogas composta por tons de azul e verde pode criar uma sensação de calma e serenidade, enquanto uma paleta composta por tons de vermelho e laranja pode transmitir energia e entusiasmo.
+        </p>
+    </figure>
+    <hr>
+    <figure>
+        <h2 id="Cores-Monocromáticas">Cores Monocromáticas</h2>
+        <p class="destaque">As cores monocromáticas são variações de uma única cor, que podem ser obtidas através da adição de branco, preto ou cinza à cor base. Essas variações incluem tons (adição de preto), matizes (adição de branco) e sombras (adição de cinza).</p>
+        <img src="../imagens/circulo-monocromáticas.png" alt="Cores Monocromáticas" onclick="openModal(this)">
+        <br>
+        <figcaption>Cores Monocromáticas</figcaption>
+        <figcaption><p class="destaque">"Clique Na Imagem Para Ampliar"</p></figcaption>
+        <p class="destaque">    
+            As cores monocromáticas são frequentemente usadas em design de interiores, moda e arte para criar paletas de cores elegantes e sofisticadas. Elas podem ser usadas para transmitir diferentes emoções e atmosferas, dependendo da cor base escolhida. Por exemplo, uma paleta de cores monocromáticas composta por tons de azul pode criar uma sensação de calma e serenidade, enquanto uma paleta composta por tons de vermelho pode transmitir energia e paixão.
+        </p>
+    </figure>
+</section>
+<hr>
+    <section class="explicacao">
+    <h2 id="Exemplos-Praticos">🎨 Exemplos Práticos de Combinações de Cores</h2>
+    <p class="destaque">
+        Abaixo você pode visualizar algumas combinações de cores diretamente, usando pequenas bolinhas representando cada cor.
+        Observe como cores complementares, análogas e tríades funcionam na prática:
+    </p>
+
+    <div class="cores-exemplo">
+        <h3>1. Cores Complementares</h3>
+        <div class="bolinhas">
+            <span class="cor" style="background-color:#FF0000;" title="Vermelho"></span>
+            <span class="cor" style="background-color:#00FF00;" title="Verde"></span>
+        </div>
+        <p class="destaque">Vermelho + Verde → Alto contraste e equilíbrio visual.</p>
+    </div>
+
+    <div class="cores-exemplo">
+        <h3>2. Cores Análogas</h3>
+        <div class="bolinhas">
+            <span class="cor" style="background-color:#FF7F00;" title="Laranja"></span>
+            <span class="cor" style="background-color:#FFA500;" title="Laranja Claro"></span>
+            <span class="cor" style="background-color:#FFD700;" title="Amarelo"></span>
+        </div>
+        <p class="destaque">Laranja → Laranja Claro → Amarelo → Harmonia suave e agradável.</p>
+    </div>
+
+    <div class="cores-exemplo">
+        <h3>3. Cores Triádicas</h3>
+        <div class="bolinhas">
+            <span class="cor" style="background-color:#0000FF;" title="Azul"></span>
+            <span class="cor" style="background-color:#FF0000;" title="Vermelho"></span>
+            <span class="cor" style="background-color:#FFFF00;" title="Amarelo"></span>
+        </div>
+        <p class="destaque">Azul + Vermelho + Amarelo → Contraste dinâmico e equilíbrio visual.</p>
+    </div>
+
+    <div class="cores-exemplo">
+        <h3>4. Cores Frias e Quentes</h3>
+        <div class="bolinhas">
+            <span class="cor" style="background-color:#1E90FF;" title="Azul (Fria)"></span>
+            <span class="cor" style="background-color:#00CED1;" title="Turquesa (Fria)"></span>
+            <span class="cor" style="background-color:#FF4500;" title="Laranja (Quente)"></span>
+            <span class="cor" style="background-color:#FF6347;" title="Vermelho (Quente)"></span>
+        </div>
+        <p class="destaque">Fria → transmite calma | Quente → transmite energia e destaque.</p>
+    </div>
+</section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    </div>
+
+<p>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m2-002.html">⬅ <strong>Anterior</strong></a>|
+                <a href="treiner-m2-004.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+</p>
+</main>
+<hr>
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p>
+    Aula instalando todas ferramentas → 
+    <a href="https://youtu.be/E2gaDa4ZaTc?si=BgjKSeYmVLmH6-ad" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+        <a href="../politica.html"
+           onclick="sessionStorage.setItem('ultimaAula','m2-003')">
+           Política de Privacidade
+        </a>
+    </p>
+</footer>
+</script>
+</body>
+</html>

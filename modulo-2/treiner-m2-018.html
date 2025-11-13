@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Usando o Seletor ID em CSS | Módulo 2 Aula 18</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar o seletor ID em CSS para estilizar elementos específicos. Tutorial sobre seletores e especificidade CSS.">
+    <meta name="keywords" content="CODEBOOK, seletor ID, CSS ID, especificidade CSS, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-018.html">
+    <meta property="og:title" content="CODEBOOK - Seletor ID em CSS">
+    <meta property="og:description" content="Aprenda a usar o seletor ID em CSS para estilizar elementos específicos. Tutorial sobre seletores CSS.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-018.html">
+    <meta property="twitter:title" content="CODEBOOK - Seletor ID em CSS">
+    <meta property="twitter:description" content="Domine o uso do seletor ID em CSS com o CODEBOOK. Tutorial sobre especificidade e seletores.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Usando o seletor ID com CSS | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+            <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-018')">⚖ Política</a></li>
+            <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-018')">👤 Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <h1>📘 Aula 18 MD-2: Usando o ID com CSS 📘</h1>
+    <hr>
+<!-- Índice da Aula -->
+    <nav class="indice-simples">
+    <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#como-usar-id">Como usar o id</a></li>
+                <li><a href="#dicas">Dicas práticas</a></li>
+                <li><a href="#resumo">Resumo da Aula</a></li>
+            </ul>
+        </strong>
+    </nav>
+    <hr>
+    <section class="explicacao" id="introducao">
+        <h2>Introdução</h2>
+        <p class="destaque">
+            O <code>id</code> é um identificador único para elementos HTML. Diferente de <code>class</code>, um <code>id</code> deve aparecer **apenas uma vez** por página.
+        </p>
+        <p class="destaque">
+            No CSS, usamos o símbolo <strong>#</strong> para selecionar um elemento pelo seu <code>id</code> e aplicar estilos específicos.
+        </p>
+    </section>
+    <hr>
+
+    <section class="explicacao" id="como-usar-id">
+        <h2>Como declarar e usar um ID</h2>
+        <p class="destaque">
+            1. No HTML, exemplo adicionamos um <code>id</code> ao elemento: <code>&lt;p id="meu-paragrafo"&gt;Texto&lt;/p&gt;</code>.<br>
+            2. No CSS, usamos <code>#meu-paragrafo { }</code> para aplicar estilos.
+        </p>
+
+        <div class="explicacao">
+            <!-- Exemplo 1: Cor e fonte -->
+                <h3>Exemplo 1: Cor e fonte</h3>
+                <pre><code>&lt;p id="texto1"&gt;Este é um texto estilizado pelo id.&lt;/p&gt;
+
+#texto1 {
+    color: #2a9d8f;
+    font-size: 18px;
+}
+
+</code></pre>
+                <div id="texto1">
+                    <h2 style="text-align: center;">Este é um texto estilizado pelo id.</h2>
+                </div>
+            </div>
+<hr>
+            <!-- Exemplo 2: Background e padding -->
+            <div class="explicacao">
+                <h3>Exemplo 2: Background e padding</h3>
+                <pre><code>&lt;div id="caixa"&gt;Caixa com id&lt;/div&gt;
+
+#caixa {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}</code></pre>
+                <div id="caixa">
+                    <h2 style="text-align: center;">Caixa com id</h2>
+                </div>
+            </div>
+<hr>
+            <!-- Exemplo 3: Centralizando texto -->
+            <div class="explicacao">
+                <h3>Exemplo 3: Centralizando texto</h3>
+                <pre><code>&lt;h2 id="titulo"&gt;Título Centralizado&lt;/h2&gt;
+
+#titulo {
+    text-align: center;
+    color: #264653;
+}</code></pre>
+                <div id="titulo">
+                    <h2 style="text-align: center;">Título Centralizado</h2>
+                </div>
+            </div>
+<hr>
+            <!-- Exemplo 4: Largura e borda -->
+            <div class="explicacao">
+                <h3>Exemplo 4: Largura e borda</h3>
+                <pre><code>&lt;div id="quadro"&gt;Quadro estilizado&lt;/div&gt;
+
+#quadro {
+    width: 200px;
+    border: 2px solid #f4a261;
+    padding: 8px;
+}</code></pre>
+                <div id="quadro">
+                    <h2 style="text-align: center;">Quadro estilizado</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section class="explicacao" id="dicas">
+        <h2>Dicas práticas ao usar ID</h2>
+        <ul>
+            <li><p class="destaque">Um <code>id</code> deve ser único na página.</p></li>
+            <li><p class="destaque">Use <code>id</code> para estilos ou manipulações específicas que não se repetem.</p></li>
+            <li><p class="destaque">Prefira <code>class</code> quando precisar repetir estilos em vários elementos.</p></li>
+            <li><p class="destaque">Evite conflitos com o CSS global e use <strong>!important</strong> em casos específicos, se necessário.</p></li>
+            <li><p class="destaque">Combinar <code>id</code> com JavaScript é útil para manipulação única de elementos.</p></li>
+        </ul>
+    </section>
+    <hr>
+
+    <section class="explicacao" id="resumo">
+        <h2>Resumo da Aula</h2>
+        <ul>
+            <li><p class="destaque">O <code>id</code> é um identificador único no HTML.</p></li>
+            <li><p class="destaque">Selecionamos com <code>#id</code> no CSS.</p></li>
+            <li><p class="destaque">Ideal para estilos específicos que não se repetem.</p></li>
+            <li><p class="destaque">Evite repetir <code>id</code> e use <strong>!important</strong> com cuidado.</p></li>
+        </ul>
+    </section>
+    <hr>
+
+    <!-- Navegação próximas aulas -->
+    <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-017.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-019.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer" aria-label="Abrir curso em video em nova aba">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/TZuVpJmSNSE?si=ozqzfhitF6jaltsK" target="_blank" rel="external noopener noreferrer" aria-label="Abrir Aula em video em nova aba">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-018')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

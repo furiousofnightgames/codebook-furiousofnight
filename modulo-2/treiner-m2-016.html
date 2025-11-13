@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Detectando Fontes em Imagens | Módulo 2 Aula 16</title>
+    <meta name="description" content="CODEBOOK: Aprenda técnicas para identificar fontes utilizadas em imagens. Tutorial sobre ferramentas de reconhecimento tipográfico.">
+    <meta name="keywords" content="CODEBOOK, fontes em imagens, identificação tipográfica, reconhecimento de fontes, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-016.html">
+    <meta property="og:title" content="CODEBOOK - Fontes em Imagens">
+    <meta property="og:description" content="Aprenda a identificar fontes utilizadas em imagens. Tutorial sobre reconhecimento tipográfico.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-016.html">
+    <meta property="twitter:title" content="CODEBOOK - Reconhecimento de Fontes">
+    <meta property="twitter:description" content="Domine técnicas de identificação de fontes em imagens com o CODEBOOK. Tutorial sobre ferramentas de reconhecimento.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+            <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-016')">⚖ Política</a></li>
+            <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-016')">👤 Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <h1>📘 Aula 16 MD-2: Detectando fontes dentro de imagens 📘</h1>
+    <hr>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#ferramentas">Ferramentas recomendadas</a></li>
+                <li><a href="#dicas">Dicas práticas para identificar fontes</a></li>
+                <li><a href="#resumo">Resumo da aula</a></li>
+            </ul>
+        </strong>
+    </nav>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="introducao">Introdução</h2>
+        <p class="destaque">
+            Em design e web design, muitas vezes encontramos fontes interessantes em imagens, banners ou logotipos. Saber como identificar essas fontes permite replicar estilos, estudar tipografia ou criar projetos com maior fidelidade visual.
+        </p>
+        <p class="destaque">
+            Nesta aula, vamos aprender ferramentas e técnicas para detectar fontes dentro de imagens, com dicas práticas e cuidados importantes.
+        </p>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="ferramentas">Ferramentas recomendadas</h2>
+        <p class="destaque">As principais ferramentas para identificar fontes em imagens são:</p>
+        <ul class="link-bloco">
+            <li>
+                <p>
+                    <strong>WhatFontIs:</strong> 
+                    <a href="https://www.whatfontis.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatFontIs em nova aba">
+                        Acesse a ferramenta
+                    </a>. 
+                    Permite reconhecimento automático de fontes, mas cada resultado deve ser analisado individualmente. Ideal para detectar fontes gratuitas ou pagas.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>FontSquirrel:</strong>
+                    <a href="https://www.fontsquirrel.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir FontSquirrel em nova aba">
+                        Acesse a ferramenta
+                    </a>. Para identificar a fonte:
+                    <ol>
+                        <li>Escolha a opção <em>Font Identifier</em>.</li>
+                        <li>Faça o upload da imagem.</li>
+                        <li>Selecione a palavra que deseja identificar (quadrícula sobre a fonte).</li>
+                        <li>Clique em <em>"Matcherate It"</em> e veja os resultados.</li>
+                    </ol>
+                    Atenção: a ferramenta é gratuita e eficiente, mas pode não identificar todas as fontes com precisão.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>MyFonts:</strong>
+                    <a href="https://www.myfonts.com/pt/" target="_blank" rel="noopener noreferrer" aria-label="Abrir MyFonts em nova aba">
+                        Acesse a ferramenta
+                    </a>. Funciona de forma semelhante ao FontSquirrel. É excelente para fontes profissionais, mas muitas opções são pagas.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="dicas">Dicas práticas para identificar fontes em imagens</h2>
+        <ul>
+            <li>
+                <p class="destaque">Certifique-se de que a imagem tenha boa resolução. Fontes borradas ou pixeladas dificultam a identificação.</p>
+            </li>
+            <li>
+                <p class="destaque">Separe palavras ou letras individualmente, especialmente em imagens com várias fontes.</p>
+            </li>
+            <li>
+                <p class="destaque">Compare os resultados com Google Fonts, Dafont ou sites de preferência para confirmar a correspondência da fonte.</p>
+            </li>
+            <li>
+                <p class="destaque">Lembre-se de verificar licenças. Nem toda fonte encontrada pode ser utilizada livremente em projetos comerciais.</p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="resumo">Resumo da aula</h2>
+        <ul>
+            <li><p class="destaque">Detectar fontes em imagens é uma habilidade importante para designers e desenvolvedores.</p></li>
+            <li><p class="destaque">Ferramentas como <strong>WhatFontIs</strong>, <strong>FontSquirrel</strong> e <strong>MyFonts</strong> facilitam esse processo.</p></li>
+            <li><p class="destaque">A qualidade da imagem e a separação correta das letras melhoram a precisão da identificação.</p></li>
+            <li><p class="destaque">Sempre verifique licenças e compatibilidade antes de usar uma fonte em projetos reais.</p></li>
+            <li>
+                <p class="link-bloco">Também nessa aula em video com o<a href="https://youtu.be/i_c5Fzk807M?si=wa7Nn5sB-v8qwq83">Curso em video</a>com Gustavo Guanabara voce encontra o tutorial completo sobre os sites citados nessa aula.</p>
+            </li>
+        </ul>
+        <p class="destaque">📌 Dica final: combine o conhecimento desta aula com a aula anterior sobre identificação de fontes em sites para ter um domínio completo de tipografia aplicada.</p>
+    </section>
+    <hr>
+
+    <!-- Navegação próximas aulas -->
+    <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-015.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-017.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer" aria-label="Abrir curso em video em nova aba">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/XTtfM0L7Co0?si=WfwEbtV6nsuipwV9" target="_blank" rel="external noopener noreferrer" aria-label="Abrir Aula em video em nova aba">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-016')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Alinhamento de Textos em CSS | Módulo 2 Aula 17</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar as propriedades de alinhamento de texto em CSS. Tutorial sobre text-align e outras propriedades de formatação textual.">
+    <meta name="keywords" content="CODEBOOK, alinhamento de texto, text-align, tipografia CSS, módulo 2">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-017.html">
+    <meta property="og:title" content="CODEBOOK - Alinhamento de Textos">
+    <meta property="og:description" content="Aprenda a usar as propriedades de alinhamento de texto em CSS. Tutorial sobre formatação textual.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-017.html">
+    <meta property="twitter:title" content="CODEBOOK - Alinhamento de Textos">
+    <meta property="twitter:description" content="Domine as técnicas de alinhamento de texto com o CODEBOOK. Tutorial sobre text-align e formatação.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>CODEBOOK - Alinhamento de Textos em CSS | Módulo 2 Aula 17</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">🏠 Início</a></li>
+            <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+            <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-017')">⚖ Política</a></li>
+            <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-017')">👤 Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <h1>📘 Aula 17 MD-2: Alinhamento de textos com CSS 📘</h1>
+    <hr>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <strong>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#text-align">Propriedade text-align</a></li>
+                <li><a href="#dicas">Dicas práticas de alinhamento</a></li>
+                <li><a href="#resumo">Resumo da Aula</a></li>
+            </ul>
+        </strong>
+    </nav>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="introducao">Introdução</h2>
+        <p class="destaque">
+            O alinhamento de textos é essencial para a legibilidade e estética de qualquer site. Com CSS, você pode definir se o texto ficará alinhado à esquerda, à direita, centralizado ou justificado.
+        </p>
+        <p class="destaque">
+            Nesta aula, vamos explorar a propriedade <code>text-align</code> com exemplos práticos e visuais.
+        </p>
+    </section>
+    <hr>
+    <section class="explicacao">
+        <h2 id="text-align">Propriedade <code>text-align</code></h2>
+        <p class="destaque">
+            <code>text-align</code> define o alinhamento horizontal do texto em elementos de bloco (<code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, etc.).
+        </p>
+        <p class="destaque">Segue os exemplos na prática visual e em códigos</p>
+
+        <div>
+            <div>
+                <h3>Alinhamento à esquerda</h3>
+                <pre><code>&lt;p style="text-align: left;"&gt;
+Texto alinhado à esquerda.
+&lt;/p&gt;</code></pre>
+                <div style="text-align: left;">
+                    Texto alinhado à esquerda.
+                </div>
+            </div>
+
+            <div>
+                <h3>Alinhamento centralizado</h3>
+                <pre><code>&lt;p style="text-align: center;"&gt;
+Texto centralizado.
+&lt;/p&gt;</code></pre>
+                <div style="text-align: center;">
+                    Texto centralizado.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h3>Alinhamento à direita</h3>
+                <pre><code>&lt;p style="text-align: right;"&gt;
+Texto alinhado à direita.
+&lt;/p&gt;</code></pre>
+                <div>
+                    <div style="text-align: right;">
+                        Texto alinhado à direita.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Justificado</h3>
+                <pre><code>&lt;p style="text-align: justify;"&gt;
+Texto justificado com bordas uniformes.
+&lt;/p&gt;</code></pre>
+                <div style="text-align: justify;">
+                    <p class="destaque">texto ajustado e nos conformes se ajustando a todas as telas, se alinhando a todas as dimensões.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="dicas">Dicas práticas de alinhamento</h2>
+        <ul>
+            <li>
+                <p class="destaque">Use <code>left</code> para textos em português, pois a leitura é naturalmente da esquerda para a direita.</p>
+            </li>
+            <li>
+                <p class="destaque">Centralize títulos ou frases de destaque para chamar atenção.</p>
+            </li>
+            <li>
+                <p class="destaque">Alinhamento à direita pode ser usado para legendas ou menus específicos.</p>
+            </li>
+            <li>
+                <p class="destaque">Justifique textos longos, mas cuidado com espaçamento irregular entre palavras.</p>
+            </li>
+            <li>
+                <p class="destaque">Combine alinhamento, tipografia e espaçamento para uma leitura confortável.</p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+        <h2 id="resumo">Resumo da Aula</h2>
+        <ul>
+            <li>
+                <p class="destaque"><code>text-align</code> controla o alinhamento horizontal do texto.</p>
+            </li>
+            <li>
+                <p class="destaque">Valores principais: <code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code>.</p>
+            </li>
+            <li>
+                <p class="destaque">Escolha baseada em legibilidade e estética.</p>
+            </li>
+            <li>
+                <p class="destaque">Pratique aplicando diferentes alinhamentos em títulos, parágrafos e legendas.</p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <!-- Navegação próximas aulas -->
+    <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                <a href="treiner-m2-016.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m2-018.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+    </main>
+
+    <hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer" aria-label="Abrir curso em video em nova aba">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula de referência → 
+            <a href="https://youtu.be/tJTtp4qyqdE?si=kpvfST01jeNAZxkq" target="_blank" rel="external noopener noreferrer" aria-label="Abrir Aula em video em nova aba">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-017')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

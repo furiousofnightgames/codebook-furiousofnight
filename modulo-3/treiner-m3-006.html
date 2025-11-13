@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda a posicionar imagens de fundo com precisão usando CSS. Domine background-position e técnicas de posicionamento para layouts profissionais.">
+    <meta name="keywords" content="background-position, CSS3, posicionamento de imagens, web design, CODEBOOK, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-006.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-006.html">
+    <meta property="og:title" content="Posicionamento de imagens de fundo | CODEBOOK">
+    <meta property="og:description" content="Aprenda a posicionar imagens de fundo com precisão usando CSS. Domine background-position e técnicas de posicionamento para layouts profissionais.">
+    <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-3/treiner-m3-006.html">
+    <meta property="twitter:title" content="Posicionamento de imagens de fundo | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda a posicionar imagens de fundo com precisão usando CSS. Domine background-position e técnicas de posicionamento para layouts profissionais.">
+    <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+    
+    <title>Posicionamento de imagens de fundo | CODEBOOK</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilos específicos para os exemplos desta aula */
+        
+        /* Demo boxes para exemplos */
+        .demo {
+            height: 300px;
+            width: 500px;
+            border: 2px solid #0048ff;
+            border-radius: 8px;
+            margin: 24px auto;
+            background-image: url('imagens/wallpaper003.jpg');
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .demo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Indicador de posição */
+        .demo::after {
+            content: attr(data-position);
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Imagem original */
+        .demo-original {
+            background-position: center;
+            background-size: 600px 360px;
+            background-repeat: no-repeat;
+            width: 600px; 
+            height: 360px;
+        }
+
+        /* Exemplos de posicionamento */
+        .demo-left-top {
+            background-position: left top;
+        }
+
+        .demo-right-top {
+            background-position: right top;
+        }
+
+        .demo-center {
+            background-position: center;
+        }
+
+        .demo-left-bottom {
+            background-position: left bottom;
+        }
+
+        .demo-right-bottom {
+            background-position: right bottom;
+        }
+
+        .demo-center-top {
+            background-position: center top;
+        }
+
+        .demo-center-bottom {
+            background-position: center bottom;
+        }
+
+        .demo-left-center {
+            background-position: left center;
+        }
+
+        .demo-right-center {
+            background-position: right center;
+        }
+
+        /* Grid de exemplos */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 24px auto;
+            padding: 0 16px;
+        }
+
+        /* Tabela de valores */
+        .valores-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin: 0;
+        }
+
+        .valores-table th,
+        .valores-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-width: 120px;
+        }
+
+        .valores-table th {
+            background: rgba(77, 255, 0, 0.1);
+            color: #4dff00;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .valores-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Container para a tabela com scroll horizontal */
+        .table-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(77, 255, 0, 0.3) transparent;
+        }
+
+        /* Estilização da scrollbar */
+        .table-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background-color: rgba(77, 255, 0, 0.3);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .valores-table th,
+            .valores-table td {
+                padding: 10px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .valores-table th,
+            .valores-table td {
+                padding: 8px;
+                font-size: 0.9em;
+                min-width: 100px;
+            }
+
+            .valores-table code {
+                font-size: 0.85em;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .valores-table th,
+            .valores-table td {
+                padding: 6px;
+                font-size: 0.85em;
+                min-width: 90px;
+            }
+        }
+
+        /* Exemplo interativo */
+        .demo-interactive {
+            height: 300px;
+            border: 2px solid #4dff00;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-image: url('imagens/wallpaper003.jpg');
+            background-position: center;
+            transition: background-position 0.3s ease;
+        }
+
+        /* Responsividade */
+        /* Tablets */
+        @media (max-width: 768px) {
+            .demo {
+                width: calc(100% - 24px);
+                height: 250px;
+            }
+
+            .demo-grid {
+                padding: 0 12px;
+            }
+
+            .valores-table {
+                margin: 20px 12px;
+                font-size: 0.95em;
+            }
+
+            pre {
+                margin: 15px 0;
+                padding: 12px;
+                font-size: 0.9em;
+                white-space: pre-wrap;
+                word-break: break-word;
+            }
+        }
+
+        /* Celulares grandes */
+        @media (max-width: 576px) {
+            .demo {
+                height: 200px;
+                margin: 16px auto;
+            }
+
+            .demo::after {
+                padding: 4px 8px;
+                font-size: 0.8em;
+            }
+
+            /* Ajuste específico apenas para o exemplo center */
+            .demo-center {
+                background-size:600px 500px;
+            }
+            .valores-table th,
+            .valores-table td {
+                padding: 8px;
+                font-size: 0.85em;
+            }
+
+            .demo-original {
+                background-size: 100% 100%;
+            }
+
+            pre {
+                font-size: 0.85em;
+                padding: 10px;
+                margin: 12px 0;
+            }
+        }
+
+        /* Celulares pequenos */
+        @media (max-width: 375px) {
+            .demo {
+                height: 180px;
+                margin: 12px auto;
+                border-width: 1px;
+            }
+
+            .demo-grid {
+                gap: 12px;
+                padding: 0 8px;
+            }
+
+            .valores-table {
+                margin: 15px 8px;
+                font-size: 0.8em;
+            }
+
+            .valores-table th,
+            .valores-table td {
+                padding: 6px;
+            }
+
+            pre {
+                font-size: 0.8em;
+                padding: 8px;
+                margin: 10px 0;
+            }
+
+            .explicacao h3 {
+                font-size: 1.1em;
+                margin: 15px 0 10px 0;
+            }
+
+            .explicacao p {
+                font-size: 0.9em;
+                line-height: 1.4;
+            }
+        }
+
+        /* Ajuste para telas muito pequenas */
+        @media (max-width: 320px) {
+            .demo {
+                height: 150px;
+            }
+
+            .demo::after {
+                font-size: 0.75em;
+                padding: 3px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">🏠 Início</a></li>
+                    <li><a href="Indice-geral-m3.html">📑 Índices</a></li>
+                    <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-006')">⚖ Política</a></li>
+                    <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-006')">👤 Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>📘 Aula 6 MD-3: Posicionamento de imagens de fundo 📘</h1>
+<hr>
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#conceito">Posicionamento de background</a></li>
+                    <li><a href="#sintaxe">Sintaxe e valores</a></li>
+                    <li><a href="#exemplos">Exemplos práticos</a></li>
+                    <li><a href="#posicoes">Posições principais</a></li>
+                    <li><a href="#valores">Tabela de valores</a></li>
+                    <li><a href="#praticas">Boas práticas</a></li>
+                </ul>
+            </strong>
+        </nav>
+
+        <section class="explicacao">
+            <h2 id="conceito">1. O que é posicionamento de background?</h2>
+            <p class="destaque">O posicionamento de imagens de fundo (background-position) permite controlar onde uma imagem aparecerá dentro do seu container. Isso é especialmente útil quando a imagem é menor que o container ou quando você usa <code>background-repeat: no-repeat</code>.</p>
+
+            <p class="destaque">Pense no container como uma janela através da qual você vê a imagem. A propriedade <code>background-position</code> determina qual parte da imagem será visível através dessa janela.</p>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="sintaxe">2. Sintaxe e valores</h2>
+            <p class="destaque">A propriedade <code>background-position</code> aceita:</p>
+            <ul>
+                <li>Palavras-chave: <code>left</code>, <code>center</code>, <code>right</code>, <code>top</code>, <code>bottom</code></li>
+                <li>Porcentagens: <code>0%</code> a <code>100%</code></li>
+                <li>Valores em pixels ou outras unidades: <code>50px 100px</code></li>
+            </ul>
+
+<pre>
+/* Sintaxe básica */
+.elemento {
+    background-position: horizontal vertical;
+}
+
+/* Exemplos */
+background-position: left top;     /* Canto superior esquerdo */
+background-position: center;       /* Centro (horizontal e vertical) */
+background-position: 50% 25%;      /* 50% da largura, 25% da altura */
+</pre>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="exemplos">3. Exemplos práticos</h2>
+            
+            <h3>Imagem Original</h3>
+            <p class="destaque">Primeiro, vamos ver como é nossa imagem original que será usada nos exemplos:</p>
+            
+            <div class="demo-grid">
+                <div class="demo demo-original" data-position="Imagem Original"></div>
+            </div>
+
+            <p class="destaque">Esta é a imagem ajustada para ocupar exatamente o tamanho do container (500px × 300px). Nos próximos exemplos, veremos como podemos posicionar esta imagem de diferentes formas dentro desta área.</p>
+
+            <p class="destaque">Esta é a imagem que vamos posicionar de diferentes formas nos exemplos a seguir. Observe como ela se comporta em cada posição:</p>
+<hr>
+            <h3>1. Left Top (Esquerdo Superior)</h3>
+            <div class="demo-grid">
+                <div class="demo demo-left-top" data-position="left top"></div>
+            </div>
+<pre>
+.elemento {
+    background-image: url('imagem.jpg');
+    background-position: left top;
+}
+</pre>
+            <p class="destaque">Nesta posição, a imagem se alinha com o canto superior esquerdo do container. É útil quando você quer que o conteúdo comece exatamente do topo esquerdo.</p>
+<hr>
+            <h3>2. Right Top (Direito Superior)</h3>
+            <div class="demo-grid">
+                <div class="demo demo-right-top" data-position="right top"></div>
+            </div>
+<pre>
+.elemento {
+    background-image: url('imagem.jpg');
+    background-position: right top;
+}
+</pre>
+            <p class="destaque">A imagem se alinha com o canto superior direito. Perfeito para elementos que precisam estar ancorados no topo direito, como ícones de menu.</p>
+<hr>
+            <h3>3. Center (Centro)</h3>
+            <div class="demo-grid">
+                <div class="demo demo-center" data-position="center"></div>
+            </div>
+<pre>
+.elemento {
+    background-image: url('imagem.jpg');
+    background-position: center;  /* Ou center center */
+}
+</pre>
+            <p class="destaque">Centralização perfeita, tanto horizontal quanto vertical. Ideal para imagens de destaque ou logos que precisam estar no centro absoluto.</p>
+<hr>
+            <h3>4. Left Bottom (Esquerdo Inferior)</h3>
+            <div class="demo-grid">
+                <div class="demo demo-left-bottom" data-position="left bottom"></div>
+            </div>
+<pre>
+.elemento {
+    background-image: url('imagem.jpg');
+    background-position: left bottom;
+}
+</pre>
+            <p class="destaque">A imagem se alinha com o canto inferior esquerdo. Útil para rodapés ou elementos que precisam estar ancorados na base esquerda.</p>
+<hr>
+            <h3>5. Right Bottom (Direito Inferior)</h3>
+            <div class="demo-grid">
+                <div class="demo demo-right-bottom" data-position="right bottom"></div>
+            </div>
+<pre>
+.elemento {
+    background-image: url('imagem.jpg');
+    background-position: right bottom;
+}
+</pre>
+            <p class="destaque">Alinhamento no canto inferior direito. Muito usado para marcas d'água ou elementos decorativos que precisam estar no canto inferior direito.</p>
+
+            <div class="note">
+                <p class="destaque"><strong>Dica:</strong> Você também pode combinar outras posições como <code>center top</code>, <code>center bottom</code>, <code>left center</code>, <code>right center</code>, permitindo um controle preciso do posicionamento sem necessariamente precisar usar imagens de exemplo para cada combinação.</p>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="posicoes">4. Posições principais</h2>
+            <p class="destaque">Como vimos nos exemplos acima, você pode combinar as palavras-chave <code>left</code>, <code>center</code>, <code>right</code> com <code>top</code>, <code>center</code>, <code>bottom</code> para criar diferentes posicionamentos. Algumas observações importantes:</p>
+            
+            <ul>
+                <li>Quando usar apenas uma palavra (ex: <code>center</code>), ela será aplicada tanto horizontal quanto verticalmente</li>
+                <li>A ordem importa: primeiro a posição horizontal, depois a vertical</li>
+                <li>Você pode misturar palavras-chave com valores percentuais</li>
+                <li>Use <code>background-repeat: no-repeat</code> se quiser evitar que a imagem se repita</li>
+            </ul>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="valores">5. Tabela de valores</h2>
+            <div class="table-container">
+                <table class="valores-table">
+                    <tr>
+                        <th>Posição</th>
+                        <th>Descrição</th>
+                        <th>Equivalente em %</th>
+                    </tr>
+                <tr>
+                    <td><code>left top</code></td>
+                    <td>Canto superior esquerdo</td>
+                    <td><code>0% 0%</code></td>
+                </tr>
+                <tr>
+                    <td><code>center top</code></td>
+                    <td>Centro superior</td>
+                    <td><code>50% 0%</code></td>
+                </tr>
+                <tr>
+                    <td><code>right top</code></td>
+                    <td>Canto superior direito</td>
+                    <td><code>100% 0%</code></td>
+                </tr>
+                <tr>
+                    <td><code>left center</code></td>
+                    <td>Centro esquerdo</td>
+                    <td><code>0% 50%</code></td>
+                </tr>
+                <tr>
+                    <td><code>center</code></td>
+                    <td>Centro absoluto</td>
+                    <td><code>50% 50%</code></td>
+                </tr>
+                <tr>
+                    <td><code>right center</code></td>
+                    <td>Centro direito</td>
+                    <td><code>100% 50%</code></td>
+                </tr>
+                <tr>
+                    <td><code>left bottom</code></td>
+                    <td>Canto inferior esquerdo</td>
+                    <td><code>0% 100%</code></td>
+                </tr>
+                <tr>
+                    <td><code>center bottom</code></td>
+                    <td>Centro inferior</td>
+                    <td><code>50% 100%</code></td>
+                </tr>
+                <tr>
+                    <td><code>right bottom</code></td>
+                    <td>Canto inferior direito</td>
+                    <td><code>100% 100%</code></td>
+                </tr>
+                </table>
+            </div>
+        </section>
+<hr>
+        <section class="explicacao">
+            <h2 id="praticas">6. Boas práticas</h2>
+            <ul>
+                <li>Use palavras-chave para posicionamentos simples (<code>left top</code>, <code>center</code>, etc.)</li>
+                <li>Use porcentagens quando precisar de um controle mais preciso</li>
+                <li>Combine com <code>background-size</code> para melhor controle</li>
+                <li>Considere usar <code>background-origin</code> para ajustar o ponto de referência</li>
+                <li>Para imagens de fundo importantes, forneça uma cor de fallback</li>
+            </ul>
+
+            <p class="destaque">Exemplo de código completo:</p>
+<pre>
+.elemento {
+    background-color: #333;                      /* Cor de fallback */
+    background-image: url('imagem.jpg');         /* Imagem */
+    background-position: center;                 /* Centralizada */
+    background-repeat: no-repeat;               /* Sem repetição */
+    background-size: cover;                     /* Cobre todo o container */
+}
+</pre>
+        </section>
+    </main>
+
+    <hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m3-005.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m3-007.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima → 
+            <a href="https://youtu.be/RpcmGqvzWxQ" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html"
+               onclick="sessionStorage.setItem('ultimaAula','m3-006')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

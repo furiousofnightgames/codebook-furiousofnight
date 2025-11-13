@@ -1,0 +1,248 @@
+<!-- Página 1 Secundária -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Secundária - Reprodução de Vídeos</title>
+  <link rel="icon" type="image/x-icon" href="../../imagens/logo-sitebook.ico">
+
+  <style>
+    /* ==============================
+       RESET E BASE
+    ============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(180deg, #031619, #0a2a2e);
+      color: #00ff0d;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    /* ==============================
+       TOPO (BOTÃO VOLTAR + TÍTULO)
+    ============================== */
+    .topo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .nav-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-voltar {
+      position: relative;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 0, 0.3);
+      background: rgba(255, 255, 0, 0.05);
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+      transform: translateY(-2px);
+      text-shadow: 0 0 6px #fff;
+    }
+
+    /* ==============================
+       CABEÇALHOS
+    ============================== */
+    h1, h2 {
+      color: #00ffff;
+      text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+    }
+
+    /* ==============================
+       VÍDEO
+    ============================== */
+    iframe {
+      display: none;
+      width: 90%;
+      max-width: 1000px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    iframe.active {
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* ==============================
+       TEXTO E LINKS
+    ============================== */
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #d4ffd4;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 0, 0.3);
+      background: rgba(255, 255, 0, 0.05);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #fff;
+      text-shadow: 0 0 6px #fff;
+      transform: translateY(-2px);
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border: none;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    /* ==============================
+       BLOCO DE FERRAMENTAS
+    ============================== */
+    .ferramentas {
+      background: rgba(0, 255, 0, 0.05);
+      border: 1px solid rgba(0, 255, 0, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 30px auto;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .ferramentas p {
+      font-size: 1em;
+      margin: 10px 0;
+      color: #d4ffd4;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ferramentas a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .ferramentas a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 6px #00ffff;
+      text-decoration: underline;
+    }
+
+    /* ==============================
+       RESPONSIVIDADE
+    ============================== */
+    @media (max-width: 768px) {
+      body { padding: 15px; }
+      iframe { width: 95%; }
+      h1 { font-size: 1.5em; }
+      h2 { font-size: 1.2em; }
+      .btn-voltar { padding: 6px 14px; }
+      .ferramentas { padding: 15px; }
+      .ferramentas p { font-size: 0.95em; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 10px; }
+      h1 { font-size: 1.2em; }
+      h2 { font-size: 1em; }
+      p { font-size: 0.9em; }
+      a { padding: 8px 14px; }
+      .btn-voltar { padding: 5px 10px; }
+      .topo { gap: 6px; margin-bottom: 15px; }
+      .ferramentas { padding: 12px; }
+      .ferramentas p { font-size: 0.9em; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topo">
+    <div class="nav-buttons">
+      <a href="passo-1.html" class="btn-voltar">⬅ Voltar</a>
+      <a href="../indice-geral-m2.html" class="btn-voltar">Ir ao Índice ➜</a>
+    </div>
+    <h1>Navegando pelo projeto pronto!</h1>
+  </div>
+
+  <iframe id="video1"
+          src="https://www.youtube.com/embed/YB9c1Zg_Ln4"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+
+  <p>
+    Link do material para download:
+    <a href="material.zip" download="material.zip" type="application/zip">Download do Material</a>
+  </p>
+
+  <div class="ferramentas">
+    <h2>Ferramentas para usar:</h2>
+    <p>🧭 <strong>Planejamento do site:</strong> <a href="https://app.mockflow.com/" target="_blank">Mockflow</a></p>
+    <p>🎨 <strong>Paleta de cores:</strong> <a href="https://color.adobe.com/pt/" target="_blank">Adobe Color</a></p>
+    <p>✒️ <strong>Fontes personalizadas:</strong> <a href="https://www.dafont.com/pt/" target="_blank">Dafont</a></p>
+    <p>📱 <strong>Testes de responsividade:</strong> <a href="https://chromewebstore.google.com/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh" target="_blank">Window Resizer</a></p>
+    <p>😀 <strong>Personalização com emojis:</strong> <a href="https://emojipedia.org/" target="_blank">Emojipedia</a></p>
+  </div>
+  <hr>
+
+  <h2>
+    <a href="passo-3.html">Próximo Passo ➡</a>
+  </h2>
+</body>
+</html>

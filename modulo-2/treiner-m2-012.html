@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Estilização Avançada de Fontes | Módulo 2 Aula 12</title>
+  <meta name="description" content="CODEBOOK: Aprenda sobre font-weight, font-style, text-decoration e shorthand font em CSS. Tutorial completo de estilização avançada.">
+  <meta name="keywords" content="CODEBOOK, font-weight, font-style, text-decoration, shorthand CSS, módulo 2">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-012.html">
+  <meta property="og:title" content="CODEBOOK - Fontes Avançadas CSS">
+  <meta property="og:description" content="Domine as propriedades avançadas de fonte em CSS. Tutorial sobre peso, estilo e decoração de texto.">
+  <meta property="og:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-012.html">
+  <meta property="twitter:title" content="CODEBOOK - Formatação CSS">
+  <meta property="twitter:description" content="Aprenda técnicas avançadas de estilização de fontes com o CODEBOOK. Tutorial de formatação CSS.">
+  <meta property="twitter:image" content="https://furiousofnight.github.io/front-end-modulo-1-5/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnight.github.io/front-end-modulo-1-5/modulo-2/treiner-m2-012.html">
+  <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">🏠 Início</a></li>
+        <li><a href="indice-geral-m2.html">📑 Índices</a></li>
+        <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-012')">⚖ Política</a></li>
+        <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m2-012')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>📘 Aula 12 MD-2: Peso, Estilo, Decoração & Shorthand Font em CSS 📘</h1>
+    <hr>
+
+    <!-- Índice -->
+    <nav class="indice-simples">
+      <h2>Índice</h2>
+      <strong>
+        <ul>
+          <li>
+            <a href="#introducao">Introdução</a>
+        </li>
+          <li>
+            <a href="#font-weight">font-weight</a>
+        </li>
+          <li>
+            <a href="#font-style">font-style</a>
+        </li>
+          <li>
+            <a href="#text-decoration">text-decoration</a>
+        </li>
+          <li>
+            <a href="#shorthand-font">Shorthand font</a>
+        </li>
+          <li>
+            <a href="#combinacoes">Exemplos de combinações</a>
+        </li>
+          <li>
+            <a href="#painel-interativo">Painel interativo</a>
+        </li>
+          <li>
+            <a href="#boas-praticas">Boas práticas</a>
+        </li>
+          <li>
+            <a href="#resumo">Resumo Geral</a>
+        </li>
+        </ul>
+      </strong>
+    </nav>
+    <hr>
+
+    <!-- Introdução -->
+    <section id="introducao" class="explicacao">
+      <h2>Introdução</h2>
+      <p class="destaque">
+        Nesta aula, vamos explorar como controlar o <strong>peso</strong> da fonte, o <strong>estilo</strong>, a <strong>decoração do texto</strong> e como usar a <strong>shorthand font</strong> para combinar tudo em uma linha. Isso ajuda a criar hierarquia, estilo e destaque visual no seu conteúdo.
+      </p>
+      <p class="destaque">💡 Dica: Entender estas propriedades é essencial para criar textos claros, legíveis e visualmente organizados.</p>
+    </section>
+    <hr>
+
+    <!-- Font Weight -->
+    <section id="font-weight" class="explicacao">
+      <h2>font-weight</h2>
+      <p class="destaque">Controla a espessura da fonte, tanto com valores literais quanto numéricos:</p>
+      <ul>
+        <li>
+          <p class="destaque">Literals: <strong>lighter</strong>, <strong>normal</strong>, <strong>bold</strong>, <strong>bolder</strong> — usados para design rápido ou compatibilidade entre fontes.</p>
+        </li>
+        <li>
+          <p class="destaque">Numéricos: 100, 200, 300 ... até 900 — fornecem controle detalhado da espessura, ideal para hierarquia visual.</p>
+        </li>
+      </ul>
+      <p class="destaque">💡 Dica: Use valores mais pesados para títulos e mais leves para textos longos, mantendo legibilidade.</p>
+      <div style="margin:10px 0; padding:12px; background:#1e1e1e; border-radius:8px; color:#fff !important;">
+        <p style="font-weight:lighter; color:#ff9999 !important;">Lighter</p>
+        <p style="font-weight:normal; color:#ffffff !important;">Normal</p>
+        <p style="font-weight:bold; color:#55ff55 !important;">Bold</p>
+        <p style="font-weight:bolder; color:#ff5555 !important;">Bolder</p>
+        <p style="font-weight:100; color:#ff9999 !important;">100</p>
+        <p style="font-weight:300; color:#ffbb55 !important;">300</p>
+        <p style="font-weight:500; color:#55ffcc !important;">500</p>
+        <p style="font-weight:700; color:#55ff55 !important;">700</p>
+        <p style="font-weight:900; color:#ff5555 !important;">900</p>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Font Style -->
+    <section id="font-style" class="explicacao">
+      <h2>font-style</h2>
+      <p class="destaque">Define <strong>normal</strong>, <strong>italic</strong> ou <strong>oblique</strong> para o texto:</p>
+      <ul>
+        <li>
+          <p class="destaque"><strong>normal</strong> — sem inclinação, padrão da fonte.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>italic</strong> — itálico clássico, útil para citações ou palavras estrangeiras.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>oblique</strong> — inclinação sutil, alternativa ao italic.</p>
+        </li>
+      </ul>
+      <p class="destaque">💡 Dica: Combine com pesos diferentes para criar destaque sem prejudicar a hierarquia.</p>
+      <div style="margin:10px 0; padding:12px; background:#1e1e1e; border-radius:8px; color:#fff !important;">
+        <p style="font-style:normal; color:#ffffff !important;">Normal</p>
+        <p style="font-style:italic; color:#ffbb55 !important;">Italic</p>
+        <p style="font-style:oblique; color:#55ffcc !important;">Oblique</p>
+        <p style="font-style:italic; font-weight:bold; color:#ff5555 !important;">Italic + Bold</p>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Text Decoration -->
+    <section id="text-decoration" class="explicacao">
+      <h2>text-decoration</h2>
+      <p class="destaque">Adiciona decorações visuais no texto:</p>
+      <ul>
+        <li>
+          <p class="destaque"><strong>underline</strong> — sublinha, ideal para links.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>overline</strong> — linha acima, efeito estilizado.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>line-through</strong> — linha atravessando, usado para mostrar alterações ou exclusões.</p>
+        </li>
+      </ul>
+      <p class="destaque">💡 Dica: Evite múltiplas decorações em textos longos para não atrapalhar a leitura.</p>
+      <div style="margin:10px 0; padding:12px; background:#1e1e1e; border-radius:8px; color:#fff !important;">
+        <p style="text-decoration:underline; color:#ff5555 !important;">Underline</p>
+        <p style="text-decoration:overline; color:#55ff55 !important;">Overline</p>
+        <p style="text-decoration:line-through; color:#55ccff !important;">Line-through</p>
+        <p style="text-decoration:underline overline; color:#ffbb55 !important;">Underline + Overline</p>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Shorthand Font -->
+    <section id="shorthand-font" class="explicacao">
+      <h2>Shorthand font</h2>
+      <p class="destaque">Permite combinar várias propriedades tipográficas em uma única linha:</p>
+      <p class="destaque">Inclui: <code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>, <code>font-size/line-height</code>, <code>font-family</code> e até <code>text-decoration</code>.</p>
+      <p class="destaque">💡 Dica: Use para manter CSS organizado e simplificado, especialmente em títulos ou textos destacados.</p>
+      <div style="margin:10px 0; padding:12px; background:#1e1e1e; border-radius:8px; color:#fff !important;">
+        <p style="font: italic small-caps bold 24px/1.5 'Times New Roman', serif; text-decoration:underline overline; color:#55ffcc !important;">
+          Italic, Small-caps, Bold, 24px, line-height 1.5, com underline + overline
+        </p>
+        <pre><code>p {
+  font: italic small-caps bold 24px/1.5 'Times New Roman', serif;
+  text-decoration:   text-decoration: underline overline;
+  color: #55ffcc;
+}
+</code></pre>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Combinações -->
+    <section id="combinacoes" class="explicacao">
+      <h2>Exemplos de combinações</h2>
+      <p class="destaque">Veja como combinar peso, estilo, variante e decorações para criar hierarquia e impacto visual:</p>
+      <div style="margin:10px auto; padding:12px; background:#1e1e1e; border-radius:8px; max-width:600px;">
+        <h3 style="font-weight:700; font-style:italic; text-decoration:underline; color:#ff5555 !important;">Título Negrito Itálico Subscrito</h3>
+        <p style="font-weight:400; font-style:normal; color:#fff !important;">Corpo de texto normal. Aqui podemos perceber contraste e legibilidade, aplicando diferentes pesos e estilos de forma estratégica.</p>
+      </div>
+      <div style="margin:10px auto; padding:12px; background:#1e1e1e; border-radius:8px; max-width:600px;">
+        <h3 style="font-variant:small-caps; font-weight:600; font-style:oblique; text-decoration:line-through; color:#55ff55 !important;">
+          Subtítulo Small-caps Semi-negrito + Line-through
+        </h3>
+        <p style="font-weight:300; font-style:italic; color:#fff !important;">Texto complementar leve e itálico, mostrando como diferentes combinações podem criar efeitos visuais interessantes sem perder a clareza.</p>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Painel interativo -->
+    <section id="painel-interativo" class="explicacao">
+      <h2>Painel interativo em Tempo Real</h2>
+      <p class="destaque">Altere peso, estilo, variante e decoração do texto em tempo real e veja os resultados no parágrafo abaixo:</p>
+
+      <div style="margin:10px auto; padding:12px; background:#111; border-radius:8px; color:#fff !important; max-width:600px; text-align:center;">
+        <label>Peso:
+          <select id="peso">
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400" selected>400</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+            <option value="800">800</option>
+            <option value="900">900</option>
+            <option value="lighter">Lighter</option>
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+            <option value="bolder">Bolder</option>
+          </select>
+        </label>
+        <br>
+        <label>Estilo:
+          <select id="estilo">
+            <option value="normal" selected>Normal</option>
+            <option value="italic">Italic</option>
+            <option value="oblique">Oblique</option>
+          </select>
+        </label>
+        <br>
+        <label>Variante:
+          <select id="variante">
+            <option value="normal" selected>Normal</option>
+            <option value="small-caps">Small-caps</option>
+          </select>
+        </label>
+        <br>
+        <label>Decoração:
+          <select id="decoracao">
+            <option value="none" selected>Nenhuma</option>
+            <option value="underline">Underline</option>
+            <option value="overline">Overline</option>
+            <option value="line-through">Line-through</option>
+          </select>
+        </label>
+
+        <div id="preview" style="margin-top:12px; padding:12px; background:#222; border-radius:8px; color:#fff !important;">
+          Texto de exemplo: observe as alterações em tempo real
+        </div>
+
+        <script>
+          const pesoSelect = document.getElementById('peso');
+          const estiloSelect = document.getElementById('estilo');
+          const varianteSelect = document.getElementById('variante');
+          const decoracaoSelect = document.getElementById('decoracao');
+          const preview = document.getElementById('preview');
+
+          function atualizarPreview() {
+            preview.style.fontWeight = pesoSelect.value;
+            preview.style.fontStyle = estiloSelect.value;
+            preview.style.fontVariant = varianteSelect.value;
+            preview.style.textDecoration = decoracaoSelect.value;
+          }
+
+          pesoSelect.addEventListener('change', atualizarPreview);
+          estiloSelect.addEventListener('change', atualizarPreview);
+          varianteSelect.addEventListener('change', atualizarPreview);
+          decoracaoSelect.addEventListener('change', atualizarPreview);
+          window.addEventListener('load', atualizarPreview);
+        </script>
+      </div>
+      <p class="destaque">💡 Dica: Experimente diferentes combinações para perceber o impacto visual de cada propriedade CSS no texto.</p>
+    </section>
+    <hr>
+
+    <!-- Boas práticas -->
+    <section id="boas-praticas" class="explicacao">
+      <h2>Boas práticas</h2>
+      <ul>
+        <li>
+          <p class="destaque">Use pesos e estilos com coerência para criar hierarquia visual.</p>
+        </li>
+        <li>
+          <p class="destaque">Evite excesso de <code>text-decoration</code> para não poluir a leitura.</p>
+        </li>
+        <li>
+          <p class="destaque">Shorthand font ajuda a simplificar CSS, mas use de forma legível e organizada.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Resumo Geral -->
+    <section id="resumo" class="explicacao">
+      <h2>Resumo Geral</h2>
+      <ul>
+        <li>
+          <p class="destaque"><strong>font-weight:</strong> controla espessura da fonte, literal ou numérico.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>font-style:</strong> normal, italic, oblique.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>text-decoration:</strong> underline, overline, line-through.</p>
+        </li>
+        <li>
+          <p class="destaque"><strong>shorthand font:</strong> combina várias propriedades de tipografia em uma linha.</p>
+        </li>
+        <li>
+          <p class="destaque">Painel interativo permite visualizar combinações em tempo real.</p>
+        </li>
+      </ul>
+    </section>
+    <hr>
+
+    <!-- Navegação próximas aulas -->
+    <nav class="proxima-aula">
+      <p>
+        <strong>Próxima Aula: <br>
+          <a href="treiner-m2-011.html">⬅ <strong>Anterior</strong></a> | <a href="treiner-m2-013.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+      </p>
+    </nav>
+  </main>
+
+  <hr>
+  <footer class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>Curso recomendado: 
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+    <p>
+        Aula referente ao conteúdo acima → 
+        <a href="https://youtu.be/oHj5ez1bSkc?si=sc8qddy2SJQGVBzg" target="_blank" rel="external noopener noreferrer">
+            <strong>Aula no Curso em vídeo</strong>
+        </a>
+    </p>
+  </footer>
+  <hr>
+  <footer class="roda-pe">
+      <p>
+          © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+          <a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m2-012')">
+             Política de Privacidade
+          </a>
+      </p>
+  </footer>
+</body>
+</html>
