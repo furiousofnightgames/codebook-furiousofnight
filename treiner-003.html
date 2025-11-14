@@ -1,0 +1,158 @@
+﻿<!--APRENDENDO PARÁGRAFOS E QUEBRAS DE LINHA NO HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Parágrafos e Quebras de Linha em HTML | Aula 3</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar parágrafos e quebras de linha em HTML5. Domine a formatação de texto básica com tags p e br, com exemplos práticos e explicações claras.">
+    <meta name="keywords" content="CODEBOOK, parágrafos HTML, quebra de linha HTML, tags HTML, formatação texto HTML, HTML5">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-003.html">
+    <meta property="og:title" content="CODEBOOK - Formatação de Texto Básica em HTML">
+    <meta property="og:description" content="Aprenda a formatar textos em HTML com o CODEBOOK! Domine parágrafos e quebras de linha com exemplos práticos e dicas profissionais.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-003.html">
+    <meta property="twitter:title" content="CODEBOOK - Textos em HTML5">
+    <meta property="twitter:description" content="Descubra como trabalhar com textos em HTML no CODEBOOK! Aprenda sobre parágrafos e quebras de linha de forma simples e eficiente.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-003.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','003')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','003')">📚 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📚 Aula 3: Aprendendo Parágrafos e Quebras de Linhas 📚</h1>
+<hr>
+
+<!-- Índice de navegação -->
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+        <li><a href="#o-que-e-um-paragrafo"><strong>O que é um parágrafo?</strong></a></li>
+        <li><a href="#quebras-de-linha"><strong>Quebras de linha</strong></a></li>
+        <li><a href="#separando-secoes"><strong>Separando seções com &lt;hr&gt;</strong></a></li>
+        <li><a href="#resumo"><strong>Resumo</strong></a></li>
+        </ul>
+    </nav>
+<hr>
+<section  id="o-que-e-um-paragrafo" class="explicacao">
+    <h2>O que é um parágrafo?</h2>
+    <p>
+        No HTML, o parágrafo é representado pela tag <strong><mark class="verde">&lt;p&gt;</mark></strong>. Ele serve para separar blocos de texto e organizar o conteúdo da página.
+    </p>
+    <p>Exemplo de um parágrafo simples:</p>
+        <p>
+            <strong>
+                <code>
+                    <mark class="amarelo">&lt;p&gt;Este é um parágrafo no HTML.&lt;/p&gt;</mark>
+                </code>
+            </strong>
+        </p>
+    <h2>Como ele aparece visualmente:</h2>
+    <div class="exemplo-visual">
+        <p>Este é um parágrafo no HTML.</p>
+    </div>
+</section>
+<hr>
+<section id="quebras-de-linha" class="explicacao">
+    <h2>Quebras de linha</h2>
+    <p>
+        Quando você quer iniciar uma nova linha sem criar um novo parágrafo, você usa a tag <strong><mark class="verde">&lt;br&gt;</mark></strong>. Ela não precisa de fechamento.
+    </p>
+    <p>Exemplo de quebra de linha:</p>
+    <p>
+        <strong>
+                <mark class="amarelo">&lt;p&gt;Linha 1&lt;br&gt;Linha 2&lt;br&gt;Linha 3&lt;/p&gt;</mark>
+        </strong>
+    </p>
+    <h2>Visualização do exemplo acima:</h2>
+    <p>
+        Linha 1<br>
+        Linha 2<br>
+        Linha 3
+    </p>
+</section>
+<hr>
+
+<section id="separando-secoes" class="explicacao">
+    <h2>Separando seções com &lt;hr&gt;</h2>
+    <p>A tag<code><mark class="verde">&lt;hr&gt;</mark></code>cria uma linha horizontal na página, útil para separar seções ou tópicos de forma visual.</p>
+    <p>Exemplo: <strong><mark class="amarelo">&lt;hr&gt;</mark></strong></p>
+    <h2>Exemplo Visual</h2>
+    <hr>
+    <p>O conteúdo acima da linha está separado do conteúdo abaixo por uma linha branca.</p>
+</section>
+<hr>
+
+<section id="resumo" class="explicacao">
+    <h2>Resumo</h2>
+    <p>
+        1. <strong><code><mark class="verde">&lt;p&gt;</mark></code></strong> cria um parágrafo, separando blocos de texto.
+    </p>
+    <p>
+        2. <strong><code><mark class="verde">&lt;br&gt;</mark></code></strong> cria uma quebra de linha dentro de um parágrafo.
+    </p>
+    <p>
+        3. <strong><code><mark class="verde">&lt;hr&gt;</mark></code></strong> cria uma linha horizontal para separar seções.
+    </p>
+    <p>
+        Estas três tags ajudam a organizar o conteúdo de forma clara e legível.
+    </p>
+</section>
+<hr>
+
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-002.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-004.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+</main>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima 👆
+            <a href="https://youtu.be/f6NTJdtEFOc?si=MJklIxPmyNQawicp" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+<hr>
+<footer class="roda-pe">
+    <p>© 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','003')"><strong>Política de Privacidade</strong></a></p>
+</footer>
+</body>
+</html>
+
+

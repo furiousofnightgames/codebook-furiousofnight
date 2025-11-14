@@ -1,0 +1,189 @@
+﻿<!--Links Para Downloads-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Links para Download HTML | Aula 17</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar links para download em HTML5. Tutorial sobre atributo download e tipos de arquivos para download.">
+    <meta name="keywords" content="CODEBOOK, links download, HTML download, atributo download, arquivos HTML">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-017.html">
+    <meta property="og:title" content="CODEBOOK - Downloads em HTML">
+    <meta property="og:description" content="Aprenda a criar links para download em HTML5. Tutorial completo sobre downloads e tipos de arquivos.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-017.html">
+    <meta property="twitter:title" content="CODEBOOK - Links Download">
+    <meta property="twitter:description" content="Domine os links de download em HTML5 com o CODEBOOK. Aprenda a implementar downloads em seu site.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-017.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','017')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','017')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 17: Links Para Downloads 📘</h1>
+<hr>
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <strong><a href="#exemplos-e-explicacoes">Exemplos & explicações</a></strong>
+        </li>
+        <li>
+            <strong><a href="#exemplo-estrutura1">Primeiro exemplo de estrutura</a></strong>
+        </li>
+        <li>
+            <strong><a href="#segundo-exemplo-download">Segundo exemplo de download & estrutura</a></strong>
+        </li>
+        <li>
+            <strong><a href="#Site-Recomendado-type">Site Recomendado para busca de elementos</a></strong>
+        </li>
+    </ul>
+</nav>
+<hr>
+<section class="explicacao">
+    <h2 id="exemplos-e-explicacoes">Exemplos e Explicação</h2>
+    <ul>
+        <li class="link-bloco">
+            Exemplo 1:
+            <a href="links-downloads/links-downloads.pdf" download="links-downloads.pdf" type="application/pdf">
+                <strong>Baixar Um PDF</strong>
+            </a>
+        </li>
+    </ul>
+    <ol>
+        <li>
+            Crie uma pasta e coloque seus arquivos para download, nomeie de forma fácil de identificar.
+        </li>
+        <li>
+            <strong>Dica:</strong> Nas aspas use o atalho que já foi ensinado nas aulas passadas, <br>
+            Dentro das aspas em <mark class="amarelo"><strong>href=" "</strong></mark> segure a tecla CTRL e aperte a tecla ESPAÇO e escolha a pasta e seu arquivo com o conteúdo para download.
+            O navegador talvez te dê opções para usar o PDF.
+        </li>
+    </ol>
+</section>
+    <hr>
+<section class="explicacao">
+<h3 id="exemplo-estrutura1">Exemplo de estrutura usada:</h3>
+    <ul>
+<li>
+<pre><code>
+<mark class="amarelo">&lt;a href="links-downloads/links_downloads.pdf" download="links_downloads.pdf" type="application/pdf"&gt;&lt;/a&gt;</mark>
+
+</code></pre>
+</li>
+        <li>
+            Usamos na estrutura o elemento <pre><code><strong><mark class="verde">&lt;a href="conteúdo"&gt;&lt;/a&gt;</mark></strong></code></pre> para anexar o conteúdo para download.
+        </li>
+        <li>
+            Usamos também o elemento <strong><mark class="verde">download="descrição"</mark></strong> dentro do primeiro elemento para descrever o conteúdo.
+        </li>
+        <li>
+            E usamos também dentro do primeiro elemento o elemento <strong><mark class="verde">type="application/pdf"</mark></strong>.
+        </li>
+        <li>
+            <strong>Observações importantes:</strong> <br>
+            - O atributo download sugere ao navegador que o arquivo seja baixado, em vez de aberto. <br>
+            - Nem todos os navegadores respeitam esse atributo para todos os tipos de arquivo. <br>
+            - Para maior compatibilidade, hospede seus arquivos em um servidor confiável <br>
+            - Caso nao faça o download do pdf use o botão direito do mouse e <strong>SALVAR LINK COMO</strong> o download do PDF terá sucesso.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="segundo-exemplo-download">Segundo exemplo de download</h2>
+<ul>
+    <li class="link-bloco">
+        Exemplo 2:
+        <a href="links-downloads/links-downloads.zip" download="links-downloads.zip" type="application/zip">
+            <strong>Baixar Arquivo Compactado</strong>
+        </a>
+    </li>
+</ul>
+<h3><strong>Exemplo de estrutura usada:</strong></h3>
+<ul>
+<li>
+<code><pre>
+<mark class="amarelo">&lt;a href="links-downloads/links_downloads.zip" download="links_downloads.zip" type="application/zip"&gt;&lt;/a&gt;</mark>
+</pre></code>
+</li>
+        <li>
+            <strong>Oquê mudou?:</strong><br> Entre o primeiro e segundo exemplo é usamos os seguintes elementos:
+        </li>
+    <ol>
+        <li>
+            <strong><mark class="amarelo">download="conteúdo.zip"</mark></strong> com <mark class="verde"><strong>.zip</strong></mark> na descrição do conteudo dentro do elemento download.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>type="application/zip"</strong></mark> no elemento <mark class="amarelo"><strong>type=""</strong></mark> usamos o <mark class="verde"><strong>application/zip</strong></mark> para assim ter sucesso no download.
+        </li>
+    </ol>
+</ul>
+</section>
+<hr>
+<section class="explicacao">
+    <h3>Site recomendado</h3>
+        <p>
+            No site abaixo você pode encontrar vários
+            elementos <mark class="verde"><strong>type=" "</strong></mark> para explorar e usar.
+        </p>
+        <p class="link-bloco">
+            <strong>Site Recomendado: <br></strong>
+            <a href="http://iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external noopener noreferrer">Iana Internet Assigner</a>
+        </p>
+</section>
+<hr>
+<nav class="proxima-aula">
+    <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-016.html">⬅ <strong>Anterior</strong></a> |
+        <a href="treiner-018.html"><strong>Próxima</strong> ➡</a>
+    </p>
+</nav>
+</main>
+
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">CURSO EM VÍDEO com Gustavo Guanabara</a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima
+            <a href="https://youtu.be/Jszz7M676y8?si=5SLIFs1LKYD4hca1" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+    </footer>
+<hr>
+    <footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','017')"><strong>Política de Privacidade</strong></a>
+    </p>
+</footer>
+</body>
+</html>
+
+

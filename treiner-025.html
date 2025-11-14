@@ -1,0 +1,253 @@
+﻿<!-- Estilos inline: explicação didática -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Estilos CSS Inline | Aula 25</title>
+  <meta name="description" content="CODEBOOK: Aprenda sobre estilos CSS inline em HTML5. Tutorial sobre estilização direta de elementos e boas práticas CSS.">
+  <meta name="keywords" content="CODEBOOK, CSS inline, estilo HTML, style attribute, HTML5 CSS">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-025.html">
+  <meta property="og:title" content="CODEBOOK - CSS Inline">
+  <meta property="og:description" content="Aprenda a usar estilos CSS inline em HTML5. Tutorial sobre estilização direta de elementos.">
+  <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-025.html">
+  <meta property="twitter:title" content="CODEBOOK - Estilos Inline">
+  <meta property="twitter:description" content="Domine os estilos CSS inline com o CODEBOOK. Aprenda estilização direta em HTML5.">
+  <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-025.html">
+  <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','025')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','025')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+  <h1>📘 Aula 25: Estilos Inline 📘</h1>
+  <hr>
+  <nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#estilo-inline"><strong>O que é estilo inline?</strong></a>
+        </li>
+        <li>
+            <a href="#propriedades"><strong>propriedades Inline</strong></a>
+        </li>
+        <li>
+            <a href="#boas-praticas"><strong>Boas práticas quando usar inline</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-css-externo"><strong>Exemplo & Resultado CSS Externo</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-css-inline"><strong>Exemplo & Resultado CSS Inline</strong></a>
+        </li>
+        <li><a href="#checklist"><strong>Checklist Rápido</strong></a></li>
+    </ul>
+    </nav>
+<hr>
+    <section class="explicacao">
+      <h2 id="estilo-inline">O que é estilo inline?</h2>
+      <p>
+          Estilo <mark><strong>inline</strong></mark> é quando você aplica CSS diretamente na tag, usando o atributo <strong>
+              <mark>style="…"</mark>
+          </strong>. É rápido para demonstrar e testar.
+      </p>
+    </section>
+    <hr>
+
+    <section class="explicacao">
+      <h2 id="propriedades">Podemos Usar Essas Propriedades Inline</h2>
+      <h3><strong>&lt;body style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>background-color</strong></mark>: <strong>
+                <mark class="verde">rgb(7, 39, 49)</mark>
+            </strong> — define a cor de fundo da página.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-family</strong></mark>: <strong>
+                <mark class="verde">Arial, sans-serif</mark>
+            </strong> — define a família de fontes padrão para todo o documento (os filhos herdam, a menos que sobrescrevam).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>margin</strong></mark>: <strong>
+                <mark class="verde">20px</mark>
+            </strong> — adiciona espaço externo nas bordas da página (afasta o conteúdo das bordas da janela).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">20px</mark>
+            </strong> — tamanho base de fonte do documento. Unidades em <code>em</code> (dos títulos) vão se basear nisso.
+        </li>
+      </ul>
+      <h3><strong>&lt;h1 style="…"&gt; e &lt;h2 style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>color</strong></mark>: <strong>
+                <mark class="verde">aqua</mark>
+            </strong> / <strong>
+                <mark class="verde">rgb(165, 30, 255)</mark>
+            </strong> — cor do texto do título.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">1.5em</mark>
+            </strong> (h1) e <strong>
+                <mark class="verde">1.2em</mark>
+            </strong> (h2) — tamanhos relativos ao <strong>font-size do elemento pai</strong> (no caso, o <code>body</code> com 20px).
+          • 1.5em ≈ 30px; 1.2em ≈ 24px.
+        </li>
+      </ul>
+      <h3><strong>&lt;p style="…"&gt;</strong></h3>
+      <ul>
+        <li>
+            <mark class="amarelo"><strong>font-family</strong></mark>: <strong>
+                <mark class="verde">Arial, sans-serif</mark>
+            </strong> — aqui é redundante, pois o <code>body</code> já definiu; mantive só para demonstrar herança vs. sobrescrita.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>font-size</strong></mark>: <strong>
+                <mark class="verde">16px</mark>
+            </strong> — tamanho do parágrafo (menor que o base de 20px para dar hierarquia visual).
+        </li>
+        <li>
+            <mark class="amarelo"><strong>color</strong></mark>: <strong>
+                <mark class="verde">rgb(255, 255, 255)</mark>
+            </strong> — texto branco para contraste no fundo escuro.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>text-align</strong></mark>: <strong>
+                <mark class="verde">justify</mark>
+            </strong> — alinha o texto dos parágrafos em blocos (bordas esquerda e direita retinhas).
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+<div class="explicacao">
+      <h2>Boas práticas quando usar inline</h2>
+    <ul>
+      <li><mark class="verde"><strong>Rápido para demos</strong></mark>: perfeito para aulas, protótipos e testes.</li>
+      <li><mark class="verde"><strong>Evite em produção</strong></mark>: inline dificulta manutenção e repete código. Prefira classes no CSS externo.</li>
+      <li><mark class="verde"><strong>Herança</strong></mark>: defina o que for global no <mark class="amarelo"><strong>body</strong></mark> (fonte, cor base) e aplique <strong>apenas exceções</strong> nos elementos.</li>
+      <li><mark class="verde"><strong>Unidades</strong></mark>: <mark class="amarelo"><strong>em</strong> / <strong>rem</strong></mark> são ótimas para tamanhos relativos (responsividade). <strong>px</strong> dá controle absoluto.</li>
+      <li><strong>Acessibilidade</strong>: garanta bom contraste entre <strong>color</strong> e <strong>background-color</strong>.</li>
+    </ul>
+</div>
+    <hr>
+
+    <!-- Bloco comparativo CSS externo -->
+<div class="explicacao">
+  <h2 id="exemplo-css-externo">Exemplo Visual: CSS Interno</h2>
+<pre><code>
+    /* CSS Interno */
+    body {
+    background-color: rgb(7, 39, 49);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    font-size: 20px;
+    }
+    h1 { color: aqua; font-size: 1.5em; }
+    h2 { color: rgb(165, 30, 255); 
+    font-size: 1.2em; }
+    p  { font-size: 16px; 
+    color: rgb(255, 255, 255); 
+    text-align: justify; }
+
+</code></pre>
+
+<div class="explicacao">
+  <h1>Capítulo 1</h1>
+  <h2>Capítulo 1.1</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
+  <h2>Capítulo 1.2</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.</p>
+</div>
+</div>
+    <hr>
+    <!-- Bloco Exemplo Visual -->
+<div class="explicacao">
+  <h2 id="exemplo-css-inline">Exemplo Visual: Código Inline & Resultado</h2>
+<pre><code>
+&lt;h1 style="color:aqua; font-size:1.5em;"&gt;Capítulo 1&lt;/h1&gt;
+&lt;h2 style="color:rgb(165,30,255); font-size:1.2em;"&gt;Capítulo 1.1&lt;/h2&gt;
+&lt;p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;"&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+&lt;/p&gt;
+
+</code></pre>
+
+<div class="explicacao">
+  <h1 style="color:aqua; font-size:1.5em;">Capítulo 1</h1>
+  <h2 style="color:rgb(165, 30, 255); font-size:1.2em;">Capítulo 1.1</h2>
+  <p style="font-family:Arial, sans-serif; font-size:16px; color:white; text-align:justify;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laborum quam voluptatum nulla architecto commodi dolorem.
+  </p>
+</div>
+</div>
+    <hr>
+
+    <section class="explicacao">
+      <h2 id="checklist">Checklist rápido</h2>
+      <ul>
+        <li>Definiu o <mark class="amarelo"><strong>font-size</strong></mark> base no body?✅</li>
+        <li>Usou <mark class="amarelo"><strong>em</strong></mark> para títulos (escala relativa)?✅</li>
+        <li>Conferiu contraste de <mark class="amarelo"><strong>color</strong></mark> x <mark class="amarelo"><strong>background-color</strong></mark>?✅</li>
+        <li>Inline só onde <strong>realmente</strong> precisa?✅</li>
+      </ul>
+    </section>
+    <hr>
+    <div class="proxima-aula">
+        <strong>Próxima Aula <br>
+            <a href="treiner-024.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-026.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+    </div>
+    <hr>
+</main>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/byqhpuVpvEI?si=85YP4vcDPUTeT4tc" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+    </main><footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','025')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

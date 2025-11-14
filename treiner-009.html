@@ -1,0 +1,317 @@
+﻿<!-- SEMÂNTICA NO HTML5 — EXPLICAÇÃO E EXEMPLOS -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>CODEBOOK - Semântica HTML5: Guia Completo | Aula 9</title>
+  <meta name="description" content="CODEBOOK: Domine a semântica HTML5! Aprenda a usar tags semânticas, estruture seu código corretamente e melhore a acessibilidade do seu site.">
+  <meta name="keywords" content="CODEBOOK, semântica HTML5, tags semânticas, HTML estrutural, acessibilidade web, SEO HTML">
+  <meta name="author" content="CODEBOOK">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-009.html">
+  <meta property="og:title" content="CODEBOOK - Guia de Semântica HTML5">
+  <meta property="og:description" content="Aprenda a usar corretamente as tags semânticas do HTML5 com o CODEBOOK! Melhore a estrutura e acessibilidade do seu site.">
+  <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-009.html">
+  <meta property="twitter:title" content="CODEBOOK - HTML5 Semântico">
+  <meta property="twitter:description" content="Domine a semântica HTML5! Aprenda como estruturar seu site de forma profissional com o CODEBOOK.">
+  <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+  
+  <!-- Links -->
+  <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-009.html">
+  <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="indice-geral.html">📑 Índices</a></li>
+        <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','009')">⚖ Política</a></li>
+        <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','009')">👤 Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+<h1>📘 Aula 9: Semântica no HTML5 📘</h1>
+<hr>
+
+<!-- Índice de navegação -->
+<nav class="indice-simples">
+  <h2>Índice</h2>
+  <ul>
+      <li>
+        <a href="#importancia"><strong>Por que a semântica é importante?</strong></a>
+      </li>
+      <li>
+        <a href="#exemplos"><strong>Como era vs como é hoje</strong></a>
+      </li>
+      <li>
+        <a href="#principais-elementos"><strong>Principais elementos semânticos do HTML5</strong></a>
+      </li>
+      <li>
+        <a href="#boas-praticas"><strong>Boas práticas</strong></a>
+      </li>
+      <li>
+        <a href="#tags-obsoletas"><strong>Tags obsoletas</strong></a>
+      </li>
+      <li>
+        <a href="#resumo"><strong>Resumo final</strong></a>
+      </li>
+  </ul>
+</nav>
+
+<hr>
+
+<section class="explicacao">
+  <h2 id="importancia">Por que a semântica é importante?</h2>
+  <ul>
+    <li>
+        Ajuda na acessibilidade: <strong>
+        <mark class="amarelo">leitores de tela</mark>
+        </strong> conseguem navegar por áreas como cabeçalho, navegação e conteúdo principal.
+    </li>
+    <li>
+        Melhora o SEO: <strong>
+        <mark class="amarelo">buscadores</mark>
+        </strong> entendem melhor o tema e a hierarquia de informações.
+    </li>
+    <li>
+        Facilita a manutenção: o código fica <strong>
+          <mark class="amarelo">autoexplicativo</mark>
+        </strong> e organizado.
+    </li>
+  </ul>
+</section>
+<hr>
+  <h2 id="exemplos" class="centralizado">Como era vs como é hoje</h2>
+<section class="explicacao">
+  <h3>Exemplo 1: Estrutura geral da página</h3>
+  <pre><code><p>Antes (pouca semântica):</p>
+  <mark class="amarelo">&lt;div id="topo"&gt;</mark>
+    <mark class="amarelo">&lt;div class="logo"&gt;Minha Marca&lt;/div&gt;</mark>
+    <mark class="amarelo">&lt;div class="menu"&gt;... links ...&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;div id="conteudo"&gt;... artigos ...&lt;/div&gt;</mark>
+  <mark class="amarelo">&lt;div id="rodape"&gt;© 2025&lt;/div&gt;</mark>
+</code></pre>
+  <hr>
+  <pre><code><p>Hoje (nomes que revelam o papel):</p><strong>
+    <mark class="verde">&lt;header&gt;Minha Marca e navegação&lt;/header&gt;</mark>
+    <mark class="verde">&lt;main&gt;Conteúdo principal&lt;/main&gt;</mark>
+    <mark class="verde">&lt;footer&gt;© 2025 roda-pé&lt;/footer&gt;</mark></strong>
+</pre></code>
+</section>
+
+<hr>
+
+<section class="explicacao">
+  <h3>Exemplo 2: Navegação</h3>
+  <hr>
+  <div class="exemplo-visual">
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="menu"&gt;Início, Artigos, Contato&lt;/div&gt;</mark>
+
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;nav&gt;Início, Artigos, Contato&lt;/nav&gt;</mark>
+</code></pre>
+  </div>
+</section>
+<hr>
+
+<section class="explicacao">
+  <h3>Exemplo 3: Um artigo</h3>
+  <hr>
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="post"&gt;</mark>
+<mark class="amarelo">&lt;h1&gt;Título&lt;/h1&gt;</mark>
+<mark class="amarelo">Publicado em 22/08/2025</mark>
+<mark class="amarelo">Texto do artigo...</mark>
+<mark class="amarelo">&lt;/div&gt;</mark>
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;article&gt;</mark>
+<mark class="verde">&lt;h1&gt;Título&lt;/h1&gt;</mark>
+<mark class="verde">&lt;time datetime="2025-08-22"&gt;22/08/2025&lt;/time&gt;</mark>
+<mark class="verde">Texto do artigo...</mark>
+<mark class="verde">&lt;/article&gt;</mark>
+</code></pre>
+</section>
+<hr>
+
+<section class="explicacao">
+  <h3>Exemplo 4: Conteúdo principal e lateral</h3>
+  <hr>
+  <section class="exemplo-visual">
+<pre><code><p>Antes:</p>
+<mark class="amarelo">&lt;div class="col-esq"&gt;links relacionados&lt;/div&gt;</mark>
+<mark class="amarelo">&lt;div class="col-dir"&gt;texto principal&lt;/div&gt;</mark>
+
+</code></pre>
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;main&gt;texto principal&lt;/main&gt;</mark>
+<mark class="verde">&lt;aside&gt;links relacionados&lt;/aside&gt;</mark>
+
+</code></pre>
+  </section>
+</section>
+<hr>
+
+<section class="explicacao">
+  <h3>Exemplo 5: Mídia com descrição</h3>
+  <hr><p>Antes:</p>
+    <mark class="amarelo">&lt;img src="grafico.png"&gt;</mark>
+    <p>Gráfico de vendas</p>
+
+<pre><code><p>Hoje:</p>
+<mark class="verde">&lt;figure&gt;</mark>
+  <mark class="verde">&lt;img src="grafico.png" alt="Gráfico de vendas de jan a jun 2025"&gt;</mark>
+  <mark class="verde">&lt;figcaption&gt;Gráfico de vendas (jan a jun 2025).&lt;/figcaption&gt;</mark>
+<mark class="verde">&lt;/figure&gt;</mark>
+
+</code></pre>
+</section>
+<hr>
+
+<section class="explicacao">
+  <h2 id="principais-elementos">Principais elementos semânticos do HTML5</h2>
+  <ul>
+    <li>
+      <mark class="verde"><strong>&lt;header&gt;</strong></mark> identifica o cabeçalho da página ou de uma seção.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;nav&gt;</strong></mark> indica um bloco de navegação com links importantes.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;main&gt;</strong></mark> marca o conteúdo principal único da página.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;section&gt;</strong></mark> agrupa conteúdo por tema dentro do principal.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;article&gt;</strong></mark> representa um conteúdo independente, como um post.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;aside&gt;</strong></mark> traz conteúdo complementar, como notas e links.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;footer&gt;</strong></mark> define o rodapé da página ou de uma seção.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;figure&gt;</strong></mark> e <mark class="verde"><strong>&lt;figcaption&gt;</strong></mark> associam mídia e sua legenda.
+    </li>
+    <li>
+      <mark class="verde"><strong>&lt;time&gt;</strong></mark> marca datas e horas, com atributo datetime legível por máquina.
+    </li>
+  </ul>
+</section>
+<hr>
+
+<hr>
+
+<section class="explicacao">
+  <h2 id="boas-praticas">Boas práticas simples</h2>
+  <ol>
+    <li>
+      Usar apenas um <strong>
+        <mark class="verde">&lt;main&gt;</mark>
+      </strong> por página.
+    </li>
+    <li>
+      Reservar <strong>
+        <mark class="verde">&lt;nav&gt;</mark>
+      </strong> para navegação real do site.
+    </li>
+    <li>
+      Usar <strong>
+        <mark class="verde">&lt;article&gt;</mark>
+      </strong> quando o bloco fizer sentido sozinho.
+    </li>
+    <li>
+      Usar <strong>
+        <mark class="verde">&lt;section&gt;</mark>
+      </strong> para organizar partes temáticas.
+    </li>
+    <li>
+      Adicionar <strong>
+        <mark class="verde">alt</mark>
+      </strong> em imagens com significado.
+    </li>
+    <li>
+      Usar <strong>
+        <mark class="verde">&lt;time datetime="AAAA-MM-DD"&gt;</mark>
+      </strong> quando houver datas.
+    </li>
+  </ol>
+</section>
+<hr>
+
+<section class="explicacao">
+  <h2 id="tags-obsoletas"><u>Tags obsoletas</u> (não conformes)</h2>
+  <p>
+    Não devem ser usadas em novos projetos. Troque por elementos semânticos modernos ou por CSS/JS.
+  </p>
+  <p class="link-bloco">
+    Site recomendados: <a href="https://www.w3.org/TR/2014/REC-html5-20141028/obsolete.html" target="_blank" rel="external noopener noreferrer"><strong>W3Schools Obsolete Tags</strong></a>,
+  </p>
+  <p class="link-bloco">
+    Site recomendado: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element#obsoletos_e_desaprovados" target="_blank" rel="external noopener noreferrer"><strong>Mozilla.org Obsolete Tags</strong></a>
+  </p>
+</section>
+
+<hr>
+
+<section class="explicacao">
+  <h2 id="resumo"><u>Resumo final</u></h2>
+    <p>
+      A semântica no HTML5 torna o código mais claro para pessoas e máquinas. Trocar estruturas genéricas por elementos com significado melhora acessibilidade, SEO e manutenção.
+    </p>
+</section>
+<hr>
+   <section class="proxima-aula">
+     <p>
+          <strong>Próxima Aula: <br>
+              <a href="treiner-008.html">⬅ <strong>Anterior</strong></a> |
+              <a href="treiner-010.html"><strong>Próxima</strong> ➡</a>
+          </strong>
+      </p>
+   </section>
+</main>
+    <hr>
+
+    <section class="creditos">
+      <h2>Créditos e Referências</h2>
+      <h3>Gustavo Guanabara</h3>
+      <p>
+          Curso recomendado:
+          <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+              <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+          </a>
+      </p>
+      <p>
+          Aula referente ao conteúdo acima →
+          <a href="https://youtu.be/HaSgt1hK2Fs?si=ytBpQEXgUCr9ToGl" target="_blank" rel="external noopener noreferrer">
+              <strong>Aula no Curso em vídeo</strong>
+          </a>
+      </p>
+    </section>
+<hr>
+  <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','009')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

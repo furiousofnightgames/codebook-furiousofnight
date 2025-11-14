@@ -1,0 +1,367 @@
+﻿<!-- Aula 13 - Listas OL e UL -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Listas HTML: OL e UL | Aula 13</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar listas ordenadas (OL) e não ordenadas (UL) em HTML. Tutorial prático sobre organização de conteúdo com listas.">
+    <meta name="keywords" content="CODEBOOK, listas HTML, ol, ul, li, listas ordenadas, listas não ordenadas">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-013.html">
+    <meta property="og:title" content="CODEBOOK - Listas em HTML5">
+    <meta property="og:description" content="Tutorial completo sobre listas ordenadas (OL) e não ordenadas (UL) em HTML. Aprenda a organizar seu conteúdo.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-013.html">
+    <meta property="twitter:title" content="CODEBOOK - Listas OL e UL">
+    <meta property="twitter:description" content="Aprenda a criar e organizar listas em HTML5 com o CODEBOOK. Tutorial prático sobre OL e UL.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-013.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','013')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','013')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 13: Listas <code>&lt;ol&gt;</code> e <code>&lt;ul&gt;</code> 📘</h1>
+    <hr>
+
+    <!-- Índice rápido -->
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+            <strong>
+                <li>
+                    <a href="#conceitos">Conceitos Rápidos</a>
+                </li>
+                <li>
+                    <a href="#ul">Listas Não-Ordenadas</a>
+                </li>
+                <li>
+                    <a href="#ol">Listas Ordenadas</a>
+                </li>
+                <li>
+                    <a href="#acessibilidade">Boas Práticas</a>
+                </li>
+                <li>
+                    <a href="#estrutura">Estruturas em Código</a>
+                </li>
+                <li>
+                    <a href="#resumo-visual-ol">Resumo Visual - Listas Ordenadas</a>
+                </li>
+                <li>
+                    <a href="#resumo-visual-ul">Resumo Visual - Listas Não-Ordenadas</a>
+                </li>
+            </strong>
+        </ul>
+    </nav>
+    <hr>
+
+    <!-- Introdução -->
+    <section class="explicacao">
+        <p>
+            Nesta aula, você aprenderá a usar <mark class="amarelo"><strong>listas ordenadas</strong> (&lt;ol&gt;)</mark> e <mark class="amarelo"><strong>listas não-ordenadas</strong> (&lt;ul&gt;)</mark>, além das melhores práticas para organizar itens de forma clara e acessível.
+        </p>
+    </section>
+    <hr>
+
+    <!-- Conceitos Rápidos -->
+    <section class="explicacao">
+        <h2 id="conceitos">Conceitos Rápidos</h2>
+        <ul>
+            <li><mark class="verde"><strong>&lt;ul&gt;</strong></mark> → lista sem ordem definida (marcadores).</li>
+            <li><mark class="verde"><strong>&lt;ol&gt;</strong></mark> → lista com ordem definida (números ou letras).</li>
+            <li>Os itens das listas são sempre <mark class="amarelo"><strong>&lt;li&gt;</strong></mark>.</li>
+            <li>Use listas para agrupar conteúdos relacionados.</li>
+        </ul>
+    </section>
+<hr>
+    <!-- Listas Não-Ordenadas -->
+    <section class="explicacao">
+        <h2 id="ul">Listas Não-Ordenadas — &lt;ul&gt;</h2>
+        <p>Use quando a ordem dos itens não importa.</p>
+        <ul>
+            <li><mark class="amarelo"><strong>disc</strong></mark>: marcador padrão (bolinha)</li>
+            <li><mark class="amarelo"><strong>circle</strong></mark>: marcador circular vazio</li>
+            <li><mark class="amarelo"><strong>square</strong></mark>: marcador quadrado</li>
+        </ul>
+    </section>
+<hr>
+    <!-- Listas Ordenadas -->
+    <section class="explicacao">
+        <h2 id="ol">Listas Ordenadas — &lt;ol&gt;</h2>
+        <p>Use quando a ordem dos itens é importante.</p>
+        <ul>
+            <li><mark class="amarelo"><strong>type</strong></mark>: define o estilo do contador (número, letra, romano)</li>
+            <li><mark class="amarelo"><strong>start</strong></mark>: define o número inicial da lista</li>
+            <li><mark class="amarelo"><strong>reversed</strong></mark>: exibe a lista em ordem decrescente</li>
+        </ul>
+    </section>
+<hr>
+    <!-- Tipos de OL -->
+    <section class="explicacao">
+        <h2 id="tipos-ol">Tipos de Contadores em Listas Ordenadas — <code>&lt;ol&gt;</code></h2>
+        <p>O atributo <mark class="amarelo"><strong>type</strong></mark> define o estilo dos números ou letras:</p>
+        <ul>
+            <li>
+                <mark class="verde"><strong> 1 </strong></mark>: números arábicos
+            </li>
+            <li>
+                <mark class="verde"><strong> A </strong></mark>: letras maiúsculas
+            </li>
+            <li>
+                <mark class="verde"><strong> a </strong></mark>: letras minúsculas
+            </li>
+            <li>
+                <mark class="verde"><strong> I </strong></mark>: números romanos maiúsculos
+            </li>
+            <li>
+                <mark class="verde"><strong> i </strong></mark>: números romanos minúsculos
+            </li>
+        </ul>
+<hr>
+        <h3>Exemplo prático com <code>type</code></h3>
+        <pre><code>&lt;ol type="I"&gt;
+    &lt;li&gt;Primeiro Passo&lt;/li&gt;
+    &lt;li&gt;Segundo Passo&lt;/li&gt;
+    &lt;li&gt;Terceiro Passo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Outros atributos úteis do &lt;ol&gt;</h3>
+        <ul>
+            <li><mark class="verde"><strong>start="n"</strong></mark>: define o número inicial da lista</li>
+            <li><mark class="verde"><strong>reversed</strong></mark>: inverte a ordem da contagem</li>
+        </ul>
+
+        <pre><code>&lt;ol type="A" start="3" reversed&gt;
+    &lt;li&gt;Item C&lt;/li&gt;
+    &lt;li&gt;Item B&lt;/li&gt;
+    &lt;li&gt;Item A&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
+<hr>
+<!-- Boas Práticas -->
+<section class="explicacao">
+    <h2 id="acessibilidade">Boas Práticas</h2>
+    <ul>
+        <li>
+            Use <mark class="verde"><strong>&lt;li&gt;</strong></mark> apenas dentro de <mark class="verde"><strong>&lt;ul&gt;</strong></mark> ou <mark class="verde"><strong>&lt;ol&gt;</strong></mark>.</li>
+        <li>
+            Evite usar listas apenas para layout; utilize CSS para estilização.
+        </li>
+        <li>
+            Leitores de tela interpretam listas, aumentando a acessibilidade.
+        </li>
+        <li>
+            Prefira títulos claros e textos descritivos nos itens.
+        </li>
+    </ul>
+</section>
+<hr>
+    <!-- Estruturas em Código -->
+    <section class="explicacao">
+        <h2 id="estrutura">Estruturas em Código</h2>
+
+        <h3>Lista não-ordenada</h3>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item A&lt;/li&gt;
+    &lt;li&gt;Item B&lt;/li&gt;
+    &lt;li&gt;Item C&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h3>Lista ordenada</h3>
+        <pre><code>&lt;ol type="A" start="3"&gt;
+    &lt;li&gt;Terceiro&lt;/li&gt;
+    &lt;li&gt;Quarto&lt;/li&gt;
+    &lt;li&gt;Quinto&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Lista ordenada invertida</h3>
+        <pre><code>&lt;ol type="I" start="5" reversed&gt;
+    &lt;li&gt;Quinto&lt;/li&gt;
+    &lt;li&gt;Quarto&lt;/li&gt;
+    &lt;li&gt;Terceiro&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Exemplo visual combinado</h3>
+        <pre><code>&lt;ol type="a"&gt;
+    &lt;li&gt;Primeiro item&lt;/li&gt;
+    &lt;li&gt;Segundo item
+        &lt;ul&gt;
+            &lt;li&gt;Subitem 1&lt;/li&gt;
+            &lt;li&gt;Subitem 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Terceiro item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
+<hr>
+<!-- Resumo visual OL -->
+<section class="explicacao">
+    <h2 id="resumo-visual-ol">Resumo Visual: Listas Ordenadas</h2>
+    <div style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center;">
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>1, 2, 3…</h3>
+            <ol type="1">
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>A, B, C…</h3>
+            <ol type="A">
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>a, b, c…</h3>
+            <ol type="a">
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>I, II, III…</h3>
+            <ol type="I">
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>i, ii, iii…</h3>
+            <ol type="i">
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Inversa</h3>
+            <ol type="1" start="5" reversed>
+                <li>Quinto</li>
+                <li>Quarto</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- Resumo visual UL -->
+<section class="explicacao">
+    <h2 id="resumo-visual-ul">Resumo Visual: Listas Não-Ordenadas</h2>
+    <div style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center;">
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Bolinhas (disc)</h3>
+            <ul style="list-style-type: disc;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Quadrados (square)</h3>
+            <ul style="list-style-type: square;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Círculos (circle)</h3>
+            <ul style="list-style-type: circle;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Sem marcador</h3>
+            <ul style="list-style-type: none; padding-left:0;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Emoji</h3>
+            <ul style="list-style: none; padding-left:0;">
+                <li>✅ Item 1</li>
+                <li>✅ Item 2</li>
+                <li>✅ Item 3</li>
+            </ul>
+        </div>
+        <div style="flex:1 1 30%; min-width:200px;">
+            <h3>Customizado</h3>
+            <ul style="list-style-type: square; color: rgb(40, 169, 255);">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- Referências e navegação -->
+<nav class="proxima-aula">
+    <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-012.html">⬅ Anterior</a> |
+            <a href="treiner-014.html">Próxima ➡</a>
+        </strong>
+    </p>
+</nav>
+<hr>
+</main>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>
+        Curso recomendado:
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+    <p id="aula-em-video">
+        Aula referente ao conteúdo acima →
+        <a href="https://youtu.be/Ez1kgIyoGuE?si=oTmArJ3NRmDEdk53" target="_blank" rel="external noopener noreferrer">
+            <strong>Aula no Curso em vídeo</strong>
+        </a>
+    </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. 
+        <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','013')">
+            <strong>Política de Privacidade</strong>
+        </a>
+    </p>
+</footer>
+</body>
+</html>
+
+

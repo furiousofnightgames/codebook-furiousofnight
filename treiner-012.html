@@ -1,0 +1,240 @@
+﻿<!-- Citações e códigos -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Citações e Códigos em HTML | Aula 12</title>
+    <meta name="description" content="CODEBOOK: Aprenda a trabalhar com citações e blocos de código em HTML5. Domine as tags code, pre, blockquote e cite para uma formatação profissional.">
+    <meta name="keywords" content="CODEBOOK, citações HTML, código fonte HTML, blockquote, pre, code, cite, formatação HTML">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-012.html">
+    <meta property="og:title" content="CODEBOOK - Citações e Códigos HTML5">
+    <meta property="og:description" content="Aprenda a trabalhar com citações e blocos de código em HTML5 com o CODEBOOK! Domine a formatação profissional.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-012.html">
+    <meta property="twitter:title" content="CODEBOOK - Formatação de Citações">
+    <meta property="twitter:description" content="Domine as tags de citação e código em HTML5 com o CODEBOOK! Aprenda a formatar seu conteúdo profissionalmente.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-012.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','012')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','012')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 12: Outras formatações 📘</h1>
+<hr>
+<!-- Índice de navegação -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#codigo"><strong>Código-fonte & Pré-formatação</strong></a>
+        </li>
+        <li>
+            <a href="#citacoes"><strong>Citações</strong></a>
+        </li>
+        <li>
+            <a href="#citacoes-completas"><strong>Citações completas</strong></a>
+        </li>
+        <li>
+            <a href="#links"><strong>Dica extra: Adicionando link</strong></a>
+        </li>
+        <li>
+            <a href="#abreviacoes"><strong>Abreviações</strong></a>
+        </li>
+        <li>
+            <a href="#texto-invertido"><strong>Texto invertido</strong></a>
+        </li>
+    </ul>
+</nav>
+
+    <hr>
+
+<!-- CÓDIGO -->
+<section class="explicacao">
+    <h2 id="codigo">Código-fonte & Pré-formatação</h2>
+        <p>
+            O comando <mark class="amarelo"><code>document.getElementById('teste')</code></mark> é escrito em linguagem JavaScript.
+        </p>
+        <p>
+            Usamos a TAG <mark class="verde">( <code>&lt;code&gt;seu-texto&lt;/code&gt;</code> )</mark> no código acima marcado em amarelo.
+        </p>
+        <hr>
+        <p>
+            Nessa formatação abaixo usamos a TAG <code><mark class="verde">&lt;pre&gt;&lt;/pre&gt;</mark></code> para o código python abaixo ser apresentado como escrevi.
+        </p>
+<p>
+E também usamos a TAG 
+<pre><code><mark class="amarelo">&lt;pre&gt;</mark><mark class="verde">&lt;code&gt;seu-texto&lt;/code&gt;</mark><mark class="amarelo">&lt;/pre&gt;</mark></code></pre> dentro da TAG 
+<mark class="verde">&lt;pre&gt;&lt;/pre&gt;</mark>
+</code>,<br> para assim ter esse resultado abaixo em linguagem python de demostração.
+</p>
+    <h3>Resultado</h3>
+<pre><code>
+    num = int(input("Digite um número aqui: "))
+    if num % 2 == 0:
+        print(f"O número {num} é PAR!")
+    else:
+        print(f"O número {num} é ÍMPAR!")
+    print("Fim do Programa!")
+</code></pre>
+        <p>
+            OBS: A TAG <mark class="verde">&lt;pre&gt;&lt;/pre&gt;</mark> mantém os espaços e quebras de linha do código original e visível no navegador.
+</section>
+<hr>
+
+    <!-- CITAÇÕES -->
+<section class="explicacao">
+    <h2 id="citacoes">Citações</h2>
+        <p>
+Como diria seu irmão a um primo: <pre><code><mark class="amarelo"><q>o cavalo de João ganhou a corrida.</q></mark>
+</code></pre>
+        </p>
+        <p>
+            Talvez a TAG <strong><mark class="verde">&lt;q&gt;citação&lt;/q&gt;</mark></strong> que usamos na frase citada em amarelo acima, não faça sentido para você, afinal foram só aspas duplas que acrescentou na frase de citação!
+        </p>
+        <p>
+            Mas não é aleatório, pois você está dando SENTIDO à citação e às coisas, usando a TAG <strong>
+                <mark class="amarelo">&lt;q&gt;</mark>
+            </strong>.
+        </p>
+</section>
+    <hr>
+
+    <!-- CITAÇÕES COMPLETAS -->
+<section class="explicacao">
+    <h2 id="citacoes-completas">Citações Completas</h2>
+        <h3>Segundo Maurício Samy Silva, em seu livro <i>Fundamentos de HTML5 e CSS3</i>:</h3>
+        <blockquote cite="https://www.amazon.com.br/dp/8575224387?tag=inlivros-20&linkCode=ogi&th=1&psc=1">
+            <mark class="amarelo">Fundamentos de HTML5 e CSS3, escrito por Maurício Samy Silva, é uma leitura indispensável para aqueles que desejam se aprofundar no desenvolvimento web. O autor apresenta de forma clara e concisa os princípios fundamentais dessas duas linguagens essenciais para a criação de websites modernos. Com uma abordagem didática, o livro explora os conceitos teóricos, além de oferecer inúmeros exemplos práticos que auxiliam na compreensão e aplicação dos conhecimentos adquiridos. A experiência de Silva como instrutor de cursos online reflete-se em sua habilidade em transmitir instruções precisas e detalhadas. Este livro certamente se destaca como uma referência para estudantes e profissionais da área.</mark>
+        </blockquote>
+        <p class="link-bloco">
+            Site recomendado: <a href="https://www.amazon.com.br/dp/8575224387?tag=inlivros-20&linkCode=ogi&th=1&psc=1" target="_blank" title="Abrir em nova aba"><strong>Livro Fundamentos de HTML5 e CSS3</strong></a>
+        </p>
+        <br>
+        <p>
+            Agora para a citação completa acima em amarelo, usamos a TAG <br><mark class="verde">&lt;blockquote&gt;SUA-CITAÇÃO&lt;/blockquote&gt;</mark>
+        </p>
+        <p>
+            E adicionamos o atributo em amarelo <mark class="verde">&lt;blockquote </mark> <mark class="amarelo">cite="URL da fonte"</mark><mark class="verde">&gt;</mark> para referenciar a fonte da citação. Assim, os mecanismos de busca sabem que você está indicando a origem do conteúdo citado.
+        </p>
+</section>
+    <hr>
+
+    <!-- LINKS -->
+<section class="explicacao">
+    <h2 id="links">Dica extra: Adicionando links com título</h2>
+    <p>
+        Para criar um link clicável usamos a tag <pre><code><mark class="verde">&lt;a href="sua-URL"&gt;Texto do Link&lt;/a&gt;.</mark></code></pre>
+    </p>
+    <p>
+        Podemos adicionar o atributo <mark class="amarelo"><code>title="Descrição do link"</code></mark> para fornecer uma **descrição adicional**, que aparece quando o usuário passa o mouse sobre o link.
+    </p>
+    <p>
+        Exemplo completo:
+    </p>
+<section class="exemplo-visual">
+<pre><code><mark class="amarelo">&lt;a href="https://www.exemplo.com" title="Acesse o site Exemplo"&gt;Clique aqui&lt;/a&gt;</mark>
+
+</code></pre>
+</section>
+    <p>
+        Aqui, "Clique aqui" é o texto visível do link, e "Acesse o site Exemplo" é a dica que aparece ao passar o mouse.
+    </p>
+</section>
+    <hr>
+
+    <!-- ABREVIAÇÕES -->
+<section class="explicacao">
+    <h2 id="abreviacoes">Abreviações</h2>
+        <p>
+            Estamos estudando <abbr title="HyperText Markup Language"><mark class="amarelo">HTML</mark></abbr> e <abbr title="Cascading Style Sheets"><mark class="amarelo">CSS</mark></abbr> — estamos adorando!
+        </p>
+<p>
+    Na frase acima usamos a TAG de abreviação 
+<pre><code>
+<mark class="verde">&lt;abbr title="sua-abreviação"&gt;oque-quer-abreviar&lt;/abbr&gt;</mark>
+
+</code></pre>. O resultado você mesmo pode observar segurando o mouse sobre as palavras destacadas em amarelo acima.
+</p>
+    <h3>DICA:</h3>
+        <p>
+            Para adicionar a TAG rapidamente basta digitar <mark class="amarelo">abbr</mark> e clicar na tecla <mark class="verde">ENTER</mark>. <br>OBS: depende do ambiente de desenvolvimento que estiver usando.
+        </p>
+</section>
+    <hr>
+
+    <!-- TEXTO INVERTIDO -->
+<section class="explicacao">
+    <h2 id="texto-invertido">Texto Invertido</h2>
+        <h3>Esse é só para brincar contigo 😁</h3>
+        <p>
+            <bdo dir="rtl">Estamos aprendendo a desenvolver em HTML!</bdo>
+        </p>
+<p>
+Na frase acima usamos a TAG <pre><code><mark class="verde">&lt;bdo dir="rtl"&gt;seu-texto&lt;/bdo&gt;</mark></code></pre>
+    . O atributo <mark class="amarelo">dir="rtl"</mark> inverte o texto da direita para a esquerda. Para voltar ao normal use <mark class="amarelo">dir="ltr"</mark>, que é o padrão do texto.
+</p>
+        <p>
+            <i>Opinião pessoal: não vejo muita utilidade prática para isso 😅.</i>
+        </p>
+        <hr>
+</section>
+    <!-- Navegação entre aulas -->
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-011.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-013.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav class="proxima-aula">
+</main>
+    <hr>
+<!-- Créditos e Referências -->
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/4ynvsrkamt8?si=NiATqdmVfw0YOuyU" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+<hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','012')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

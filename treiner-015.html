@@ -1,0 +1,194 @@
+﻿<!--Links e Âncoras em HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Links e Âncoras HTML | Aula 15</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar links e âncoras em HTML5. Tutorial sobre tags a, href e navegação entre páginas.">
+    <meta name="keywords" content="CODEBOOK, links HTML, âncoras HTML, tag a, href, navegação HTML">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-015.html">
+    <meta property="og:title" content="CODEBOOK - Links e Âncoras">
+    <meta property="og:description" content="Aprenda a criar links e âncoras em HTML5. Tutorial completo sobre navegação entre páginas.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-015.html">
+    <meta property="twitter:title" content="CODEBOOK - Links HTML">
+    <meta property="twitter:description" content="Domine a criação de links e âncoras em HTML5 com o CODEBOOK. Tutorial prático sobre navegação.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-015.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main> 
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','015')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','015')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1>📘 Aula 15: Links e Âncoras em HTML 📘</h1>
+<hr>
+<section class="indice-simples">
+    <h2>Índice desta página</h2>
+    <strong>
+        <ul>
+            <li>
+                <a href="#explicacao">O que são links e âncoras?</a>
+            </li>
+            <li>
+                <a href="#exemplo-basico">Exemplo básico de link</a>
+            </li>
+            <li>
+                <a href="#alvo-externo">Links externos</a>
+            </li>
+            <li>
+                <a href="#dicas">Dicas e boas práticas</a>
+            </li>
+            <li>
+                <a href="#exemplo-estrutura">Exemplo de estrutura & link clicável</a>
+            </li>
+        </ul>
+    </strong>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="explicacao">O que são links e âncoras?</h2>
+    <p>
+        <mark class="amarelo">&lt;a&gt;</mark> é a tag usada para criar <strong>links</strong> em HTML.<br>
+        O atributo <mark class="amarelo">href</mark> define o destino do link.<br>
+        Você pode usar links para navegar entre páginas, baixar arquivos ou ir para uma parte específica da mesma página (âncora).
+    </p>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="exemplo-basico">Exemplo básico de link</h2>
+    <div class="exemplo-visual">
+<pre><code><mark class="amarelo">&lt;a href="https://www.exemplo.com" target="_blank"&gt;</mark>Clique aqui no Exemplo<mark class="amarelo">&lt;/a&gt;</mark>
+
+</code></pre>
+    </div>
+    <p>
+        O texto entre <mark class="amarelo">&lt;a&gt;</mark> e <mark class="amarelo">&lt;/a&gt;</mark> é o que aparece como link clicável.
+    </p>
+    <hr>
+</section>
+<section class="explicacao">
+    <h2 id="alvo-externo">Links externos</h2>
+    <p>
+        Links externos levam o usuário para outro site. O recomendado é usar <mark class="amarelo">target="_blank"</mark> para abrir em nova aba e <mark class="amarelo">rel="external"</mark> para segurança e semântica:
+    </p>
+    <div class="exemplo-visual">
+<pre><code><mark class="amarelo">&lt;a href="https://www.google.com" target="_blank" rel="external"&gt;</mark>Google<mark class="amarelo">&lt;/a&gt;</mark>
+
+</code></pre>
+    </div>
+    <p>
+        <mark class="verde">Dica:</mark> Sempre use <mark class="amarelo">https://</mark> para links externos seguros.<br>
+        <mark class="verde">Importante:</mark> <mark class="amarelo">rel="external"</mark> indica que o link é para fora do seu site.<br>Você pode adicionar junto de external o atributo
+        <mark class="amarelo">"external noopener noreferrer"</mark> protege contra riscos de segurança.
+    </p>
+    <hr>
+</section>
+<section class="explicacao">
+    <h2 id="dicas">Dicas e boas práticas</h2>
+    <ul>
+        <li>
+            Sempre use <mark class="amarelo">title="abrir nova aba"</mark> para descrever o destino do link (acessibilidade).
+        </li>
+        <li>
+            Evite usar “Clique aqui” como texto do link. Prefira textos descritivos.
+        </li>
+        <li>
+            Links internos facilitam a navegação em páginas longas.
+        </li>
+        <li>
+            Use <mark class="amarelo">target="_blank"</mark> e <mark class="amarelo">rel="external noopener noreferrer"</mark> em links externos para segurança e semântica.
+        </li>
+    </ul>
+</section>
+<hr>
+<section class="explicacao" id="exemplo-estrutura">
+    <h2>Exemplo de estrutura</h2>
+    <p>código dos links externos: usando <strong>
+        <mark class="verde">title=""</mark>
+    </strong> & <strong>
+        <mark class="verde">rel=""</mark>
+    </strong></p>
+<div class="exemplo-visual">
+<pre><code><mark class="amarelo">&lt;a href="https:sua-URL" target="_blank" title="abrir nova aba"&gt;</mark><mark class="amarelo"></mark><mark class="verde">descrição</mark><mark class="amarelo"></mark><mark class="amarelo">&lt;/a&gt;</mark>
+    
+<mark class="amarelo">&lt;a href="https://www.sua-URL" target="_blank" rel="external"&gt;</mark><mark class="amarelo"></mark><mark class="verde">descrição</mark><mark class="amarelo"></mark><mark class="amarelo">&lt;/a&gt;</mark>
+
+</code></pre>
+</div>
+    <h3>Visualização real de links clicável:</h3>
+    <p class="link-bloco">
+        Você pode acessar meu <a href="https://github.com/furiousofnightgames" target="_blank" title="abrir nova aba" rel="external noopener noreferrer"><strong>repositorio público</strong></a> no GitHub
+    </p>
+    <p class="link-bloco">
+        Você pode também acessar meu <a href="https://www.tiktok.com/@furiousofnightgames" target="_blank" rel="external noopener noreferrer"><strong>perfil do TikTok</strong></a>
+    </p>
+</section>
+<hr>
+<hr>
+<nav class="proxima-aula">
+    <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-014.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-016.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+    </p>
+</nav>
+</main>
+<hr>
+
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>
+        Curso recomendado:
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+    <p>
+        Aula referente ao conteúdo acima →
+        <a href="https://youtu.be/LeOVXQDsAIY?si=j-2NH8sIMJX6S3NV" target="_blank" rel="external noopener noreferrer">
+            <strong>Aula no Curso em vídeo</strong>
+        </a>
+</footer>
+<footer class="creditos">
+    <h2>Mais referências</h2>
+        <p class="link-bloco">
+            Mozilla.org <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a" target="_blank" rel="external noopener noreferrer">MDN Web Docs: &lt;a&gt; - HTML</a>
+        </p>
+        <p class="link-bloco">
+            w3schools.com <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank" rel="external noopener noreferrer">W3Schools: HTML &lt;a&gt; Tag</a>
+        </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','015')"><strong>Política de Privacidade</strong></a>
+    </p>
+</footer>
+</body>
+</html> 
+
+

@@ -1,0 +1,238 @@
+﻿<!--Formatações adicionais em HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Formatações Avançadas HTML | Aula 11</title>
+    <meta name="description" content="CODEBOOK: Aprenda formatações avançadas em HTML5. Domine recursos como mark, sup, sub, del e mais para criar conteúdo web profissional.">
+    <meta name="keywords" content="CODEBOOK, HTML avançado, formatação HTML, mark, sup, sub, del, formatações especiais HTML5">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-011.html">
+    <meta property="og:title" content="CODEBOOK - Formatações Avançadas em HTML5">
+    <meta property="og:description" content="Aprenda formatações avançadas em HTML com o CODEBOOK! Domine tags especiais e crie conteúdo web profissional.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-011.html">
+    <meta property="twitter:title" content="CODEBOOK - HTML Formatação Avançada">
+    <meta property="twitter:description" content="Domine as formatações avançadas em HTML5 com o CODEBOOK! Aprenda a usar tags especiais de forma profissional.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-011.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','011')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','011')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 11: Formatações adicionais em HTML 📘</h1>
+<hr>
+<!-- Índice -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#texto-marcado"><strong>Texto Marcado</strong></a>
+        </li>
+        <li>
+            <a href="#cores-css"><strong>Aplicando cores com CSS</strong></a>
+        </li>
+        <li>
+            <a href="#textos-grande-pequeno"><strong>Textos Grande e Pequeno</strong></a>
+        </li>
+        <li>
+            <a href="#textos-deletados"><strong>Textos Deletados</strong></a>
+        </li>
+        <li>
+            <a href="#texto-inserido"><strong>Texto Inserido</strong></a>
+        </li>
+        <li>
+            <a href="#texto-sobrescrito-subscrito"><strong>Texto Sobrescrito e Subscrito</strong></a>
+        </li>
+    </ul>
+</nav>
+    <hr>
+    <!-- Texto Marcado -->
+    <section class="explicacao">
+        <h2 id="texto-marcado">Texto Marcado</h2>
+        <p>
+            Podemos também criar <mark class="amarelo">Um Texto Marcado Assim</mark>, usando a TAG <mark class="verde">&lt;mark&gt;seu-texto&lt;/mark&gt;</mark>.
+        </p>
+        <p>
+            OBS: A cor acima é a padrão definida no CSS da página.
+        </p>
+        <hr>
+        <p>
+            E para <mark class="verde">Mudar a Cor da Marcação Assim</mark>, podemos usar, <pre><code><strong><mark class="amarelo">&lt;mark style="background-color:SUA-COR;"&gt;&lt;/mark&gt;</mark></strong>
+            </code></pre>
+        </p>
+        <p>
+            O formato acima aplica a cor diretamente na TAG <mark class="verde"><strong>&lt;mark&gt;</strong></mark> com CSS Inline no Mark.
+        </p>
+    </section>
+    <hr>
+    <!-- Aplicando cores com CSS -->
+<section class="explicacao">
+    <h2 id="cores-css">Aplicando cores em várias marcações com CSS</h2>
+    <p>Podemos definir cores dentro do bloco <strong>
+        <mark class="amarelo">( &lt;style&gt;&lt;/style&gt; )</mark>
+    </strong> no <strong>
+        <mark class="verde">( &lt;head&gt;&lt;/head&gt; )</mark>
+    </strong> da página:</p>
+<pre><code>
+<mark class="verde">&lt;head&gt;</mark>
+    <mark class="verde">&lt;meta charset="UTF-8"&gt;</mark>
+    <mark class="verde">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+    <mark class="verde">&lt;title&gt;Formatações adicionais em HTML&lt;/title&gt;</mark>
+    <mark class="verde">&lt;style&gt;</mark>
+    <mark class="amarelo">mark.sua-cor { background-color: SUA-COR; }</mark>
+    <mark class="verde">&lt;/style&gt;</mark>
+<mark class="verde">&lt;/head&gt;</mark>
+
+</pre></code>
+    <p>
+        OBS: Assim todas as marcações com a classe <mark class="amarelo">amarelo</mark> recebem a mesma cor sem repetir o estilo em cada TAG.
+    </p>
+</section class="explicacao">
+    <hr>
+    <!-- Textos Grande e Pequeno -->
+    <section class="explicacao">
+        <h2 id="textos-grande-pequeno">Textos Grande e Pequeno</h2>
+        <p>
+            Estamos criando um <strong>
+                <mark class="verde"><big>TEXTO GRANDE</big></mark></strong> assim, usando a TAG <strong>
+                <mark class="amarelo">( &lt;big&gt; seu-texto &lt;/big&gt; )</mark>
+            </strong> nesse parágrafo.
+        </p>
+<p>
+    OBS: a TAG <mark class="amarelo"><strong>&lt;big&gt; &lt;/big&gt;</strong></mark> foi descontinuada apesar de ainda funcionar, substituída por estilo no HTML5 desta forma:<br> <pre><code><strong><mark class="verde">&lt;span style="font-size: 1.5em;"&gt;SEU-TEXTO AQUI&lt;/span&gt;</mark></strong>
+    </code></pre>
+</p>
+        <p>
+            Estamos criando um <b>
+                <mark class="verde"><small>TEXTO PEQUENO</small></mark>
+            </b> assim, usando a TAG <strong><mark class="amarelo">&lt;small&gt; seu-texto &lt;/small&gt;</mark></strong> nesse parágrafo.
+        </p>
+        <hr>
+    </section>
+    <!-- Textos Deletados -->
+    <section class="explicacao">
+        <h2 id="textos-deletados">Textos Deletados</h2>
+        <p>
+            Podemos marcar um <strong>
+                <mark class="verde"><del>Texto Excluído</del></mark>
+            </strong> para indicar que ele não deve ser considerado.
+        </p>
+        <p>
+            Usando a TAG <strong>
+                <mark class="amarelo">( &lt;del&gt;SEU-TEXTO&lt;/del&gt; )</mark>
+            </strong> dessa forma.
+        </p>
+    </section>
+    <hr>
+    <!-- Texto Inserido -->
+    <section class="explicacao">
+        <h2 id="texto-inserido">Texto Inserido</h2>
+        <p>
+            Podemos marcar um <strong><mark class="verde"><ins>Texto Como Inserido</ins></mark></strong> para dar ênfase em algo adicionado.
+        </p>
+        <p>
+            Usando a TAG <mark class="amarelo">( &lt;ins&gt;SEU-TEXTO&lt;/ins&gt; )</mark>.
+        </p>
+        <p>
+            Também existe o sublinhado com TAG <b>
+                <mark class="amarelo"><u>Texto Sublinhado</u></mark>
+            </b> (não semântica).
+        </p>
+        <p>
+            exemplo sublinhado com TAG  <pre><code></code><mark class="verde"><strong>(não semântica)</strong></mark> <mark class="amarelo">( <b>&lt;u&gt;SEU-TEXTO&lt;/u&gt;</b> )</mark>.</code></pre>
+        </p>
+
+    <section class="exemplo-visual">
+        <h3>Resultado visual:</h3>
+        <p>
+            <mark class="amarelo"><u>TEXTO SUBLINHADO!</u></mark>
+        </p>
+    </section>
+    </section>
+    <hr>
+    <!-- Texto Sobrescrito e Subscrito -->
+    <section class="explicacao">
+        <h2 id="texto-sobrescrito-subscrito">Texto Sobrescrito e Subscrito</h2>
+        <h3>Texto Sobrescrito</h3>
+        <p>
+            Para inserir expoentes, como x<strong>
+                <mark class="verde"><sup>20</sup></mark>
+            </strong>+8.
+        </p>
+        <p>
+            Usamos a TAG <strong>
+                <mark class="amarelo">( &lt;sup&gt;SEU-TEXTO&lt;/sup&gt; )</mark>
+            </strong>.
+        </p>
+        <h3>Texto Subscrito</h3>
+        <p>
+            Para subscrito, como H<strong>
+                <mark class="verde"><sub>2</sub></mark>
+            </strong>O.
+        </p>
+        <p>
+            Usamos a TAG <strong><mark class="amarelo">( &lt;sub&gt;SEU-TEXTO&lt;/sub&gt; )</mark></strong>.
+        </p>
+    </section>
+    <hr>
+    <!-- Navegação entre aulas -->
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-010.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-012.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav class="proxima-aula">
+</main>
+    <hr>
+<!-- Créditos e Referências -->
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/8TgKFYkcO5Y?si=yGVuBQV2WMR-Hr0o" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+<hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','011')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

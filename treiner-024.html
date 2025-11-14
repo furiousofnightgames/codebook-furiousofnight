@@ -1,0 +1,298 @@
+﻿<!--Desafio 2: um site com vídeos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Desafio Site com Vídeos | Aula 24</title>
+    <meta name="description" content="CODEBOOK: Pratique HTML5 criando um site completo com vídeos. Desafio prático sobre incorporação e gestão de conteúdo multimídia.">
+    <meta name="keywords" content="CODEBOOK, desafio HTML5, site com vídeos, projeto prático, HTML multimídia">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-024.html">
+    <meta property="og:title" content="CODEBOOK - Projeto Prático">
+    <meta property="og:description" content="Crie um site completo com vídeos! Desafio prático de HTML5 com o CODEBOOK.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-024.html">
+    <meta property="twitter:title" content="CODEBOOK - Site Multimídia">
+    <meta property="twitter:description" content="Pratique HTML5 criando um site com vídeos no CODEBOOK. Desafio prático de desenvolvimento web.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-024.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- Navbar  -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','024')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','024')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 24: Desafio - Um site com vídeos 📘</h1>
+<hr>
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+            <li>
+                <a href="#desafio"><strong>Desafio Criar um Site Com Vídeos</strong></a>
+            </li>
+            <li>
+                <a href="#exemplo-principal"><strong>Estrutura Usada na Página Principal</strong></a>
+            </li>
+            <li>
+                <a href="#explicacao-principal"><strong>Explicação Sobre a Estrutura Principal</strong></a>
+            </li>
+            <li>
+                <a href="#exemplo-secundarias"><strong>Estrutura Das Paginas Secundárias</strong></a>
+            </li>
+            <li>
+                <a href="#explicacao-secundarias"><strong>Explicação da Estrutura Secundária</strong></a>
+            </li>
+        </ul>
+    </nav>
+<hr>
+    <section class="explicacao">
+        <div class="exemplo-visual">
+            <p id="desafio">Crie um site que exiba uma galeria de vídeo, igual essa página está demostrando,<br> Atenção clique nos banners.</p>
+        <h2>Galeria de vídeos</h2>
+    <div class="video-grid">
+        <a href="secundarias/secundaria-001.html?id=video1">
+            <img src="https://img.youtube.com/vi/jQMbuK6URws/0.jpg" alt="Vídeo 1">
+        </a>
+        <a href="secundarias/secundaria-002.html?id=video2">
+            <img src="https://img.youtube.com/vi/70z3vC9mgzo/0.jpg" alt="Vídeo 2">
+        </a>
+        <a href="secundarias/secundaria-003.html?id=video3">
+            <img src="https://img.youtube.com/vi/UMJgG-hp0f8/0.jpg" alt="Vídeo 3">
+        </a>
+        <a href="secundarias/secundaria-004.html?id=video4">
+            <img src="https://img.youtube.com/vi/77pG2rellUk/0.jpg" alt="Vídeo 4">
+        </a>
+    </div>
+        </div>
+    </section>
+
+<hr>
+<div class="explicacao">
+    <h2 id="exemplo-principal">Exemplo: Estrutura Usada na Página Principal</h2>
+<pre><code>
+&lt;div class="video-grid"&gt;
+    &lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-1.html?id=video1"&gt;
+        &lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg" alt="Vídeo 1" width="300"&gt;
+    &lt;/a&gt;
+    &lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-2.html?id=video2"&gt;
+        &lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg" alt="Vídeo 2" width="300"&gt;
+    &lt;/a&gt;
+    &lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-3.html?id=video3"&gt;
+        &lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg" alt="Vídeo 3" width="300"&gt;
+    &lt;/a&gt;
+    &lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-4.html?id=video4"&gt;
+        &lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg" alt="Vídeo 4" width="300"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+</pre></code>
+<hr>
+<h3 id="explicacao-principal">Explicação Sobre a Estrutura Acima</h3>
+<ol>
+<li>
+Estrutura do HTML
+<ul type="disc" >
+    <li>
+        Usamos <strong><mark class="amarelo">&lt;div class="video-grid"&gt;</mark></strong> para criar uma grade de vídeos.
+    </li>
+    <li>
+        Usamos <pre><code><strong><mark class="amarelo">&lt;a href="CAMINHO-DO-HTML/-SECUNDARIO-1.html?id=video1"&gt;</mark></strong>
+        </code></pre> para criar um link para a página secundária que contém o vídeo.
+    </li>
+    <hr>
+    <li>
+        Usamos <pre><code><strong><mark class="amarelo">&lt;img src="https://img.youtube.com/vi/ID-DO-VIDEO/0.jpg"&gt;</mark></strong>
+        </code></pre> para exibir a miniatura do vídeo.
+    </li>
+    <hr>
+    <li>
+        <mark class="amarelo"><strong>alt="Vídeo 1"</strong></mark> → texto alternativo, importante para acessibilidade (leitores de tela).
+    </li>
+    <hr>
+    <li>
+        <mark class="amarelo"><strong>width="300"</strong></mark> → define a largura da miniatura em pixels.
+    </li>
+</ul>
+</li>
+<li>
+Funcionamento passo a passo
+<ul type="disc">
+    <li>
+        A página principal mostra uma grade de miniaturas.
+    </li>
+    <li>
+        Cada miniatura está dentro de um link <mark class="verde"><strong>&lt;a&gt;</strong></mark>.
+    </li>
+    <li>
+        Quando o usuário clica na imagem, ele é redirecionado para a página secundária correspondente, onde o vídeo é reproduzido dentro de um <mark class="verde"><strong>&lt;iframe&gt;</strong></mark>.
+    </li>
+    <li>
+        A classe <mark class="verde"><strong>?id=video1</strong></mark> na URL pode ser usada para identificar qual vídeo carregar (útil se você usar JavaScript ou back-end no futuro).
+    </li>
+</ul>
+</li>
+<li>
+Estilo e organização
+<ul type="disc">
+    <li>
+        A classe <mark class="verde"><strong>.video-grid</strong></mark> normalmente usa CSS Grid ou Flexbox para organizar os vídeos em linhas e colunas.
+    </li>
+    <li>
+        Isso mantém a galeria visualmente organizada mesmo em telas diferentes.
+    </li>
+    <li>
+        O CSS também pode adicionar espaçamento (gap), bordas, sombras e efeitos ao passar o mouse.
+    </li>
+</ul>
+</li>
+<li>
+Por que isso é útil no aprendizado
+<ul type="disc">
+    <li>
+        Permite aplicar conceitos de HTML: <mark class="verde"><strong>&lt;div&gt;</strong></mark>, <mark class="verde"><strong>&lt;a&gt;</strong></mark>, <mark class="verde"><strong>&lt;img&gt;</strong></mark>.
+    </li>
+    <li>
+        Introduz links internos e parâmetros na URL <mark class="verde"><strong>(?id=video1)</strong></mark>.
+    </li>
+    <li>
+        Ensina estrutura de grade com CSS.
+    </li>
+    <li>
+        Cria uma experiência prática de navegação entre páginas.
+    </li>
+</ul>
+</li>
+</ol>
+</div>
+<hr>
+<section class="explicacao">
+
+<h3 id="exemplo-secundarias">Exemplo: Estrutura Usada & Replicada nas Páginas Secundárias</h3>
+<pre><code>
+&lt;iframe id="video1"
+src="https://youtube.com/embed/ID-DO-VIDEO"
+class="active" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope;
+picture-in-picture" allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;hr&gt;
+&lt;h2&gt;&lt;a href="../seu.html"&gt;⬅ Voltar à Galeria&lt;/a&gt;&lt;/h2&gt;
+
+</pre></code>
+<hr>
+<br>
+<h4 id="explicacao-secundarias">Explicação da Estrutura Secundária Usada</h4>
+<ol>
+<li>
+    Estrutura do iframe
+    <ul type="square">
+        <li>
+            Usamos <mark class="verde"><strong>&lt;iframe&gt;</strong></mark> para incorporar conteúdo externo dentro da página, neste caso, o player do YouTube.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>id="video1"</strong></mark> → identifica o iframe, permitindo manipulação via CSS ou JavaScript.
+        </li>
+        <li>
+            <pre><code><mark class="amarelo"><strong>src="https://www.youtube.com/embed/ID-DO-VIDEO"</strong></mark>
+            </code></pre> → define a URL do vídeo incorporado; o código final é o ID do vídeo no YouTube.
+        </li>
+        <li>
+            <pre><mark class="amarelo"><strong>sandbox="allow-scripts allow-same-origin"</strong></mark></pre> → adiciona restrições de segurança, permitindo apenas scripts internos do YouTube e acesso ao próprio domínio.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>class="active"</strong></mark> → define uma classe CSS para controlar estilo ou visibilidade do iframe.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</strong></mark> → habilita recursos extras do player, como autoplay e picture-in-picture.
+        </li>
+        <li>
+            <mark class="amarelo"><strong>allowfullscreen</strong></mark> → permite que o vídeo seja exibido em tela cheia.
+        </li>
+    </ul>
+</li>
+<li>
+    Funcionamento do iframe
+    <ul type="square">
+        <li>
+            O iframe carrega o vídeo dentro da própria página, permitindo que o usuário assista sem sair do site.
+        </li>
+        <li>
+            O botão do YouTube no player já permite abrir o vídeo diretamente no site do YouTube.
+        </li>
+        <li>
+            A classe <mark class="verde"><strong>active</strong></mark> pode ser usada para mostrar ou esconder o vídeo dinamicamente via CSS ou JavaScript.
+        </li>
+    </ul>
+</li>
+<li>
+    Segurança e boas práticas
+    <ul type="square">
+        <li>
+            Sempre use URLs confiáveis no <mark class="verde"><strong>src</strong></mark>, como o embed oficial do YouTube.
+        </li>
+        <li>
+            O atributo <mark class="verde"><strong>sandbox</strong></mark> ajuda a proteger seu site contra scripts externos maliciosos.
+        </li>
+        <li>
+            Não é necessário usar <mark class="verde"><strong>target="_blank"</strong></mark> ou <mark class="verde"><strong>rel</strong></mark> no iframe; essas propriedades só funcionam em links.
+        </li>
+    </ul>
+</li>
+</ol>
+</section>
+
+<hr>
+    <div class="proxima-aula">
+        <strong>Próxima Aula <br>
+            <a href="treiner-023.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-025.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+    </div>
+    <hr>
+
+    <div class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/gqrySQQzvvQ?si=1Pk6mJ2TwMKz3xxa" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </div>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','024')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

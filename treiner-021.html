@@ -1,0 +1,192 @@
+﻿<!--Formatos de videos para sites-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Vídeos em HTML5 | Aula 21</title>
+    <meta name="description" content="CODEBOOK: Aprenda sobre formatos de vídeo para web. Tutorial sobre codecs, compatibilidade e otimização de vídeos para HTML5.">
+    <meta name="keywords" content="CODEBOOK, vídeos HTML5, formatos vídeo web, codecs vídeo, otimização vídeo">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-021.html">
+    <meta property="og:title" content="CODEBOOK - Formatos de Vídeo">
+    <meta property="og:description" content="Aprenda sobre formatos e codecs de vídeo para web. Tutorial completo sobre vídeos em HTML5.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-021.html">
+    <meta property="twitter:title" content="CODEBOOK - Vídeos Web">
+    <meta property="twitter:description" content="Domine os formatos de vídeo para web com o CODEBOOK. Aprenda sobre codecs e otimização.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-021.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <script src="modulo-2/modal.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','021')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','021')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 21: Formatos de videos para sites 📘</h1>
+<hr>
+<nav class="indice-simples">
+<h2>Indice</h2>
+<ul>
+<li>
+    <strong><a href="#dicas-autorais">Dicas De Direitos Autorais em Videos</a></strong>
+</li>
+<li>
+    <strong><a href="#compatibilidade">Compatibilidade De Videos</a></strong>
+</li>
+<li>
+    <strong><a href="#hospedagem-video">Para Videos Hospedados No Sistema</a></strong>
+</li>
+<li>
+    <strong><a href="#resultados">Resultados De Tamanhos & Formatos</a></strong>
+</li>
+</ul>
+</nav>
+<hr>
+<section class="explicacao">
+<h2 id="dicas-autorais">Dicas de direitos autoriais sobre videos</h2>
+<p>
+Os vídeos publicados na internet estão protegidos por <strong>leis de direitos autorais</strong>. Isso significa que somente o criador ou o detentor legal da obra tem o direito de reproduzir, distribuir, editar ou monetizar o conteúdo. O uso de vídeos de terceiros sem autorização pode gerar <strong>bloqueios</strong>, <strong>reivindicações de conteúdo ou até ações legais</strong>. Sempre utilize vídeos de sua autoria, de domínio público ou com <strong>licença adequada</strong> (como <strong>Creative Commons</strong>) para garantir segurança e conformidade legal.
+</p>
+<p class="link-bloco">Site recomendado: <a href="https://www.pexels.com/" target="_blank" title="Site para videos sem direitos autoriais" rel="noopener noreferrer"><strong>Pexels.com</strong></a></p>
+<hr>
+<h2 id="compatibilidade">Compatibilidade de videos</h2>
+<p><strong>Formatos mais comuns e compatíveis:</strong></p>
+<ul>
+<li>
+    <mark class="amarelo"><strong> MP4 (H.264 + AAC)</strong></mark> → Chrome, Firefox, Safari, Edge e dispositivos móveis.
+</li>
+<li>
+    <mark class="amarelo"><strong> WebM (VP8/VP9 + Opus/Vorbis)</strong></mark> → Ideal para navegadores modernos, especialmente Chrome e Firefox.
+</li>
+<li>
+    <mark class="amarelo"><strong>OGG/OGV (Theora + Vorbis)</strong></mark> → Menos usado atualmente, mas funciona em Firefox e alguns navegadores livres.
+</li>
+</ul>
+</section>
+<section class="explicacao">
+<h3>Dicas práticas</h3>
+<ol>
+<li>
+    Sempre forneça <strong>mais de um formato</strong> usando <mark class="verde"><strong>&lt;source&gt;</strong></mark> dentro da tag <mark class="verde"><strong>&lt;video&gt;</strong></mark><br> como vimos na aula anterior sobre áudio também se aplica em videos.
+</li>
+<li>
+    Inclua um <strong>fallback</strong>, como um link de download, caso o navegador não consiga reproduzir o vídeo.
+</li>
+<li>
+    Teste os vídeos em diferentes navegadores e dispositivos para garantir compatibilidade.
+</li>
+</ol>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="hospedagem-video">Para videos hospedados no sistema</h2>
+<p>
+Quando um vídeo é hospedado, ele fica armazenado em um servidor, podendo ser acessado diretamente pela página web. <br> Isso permite controlar a qualidade, formatos e disponibilidade do conteúdo, além de garantir que ele funcione corretamente para a maioria dos navegadores e dispositivos.
+</p>
+<p class="link-bloco">
+<strong>Ferramenta valiosa para conversão de videos:</strong> <a href="https://handbrake.fr/"><strong>HandBrake Open Source</strong></a>
+</p>
+<p>
+<strong>Recomendado:</strong> Assista video tutorial sobre a ferramenta antes de usar.
+</p>
+</section>
+<hr>
+<section class="explicacao">
+<h3 id="resultados">Resultados de tamanhos e formatos</h3>
+<p>Na imagem abaixo vemos resultados de tamanhos e formatos usando a ferramenta de conversão acima:</p>
+<ol>
+<li>
+    vídeo original sem conversão, pesando <mark class="amarelo"><strong>31MB quase 32MB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
+</li>
+<li>
+    vídeo em <mark class="verde"><strong>.MP4</strong></mark> convertido para web, pesando <mark class="amarelo"><strong>5.575KB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
+</li>
+<li>
+    vídeo convertido em <mark class="verde"><strong>WEBM</strong></mark> com mesma qualidade, pesando <mark class="amarelo"><strong>8.361KB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
+</li>
+<li>
+    vídeo convertido em <mark class="verde"><strong>MKV</strong></mark>, pesando <mark class="amarelo"><strong>8.472KB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
+</li>
+<li>
+    vídeo convertido em <mark class="verde"><strong>OGV</strong></mark>, pesando <mark class="amarelo"><strong>5.711KB</strong></mark>. <mark class="verde"><strong>OBS:</strong></mark> é o mesmo vídeo.
+</li>
+</ol>
+<p>“Clique na imagem para ampliar"</p>
+<figure>
+<img src="imagens/imagem-tamanhos-videos.png" 
+    alt="Resultados de tamanhos usando a ferramenta" 
+    class="img-unica"
+    onclick="openModal(this)">
+<figcaption>
+<p>Comparação de tamanhos e formatos após conversão.</p>
+</figcaption>
+</figure>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImg">
+</div>
+<p>
+<strong>NOTA:</strong> Vídeos pesados podem prejudicar tempo de carregamento, especialmente em mobile. <br>
+Fazer conversão para ter uma página de internet fluida e com menor custo na hospedagem do seu site e boas práticas.
+</p>
+<p class="link-bloco">
+Para converter em OGV usamos essa ferramenta <a href="https://convertio.co/pt/mp4-ogv/">
+        <strong>Convertio.io</strong>
+</a>
+</p>
+</section>
+<hr>
+<nav class="proxima-aula">
+<p>
+<strong>Próxima Aula: <br>
+    <a href="treiner-020.html">⬅ <strong>Anterior</strong></a> |
+<a href="treiner-022.html"><strong>Próxima</strong> ➡</a>
+</p>
+</nav>
+</main>
+<hr>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">CURSO EM VÍDEO com Gustavo Guanabara</a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima
+            <a href="https://youtu.be/DjOSM72cYac?si=s19viwjvXsyK1kQm" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','021')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

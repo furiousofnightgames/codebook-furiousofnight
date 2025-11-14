@@ -1,0 +1,229 @@
+﻿<!-- Videos em hospedagem própria -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Hospedagem de Vídeos | Aula 22</title>
+    <meta name="description" content="CODEBOOK: Aprenda sobre hospedagem própria de vídeos em HTML5. Tutorial sobre implementação da tag video e hospedagem local.">
+    <meta name="keywords" content="CODEBOOK, hospedagem vídeos, vídeos HTML5, tag video, servidor local">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-022.html">
+    <meta property="og:title" content="CODEBOOK - Vídeos Próprios">
+    <meta property="og:description" content="Aprenda a hospedar e exibir vídeos em seu próprio servidor com HTML5. Tutorial completo.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-022.html">
+    <meta property="twitter:title" content="CODEBOOK - Hospedagem Local">
+    <meta property="twitter:description" content="Domine a hospedagem própria de vídeos com o CODEBOOK. Aprenda a usar a tag video em HTML5.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-022.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','022')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','022')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 22: Videos em hospedagem própria 📘</h1>
+<hr>
+
+<nav class="indice-simples">
+<h2>Índice</h2>
+<ul>
+<li>
+    <a href="#escolha-decisao"><strong>Escolha de Decisão de Hospedagem</strong></a>
+</li>
+<li>
+    <a href="#boas-praticas"><strong>Boas Práticas em Hospedagem Própria</strong></a>
+</li>
+<li>
+    <a href="#resumo1"><strong>Resumo Estratégico</strong></a>
+</li>
+<li>
+    <a href="#inserindo-video"><strong>Inserindo Vídeos Hospedados Localmente</strong></a>
+</li>
+<li>
+    <a href="#estrutura"><strong>Estrutura Usada no Video Inserido</strong></a>
+</li>
+<li>
+    <a href="#tags-elementos"><strong>Tags & Elementos Usados na Estrutura</strong></a>
+</li>
+<li>
+    <a href="#resumo2"><strong>Resumindo</strong></a>
+</li>
+</ul>
+</nav>
+<hr>
+
+<section class="explicacao">
+<h2 id="escolha-decisao">Escolha de decisão sobre hospedagem própria de mídias</h2>
+<p>
+Quando você decide hospedar seus vídeos no seu próprio servidor (ou em uma hospedagem paga como VPS, dedicado ou até S3 da AWS), você assume o controle total sobre eles, diferente de depender de plataformas de streaming de vídeos.
+</p>
+<p>✅ <strong>Vantagens</strong></p>
+<ul>
+<li><mark class="verde"><strong>Controle absoluto:</strong></mark> ninguém pode remover ou restringir seus vídeos.</li>
+<li><mark class="verde"><strong>Sem anúncios de terceiros:</strong></mark> você define o que aparece antes/durante/depois.</li>
+<li><mark class="verde"><strong>Privacidade:</strong></mark> não há coleta de dados do usuário por plataformas externas.</li>
+<li><mark class="verde"><strong>Personalização:</strong></mark> você escolhe o player, layout e formato de exibição.</li>
+</ul>
+<hr>
+<p>⚠️ <strong>Desvantagens</strong></p>
+<ul>
+<li><mark class="amarelo"><strong>Alto consumo de recursos:</strong></mark> vídeo exige muito espaço em disco e largura de banda (especialmente se muitas pessoas assistirem ao mesmo tempo).</li>
+<li><mark class="amarelo"><strong>Manutenção:</strong></mark> você precisa configurar servidores, compressão de vídeo e segurança.</li>
+<li><mark class="amarelo"><strong>Escalabilidade limitada:</strong></mark> se muitos acessos acontecerem de uma vez, seu servidor pode ficar lento ou cair.</li>
+</ul>
+<hr>
+<h3 id="boas-praticas">Boas Práticas em Hospedagem Própria</h3>
+<ol>
+<li>
+    ⚠️ <strong>Compactar os vídeos</strong> em formatos modernos (ex.: MP4 com codec H.264 ou H.265).
+</li>
+<li>
+    ⚠️ <strong>Usar streaming adaptativo</strong> (HLS ou DASH), que ajusta a qualidade conforme a internet do usuário.
+</li>
+<li>
+    ⚠️ <strong>Configurar CDN</strong> (Content Delivery Network), para distribuir os vídeos mais rápido no mundo todo.
+</li>
+<li>
+    ⚠️ <strong>Ter um player responsivo</strong> (como Plyr, Video.js ou Shaka Player).
+</li>
+<li>
+    ⚠️ <strong>Prever custos de tráfego</strong> – streaming consome muita banda, especialmente em projetos que podem viralizar.
+</li>
+</ol>
+<hr>
+<h4 id="resumo1">Resumo estratégico</h4>
+<p>
+Hospedar vídeos por conta própria é indicado para quem <strong>quer independência total e controle profissional.</strong> Porém, exige <strong>investimento em infraestrutura, otimização de arquivos</strong> e possivelmente uma <strong>CDN</strong> <strong>(Rede de entrega de conteúdo ou rede de distribuição de conteúdo)</strong> para garantir qualidade.
+</p>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="inserindo-video" class="exemplo-visual">Inserindo vídeos hospedados localmente</h2>
+<p>Este vídeo está hospedado em servidor próprio.</p>
+<video controls poster="imagens/patinho-natureza-500x334.png">
+<source src="midia/videos/Patinho.mp4" type="video/mp4">
+<source src="midia/videos/Patinho.webm" type="video/webm">
+<source src="midia/videos/Patinho.mkv" type="video/x-matroska">
+<source src="midia/videos/Patinho.ogv" type="video/ogg">
+<p>Seu navegador não é compatível com essa reprodução de vídeos</p>
+</video>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="estrutura">Usando a seguinte estrutura</h2>
+<pre><code><mark>&lt;video controls poster="midia/videos/pato-natureza.png" width="500"&gt;</mark>
+    <mark>&lt;source src="midia/videos/Patinho.mp4" type="video/mp4"&gt;</mark>
+    <mark>&lt;source src="midia/videos/Patinho.webm" type="video/webm"&gt;</mark>
+    <mark>&lt;source src="midia/videos/Patinho.mkv" type="video/x-matroska"&gt;</mark>
+    <mark>&lt;source src="midia/videos/Patinho.ogv" type="video/ogg"&gt;</mark>
+<mark>&lt;p&gt;Seu navegador não é compativel com essa reprodução de videos&lt;/p&gt;</mark>
+<mark>&lt;/video&gt;</mark>
+
+</pre></code>
+<hr>
+<h3 id="tags-elementos">Tags e elementos usados na estrutura</h3>
+<ol>
+<li>
+    Usamos <mark class="amarelo"><strong><code>&lt;video&gt;&lt;/video&gt;</code></strong></mark>
+    <ul type="disc">
+        <li>É a <strong>tag principal</strong> usada para inserir vídeos diretamente em páginas da web.</li>
+        <li>O atributo <mark class="verde"><strong>controls</strong></mark> adiciona botões padrões (play, pause, volume, barra de progresso).</li>
+        <li>O atributo <mark class="verde"><strong>poster</strong></mark> define a imagem de capa que aparece antes de o vídeo ser iniciado.</li>
+        <li>O atributo <mark class="verde"><strong>width</strong></mark> define a largura do player no navegador.</li>
+    </ul>
+</li>
+<hr>
+<li>
+    Usamos <mark class="amarelo"><strong><code>&lt;source&gt;</code></strong></mark>
+    <ul type="disc">
+        <li>Define os <mark class="verde"><strong>arquivos de vídeo disponíveis</strong></mark> para reprodução.</li>
+        <li>Cada um aponta para um formato diferente, garantindo <mark class="verde"><strong>compatibilidade entre navegadores.</strong></mark></li>
+        <li>O navegador escolhe automaticamente o <mark class="verde"><strong>primeiro formato que consegue reproduzir.</strong></mark></li>
+    </ul>
+</li>
+<hr>
+<li>Exemplos usados</li>
+<ul type="square">
+    <li><mark class="amarelo"><strong>type="video/mp4"</strong></mark> → formato mais usado e suportado.</li>
+    <li><mark class="amarelo"><strong>type="video/webm"</strong></mark> → eficiente para web e navegadores modernos.</li>
+    <li><mark class="amarelo"><strong>type="video/x-matroska"</strong></mark> → usado no <mark class="amarelo"><strong>.mkv</strong></mark>, mas com suporte limitado.</li>
+    <li><mark class="amarelo"><strong>type="video/ogg"</strong></mark> → mais antigo, mas ainda aceito em alguns navegadores.</li>
+</ul>
+<hr>
+<li>
+    Usamos parágrafo <mark class="verde"><strong>&lt;p&gt;&lt;/p&gt;</strong></mark> como (fallback)
+    <ul type="disc">
+        <li>Texto alternativo exibido <strong>caso o navegador não consiga reproduzir nenhum formato de vídeo.</strong></li>
+        <li>Garante <strong>acessibilidade</strong> e clareza para o usuário.</li>
+    </ul>
+</li>
+</section>
+</ol>
+<hr>
+
+<section class="explicacao">
+<h2 id="resumo2">Resumindo</h2>
+<p>
+Essa estrutura garante que o vídeo seja exibido da melhor forma possível, oferecendo <strong>vários formatos para compatibilidade</strong>, uma <strong>imagem inicial (poster)</strong> e até mesmo uma <strong>mensagem de fallback</strong> para navegadores antigos.
+</p>
+</section>
+<hr>
+<nav class="proxima-aula">
+<p>
+<strong>Próxima Aula: <br>
+    <a href="treiner-021.html">⬅ <strong>Anterior</strong></a> |
+    <a href="treiner-023.html"><strong>Próxima</strong> ➡</a>
+</strong>
+</p>
+</nav>
+</main>
+    <hr>
+
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/TCeyIwFGkYo?si=xrDSiRasm00AInR9" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+        <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','022')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

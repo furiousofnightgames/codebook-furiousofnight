@@ -1,0 +1,244 @@
+﻿<!--Proposta de desafio 1-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Desafio HTML Prático | Aula 18</title>
+    <meta name="description" content="CODEBOOK: Primeiro desafio prático de HTML5. Coloque seus conhecimentos em prática com exercícios reais de desenvolvimento web.">
+    <meta name="keywords" content="CODEBOOK, desafio HTML, exercícios HTML, prática HTML5, projeto web">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-018.html">
+    <meta property="og:title" content="CODEBOOK - Desafio HTML">
+    <meta property="og:description" content="Pratique HTML5 com nosso primeiro desafio! Desenvolva suas habilidades com exercícios práticos do CODEBOOK.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-018.html">
+    <meta property="twitter:title" content="CODEBOOK - Exercício Prático">
+    <meta property="twitter:description" content="Coloque em prática seus conhecimentos de HTML5 com o primeiro desafio do CODEBOOK!">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-018.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Estilo exclusivo para o bloco do Exemplo do Desafio 2 ===== */
+        .tooltip-block {
+            position: relative !important;
+            font-family: Arial, sans-serif !important;
+        }
+
+        .tooltip-block abbr {
+            cursor: pointer !important;
+            border-bottom: 1px dotted var(--cor-principal) !important;
+            position: relative !important;
+            text-decoration: none !important;
+            transition: color 0.2s ease !important;
+        }
+
+        .tooltip-block abbr:hover {
+            color: var(--cor-principal) !important;
+        }
+
+        /* Tooltip centralizado e fixo na tela */
+        .tooltip-block abbr::after {
+            content: attr(data-title) !important; /* usar data-title */
+            position: fixed !important;
+            top: 30% !important;
+            left: 53% !important;
+            transform: translateX(-50%) !important;
+            background: var(--cor-fundo) !important;
+            color: var(--cor-texto) !important;
+            padding: 6px 12px !important;
+            border-radius: 8px !important;
+            white-space: nowrap !important;
+            font-size: 0.85em !important;
+            text-align: center !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            transition: opacity 0.25s ease, transform 0.25s ease !important;
+            z-index: 9999 !important;
+            max-width: 90vw !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            box-shadow: var(--cor-shadow-light) !important;
+        }
+
+        /* Mostrar tooltip ao passar ou tocar */
+        .tooltip-block abbr:hover::after,
+        .tooltip-block abbr:active::after,
+        .tooltip-block abbr:focus::after {
+            opacity: 1 !important;
+            transform: translateX(-50%) translateY(-5px) !important; /* leve animação */
+        }
+
+        /* Responsividade: quebra de linha em telas pequenas */
+        @media (max-width: 480px) {
+            .tooltip-block abbr::after {
+                white-space: normal !important; /* permite quebra de linha */
+                max-width: 85vw !important;
+                padding: 5px 8px !important;
+                font-size: 0.8em !important;
+            }
+        }
+
+        /* Pequenos ajustes visuais internos do bloco */
+        .tooltip-block ol {
+            padding-left: 20px !important;
+        }
+
+        .tooltip-block ol li {
+            margin-bottom: 10px !important;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">🏠 Início</a></li>
+                    <li><a href="indice-geral.html">📑 Índices</a></li>
+                    <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','018')">⚖ Política</a></li>
+                    <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','018')">👤 Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 class="centralizado">📘Aula 18: Proposta de desafio 📘</h1>
+        <hr>
+
+        <nav class="indice-simples">
+            <h2>Índice</h2>
+            <strong>
+                <ul>
+                    <li><a href="#desafios">Desafios Principais</a></li>
+                    <li><a href="#desafio1">Exemplo Visual do Desafio 1</a></li>
+                    <li><a href="#desafio2">Exemplo Visual do Desafio 2</a></li>
+                </ul>
+            </strong>
+        </nav>
+        <hr>
+
+        <section class="explicacao">
+            <h2 id="Desafios">Desafios</h2>
+            <p>Desafio 1: Crie um perfil onde mostre uma imagem e suas redes sociais direcionáveis.</p>
+            <p>Desafio 2: Use elemento de lista e abreviação para ver as tags usadas nos 7 itens da lista abaixo.</p>
+            <ul>
+                <li>Parágrafos</li>
+                <li>Títulos</li>
+                <li>Imagens</li>
+                <li>Abreviações</li>
+                <li>Códigos-Fonte</li>
+                <li>Listas Númeradas</li>
+                <li>Listas com Demarcadores</li>
+            </ul>
+            <p>Abaixo irei deixar dois exemplos visuais, porém o desafio é seu para fazer igual ou melhor! &#x1F60A;</p>
+            <p><strong>DICA:</strong> Use tudo que aprendeu nesse desafio e se supere.</p>
+            <h2>Abaixo está meu resultado</h2>
+        </section>
+        <hr>
+
+        <section class="perfil-bloco">
+            <h2 id="desafio1">Meu perfil e minhas redes sociais</h2>
+            <img src="imagens/logo-sitebook.png" alt="imagem logo de lobinho" class="icone-redondo">
+            <hr>
+            <h3>Minha Bios</h3>
+            <p>
+                Meu nome é <strong>Diego Henrique</strong>, conhecido como <strong>Furious</strong> nas redes sociais e nos games.
+                Sou cadeirante, amante de jogos e apaixonado por fazer novas amizades.
+                Atualmente, sou estudante iniciante e autodidata no mundo da programação.
+                Estou utilizando este espaço em HTML para compartilhar um pouco do que aprendi até agora,
+                com o objetivo de servir como inspiração e aprendizado para vocês.
+                Espero que gostem! &#x1F60A;
+            </p>
+            <hr>
+            <h3>Minha inspiração de conhecimento</h3>
+            <p class="link-bloco">
+                Tenho aprendido bastante com os vídeos do
+                <a href="https://www.youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer"><strong>Curso em Vídeo</strong></a>.
+            </p>
+            <hr>
+            <h2>Como falar comigo?</h2>
+            <ul class="redes-sociais">
+                <li>
+                    <img src="imagens/guithub.ico" alt="GitHub">
+                    <a href="https://github.com/furiousofnightgames" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                </li>
+                <li>
+                    <img src="imagens/tiktok.ico" alt="TikTok">
+                    <a href="https://www.tiktok.com/@furiousofnightgames" target="_blank" rel="noopener noreferrer">Meu TikTok</a>
+                </li>
+                <li>
+                    <img src="imagens/facebook.ico" alt="Facebook">
+                    <a href="https://www.facebook.com/share/1AxakRepJr/" target="_blank" rel="noopener noreferrer">Meu Facebook</a>
+                </li>
+                <li>
+                    <img src="imagens/instagram.ico" alt="Instagram">
+                    <a href="https://www.instagram.com/furiousofnightgames" target="_blank" rel="noopener noreferrer">Meu Instagram</a>
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
+        </section>
+        <hr>
+
+        <section class="explicacao">
+            <div class="tooltip-block">
+                <h2 id="desafio2">Exemplo visual do desafio 2</h2>
+                <ol>
+                    <li><abbr data-title="Para Parágrafo Use &lt;p&gt;&lt;/p&gt;">Parágrafo</abbr></li>
+                    <li><abbr data-title="Para Títulos Use &lt;h1&gt;&lt;/h1&gt; a &lt;h6&gt;&lt;/h6&gt; usando a hierarquia">Títulos</abbr></li>
+                    <li><abbr data-title="Para Imagens Use &lt;img&gt;">Imagens</abbr></li>
+                    <li><abbr data-title="Para Abreviações Use &lt;abbr data-title=&gt;sua-descrição&lt;/abbr&gt; com aspas no data-title">Abreviações</abbr></li>
+                    <li><abbr data-title="Para Códigos-Fonte use &lt;code&gt;&lt;/code&gt;">Código-Fonte</abbr></li>
+                    <li><abbr data-title="Para Listas Númeradas use &lt;ol&gt; &lt;li&gt; item-da-lista &lt;/li&gt; &lt;/ol&gt;">Listas Númeradas</abbr></li>
+                    <li><abbr data-title="Para Lista Com Demarcadores use &lt;ul&gt; &lt;li&gt; item-da-lista &lt;/li&gt; &lt;/ul&gt;">Lista Com Demarcadores</abbr></li>
+                </ol>
+                <p><strong>ATENÇÃO:</strong> Segure o dedo ou mouse sobre os itens da lista acima para ver as dicas nas palavras!</p>
+            </div>
+        </section>
+        <hr>
+
+        <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                    <a href="treiner-017.html">⬅ <strong>Anterior</strong></a> |
+                    <a href="treiner-019.html"><strong>Próxima</strong> ➡</a>
+            </p>
+        </nav>
+    </main>
+    <hr>
+
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">CURSO EM VÍDEO com Gustavo Guanabara</a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima
+            <a href="https://youtu.be/suL56Mdx22Y?si=zqIETEH2o6f2RKfQ" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+    </footer>
+    <hr>
+
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. 
+            <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','018')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

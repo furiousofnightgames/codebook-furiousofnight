@@ -1,0 +1,278 @@
+﻿<!--Imagens Dinâmicas-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Imagens Dinâmicas HTML5 | Aula 19</title>
+    <meta name="description" content="CODEBOOK: Aprenda a trabalhar com imagens dinâmicas em HTML5. Tutorial sobre picture, source e responsividade de imagens.">
+    <meta name="keywords" content="CODEBOOK, imagens dinâmicas, HTML5, picture tag, source, responsividade imagens">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-019.html">
+    <meta property="og:title" content="CODEBOOK - Imagens Dinâmicas">
+    <meta property="og:description" content="Aprenda a criar imagens responsivas em HTML5. Tutorial sobre imagens dinâmicas e adaptativas.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-019.html">
+    <meta property="twitter:title" content="CODEBOOK - Imagens Responsivas">
+    <meta property="twitter:description" content="Domine imagens dinâmicas em HTML5 com o CODEBOOK. Aprenda sobre picture e source tags.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-019.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','019')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','019')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘Aula 19: Imagens Dinâmicas & Mídias📘
+    </h1>
+<hr>
+    <nav class="indice-simples">
+<h2>Indice</h2>
+<ul>
+    <li>
+        <strong><a href="#passo-necessario">Passo Necessario & Recomendado</a></strong>
+    </li>
+    <li>
+        <strong><a href="#imagens-adaptada">Imagens Que Se Adaptam Sozinhas</a></strong>
+    </li>
+    <li>
+        <strong><a href="#resumo">Resumo De Comportamento</a></strong>
+    </li>
+</ul>
+    </nav>
+    <hr>
+    <section class="explicacao">
+<h2 id="passo-necessario">Passos Necessários</h2>
+<p>
+    Nesse primeiro passo é necessário e recomendado que veja esse video abaixo,<br> pois é referente ao conteúdo.
+</p>
+<div class="video-iframe">
+    <iframe src="https://www.youtube.com/embed/E01LDVj0Rpg?vq=hd1080"
+          class="active"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen title="YouTube video player"></iframe>
+</div>
+    </section>
+    <section class="explicacao">
+<h3>Ferramenta usada no tutorial do video acima.</h3>
+    <p class="link-bloco">
+        Ferramenta Usada:
+        <a href="https://www.gimp.org/downloads/" target="_blank" rel="external noopener noreferrer"><strong>GIMP FREE DOWNLOAD</strong></a>
+    </p>
+<p class="link-bloco">
+    Os creditos desse conteúdo é totalmente ao canal <a href="https://www.youtube.com/cursoemvideo" target="_blank" title="Canal Curso em Vídeo" rel="noopener noreferrer">
+    <strong>Curso em Vídeo</strong></a>.
+</p>
+    </section>
+<hr>
+    <section class="explicacao">
+<h2 id="imagens-adaptada">Imagens Que Se Adaptam Sozinhas</h2>
+<p>
+    Tente abrir esse site em vários dispositivos diferentes ou apenas redimensione o navegador.
+</p>
+
+<figure>
+    <picture>
+<source media="(max-width: 750px)" srcset="imagens/pequeno.png" type="image/png">
+<source media="(max-width: 1050px)" srcset="imagens/medio.png" type="image/png">
+<img src="imagens/grande.png" alt="Imagem flexível">
+    </picture>
+    <figcaption>
+<p>Esta imagem muda de acordo com a largura da tela: pequena, média ou grande.</p>
+    </figcaption>
+</figure>
+
+<p>
+    Aqui na imagem acima você terá uma experiência interessante. <br>
+    <strong>Atenção:</strong> Redimensione gradualmente seu navegador da esquerda para a direita e veja a mágica acontecer.
+</p>
+
+    </section>
+
+    <hr>
+    <section class="explicacao">
+<h2>Nesse demostração usamos a seguinte estrutura</h2>
+<pre><code>
+<mark class="amarelo">&lt;picture&gt;</mark>
+    <mark class="amarelo">&lt;source media="(max-width: 750px )" srcset="imagens/pequeno.png" type="image/png"&gt;</mark>
+    <mark class="amarelo">&lt;source media="(max-width: 1050px )" srcset="imagens/medio.png" type="image/png"&gt;</mark>
+    <mark class="amarelo">&lt;img src="imagens/grande.png" alt="imagem grande flexível" width="300" height="300"&gt;</mark>
+<mark class="amarelo">&lt;/picture&gt;</mark>
+
+</pre></code>
+<p><strong>ATENÇÃO:</strong> Respeite a ordem das imagem sempre da menor para maior</p>
+<hr>
+</section>
+    <section class="explicacao">
+<h3>Explicando os elementos usados na estrutura</h3>
+<p>1-<mark class="amarelo"><code><strong>&lt;picture&gt; </strong></code></mark>
+    <ul>
+        <li>
+            Função: Contêiner para imagens responsivas. Permite fornecer múltiplas fontes de imagem para diferentes condições de tela ou resolução.
+        </li>
+        <li>
+            Uso: Envolve os <strong>
+                <mark class="amarelo">&lt;source&gt;</mark>
+            </strong> e o <strong>
+                <mark class="amarelo">&lt;img&gt;</mark>
+            </strong> de fallback.
+        </li>
+        <li>
+            Observação: O navegador escolhe a primeira <strong>
+                <mark class="amarelo">&lt;source&gt;</mark>
+            </strong> cuja condição de media seja verdadeira
+        </li>
+    </ul>
+</p>
+<hr>
+<p>
+    2- <strong><mark class="amarelo">&lt;source&gt;</mark></strong>
+</p>
+<ul>
+    <li>
+        Função: Define uma fonte alternativa de imagem dentro do <mark class="amarelo"><strong>&lt;picture&gt;</strong></mark>.
+    </li>
+    <li>
+            <strong>Atributos principais usados:</strong>
+    </li>
+        <ul type="circle">
+            <li>
+                media: Define uma condição CSS para usar essa imagem (por exemplo, (max-width: 750px)).
+            </li>
+            <li>
+                srcset: Caminho do arquivo da imagem a ser exibida se a condição media for verdadeira
+            </li>
+            <li>
+                type: Tipo de arquivo da imagem (opcional, mas ajuda o navegador a decidir se consegue exibir).
+            </li>
+        </ul>
+    <li>
+        <strong>Observação:</strong> Pode ter várias tags <source> dentro de um <picture>, cada uma com condições diferentes.
+    </li>
+</ul>
+<hr>
+<p>
+    3- <strong><mark class="amarelo">&lt;img&gt;</mark></strong>
+</p>
+<ul>
+    <li>
+        Função: Fornece a imagem padrão (fallback) caso nenhuma condição das <source> seja satisfeita.
+    </li>
+    <li>
+        <strong>Atributos usados:</strong>
+    </li>
+    <ul>
+        <li>
+            src: Caminho da imagem padrão.
+        </li>
+        <li>
+            alt: Texto alternativo para acessibilidade e SEO.
+        </li>
+        <li>
+            width e height: Dimensões da imagem no layout.
+        </li>
+    </ul>
+</ul>
+<hr>
+<p>
+    4- <strong><mark class="amarelo">media="(max-width: 750px)"</mark> e <mark class="amarelo">media="(max-width: 1050px)"</mark></strong>
+</p>
+<ul>
+    <li>
+        Função: Define a largura máxima da tela para aplicar aquela imagem.
+    </li>
+    <li>
+        <strong>Exemplo:</strong>
+    </li>
+    <ul type="circle">
+        <li>
+            Se a largura da tela ≤ 750px → usa imagem pequena
+        </li>
+        <li>
+            Se a largura da tela ≤ 1050px → usa imagem média.
+        </li>
+    </ul>
+    <li>
+        <strong>Importante:</strong> O navegador verifica cada <source> em ordem até encontrar a primeira que seja verdadeira.
+    </li>
+</ul>
+<hr>
+<p>
+    5- <mark class="amarelo"><strong>alt="imagem grande flexível"</strong></mark>
+</p>
+<ul>
+    <li>
+        Função: Texto alternativo exibido se a imagem não carregar e para leitores de tela.
+    </li>
+</ul>
+<hr>
+<h3 id="resumo">Resumo de comportamento</h3>
+<ol>
+    <li>
+        O navegador percorre os <mark class="amarelo"><strong>&lt;source&gt;</strong></mark> na ordem.
+    </li>
+    <li>
+        Quando uma condição media é satisfeita, a imagem correspondente é usada.
+    </li>
+    <li>
+        Se nenhuma condição for satisfeita, o <mark class="amarelo">
+            <stro0ng>&lt;img&gt;</stro0ng>
+        </mark> é exibido como fallback.
+    </li>
+</ol>
+    </section>
+<hr>
+    <nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br>
+        <a href="treiner-018.html">⬅ <strong>Anterior</strong></a> |
+    <a href="treiner-020.html"><strong>Próxima</strong> ➡</a>
+</p>
+    </nav>
+</main>
+<hr>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">CURSO EM VÍDEO com Gustavo Guanabara</a>
+        </p>
+        <p id="aula-em-video">
+            Aula 1 referente ao conteúdo acima
+            <a href="https://youtu.be/cAgkwPWE4hU?si=Y9QPUDNiddeKyjFK" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+        <p>
+            Aula 2 referente ao conteúdo acima
+            <a href="https://youtu.be/E01LDVj0Rpg?si=qHP-n9rBEhoIrZy-" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+</footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','019')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

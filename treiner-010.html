@@ -1,0 +1,229 @@
+﻿<!-- Formatação de textos em Negrito e Itálico no HTML -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Formatação de Texto: Negrito e Itálico | Aula 10</title>
+    <meta name="description" content="CODEBOOK: Aprenda a usar corretamente as tags de formatação em HTML. Domine o uso de negrito e itálico, entenda a diferença entre tags semânticas e de estilo.">
+    <meta name="keywords" content="CODEBOOK, formatação HTML, negrito HTML, itálico HTML, strong, em, b, i, tags semânticas">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-010.html">
+    <meta property="og:title" content="CODEBOOK - Dominando Negrito e Itálico em HTML">
+    <meta property="og:description" content="Aprenda a formatar textos profissionalmente com o CODEBOOK! Domine as tags de negrito e itálico em HTML5.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-010.html">
+    <meta property="twitter:title" content="CODEBOOK - Formatação HTML">
+    <meta property="twitter:description" content="Descubra como usar corretamente as tags de negrito e itálico em HTML5 com o CODEBOOK!">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-010.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','010')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','010')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 10: Principais Formatações de Texto 📘</h1>
+    <hr>
+    <!-- Índice -->
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+            <li>
+                <a href="#negrito"><strong>Negrito e Destaque</strong></a>
+            </li>
+            <li>
+                <a href="#italico"><strong>Itálico e Ênfase</strong></a>
+            </li>
+            <li>
+                <a href="#conclusao"><strong>Conclusão</strong></a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    <section class="explicacao">
+        <p>
+            <strong>Vamos aprender a usar <u><b>negrito</b></u> e <u><i>itálico</i></u> corretamente no HTML, entendendo a diferença entre o uso <strong><u>semântico</u></strong> e o uso <u><b>não semântico</b></u>.</strong>
+        </p>
+    </section>
+    <hr>
+    <!-- Negrito -->
+    <section class="explicacao">
+        <h2 id="negrito">1. Negrito e Destaque</h2>
+        <p>
+            O negrito pode ser aplicado de duas formas:
+        </p>
+        
+        <section class="exemplo-visual">
+            <h3>Exemplo com <mark class="amarelo"><code>&lt;b&gt;</code> (não semântico)</mark></h3>
+            
+    <p>
+<pre><code><mark class="verde">&lt;p&gt;Nessa frase, temos um</mark> <mark class="amarelo">&lt;b&gt;Termo em negrito&lt;/b&gt;</mark><mark class="verde">&lt;/p&gt;</mark>
+
+</code></pre>
+    </p>
+            
+            <p>
+                <b>Resultado no navegador:</b>
+            </p>
+            <p>
+                Nessa frase, temos um <mark class="verde"><b>Termo em negrito</b></mark>
+            </p>
+        </section>
+    </section>
+<hr>
+    <section class="explicacao">
+        <h3>Exemplo com <mark class="verde"><strong>&lt;strong&gt;</strong></mark> (semântico)</mark></h3>
+        <section class="exemplo-visual">
+<p>
+<pre><code><mark class="verde">&lt;p&gt;Nesta frase, temos um</mark> <mark class="amarelo">&lt;strong&gt;Termo em destaque&lt;/strong&gt;</mark><mark class="verde">&lt;/p&gt;</mark>
+
+</code></pre>
+</p>
+            <p>
+                <b>Resultado no navegador:</b>
+            </p>
+            <p>
+                Nesta frase, temos um <mark class="verde"><strong>Termo em destaque</strong></mark>
+            </p>
+            <p>
+                ✔ <b>Dica:</b> <strong>
+                <mark class="amarelo">&lt;strong&gt;</mark>
+            </strong> é preferível quando você quer dar <u>importância ao conteúdo</u>.
+            </p>
+        </section>
+    </section>
+    <hr>
+    
+    <!-- Itálico -->
+    <section class="explicacao">
+        <h2 id="italico">2. Itálico e Ênfase</h2>
+        <p>
+            Assim como no negrito, temos duas opções para aplicar o itálico:
+        </p>
+        
+        <section class="exemplo-visual">
+            <h3>Exemplo com <mark class="amarelo"><code>&lt;i&gt;</code> (não semântico)</mark></h3>
+<p>
+<pre><code><mark class="verde">&lt;p&gt;Nesta frase, temos um</mark> <mark class="amarelo">&lt;i&gt;Termo em itálico&lt;/i&gt;</mark><mark class="verde">&lt;/p&gt;</mark>
+    
+</code></pre>
+</p>
+            <p>
+                <b>Resultado no navegador:</b>
+            </p>
+            <p>
+                Nesta frase, temos um <mark class="verde"><i>Termo em itálico</i></mark>
+            </p>
+        </section>
+    </section>
+<hr>
+    <section class="explicacao">
+        <h3>Exemplo com <mark class="amarelo">&lt;em&gt;</mark> (semântico)</h3>
+        <section class="exemplo-visual">
+<p>
+<pre><code><mark class="verde">&lt;p&gt;Nesta frase, temos um</mark><mark class="amarelo">&lt;em&gt;Termo em itálico&lt;/em&gt;</mark><mark class="verde">&lt;/p&gt;</mark>
+
+</code></pre>
+</p>
+            
+            <p>
+                <b>Resultado no navegador:</b>
+            </p>
+            <p>
+                Nesta frase, temos um <mark class="verde"><em>Termo em itálico</em></mark>
+            </p>
+            <p>
+                ✔ <b>Dica:</b> Use <mark class="amarelo"><strong>&lt;em&gt;</strong></mark> quando a intenção for dar <u>ênfase</u> à palavra ou expressão.
+            </p>
+        </section>
+    </section>
+    <hr>
+    
+    <!-- Conclusão -->
+    <section class="explicacao">
+        <h2 id="conclusao">🎯 Conclusão</h2>
+        <ul>
+            <li>
+                <strong>
+                    <mark class="amarelo">&lt;b&gt;</mark>
+                </strong> → apenas aparência (visual, sem significado extra).
+            </li>
+            <li>
+                <strong>
+                    <mark class="verde">&lt;strong&gt;</mark>
+                </strong> → dá importância semântica (destaque real para navegadores e leitores de tela).
+            </li>
+            <li>
+                <strong>
+                    <mark class="amarelo">&lt;i&gt;</mark>
+                </strong> → apenas aparência (texto inclinado, sem significado extra).
+            </li>
+            <li>
+                <strong>
+                    <mark class="verde">&lt;em&gt;</mark>
+                </strong> → indica ênfase semântica no texto.
+            </li>
+        </ul>
+        <p>✅ Sempre que possível, prefira as tags <strong>
+            <mark class="verde">&lt;strong&gt;</mark> e <mark class="verde">&lt;em&gt;</mark>
+        </strong> para melhor acessibilidade.</p>
+        <hr>
+    </section>
+    <!-- Navegação entre aulas -->
+    <section class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-009.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-011.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </section>
+</main>
+    <hr>
+<!-- Créditos e Referências -->
+    <section class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/T-d_hsO3hUI?si=oncvqRnyv7CZdgrX" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </section>
+<hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','010')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,192 @@
+﻿<!-- ESTRUTURA BÁSICA DO HTML -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Aula 1: Estrutura Básica do HTML | Módulo 1</title>
+    <meta name="description" content="CODEBOOK: Aprenda a estrutura básica do HTML5. Primeira aula do Módulo 1 com exemplos práticos e explicações detalhadas para iniciantes em desenvolvimento web.">
+    <meta name="keywords" content="CODEBOOK, HTML básico, estrutura HTML, HTML5, aprender HTML, curso web, aula 1">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-001.html">
+    <meta property="og:title" content="CODEBOOK - Estrutura Básica do HTML | Aula 1">
+    <meta property="og:description" content="Comece sua jornada no desenvolvimento web com o CODEBOOK. Aprenda HTML5 desde o básico com exemplos práticos.">
+    <meta property="og:image" content="imagens/logo-sitebook.ico">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-001.html">
+    <meta property="twitter:title" content="CODEBOOK - Estrutura HTML Básica">
+    <meta property="twitter:description" content="CODEBOOK Aula 1: Aprenda a estrutura fundamental do HTML5 com exemplos práticos e explicações detalhadas.">
+    <meta property="twitter:image" content="imagens/logo-sitebook.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-001.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+        <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+            <li><a href="indice-geral.html">📑 Índices</a></li>
+            <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','001')">⚖ Política</a></li>
+            <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','001')">👤 Sobre</a></li>
+        </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 1: Estrutura Básica do HTML 📘</h1>
+<h3 class="centralizado">Início da sua jornada no Front-End...</h3>
+<hr>
+
+<!-- Índice de navegação -->
+<nav  class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li><a href="#tipo-de-declaracao"><strong>Tipo De Declaração De Documento</strong></a></li>
+        <li>
+            <a href="#tag-html"><strong>Tag &lt;html&gt;</strong>
+            </a>
+        </li>
+        <li>
+            <a href="#tag-head"><strong>Tag &lt;head&gt;</strong></a>
+        </li>
+        <li>
+            <a href="#tag-body"><strong>Tag &lt;body&gt;</strong></a>
+        </li>
+        <li>
+            <a href="#estrutura-minima"><strong>Estrutura Mínima Completa De Um HTML</strong></a>
+        </li>
+        <li>
+            <a href="#resumo"><strong>Resumo</strong></a>
+        </li>
+        <li>
+            <a href="#aula-em-video"><strong>Aula Instalando Todas Ferramentas</strong></a>
+        </li>
+    </ul>
+</nav>
+<hr>
+
+<section class="explicacao">
+<h2 id="tipo-de-declaracao">1. Declaração do tipo de documento</h2>
+<p>A primeira linha do HTML é a declaração do tipo de documento:</p>
+<p><code><mark class="verde"><strong>&lt;!DOCTYPE html&gt;</strong></mark></code></p>
+<p>Ela indica ao navegador que este documento é HTML5.</p>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="tag-html">2. Tag <mark class="amarelo"><strong>&lt;html&gt;</strong></mark></h2>
+<p>A tag <mark class="verde"><strong>&lt;html&gt;</strong></mark> envolve todo o conteúdo da página. Dentro dela, encontramos duas seções principais: &lt;head&gt; e &lt;body&gt;.</p>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="tag-head">3. Tag <mark class="amarelo"><strong>&lt;head&gt;</strong></mark></h2>
+<p>O <mark class="verde"><strong>&lt;head&gt;</strong></mark> contém informações importantes para o navegador e motores de busca, como:</p>
+<ul>
+    <li><mark class="verde"><strong>&lt;title&gt;</strong></mark>: título da página que aparece na aba do navegador.</li>
+    <li><mark class="verde"><strong>&lt;meta charset="UTF-8"&gt;</strong></mark>: define a codificação de caracteres.</li>
+    <li><mark class="verde"><strong>&lt;meta name="viewport"&gt;</strong></mark>: define como a página será exibida em dispositivos móveis.</li>
+</ul>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="tag-body">4. Tag <mark class="amarelo"><strong>&lt;body&gt;</strong></mark></h2>
+<p>O <mark class="verde"><strong>&lt;body&gt;</strong></mark> contém todo o conteúdo visível da página: textos, imagens, links, tabelas e tudo que o usuário vê.</p>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="estrutura-minima">5. Estrutura mínima completa de um HTML</h2>
+<p>Exemplo do HTML básico com comentários explicativos:</p>
+<pre>
+<code>
+<mark class="verde"><strong>&lt;!DOCTYPE html&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Identificação HTML5 --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;html lang="pt-br"&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Abrindo HTML e definindo idioma --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;head&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Cabeçalho da página --&gt;</strong></mark>
+    <mark class="verde"><strong>&lt;meta charset="UTF-8"&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Conjunto de caracteres --&gt;</strong></mark>
+    <mark class="verde"><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Responsividade --&gt;</strong></mark>
+    <mark class="verde"><strong>&lt;title&gt;Meu título&lt;/title&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Título da aba --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;/head&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Fechando cabeçalho --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;body&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Corpo da página --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;h1&gt;Olá, mundo! Obrigado por estar aqui.&lt;/h1&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Título principal visível --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Parágrafo de Exemplo --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;/body&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Fechando corpo --&gt;</strong></mark>
+<mark class="verde"><strong>&lt;/html&gt;</strong></mark> <mark class="amarelo"><strong>&lt;!-- Fechando HTML --&gt;</strong></mark>
+</code>
+</pre>
+<hr>
+    <h3 id="exemplo-visual1">Exemplo Visual da Estrutura HTML acima.</h3>
+    <hr>
+    <section class="exemplo-visual">
+        <h1>Olá, mundo! Obrigado por estar aqui.</h1>
+        <p>Este é um parágrafo de exemplo.</p>
+    </section>
+</section>
+<hr>
+
+<section class="explicacao">
+<h2 id="resumo">6. Resumo</h2>
+<p>Estrutura básica do HTML:</p>
+<ul>
+    <li>
+        <mark class="verde"><strong>&lt;!DOCTYPE html&gt;</strong></mark>: define HTML5
+    </li>
+    <li>
+        <mark class="verde"><strong>&lt;html&gt;</strong></mark>: envolve todo o documento
+    </li>
+    <li>
+        <mark class="verde"><strong>&lt;head&gt;</strong></mark>: informações da página (meta, title, links de CSS, scripts)
+    </li>
+    <li>
+        <mark class="verde"><strong>&lt;body&gt;</strong></mark>: conteúdo visível para o usuário
+    </li>
+</ul>
+<p>Seguindo essa estrutura, sua página será compreendida corretamente pelo navegador e organizada para manutenção futura.</p>
+</section>
+<hr>
+
+<nav class="proxima-aula">
+<p>
+    <strong>Próxima Aula: <br>
+    <a href="treiner-002.html"><strong>Próxima Aula</strong> ➡</a>
+    </strong>
+</p>
+</nav>
+</main>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>Curso recomendado: 
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p id="aula-em-video">
+    Aula instalando todas ferramentas → 
+    <a href="https://youtu.be/UForX7ehChM?si=cvpENIn6eSC2sDIV" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>© 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','001')"><strong>Política de Privacidade</strong></a></p>
+</footer>
+</body>
+</html>
+
+

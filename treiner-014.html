@@ -1,0 +1,344 @@
+﻿<!-- Aula 14 - Listas Mistas e Definições -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Listas Mistas e de Definição | Aula 14</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar listas mistas e listas de definição em HTML. Tutorial sobre DL, DT e DD para organizar conteúdo com definições.">
+    <meta name="keywords" content="CODEBOOK, listas mistas HTML, listas definição, dl, dt, dd, HTML5">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-014.html">
+    <meta property="og:title" content="CODEBOOK - Listas Mistas e de Definição">
+    <meta property="og:description" content="Aprenda a trabalhar com listas mistas e listas de definição em HTML. Tutorial completo sobre DL, DT e DD.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-014.html">
+    <meta property="twitter:title" content="CODEBOOK - Listas Avançadas HTML">
+    <meta property="twitter:description" content="Domine listas mistas e de definição em HTML5. Aprenda a usar DL, DT e DD com o CODEBOOK.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-014.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','014')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','014')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 14: Listas Mistas e Definições em HTML 📘</h1>
+    <hr>
+
+    <!-- Índice -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+        <ul>
+            <li>
+                <a href="#introducao">Introdução</a>
+            </li>
+            <li>
+                <a href="#listas-ordenadas">Listas Ordenadas</a>
+            </li>
+            <li>
+                <a href="#listas-nao-ordenadas">Listas Não Ordenadas</a>
+            </li>
+            <li>
+                <a href="#listas-aninhadas">Listas Aninhadas</a>
+            </li>
+            <li>
+                <a href="#listas-mistas">Listas Mistas</a>
+            </li>
+            <li>
+                <a href="#listas-definicoes">Listas de Definições</a>
+            </li>
+            <li>
+                <a href="#boas-praticas">Boas Práticas</a>
+            </li>
+        </ul>
+    </strong>
+</nav>
+<hr>
+
+<!-- Introdução -->
+<section id="introducao" class="explicacao">
+    <h2>Introdução</h2>
+    <p>
+        O uso de listas em HTML é fundamental para estruturar conteúdos de forma organizada.  
+        Elas permitem <strong>hierarquizar informações</strong>, <strong>agrupar conceitos</strong> 
+        e <strong>facilitar a leitura</strong>.
+    </p>
+    <p>Existem três tipos principais de listas:</p>
+    <ul>
+        <li><strong>Ordenadas (&lt;ol&gt;</strong>) – itens numerados.</li>
+        <li><strong>Não ordenadas (&lt;ul&gt;</strong>) – itens marcados com símbolos.</li>
+        <li><strong>De definições (&lt;dl&gt;</strong>) – termos e descrições.</li>
+    </ul>
+</section>
+<hr>
+
+<!-- Listas Ordenadas -->
+<section id="listas-ordenadas" class="explicacao">
+    <h2>1 Listas Ordenadas</h2>
+    <p>
+        São listas numeradas automaticamente pelo navegador.  
+        Usam a tag <code>&lt;ol&gt;</code> com itens definidos dentro de <code>&lt;li&gt;</code>.
+    </p>
+
+    <h3>Exemplo em código:</h3>
+    <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Ligar o computador&lt;/li&gt;
+    &lt;li&gt;Abrir o navegador&lt;/li&gt;
+    &lt;li&gt;Acessar um site&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+
+        <h3>Exemplo Visual</h3>
+        <ol>
+            <li>Ligar o computador</li>
+            <li>Abrir o navegador</li>
+            <li>Acessar um site</li>
+        </ol>
+</section>
+<hr>
+
+<!-- Listas Não Ordenadas -->
+<section id="listas-nao-ordenadas" class="explicacao">
+    <h2>2 Listas Não Ordenadas</h2>
+    <p>
+        São listas marcadas por símbolos (pontos, quadrados ou círculos).  
+        Usam <code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code>.
+    </p>
+
+    <h3>Exemplo em código:</h3>
+        <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Arroz&lt;/li&gt;
+    &lt;li&gt;Feijão&lt;/li&gt;
+    &lt;li&gt;Carne&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+
+        <h3>Exemplo Visual</h3>
+        <ul>
+            <li>Arroz</li>
+            <li>Feijão</li>
+            <li>Carne</li>
+        </ul>
+    </section>
+    <hr>
+
+<!-- Listas Aninhadas -->
+<section id="listas-aninhadas" class="explicacao">
+    <h2>3 Listas Aninhadas</h2>
+    <p>
+        Uma <mark class="amarelo">lista aninhada</mark> é quando criamos uma lista dentro de outra.  
+        Muito útil para estruturar informações hierárquicas.
+    </p>
+
+    <h3>Exemplo em código:</h3>
+        <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Animais
+        &lt;ul&gt;
+            &lt;li&gt;Mamíferos
+                &lt;ul&gt;
+                    &lt;li&gt;Leão&lt;/li&gt;
+                    &lt;li&gt;Elefante&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Aves
+                &lt;ul&gt;
+                    &lt;li&gt;Águia&lt;/li&gt;
+                    &lt;li&gt;Papagaio&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+
+<h3>Visualização:</h3>
+<ul>
+    <li>Animais
+        <ul>
+            <li>Mamíferos
+                <ul>
+                    <li>Leão</li>
+                    <li>Elefante</li>
+                </ul>
+            </li>
+            <li>Aves
+                <ul>
+                    <li>Águia</li>
+                    <li>Papagaio</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+</section>
+    <hr>
+
+<!-- Listas Mistas -->
+<section id="listas-mistas" class="explicacao">
+    <h2>4 Listas Mistas (Ordenadas + Não Ordenadas)</h2>
+    <p>
+        Uma <mark class="verde">lista mista</mark> combina <code>&lt;ol&gt;</code> e <code>&lt;ul&gt;</code>.  
+        São úteis para tópicos principais com subitens não numerados.
+    </p>
+
+    <h3>Exemplo em código:</h3>
+        <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Frutas
+        &lt;ul&gt;
+            &lt;li&gt;Maçã&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Legumes
+        &lt;ul&gt;
+            &lt;li&gt;Cenoura&lt;/li&gt;
+            &lt;li&gt;Batata&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+
+        <h3>Visualização:</h3>
+        <ol>
+            <li>Frutas
+                <ul>
+                    <li>Maçã</li>
+                    <li>Banana</li>
+                </ul>
+            </li>
+            <li>Legumes
+                <ul>
+                    <li>Cenoura</li>
+                    <li>Batata</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <hr>
+
+<!-- Listas de Definições -->
+<section id="listas-definicoes" class="explicacao">
+    <h2>5 Listas de Definições</h2>
+    <p>
+        As <mark class="verde">listas de definições</mark> (<code>&lt;dl&gt;</code>) são compostas de:
+    </p>
+    <ul>
+        <li><code>&lt;dt&gt;</code> – termo (palavra a ser definida).</li>
+        <li><code>&lt;dd&gt;</code> – definição ou explicação do termo.</li>
+    </ul>
+
+    <h3>Exemplo em código:</h3>
+        <pre><code>
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Linguagem de marcação para estruturar páginas web.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Linguagem de estilos para design visual das páginas.&lt;/dd&gt;
+
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Linguagem de programação que adiciona interatividade.&lt;/dd&gt;
+&lt;/dl&gt;
+        </code></pre>
+
+<h3>Visualização:</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para estruturar páginas web.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de estilos para design visual das páginas.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação que adiciona interatividade.</dd>
+    </dl>
+</section>
+    <hr>
+
+<!-- Boas Práticas -->
+<section id="boas-praticas" class="explicacao">
+    <h2>6 Boas Práticas</h2>
+    <ul>
+        <li>
+            Use listas para <strong>informações relacionadas</strong>, não apenas para layout.
+        </li>
+        <li>
+            Evite listas muito profundas (acima de 3 níveis).
+        </li>
+        <li>
+            Prefira frases curtas e objetivas nos itens.
+        </li>
+        <li>
+            Mantenha a semântica correta para acessibilidade.
+        </li>
+        <li>
+            Use listas de definição para termos técnicos, glossários e FAQs.
+        </li>
+    </ul>
+</section>
+<hr>
+
+<!-- Referências e navegação -->
+<nav class="proxima-aula">
+    <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-013.html">⬅ Anterior</a> |
+            <a href="treiner-015.html">Próxima ➡</a>
+        </strong>
+    </p>
+</nav>
+<hr>
+</main>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>
+        Curso recomendado:
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+    <p>
+        Aula referente ao conteúdo acima →
+        <a href="https://youtu.be/Ez1kgIyoGuE?si=7sDlY9iHALrhZwCj" target="_blank" rel="external noopener noreferrer">
+            <strong>Aula no Curso em vídeo</strong>
+        </a>
+    </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. 
+        <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','014')">
+            <strong>Política de Privacidade</strong>
+        </a>
+    </p>
+</footer>
+</body>
+</html>
+
+

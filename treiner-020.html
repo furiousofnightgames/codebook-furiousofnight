@@ -1,0 +1,231 @@
+﻿<!--Colocando áudio no site-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Áudio em HTML5 | Aula 20</title>
+    <meta name="description" content="CODEBOOK: Aprenda a adicionar e controlar áudio em HTML5. Tutorial sobre tag audio, formatos suportados e controles de reprodução.">
+    <meta name="keywords" content="CODEBOOK, áudio HTML5, tag audio, controles áudio, formatos áudio web">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-020.html">
+    <meta property="og:title" content="CODEBOOK - Áudio em Sites">
+    <meta property="og:description" content="Aprenda a adicionar áudio em sites com HTML5. Tutorial sobre reprodução e controle de áudio.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-020.html">
+    <meta property="twitter:title" content="CODEBOOK - Áudio HTML5">
+    <meta property="twitter:description" content="Domine a reprodução de áudio em HTML5 com o CODEBOOK. Tutorial completo sobre áudio em sites.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-020.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','020')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','020')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 20: Colocando áudio no site 📘</h1>
+<hr>
+<nav class="indice-simples">
+<h2>Indice</h2>
+<ul>
+<li>
+    <strong><a href="#dicas-autorais">Dicas Sobre Direitos Autorais</a></strong>
+</li>
+<li>
+    <strong><a href="#reproduzindo-audio1">Reproduzindo áudios: Exemplo 1</a></strong>
+</li>
+<li>
+    <strong><a href="#reproduzindo-audio2">Segunda forma: completa e mais flexível</a></strong>
+</li>
+<li>
+    <strong><a href="#resumo">Resumindo</a></strong>
+</li>
+</ul>
+</nav>
+<hr>
+<section class="explicacao">
+<h2 id="dicas-autorais">Dica sobre direitos autorais!</h2>
+<p class="link-bloco">Use sempre musicas filtradas sem direitos autoriais ou sem atribuição use ferramentas, <br> como o <a href="https://studio.youtube.com/channel/UCji4MDX7ESWSPM6Rfw7m0-w/music" target="_blank" rel="noopener noreferrer"><strong>YouTube Studio Music</strong></a> com o filtro para <mark class="amarelo"><strong>Atribuição não necessária</strong></mark> ou de outras fontes caso tenha. <br><strong>Atenção:</strong> Tome sempre muito cuidado com  direitos em forma de músicas.
+</p>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="reproduzindo-audio1">Reproduzindo áudios: Exemplo 1</h2>
+<p>
+<strong>Vamos reproduzir áudio em HTML5.</strong>
+</p>
+<p>
+O HTML5 trouxe a tag <mark class="verde"><strong>&lt;audio&gt;</strong></mark>, que nos permite inserir sons e músicas em nossas páginas de forma simples,<br> sem depender de plugins externos como o Flash. A seguir, veremos duas formas de uso: a maneira simples e a maneira completa.
+</p>
+<div class="exemplo-visual">
+<p>
+Primeira forma: simples mas limitada:
+</p>
+<audio src="midia/audio-02.mp3" controls aria-label="exemplo de áudio simples"></audio> <br>
+
+<h3>Estrutura usada acima</h3>
+<p>
+<pre><code><strong><mark class="amarelo">&lt;audio src="midia/seu-audio.mp3" controls&gt;&lt;/audio&gt;</mark></strong>
+
+</code></pre>
+</p>
+</div>
+<hr>
+<h3>Explicação dos elementos usados acima</h3>
+<ol>
+<li>
+<code>
+    <mark class="verde"><strong>&lt;audio&gt;</strong></mark>
+</code>→ é a tag responsável por carregar e tocar arquivos de áudio.
+</li>
+<li>
+<code>
+    <mark class="verde"><strong>src="midia/seu-audio.mp3"</strong></mark>
+</code> → indica o caminho do arquivo de áudio que será reproduzido (no caso, um MP3 dentro da pasta midia).
+</li>
+<li>
+<code>
+    <mark class="verde"><strong>controls</strong></mark>
+</code> → mostra os controles de reprodução do navegador (botão play, barra de progresso, volume).
+</li>
+</ol>
+<h4>Limitações</h4>
+<ul>
+<li>
+Aceita apenas um arquivo (se o navegador não suportar <strong>.mp3</strong>, o áudio não será reproduzido).
+</li>
+<li>
+Não oferece alternativas se o áudio falhar.
+</li>
+</ul>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="reproduzindo-audio2">Segunda forma: completa e mais flexível</h2>
+<audio preload="metadata" controls aria-label="Segunda forma: completa e mais flexível" loop>
+<source src="midia/audio-02.mp3" type="audio/mpeg">
+<source src="midia/audio-02.ogg" type="audio/ogg">
+<source src="midia/audio-02.wav" type="audio/wav">
+<p>Infelizmente seu navegador não consegue reproduzir o áudio
+<a href="midia/audio-02.mp3"><strong>Clique aqui para baixar o arquivo</strong></a>
+</p>
+</audio>
+<h3>Estrutura usada na forma acima</h3>
+<pre><code>
+<mark class="amarelo">&lt;audio preload="metadata" autoplay controls loop&gt;</mark>
+<mark class="amarelo">&lt;source src="midia/audio-02.mp3" type="audio/mpeg"&gt;</mark>
+<mark class="amarelo">&lt;source src="midia/audio-02.ogg" type="audio/ogg"&gt;</mark>
+<mark class="amarelo">&lt;source src="midia/audio-02.wav" type="audio/wav"&gt;</mark>
+<mark class="amarelo">&lt;p&gt;Infelizmente seu navegador não consegue reproduzir o áudio </mark>
+<mark class="amarelo">&lt;a href="midia/audio-02.mp3"&gt;<strong> Clique aqui para baixar o arquivo</strong>&lt;/a&gt;</mark>
+<mark class="amarelo">&lt;/p&gt;</mark>
+<mark class="amarelo">&lt;/audio&gt;</mark>
+
+</pre></code>
+<p>
+<strong>ATENÇÃO:</strong> Sempre tenha o mesmo áudio nos 3 formatos, use ferramentas de conversão para melhor compatibilidade nos navegadores.
+</p>
+<hr>
+<h3>Explicação dos elementos usados</h3>
+<ul>
+<li>
+    <mark class="verde"><code><strong>&lt;audio&gt;</strong></code></mark> → o mesmo papel da forma simples, mas agora recebe atributos extras.
+</li>
+<li>
+    <mark class="verde"><code><strong>preload="metadata"</strong></code></mark> → carrega apenas as informações do arquivo (como duração), <br>mas não baixa o áudio inteiro até que o usuário dê play (economiza dados).
+</li>
+<li>
+    <mark class="verde"><code><strong>controls</strong></code></mark> → mostra os botões de controle.
+</li>
+<li>
+    <mark class="verde"><code><strong>loop</strong></code></mark> → quando o áudio termina, ele começa novamente de forma infinita.
+</li>
+</ul>
+<hr>
+<h4>As fontes ( <mark class="amarelo"><strong>&lt;source&gt;</strong></mark> )</h4>
+<p>Cada navegador suporta melhor determinados formatos de áudio. Para garantir compatibilidade, usamos várias opções:</p>
+<ul>
+<li>
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.mp3" type="audio/mpeg"&gt;</strong></mark>
+    </code></pre> → formato MP3 com <mark class="amarelo"><strong>audio/mpeg</strong></mark> no type, amplamente suportado.
+</li>
+<hr>
+<li>
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.ogg" type="audio/ogg"&gt;</strong></mark>
+    </code></pre> → formato OGG com <mark class="amarelo"><strong>audio/ogg</strong></mark> no type, comum em navegadores livres como Firefox.
+</li>
+<hr>
+<li>
+    <pre><code><mark class="verde"><strong>&lt;source src="midia/seu-audio.wav" type="audio/wav"&gt;</strong></mark> 
+    </code></pre>→ formato WAV com <strong><mark class="amarelo">audio/wav</mark></strong> no type, alta qualidade, mas arquivos pesados.
+</li>
+</ul>
+<p>O navegador tentará reproduzir o primeiro formato que conseguir reconhecer.</p>
+<hr>
+<h4>Conteúdo alternativo (&lt;p&gt; ... &lt;/p&gt;)</h4>
+<p>Se o navegador não suportar a tag <mark class="amarelo"><strong>&lt;audio&gt;</strong></mark>, aparece a mensagem: <br>"Infelizmente seu navegador não consegue reproduzir o áudio."<br>E ainda há um link para download do arquivo MP3.</p>
+</section>
+<hr>
+<section class="explicacao">
+<h2 id="resumo">✅ Resumindo</h2>
+<ol>
+<li>
+    <strong>Forma simples</strong> → mais rápida, mas arriscada (funciona apenas se o navegador suportar o formato).
+</li>
+<li>
+    <strong>Forma completa</strong> → mais profissional, garante compatibilidade e fornece alternativas ao usuário.
+</li>
+</ol>
+</section>
+<hr>
+<nav class="proxima-aula">
+<p>
+<strong>Próxima Aula: <br>
+<a href="treiner-019.html">⬅ <strong>Anterior</strong></a> |
+<a href="treiner-021.html"><strong>Próxima</strong> ➡</a>
+</p>
+</nav>
+</main>
+<hr>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">CURSO EM VÍDEO com Gustavo Guanabara</a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima
+            <a href="https://youtu.be/4OZYsFl-J9s?si=xLWcV1n2cUkjia-S" target="_blank" rel="external noopener noreferrer">Aula no Curso em vídeo</a>
+        </p>
+</footer>
+<hr>
+<footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','020')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

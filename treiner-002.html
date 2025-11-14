@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Criando Seu Primeiro HTML | Aula 2</title>
+    <meta name="description" content="CODEBOOK: Crie sua primeira página HTML! Aprenda passo a passo como estruturar um documento HTML5, com exemplos práticos e dicas essenciais para iniciantes.">
+    <meta name="keywords" content="CODEBOOK, primeiro HTML, HTML para iniciantes, HTML5 básico, criar página web, aula HTML">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-002.html">
+    <meta property="og:title" content="CODEBOOK - Crie Sua Primeira Página HTML">
+    <meta property="og:description" content="Aprenda a criar sua primeira página HTML com o CODEBOOK! Aula prática com exemplos e explicações detalhadas para iniciantes.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-002.html">
+    <meta property="twitter:title" content="CODEBOOK - Primeiros Passos com HTML">
+    <meta property="twitter:description" content="Dê seus primeiros passos na criação web com o CODEBOOK! Aprenda HTML do zero com exemplos práticos e didáticos.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+        <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-002.html\">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','002')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','002')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 2: Bem-vindo ao seu primeiro HTML! 📘</h1>
+<hr>
+    <!-- Índice de navegação -->
+    <nav class="indice-simples">
+        <h2>Indice</h2>
+        <ul>
+            <li><a href="#declaracao-do-html"><strong>Declaração Do HTML</strong></a></li>
+            <li><a href="#abertura-do-html-e-definicao-de-idioma"><strong>Abertura Do HTML & Definição Do Idioma</strong></a></li>
+            <li><a href="#cabecalho-do-documento"><strong>Cabeçalho Do Documento</strong></a></li>
+            <li><a href="#corpo-do-documento"><strong>Corpo Do Documento</strong></a></li>
+            <li><a href="#fechando-o-html"><strong>Fechando O HTML</strong></a></li>
+            <li><a href="#codigo-pronto-visual"><strong>Código Pronto & Resultado Visual</strong></a></li>
+        </ul>
+    </nav>
+    
+        <hr>
+    
+        <div class="explicacao">
+            <p>Nesta aula você vai aprender, passo a passo, a criar seu primeiro documento HTML e entender para que serve cada parte do código.</p>
+        </div>
+        <hr>
+    
+        <section class="explicacao" id="declaracao-do-html">
+            <h2>1. Declaração do HTML5</h2>
+            <p>Começamos declarando que nosso documento é HTML5:</p>
+            <p>
+                <mark class="verde">&lt;!DOCTYPE html&gt;</mark>
+            </p>
+            <p>Isso informa ao navegador que estamos usando a versão moderna do HTML.</p>
+        </section>
+        <hr>
+    
+        <section class="explicacao" id="abertura-do-html-e-definicao-de-idioma">
+            <h2>2. Abertura do HTML e definição do idioma</h2>
+            <p>Em seguida abrimos a tag HTML e definimos o idioma:</p>
+            <p><code><mark class="verde">&lt;html lang="pt-br"&gt;</mark></code></p>
+            <p>O atributo <b><mark class="amarelo">lang="pt-br"</mark></b> ajuda navegadores e ferramentas de acessibilidade a identificar que o conteúdo está em português.</p>
+        </section>
+    <hr>
+        <section class="explicacao" id="cabecalho-do-documento">
+        <h2>3. Cabeçalho do documento (&lt;head&gt;)</h2>
+        <p>Dentro do <b><mark class="verde">&lt;head&gt;</mark></b> colocamos informações sobre nosso site, como título e codificação de caracteres:</p>
+    
+<pre><code><mark class="amarelo">&lt;head&gt;</mark>
+    <mark class="amarelo">&lt;meta charset="UTF-8"&gt;</mark>
+    <mark class="amarelo">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+    <mark class="amarelo">&lt;title&gt;Meu primeiro exercício HTML&lt;/title&gt;</mark>
+<mark class="amarelo">&lt;/head&gt;</mark>
+</code></pre>
+        <p>
+            - <b><mark class="verde">&lt;meta charset="UTF-8"&gt;</mark></b> garante que acentos e caracteres especiais apareçam corretamente.<br>
+            - <b><mark class="verde">&lt;meta name="viewport" ... &gt;</mark></b> ajusta a página para dispositivos móveis.<br>
+            - <b><mark class="verde">&lt;title&gt;</mark></b> define o nome da aba do navegador.
+        </p>
+        </section>
+        <hr>
+    
+        <section class="explicacao" id="corpo-do-documento">
+            <h2>4. Corpo do documento (&lt;body&gt;)</h2>
+            <p>Todo conteúdo visível na página deve estar dentro do <b><mark class="verde">&lt;body&gt;</mark></b>:</p>
+<pre><code>
+<mark class="amarelo">&lt;body&gt;</mark>
+    <mark class="amarelo">&lt;h1&gt;Olá, seja bem-vindo!&lt;/h1&gt;</mark>
+    <mark class="amarelo">&lt;hr&gt;</mark>
+    <mark class="amarelo">&lt;p&gt;Este é meu primeiro exercício, estou aprendendo a criar meu primeiro site!&lt;/p&gt;</mark>
+<mark class="amarelo">&lt;/body&gt;</mark>
+</code></pre>
+        <p>
+            - <b><mark class="verde">&lt;h1&gt;</mark></b> é o título principal.<br>
+            - <b><mark class="verde">&lt;hr&gt;</mark></b> cria uma linha horizontal para separar conteúdos.<br>
+            - <b><mark class="verde">&lt;p&gt;</mark></b> cria parágrafos com explicações.<br>
+            - <b><mark class="verde">&lt;br&gt;</mark></b> quebra de linha.
+        </p>
+        </section>
+        <hr>
+    
+        <section class="explicacao" id="fechando-o-html">
+            <h2>5. Fechando o HTML</h2>
+            <p>Por fim, fechamos as tags abertas:</p>
+            <p><code><b>- <mark class="verde">&lt;/html&gt;</mark></b></code></p>
+            <p>Isso indica o fim do documento HTML.</p>
+        </section>
+        <hr>
+    
+        <section class="explicacao" id="codigo-pronto-visual">
+        <h2>Seu código depois de pronto deve ficar assim</h2>
+        <h3>Exemplo visual abaixo!</h3>
+<pre><code>
+<mark class="amarelo">&lt;html lang="pt-br"&gt;</mark>
+<mark class="amarelo">&lt;!DOCTYPE html&gt;</mark>
+<mark class="amarelo">&lt;head&gt;</mark>
+    <mark class="amarelo">&lt;meta charset="UTF-8"&gt;</mark>
+    <mark class="amarelo">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+    <mark class="amarelo">&lt;title&gt;Meu primeiro exercício HTML&lt;/title&gt;</mark>
+<mark class="amarelo">&lt;/head&gt;</mark>
+
+<mark class="amarelo">&lt;body&gt;</mark>
+    <mark class="amarelo">&lt;h1&gt;Olá, seja bem-vindo!&lt;/h1&gt;</mark>
+    <mark class="amarelo">&lt;hr&gt;</mark>
+    <mark class="amarelo">&lt;p&gt;Este é meu primeiro exercício, estou aprendendo a criar meu primeiro HTML!&lt;/p&gt;</mark>
+<mark class="amarelo">&lt;/body&gt;</mark>
+
+<mark class="amarelo">&lt;/html&gt;</mark>
+</code></pre>
+
+            <h2>O seu resultado visual no navegador deve ser esse abaixo!</h2>
+            <section class="exemplo-visual">
+                <h1>Olá, seja bem-vindo!</h1>
+                <hr>
+                <p>Este é meu primeiro exercício, estou aprendendo a criar meu primeiro HTML!</p>
+            </section>
+        </section>
+        <hr>
+    
+        <nav class="proxima-aula">
+            <p>
+                <strong>Próxima Aula: <br>
+                    <a href="treiner-001.html">⬅ <strong>Anterior</strong></a> |
+                    <a href="treiner-003.html"><strong>Próxima</strong> ➡</a>
+                </strong>
+            </p>
+        </nav>
+</main>
+    <hr>
+
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima → 
+            <a href="https://youtu.be/E6CdIawPTh0?si=apdZueais8um4Epu" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+    <hr>
+<footer class="roda-pe">
+    <p>© 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','002')"><strong>Política de Privacidade</strong></a></p>
+</footer>
+</body>
+</html>
+
+

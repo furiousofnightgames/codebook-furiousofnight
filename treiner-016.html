@@ -1,0 +1,214 @@
+﻿<!-- Página de exemplo sobre links internos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Links Internos em HTML | Aula 16</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar links internos e âncoras na mesma página em HTML5. Tutorial sobre navegação interna e bookmarks.">
+    <meta name="keywords" content="CODEBOOK, links internos, âncoras HTML, bookmarks, navegação interna, HTML5">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-016.html">
+    <meta property="og:title" content="CODEBOOK - Links Internos HTML">
+    <meta property="og:description" content="Aprenda a criar links internos e bookmarks em HTML5. Tutorial prático sobre navegação na mesma página.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-016.html">
+    <meta property="twitter:title" content="CODEBOOK - Navegação Interna">
+    <meta property="twitter:description" content="Domine links internos e bookmarks em HTML5 com o CODEBOOK. Aprenda navegação eficiente na mesma página.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-016.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','016')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','016')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 16: Usando links internos 📘</h1>
+    <hr>
+<!-- Índice de navegação interna -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <strong><a href="#oque-e-link-interno">O que são links internos?</a></strong>
+        </li>
+        <li>
+            <strong><a href="#exemplo-de-estrutura">Exemplo de Estrutura</a></strong>
+        </li>
+        <li>
+            <strong><a href="#segundo-exemplo">Segundo Exemplo de Estrutura</a></strong>
+        </li>
+        <li>
+            <strong><a href="#exemplo-com-uma-terceira-pagina">Exemplo de estrutura com uma terceira página</a></strong>
+        </li>
+    </ul>
+</nav>
+    <hr>
+    <!-- Explicação inicial -->
+    <section class="explicacao">
+        <h2 id="oque-e-link-interno">O que são links internos?</h2>
+        <p>
+            Links internos são hiperlinks que levam o usuário para uma parte diferente dentro da mesma página ou entre páginas do mesmo site.
+        </p>
+    </section>
+    <hr>
+    <!-- Estrutura de exemplo -->
+    <section class="explicacao">
+        <h3 id="exemplo-de-estrutura">Exemplo de estrutura</h3>
+        <p>
+            Aqui usamos a TAG de links:
+<pre><code>
+<mark class="amarelo">&lt;a href="seu-link-interno" rel="next"&gt;sua-descrição&lt;/a&gt;</mark>
+
+</code></pre>
+            <br>
+            Para referenciar um link interno, usamos:
+            <mark class="amarelo">rel="next"</mark> como identificação da próxima página,
+            <br>
+            E usamos <mark class="amarelo">rel="prev"</mark> dentro da página que referenciamos no título como página anterior.
+        </p>
+        <p>
+            Esse sistema de navegação com <mark class="amarelo">rel="next"</mark> e <mark class="amarelo">rel="prev"</mark> tem um significado importante semântico,
+            pois define um valor entre eles como identificação para sistemas como o Google.
+        </p>
+        <p>
+            <strong>DICA:</strong> Para encontrar rápido um link interno na sua pasta use o atalho:
+            segure o <mark class="amarelo">CTRL</mark> dentro das aspas do <mark class="amarelo">href=" "</mark>
+            e aperte a tecla <mark class="amarelo">ESPAÇO</mark> para escolher o seu link interno.
+        </p>
+    </section>
+    <hr>
+    <!-- Resultado visual do exemplo -->
+    <section class="explicacao">
+        <h3>Exemplo Visual do resultado da estrutura acima</h3>
+        <div class="exemplo-visual">
+            <p class="link-bloco">A outra página está aqui: <a href="treiner-015.html" rel="prev">Outra página Clique Aqui!</a></p>
+            <p>
+                <strong>DICA:</strong> para funcionar corretamente é necessário que os
+                <strong><mark class="verde">arquivos HTML</mark></strong> estejam na mesma pasta ou coloque caminho correto para subpastas.
+            </p>
+        </div>
+    </section>
+    <hr>
+    <!-- Segundo exemplo -->
+    <section class="explicacao">
+        <h3 id="segundo-exemplo">Segundo exemplo de estrutura</h3>
+        <p>Aqui nesse exemplo usamos quando não temos certeza da veracidade sobre um link.</p>
+        <p><strong>Exemplo de estrutura:</strong></p>
+        <p>
+<pre><code>
+<mark class="amarelo">&lt;a href="https://www.hostnet.com.br" target="_blank" rel="nofollow"&gt;descrição&lt;/a&gt;</mark>
+
+</code></pre>
+        </p>
+        <p>
+            Aqui usamos <strong><mark class="verde">rel="nofollow"</mark></strong> para informar ao mecanismo de busca
+            que você não dá um aval para esse conteúdo.
+        </p>
+        <hr>
+        <!-- Resultado visual do segundo exemplo -->
+        <div  class="exemplo-visual">
+            <h3>Exemplo Visual do resultado!</h3>
+            <p class="link-bloco">
+                Esta página é um oferecimento de
+                <a href="https://www.hostnet.com.br" target="_blank" rel="nofollow"><strong>HostNet</strong></a>
+            </p>
+        </div>
+    </section>
+    <hr>
+    <!-- Exemplo com subpasta -->
+    <section class="explicacao">
+        <h2 id="exemplo-com-uma-terceira-pagina">Exemplo de estrutura com uma terceira página</h2>
+        <p><strong>Terceira página exemplo:</strong></p>
+        <p>
+            Você também pode acessar uma
+<pre><code>
+<mark class="amarelo">&lt;a href="pagina-noticias/noticias.html"&gt;Página de notícias&lt;/a&gt;</mark>
+
+</code></pre>
+        </p>
+        <p>
+            Como vê, aqui o caminho do HTML está em uma sub-pasta nomeada como
+            <strong><mark class="verde">pagina-noticias/</mark></strong>, seguido pelo arquivo da terceira página.
+        </p>
+        <p>
+            <strong>DICA:</strong> use o mesmo atalho segurando a tecla
+            <mark class="verde">CTRL</mark> dentro das aspas em <mark class="amarelo">href=" "</mark>
+            e apertando a tecla <mark class="verde">ESPAÇO</mark>.
+        </p>
+    <hr>
+    <!-- Resultado visual -->
+    <div class="exemplo-visual">
+        <p><strong>Resultado visual da estrutura acima:</strong></p>
+        <p class="link-bloco">
+            Você também pode acessar uma
+            <br><a href="secundarias/noticias.html" title="Abrir a página de notícias"><strong>Página De Notícias Aqui</strong></a>
+        </p>
+    </div>
+    <hr>
+    <!-- Explicação de retorno da subpasta -->
+    <p><strong>IMPORTANTE:</strong> Na página de notícias de exemplo usamos a seguinte estrutura:</p>
+    <p>
+        <strong>Estrutura:</strong>
+        <pre><code><mark class="amarelo">&lt;a href="../html-da-aula"&gt;Voltar para aula&lt;/a&gt;</mark></code></pre>
+    </p>
+    <p>
+        Como prestou atenção, usamos <mark class="amarelo"><strong>../</strong></mark>
+        para que o HTML de notícias encontre o caminho da aula e encaminhe você de volta.
+    </p>
+</section>
+    <hr>
+    <div class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-015.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-017.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </div>
+</main>
+<hr>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p id="aula-em-video">
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/LeLnlT-ZKw8?si=XYMuiYn1ZKYugMEg" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+    </footer>
+<hr>
+<footer class="roda-pe">
+    <p>
+        © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','016')"><strong>Política de Privacidade</strong></a>
+    </p>
+</footer>
+</body>
+</html>
+
+

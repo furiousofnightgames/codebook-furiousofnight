@@ -1,0 +1,241 @@
+﻿<!--Incorporação de vídeos externos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Vídeos Externos HTML5 | Aula 23</title>
+    <meta name="description" content="CODEBOOK: Aprenda a incorporar vídeos do YouTube e Vimeo em HTML5. Tutorial sobre iframes, configurações de privacidade e direitos autorais.">
+    <meta name="keywords" content="CODEBOOK, YouTube embed, Vimeo embed, iframe HTML5, vídeos externos, incorporação vídeo">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-023.html">
+    <meta property="og:title" content="CODEBOOK - Vídeos Externos">
+    <meta property="og:description" content="Aprenda a incorporar vídeos do YouTube e Vimeo em seu site. Tutorial sobre iframes e configurações.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-023.html">
+    <meta property="twitter:title" content="CODEBOOK - Incorporar Vídeos">
+    <meta property="twitter:description" content="Tutorial completo sobre incorporação de vídeos externos em HTML5 com o CODEBOOK.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-023.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','023')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','023')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 23: Incorporação de vídeos externos 📘</h1>
+<hr>
+
+<nav class="indice-simples">
+<h2>Índice</h2>
+<ul>
+    <li>
+        <a href="#inserindo-video-youtube"><strong>Inserindo vídeos do YouTube Com URL</strong></a>
+    </li>
+    <li>
+        <a href="#explicacao-elementos"><strong>Explicação dos elementos usados</strong></a>
+    </li>
+    <li>
+        <a href="#resultado-visual"><strong>Resultado Visual</strong></a>
+    </li>
+    <li>
+        <a href="#recomendacoes"><strong>Recomendações</strong></a>
+    </li>
+</ul>
+</nav>
+<hr>
+<section class="explicacao">
+    <h2 id="inserindo-video-youtube">Inserindo vídeos do youtube com URL</h2>
+    <p>Para incorporar um vídeo do YouTube, você pode usar a seguinte estrutura:</p>
+<pre><code><mark class="amarelo">&lt;iframe</mark>
+<mark class="amarelo">width="560"</mark>
+<mark class="amarelo">height="315"</mark>
+<mark class="amarelo">src="https://www.youtube.com/embed/VIDEO_ID"</mark>
+<mark class="amarelo">title="YouTube video player"</mark>
+<mark class="amarelo">frameborder="0"</mark>
+<mark class="amarelo">allow="accelerometer; autoplay; clipboard-write; encrypted-media; </mark>
+<mark class="amarelo">gyroscope; picture-in-picture; web-share" </mark>
+<mark class="amarelo">referrerpolicy="strict-origin-when-cross-origin"</mark>
+<mark class="amarelo">allowfullscreen&gt;</mark>
+<mark class="amarelo">&lt;/iframe&gt;</mark>
+
+</pre></code>
+    <p>Substitua <mark class="verde"><strong>VIDEO_ID</strong></mark> pelo <mark class="amarelo"><strong>ID</strong></mark> do vídeo que deseja incorporar.</p>
+</section>
+<hr>
+<section class="explicacao">
+    <h3 id="explicacao-elementos">Explicação dos elementos usados na estrutura</h3>
+    <ul>
+        <li>
+            <mark class="verde"><strong>&lt;iframe&gt;:</strong></mark> <br>
+            Elemento HTML usado para incorporar outro conteúdo dentro da página (como vídeos do YouTube, mapas, ou páginas externas).
+        </li>
+        <li>
+            <mark class="verde"><strong>width="560"</strong></mark> e <mark class="verde"><strong>height="315"</strong>:</mark> <br>
+            Definem a largura e a altura do quadro onde o vídeo será exibido.
+        </li>
+        <li>
+            <mark class="verde"><strong>src="https://www.youtube.com/embed/VIDEO_ID":</strong></mark><br>
+            É o endereço (URL) do vídeo a ser carregado. O embed indica o modo de incorporação.
+        </li>
+        <li>
+            <b><mark class="verde"><strong></strong>title="YouTube video player":</strong></mark>
+            </b><br>
+            Atributo de acessibilidade: descreve o conteúdo do iframe para leitores de tela.
+        </li>
+        <li>
+            <mark class="verde"><strong>frameborder="0":</strong></mark><br>
+            Remove a borda padrão do iframe. (Hoje em dia, é mais comum usar CSS para isso).
+        </li>
+        <li>
+            <mark class="verde"><strong>allow="..."</strong></mark>
+            Controla quais recursos o iframe pode usar como:
+        </li>
+        <ul type="square">
+            <li>
+                <mark class="amarelo"><strong>accelerometer</strong></mark> → acesso ao acelerômetro do dispositivo.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>autoplay</strong></mark> → permite que o vídeo comece a tocar automaticamente.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>clipboard-write</strong></mark> → autoriza copiar/conteúdo na área de transferência.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>encrypted-media</strong></mark> → habilita mídias protegidas (DRM).
+            </li>
+            <li>
+                <mark class="amarelo"><strong>>gyroscope</strong></mark> → acesso ao sensor giroscópio.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>picture-in-picture</strong></mark> → permite o vídeo ser exibido em miniatura flutuante.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>web-share</strong></mark> → habilita funções de compartilhamento.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>referrerpolicy="strict-origin-when-cross-origin"</strong></mark>→ <br>
+                Define como o navegador envia informações do referenciador (referrer) ao acessar o conteúdo externo. Nesse caso, protege a privacidade, enviando menos dados.
+            </li>
+            <li>
+                <mark class="amarelo"><strong>allowfullscreen</strong></mark> → Permite que o vídeo seja aberto em tela cheia.
+            </li>
+        </ul>
+    </ul>
+<hr>
+    <h2>Resumindo:</h2>
+    <p>esse bloco cria uma janela (iframe) embutida na sua página que carrega um vídeo do YouTube, <br>com configurações de tamanho, segurança, acessibilidade e interatividade.</p>
+</section>
+<hr>
+<section class="explicacao">
+    <h2 id="resultado-visual">resultado Visual</h2>
+            <p class="centralizado">
+                O vídeo incorporado deve ser exibido corretamente na página dessa forma abaixo.
+            </p>
+    <div class="video-iframe">
+        <iframe
+            src="https://www.youtube.com/embed/4XfTfe2rBYE"
+            title="YouTube video player">
+        </iframe>
+    </div>
+        <div class="exemplo-visual">
+            <p id="recomendacoes">
+                <strong>RECOMENDAÇÃO:</strong> <br> Crie um canal no youtube ou plataforma de streaming de vídeos para compartilhar seu conteúdo, e diminuir o custo de dados do seu cliente ou seu site.
+            </p>
+        </div>
+    <h3>Atenção a direitos autorais nos seus vídeos, pois YouTube não perdoa.</h3>
+    <hr>
+    <p class="link-bloco">
+        <strong>Site Recomendado:</strong> para postar e limitar o uso é o <a href="https://vimeo.com/" title="Vimeo.com vídeos" target="_blank" rel="noopener noreferrer"><strong>Vimeo.com</strong></a> <br><strong>OBS:</strong> O Vimeo oferece mais controle sobre a privacidade e a distribuição dos vídeos.
+    </p>
+    <hr>
+    <p>
+        <strong>Vantagens do Vimeo:</strong>
+    </p>
+    <ul>
+        <li>
+            Controle de privacidade: Permite definir quem pode ver seus vídeos.
+        </li>
+        <li>
+            Sem anúncios: Os vídeos não são interrompidos por anúncios.
+        </li>
+        <li>
+            Qualidade de vídeo: Suporte para vídeos em alta definição.
+        </li>
+        <li>
+            É usado para trabalhos mais profissionais e criativos.
+        </li>
+    </ul>
+    <hr>
+    <p>
+        <strong>Desvantagens do Vimeo:</strong>
+    </p>
+    <ul>
+        <li>
+            Custo: Para acessar todos os recursos, é necessário pagar.
+        </li>
+        <li>
+            Menor alcance: Pode não ter a mesma audiência que o YouTube.
+        </li>
+        <li>
+            Funcionalidades limitadas: Algumas ferramentas de marketing podem ser menos robustas.
+        </li>
+    </ul>
+</section>
+    <hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-022.html">⬅ <strong></strong>Anterior</strong></a> |
+                <a href="treiner-024.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+</main>
+<hr>
+
+<footer class="creditos">
+<h2>Créditos e Referências</h2>
+<h3>Gustavo Guanabara</h3>
+<p>
+    Curso recomendado:
+    <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+        <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+    </a>
+</p>
+<p id="aula-em-video">
+    Aula referente ao conteúdo acima →
+    <a href="https://youtu.be/3hng-hmSv2Y?si=7RwIq94jzmj_BAs3" target="_blank" rel="external noopener noreferrer">
+        <strong>Aula no Curso em vídeo</strong>
+    </a>
+</p>
+</footer>
+<hr>
+<footer class="roda-pe">
+<p>
+    © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','023')"><strong>Política de Privacidade</strong></a>
+</p>
+</footer>
+</body>
+</html>
+
+

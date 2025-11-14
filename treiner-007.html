@@ -1,0 +1,231 @@
+﻿<!--COMO MUDAR O FAVICON DE UM SITE-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Como Criar e Adicionar Favicons | Aula 7</title>
+    <meta name="description" content="CODEBOOK: Aprenda a criar e implementar favicons em seus sites. Tutorial completo sobre ícones de favoritos, formatos suportados e otimização para diferentes dispositivos.">
+    <meta name="keywords" content="CODEBOOK, favicon, ícone favorito, HTML5, design web, identidade visual">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-007.html">
+    <meta property="og:title" content="CODEBOOK - Favicons: Identidade Visual para seu Site">
+    <meta property="og:description" content="Aprenda a criar e implementar favicons profissionais com o CODEBOOK! Guia completo sobre ícones de favoritos para seu site.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-007.html">
+    <meta property="twitter:title" content="CODEBOOK - Favicons em HTML5">
+    <meta property="twitter:description" content="Dê uma identidade profissional ao seu site! Aprenda sobre favicons no CODEBOOK.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-007.html">
+    
+    <!-- Linha importante: favicon do site -->
+    <link rel="shortcut icon" href="imagens/logo-sitebook500x500px.ico" type="image/x-icon">
+    
+    <title>Mudando um favicon no HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','007')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','007')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="centralizado">📘 Aula 7: Mudando o Favicon de um Site 📘</h1>
+    <hr>
+    
+    <!-- Índice de navegação -->
+    <nav class="indice-simples">
+        <h2>Índice</h2>
+        <ul>
+            <li>
+                <a href="#o-que-e-favicon"><strong>O que é um Favicon?</strong></a>
+            </li>
+            <li>
+                <a href="#onde-encontrar-favicon"><strong>Onde encontrar/criar favicons</strong></a>
+            </li>
+            <li>
+                <a href="#estrutura-minima"><strong>Como adicionar favicon no HTML</strong></a>
+            </li>
+            <li>
+                <a href="#acessibilidade-seo"><strong>Dicas e boas práticas</strong></a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    
+    <section class="explicacao">
+        <h2 id="o-que-e-favicon">O que é um Favicon?</h2>
+        <p>
+            Favicon é um <mark class="verde">ícone de identificação visual de um site</mark>. Ele aparece no topo, nas abas do navegador, ajudando a identificar o site, especialmente quando há várias abas abertas.
+        </p>
+    </section>
+    <hr>
+    
+    <section class="explicacao">
+        <h2 id="onde-encontrar-favicon">Onde encontrar/criar favicons gratuitos?</h2>
+        <p class="link-bloco">
+            Site recomendado: <a href="https://www.iconarchive.com/" target="_blank" rel="external noopener noreferrer"><strong>Iconarchive</strong></a>
+        </p>
+        <p class="link-bloco">
+            Site recomendado: <a href="https://favicon.io/" target="_blank" rel="external noopener noreferrer"><strong>Favicon.io</strong></a>
+        </p>
+        <p class="link-bloco">
+            Site recomendado: <a href="https://www.favicon.cc/" target="_blank" rel="external noopener noreferrer"><strong>Favicon.cc</strong></a> para desenhar e criar seu favicon personalizado.
+        </p>
+    </section>
+    <hr>
+    
+<section class="explicacao">
+    <h2 id="estrutura-minima">Como adicionar favicon no HTML</h2>
+    <p>Abaixo um exemplo visual do esqueleto HTML com a linha do favicon destacada:</p>
+<pre><code>
+<mark class="amarelo">&lt;head&gt;</mark>
+    <mark class="amarelo">&lt;meta charset="UTF-8"&gt;</mark>
+    <mark class="amarelo">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+    <mark class="amarelo"><strong>&lt;!-- Linha importante: favicon do site --&gt;</strong></mark>
+    <mark class="verde"><strong>&lt;link rel="shortcut icon" href="SEU_FAVICON_AQUI.ico" type="image/x-icon"&gt;</strong></mark>
+    <mark class="amarelo">&lt;title&gt;Seu Título Aqui&lt;/title&gt;</mark>
+<mark class="amarelo">&lt;/head&gt;</mark>
+
+</pre></code>
+
+    </section>
+<hr>
+    <section class="explicacao">
+    <h3 id="exemplo-outros-formatos">Exemplo com outros formatos de favicon</h3>
+<pre><code>
+    <mark class="amarelo">&lt;!-- PNG para navegadores modernos --&gt;</mark>
+<strong><mark class="verde">&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;</mark>
+</strong>
+    <mark class="amarelo">&lt;!-- SVG para alta resolução --&gt;</mark>
+<strong><mark class="verde">&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</mark>
+</strong>
+    <mark class="amarelo">&lt;!-- Fallback para Internet Explorer --&gt;</mark>
+<strong></strong><mark class="verde">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</mark></strong>
+
+</pre></code>
+    <ul>
+        <li>
+            Você pode usar vários formatos ao mesmo tempo para garantir compatibilidade máxima.
+        </li>
+        <li>
+            O formato <strong>.ico</strong> é o mais universal, mas PNG e SVG são recomendados para qualidade e transparência.
+        </li>
+        <li>
+            <strong>Na aba do seu navegador acima você verá o favicon do site.</strong>
+        </li>
+    </ul>
+</section>
+    <hr>
+    <section class="explicacao">
+        <h2 class="centralizado" id="acessibilidade-seo">Dicas e boas práticas</h2>
+        <ul>
+            <li>
+                O favicon não afeta diretamente a acessibilidade, mas melhora a identificação visual do site.
+            </li>
+            <li>
+                Favicons bem configurados ajudam na marcação do site em favoritos e atalhos de dispositivos móveis.
+            </li>
+            <li>
+                Use nomes de arquivos simples e evite espaços ou caracteres especiais.
+            </li>
+        </ul>
+    </section>
+    <hr>
+<section class="explicacao">
+    <h2 id="ferramentas">Ferramentas para criar e converter favicon</h2>
+    <ul>
+        <li class="link-bloco">
+            <a href="https://realfavicongenerator.net/" target="_blank" rel="external noopener noreferrer"><strong>RealFaviconGenerator</strong></a> – Gera favicons para todas as plataformas e fornece o código pronto.
+        </li>
+        <li class="link-bloco">
+            <a href="https://favicon.io/" target="_blank" rel="external noopener noreferrer"><strong>Favicon.io</strong></a> – Crie favicons a partir de texto, emoji ou imagens.
+        </li>
+        <li class="link-bloco">
+            <a href="https://www.favicon.cc/" target="_blank" rel="external noopener noreferrer"><strong>Favicon.cc</strong></a> – Editor online para desenhar seu próprio favicon.
+        </li>
+    </ul>
+</section>
+    <hr>
+    <section class="explicacao">
+        <h2 id="explicacao-atributos">Explicação dos principais atributos da tag <mark class="amarelo"><strong>&lt;link&gt;</strong></mark> do favicon</h2>
+        <ul>
+            <li>
+                <strong>rel</strong>: Define o tipo de relação do arquivo 
+                <pre><code></code><b><mark class="verde"><strong>("icon", "shortcut icon")</strong></mark></b></code></pre>
+            </li>
+            <li>
+                <strong>type</strong>: O tipo MIME do arquivo
+                <pre><code><mark class="verde"><strong>(ex: image/x-icon, image/png, image/svg+xml)</strong></mark></code></pre>
+            </li>
+            <li>
+                <strong>sizes</strong>: Tamanho do ícone 
+    <pre><code><strong><mark class="verde">(ex: 16x16, 32x32, 180x180 para Apple Touch Icon)</mark></strong></code></pre>
+            </li>
+            <li>
+                <strong>href</strong>: Caminho para o arquivo do favicon.
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section class="explicacao">
+<h2 id="exemplo-apple">Exemplo de favicon para dispositivos Apple</h2>
+<pre><code>
+<mark class="amarelo">&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;</mark>
+
+</code></pre>
+    <p>Esse formato é usado quando o usuário adiciona o site à tela inicial do iPhone/iPad.</p>
+</section>
+<hr>
+    <nav class="proxima-aula">
+        <p>
+        <strong>Próxima Aula: <br>
+            <a href="treiner-006.html">⬅ <strong>Anterior</strong></a> |
+            <a href="treiner-008.html"><strong>Próxima</strong> ➡</a>
+        </strong>
+        </p>
+    </nav>
+<hr>
+</main>
+<footer class="creditos">
+    <h2>Créditos e Referências</h2>
+    <h3>Gustavo Guanabara</h3>
+    <p>
+        Curso recomendado: 
+        <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+            <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+        </a>
+    </p>
+    <p>
+        Aula referente ao conteúdo acima → 
+        <a href="https://youtu.be/1ZeettFfxys?si=cPXOOLBVoaUTcHzL" target="_blank" rel="external noopener noreferrer">
+            <strong>Aula no Curso em vídeo</strong>
+        </a>
+    </p>
+</footer>
+<hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','007')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+

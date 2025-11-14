@@ -1,0 +1,194 @@
+﻿<!--ESQUELETO BÁSICO DE HTML COM TUTORIAL DE TAG DE IMAGEM-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>CODEBOOK - Tags de Imagem em HTML | Aula 6</title>
+    <meta name="description" content="CODEBOOK: Domine o uso de imagens em HTML5. Aprenda a utilizar a tag img corretamente, atributos essenciais e boas práticas para otimização de imagens na web.">
+    <meta name="keywords" content="CODEBOOK, tag img, HTML5, imagens web, atributos HTML, desenvolvimento web">
+    <meta name="author" content="CODEBOOK">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-006.html">
+    <meta property="og:title" content="CODEBOOK - Dominando Imagens em HTML">
+    <meta property="og:description" content="Aprenda a trabalhar com imagens em HTML de forma profissional com o CODEBOOK! Tutorial completo sobre a tag img e seus atributos.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-006.html">
+    <meta property="twitter:title" content="CODEBOOK - Imagens em HTML5">
+    <meta property="twitter:description" content="Aprenda a usar imagens em seus projetos web! Tutorial completo do CODEBOOK sobre a tag img em HTML5.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+    
+    <!-- Links -->
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/treiner-006.html">
+    <link rel="icon" type="image/x-icon" href="imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="indice-geral.html">📑 Índices</a></li>
+                <li><a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','006')">⚖ Política</a></li>
+                <li><a href="sobre.html" onclick="sessionStorage.setItem('ultimaAula','006')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<h1 class="centralizado">📘 Aula 6: Tag de Imagens & Carga de Imagens 📘</h1>
+<hr>
+
+<!-- Índice de navegação -->
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <ul>
+        <li>
+            <a href="#introducao"><strong>Introdução</strong></a>
+        </li>
+        <li>
+            <a href="#estrutura-basica"><strong>Estrutura Básica do HTML</strong></a>
+        </li>
+        <li>
+            <a href="#tutorial-imagens"><strong>Inserindo Imagens no HTML</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-local"><strong>Exemplo 1 - Imagem Local</strong></a>
+        </li>
+        <li>
+            <a href="#exemplo-url"><strong>Exemplo 2 - Imagem via URL</strong></a>
+        </li>
+    </ul>
+</nav>
+<hr>
+
+<section class="explicacao">
+    <h2 id="introducao">Introdução</h2>
+    <p>
+        Bem-vindo ao tutorial de HTML! Aqui você vai aprender a <mark class="verde">estrutura básica de um documento HTML</mark> e como inserir <mark class="verde">imagens</mark> na sua página.
+    </p>
+    <p class="centralizado"><strong>Importante:</strong> Assistir esses videos abaixo.</p>
+    <ol>
+        <li class="link-bloco">
+            <a href="https://youtu.be/xg-vHgLF0mI?si=fZ-WBagjIcFlye7Y" target="_blank" rel="external noopener noreferrer"><strong>Quais são os formatos para imagens na Web?</strong></a>
+        </li>
+        <li class="link-bloco">
+            <a href="https://youtu.be/8rkuukKA8a4?si=eQQR9zy1Sl_00WXe" target="_blank" rel="external noopener noreferrer"><strong>O tamanho das imagens importa para um site?</strong></a>
+        </li>
+    </ol>
+</section>
+<hr>
+
+<section class="explicacao">
+    <h2 id="estrutura-basica">1. Estrutura Básica do HTML</h2>
+    <p>Um documento HTML completo com a tag de imagem possui a seguinte estrutura:</p>
+    <p>HTML mínimo escrito com tag de imagem:</p>
+<pre><code>
+<mark class="verde">&lt;!DOCTYPE html&gt;</mark>
+<mark class="verde">&lt;html lang="pt-br"&gt;</mark>
+&nbsp;&nbsp<mark class="verde">&lt;head&gt;</mark>
+&nbsp;&nbsp;&nbsp;&nbsp;<mark class="verde">&lt;meta charset="UTF-8"&gt;</mark>
+&nbsp;&nbsp;&nbsp;&nbsp;<mark class="verde">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark>
+&nbsp;&nbsp;&nbsp;&nbsp;<mark class="verde">&lt;title&gt;</mark><mark class="amarelo">Título da Página</mark><mark class="verde">&lt;/title&gt;</mark>
+&nbsp;&nbsp;<mark class="verde">&lt;/head&gt;</mark>
+&nbsp;&nbsp<mark class="verde">&lt;body&gt;</mark>
+&nbsp;&nbsp;&nbsp;&nbsp;<mark class="verde">&lt;img src="</mark><mark class="amarelo">SUA IMAGEM AQUI</mark><mark class="verde">" alt="</mark><mark class="amarelo">DESCRIÇÃO DA IMAGEM AQUI</mark><mark class="verde">"&gt;</mark>
+&nbsp;&nbsp;<mark class="verde">&lt;/body&gt;</mark>
+<mark class="verde">&lt;/html&gt;</mark>
+</pre></code>
+</section>
+<hr>
+
+<section class="explicacao">
+    <h2 id="tutorial-imagens">2. Inserindo Imagens no HTML</h2>
+    <p>
+        No HTML, usamos a tag<mark class="verde"> <strong><code>&lt;img&gt;</code></strong></mark> para inserir imagens. Ela possui atributos importantes:
+    </p>
+    <p>
+        <strong>DICA:</strong> Para inserir facilmente a tag de imagem completa, digite <mark class="amarelo"><strong>img</strong></mark> dentro do corpo <mark class="verde"><strong>&lt;body&gt;</strong></mark> e pressione ENTER. Assim, a linha da tag de imagem será inserida automaticamente no seu código.
+    </p>
+    <p>
+        Exemplo de linha completa: <br> <pre><code><mark class="amarelo"><strong>&lt;img src="SUA IMAGEM AQUI" alt="DESCRIÇÃO DA IMAGEM AQUI"&gt;</strong></mark>
+        </code></pre>
+    </p>
+    <p>
+        - <strong>src</strong>: caminho da imagem <mark class="verde"> (local ou URL) </mark>
+    </p>
+    <p>
+        - <strong>alt</strong>: descrição da imagem, útil para <mark class="verde"> acessibilidade </mark>
+    </p>
+</section>
+<hr>
+
+<section class="explicacao">
+    <h2 id="exemplo-local">Exemplo 1 - Inserindo uma imagem local</h2>
+    <section class="exemplo-visual">
+        <p>HTML escrito:</p>
+        <p>
+            <code><mark class="amarelo">&lt;img src="</mark><mark class="verde">SUA IMAGEM AQUI</mark><mark class="amarelo">" alt="</mark><mark class="verde">DESCRIÇÃO DA IMAGEM AQUI</mark><mark class="amarelo">"&gt;</mark></code>
+        </p>
+        <p>Resultado visual usando uma imagem:</p>
+        <img src="imagens/css3-120x125px.png" alt="logo css3 120x125px">
+        <figcaption>Imagem 4- CSS3-120x125px</figcaption>
+        <p>Legenda: Logo HTML5</p>
+    </section>
+</section>
+<hr>
+
+<section class="explicacao">
+    <h2 id="exemplo-url">Exemplo 2 - Inserindo uma imagem via URL</h2>
+    <section class="exemplo-visual">
+        <p>HTML escrito:</p>
+        <p>
+            <code><mark class="amarelo">&lt;img src="</mark><mark class="verde">URL DA IMAGEM AQUI</mark><mark class="amarelo">" alt="</mark><mark class="verde">DESCRIÇÃO DA IMAGEM AQUI</mark><mark class="amarelo">"&gt;</mark></code>
+        </p>
+        <p>Resultado visual usando uma imagem via URL:</p>
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-svg-png-download-1720087.png" alt="Logo CSS3">
+        <figcaption>URL link de imagem 256x256px</figcaption>
+        <p>Legenda: Logo JavaScript</p>
+    </section>
+</section>
+<hr>
+
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-005.html">⬅ <strong>Anterior</strong></a> |
+                <a href="treiner-007.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+    <hr>
+</main>
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>
+            Curso recomendado:
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aula referente ao conteúdo acima →
+            <a href="https://youtu.be/CwOmEetWMnU?si=_Egfu9WaZXuC5Mzy" target="_blank" rel="external noopener noreferrer">
+                <strong>Aula no Curso em vídeo</strong>
+            </a>
+        </p>
+    </footer>
+<hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados. <a href="politica.html" onclick="sessionStorage.setItem('ultimaAula','006')"><strong>Política de Privacidade</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+
