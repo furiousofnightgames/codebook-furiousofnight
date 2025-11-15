@@ -1,92 +1,169 @@
 @charset "UTF-8";
-/*fontes importadas do google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+   /* FONTES GOOGLE */
+   @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+   :root {
+      --font-a: Verdana, Geneva, Tahoma, sans-serif;
+      --font-b: 'Passion One', cursive;
+      --font-c: 'Sriracha', cursive;
 
-:root {
-    --font-a: verdana, Geneva, tahoma, sans-serif;
-    --font-b: 'passion one', cursive;
-    --font-c: 'sriracha', cursive;
-}
+      --cor-primaria: rgb(11, 74, 76);
+      --cor-secundaria: rgb(241, 247, 252);
+      --cor-escura: rgb(1, 43, 29);
+      --cor-texto-claro: rgb(255, 255, 255);
+   }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
 
-html, body {
-    width: 100%;
-    background-color: rgb(201, 201, 201);
-    font-family: var(--font-a);
-}
- header {
-    background-color: rgb(11, 74, 76);
-    color: rgb(255, 255, 255);
-    text-align: center;
- }
- header h1 {
-    padding-top: 5vh;
-    padding-bottom: 1vh;
-    font-variant: small-caps;
-    font-size: 8vh;
-    text-shadow: black 1px 1px 3px;
-    font-family: var(--font-b);
-    
- }
+   body {
+      background: rgb(200, 200, 200);
+      font-family: var(--font-a);
+      width: 100%;
+   }
 
- header p {
-    padding-top: 1vh;
-    padding-bottom: 5vh;
-    font-size: 2.1vh;
-    text-shadow: black 1px 1px 2px;
- }
 
- header a, footer a {
-    color: rgb(0, 255, 128);
-    text-decoration: none;
-    font-weight: bolder;
-    text-shadow: black 1px 1px 2px;
- }
- header a:hover , footer a:hover {
-    text-decoration: wavy underline;
- }
- header a:visited , footer a:visited {
-    color: rgba(0, 229, 255, 0.726);
- }
+   header {
+      background: var(--cor-primaria);
+      color: var(--cor-texto-claro);
+      text-align: center;
+      padding: clamp(2vh, 5vw, 5vh) clamp(10px, 3vw, 30px) clamp(2vh, 5vw, 3vh) clamp(10px, 3vw, 30px);
+   }
 
-section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 6vh;
-    padding-left: 4vh;
-    font-family: var(--font-c);
-    font-size: 2.6vh;
-}
+   header h1 {
+      font-family: var(--font-b);
+      font-size: clamp(2rem, 10vw, 7rem);
+      text-shadow: 1px 1px 3px black;
+      font-variant: small-caps;
+   }
 
- section.comum {
-    background-color: rgb(241, 247, 252);
-    color: rgb(0, 29, 30);
- }
+   header p {
+      font-size: clamp(1.2rem, 3vw, 2.3rem);
+      margin-top: 1vh;
+      text-shadow: 1px 1px 2px black;
+   }
 
- section.img {
-    background-color: rgb(1, 43, 29);
-    color: rgb(241, 247, 252);
- }
- section.img > p {
-    display: inline-block;
-    max-width: 90vw;
-    padding: 2vh;
-    background-color: rgba(49, 49, 49, 0.516);
- }
- footer{
-    background-color: rgb(11, 74, 76);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-shadow: black 1px 1px 2px;
-    padding: 1.5vh 15px;
-    font-family: "KGBlankSpaceSketch", sans-serif;
-    font-size: 1.5vh;
-    
- }
+   header a {
+      color: rgb(0, 255, 150);
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 1px 1px 2px black;
+   }
+
+   header a:hover , footer a:hover {
+      text-decoration: wavy underline;
+   }
+   header a:visited , footer a:visited {
+   color: rgba(0, 229, 255, 0.726);
+   }
+
+
+   section {
+      padding: 10vh 4vh;
+      font-family: var(--font-c);
+      font-size: 2.6vh;
+      line-height: 6vh;
+   }
+
+   section.comum {
+      background: var(--cor-secundaria);
+      color: var(--cor-escura);
+   }
+
+   section.comum p {
+      max-width: 90vw;
+      margin-bottom: 5vh;
+   }
+
+   /* Seções com imagem */
+   section.imagens {
+      color: var(--cor-texto-claro);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-shadow: 2px 2px 2px black;
+      min-height: 50vh;
+      box-shadow: inset 5px 5px 10px rgba(0,0,0,0.6);
+   }
+
+   section.imagens p {
+      background: rgba(0,0,0,0.45);
+      display: inline-block;
+      padding: 2vh;
+      max-width: 90vw;
+   }
+
+   #img1 {
+      background-image: url("https://images.unsplash.com/photo-1470115636492-6d2b56f9146d");
+   }
+
+   #img2 {
+      background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
+   }
+
+
+   footer {
+      background-color: var(--cor-primaria);
+      color: var(--cor-texto-claro);
+      text-align: center;
+      text-shadow: 1px 1px 2px black;
+      padding: 1.5vh 15px;
+      font-size: 1.5vh;
+      line-height: 2.5vh;
+   }
+
+   footer a {
+      color: rgb(0, 255, 200);
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 1px 1px 2px black;
+   }
+
+   header a:hover , footer a:hover {
+   text-decoration: wavy underline;
+   }
+   header a:visited , footer a:visited {
+   color: rgba(0, 229, 255, 0.726);
+   }
+
+
+   @media (max-width: 768px) {
+      header {
+            padding: clamp(3vh, 4vw, 4vh) clamp(10px, 2.5vw, 24px) clamp(2.5vh, 4vw, 3vh) clamp(10px, 2.5vw, 24px);
+      }
+
+      section {
+            padding: 8vh 3vh;
+            font-size: 2.2vh;
+            line-height: 5vh;
+      }
+
+      section.imagens p {
+            font-size: 2.1vh;
+      }
+   }
+
+   @media (max-width: 480px) {
+      header {
+            padding: clamp(2.5vh, 3vw, 3vh) clamp(8px, 2vw, 10px) clamp(2vh, 3vw, 3vh) clamp(8px, 2vw, 10px);
+      }
+
+      section {
+            padding: 6vh 3vh;
+            line-height: 4.4vh;
+            font-size: 2vh;
+      }
+
+      section.imagens p {
+            background: rgba(0,0,0,0.65);
+            padding: 1.2vh;
+      }
+
+      footer {
+            font-size: 1.2vh;
+      }
+   }
