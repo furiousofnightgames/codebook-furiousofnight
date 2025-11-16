@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CODEBOOK: Aprenda quando e como usar tabelas em HTML. Entenda a evolução do web design e o uso correto de tabelas para dados tabulares.">
+    <meta name="keywords" content="CODEBOOK, tabelas HTML, dados tabulares, semântica HTML, web design, desenvolvimento web">
+    <meta name="author" content="Diego Oliveira">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furiousofnightgames.github.io/codebook-furiousofnight/modulo-3/treiner-m3-011.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/modulo-3/treiner-m3-011.html">
+    <meta property="og:title" content="Ainda podemos usar tabelas em HTML? | CODEBOOK">
+    <meta property="og:description" content="Aprenda quando e como usar tabelas em HTML corretamente. Entenda a evolução do web design e o uso semântico de tabelas para dados tabulares.">
+    <meta property="og:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furiousofnightgames.github.io/codebook-furiousofnight/modulo-3/treiner-m3-011.html">
+    <meta property="twitter:title" content="Ainda podemos usar tabelas em HTML? | CODEBOOK">
+    <meta property="twitter:description" content="Aprenda quando e como usar tabelas em HTML corretamente. Entenda a evolução do web design e o uso semântico de tabelas.">
+    <meta property="twitter:image" content="https://furiousofnightgames.github.io/codebook-furiousofnight/imagens/logo-sitebook.ico">
+
+    <title>Ainda podemos usar tabelas em HTML? | CODEBOOK - Módulo 3 Aula 11</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo-sitebook.ico">
+    <link rel="stylesheet" href="../style.css">
+<style>
+/* Estilos específicos para exemplos de tabelas */
+.exemplo-tabela {
+    margin: 20px 0;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.exemplo-tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 300px;
+}
+
+.exemplo-tabela th,
+.exemplo-tabela td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.exemplo-tabela th {
+    background-color: rgba(0, 225, 255, 0.1);
+    font-weight: bold;
+}
+
+.exemplo-tabela tr:nth-child(even) {
+    background-color: rgba(0, 225, 255, 0.05);
+}
+
+.exemplo-tabela tr:hover {
+    background-color: rgba(0, 225, 255, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+/* Exemplo de layout antigo com tabela (para demonstração) */
+.exemplo-layout-antigo {
+    border: 2px dashed rgba(255, 127, 80, 0.5);
+    padding: 15px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.exemplo-layout-antigo .destaque {
+    margin-bottom: 10px;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.exemplo-layout-antigo table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exemplo-layout-antigo td {
+    padding: 10px;
+    border: 1px solid rgba(255, 127, 80, 0.3);
+    vertical-align: top;
+}
+
+.exemplo-layout-antigo td:first-child {
+    width: 20%;
+}
+
+/* Exemplo moderno com semântica */
+.exemplo-layout-moderno {
+    border: 2px solid rgba(0, 225, 255, 0.5);
+    padding: 15px;
+    margin: 20px 0;
+    background-color: rgba(0, 225, 255, 0.05);
+}
+
+.exemplo-layout-moderno .destaque {
+    margin-bottom: 10px;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.exemplo-layout-moderno header,
+.exemplo-layout-moderno nav,
+.exemplo-layout-moderno main,
+.exemplo-layout-moderno aside,
+.exemplo-layout-moderno footer {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid rgba(0, 225, 255, 0.3);
+    background-color: rgba(0, 225, 255, 0.1);
+}
+
+/* Responsividade para exemplos */
+@media screen and (max-width: 768px) {
+    .exemplo-tabela {
+        font-size: 1em;
+    }
+
+    .exemplo-tabela table {
+        min-width: 100%;
+    }
+
+    .exemplo-tabela th,
+    .exemplo-tabela td {
+        padding: 12px 10px;
+        font-size: 1em;
+    }
+
+    .exemplo-layout-antigo,
+    .exemplo-layout-moderno {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .exemplo-tabela {
+        font-size: 0.95em;
+    }
+
+    .exemplo-tabela table {
+        min-width: 100%;
+        font-size: 1em;
+    }
+
+    .exemplo-tabela th,
+    .exemplo-tabela td {
+        padding: 12px 8px;
+        font-size: 1em;
+    }
+
+    .exemplo-tabela caption {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .exemplo-tabela {
+        font-size: 0.9em;
+    }
+
+    .exemplo-tabela th,
+    .exemplo-tabela td {
+        padding: 10px 6px;
+        font-size: 0.95em;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">🏠 Início</a></li>
+                <li><a href="indice-geral-m3.html">📑 Índices</a></li>
+                <li><a href="../politica.html" onclick="sessionStorage.setItem('ultimaAula','m3-011')">⚖ Política</a></li>
+                <li><a href="../sobre.html" onclick="sessionStorage.setItem('ultimaAula','m3-011')">👤 Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+<h1 class="centralizado">📘 Aula 11 MD-3: Ainda podemos usar tabelas em HTML? 📘</h1>
+<hr>
+
+<nav class="indice-simples">
+    <h2>Índice</h2>
+    <strong>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#antigamente">Layouts com Tabelas</a></li>
+            <li><a href="#hoje">Estrutura Moderna</a></li>
+            <li><a href="#quando-usar">Quando Usar Tabelas?</a></li>
+            <li><a href="#estrutura">Estrutura Semântica de Tabelas</a></li>
+            <li><a href="#exemplos">Exemplos Práticos</a></li>
+            <li><a href="#dicas">Dicas e Boas Práticas</a></li>
+        </ul>
+    </strong>
+</nav>
+<hr>
+
+<section id="introducao" class="explicacao">
+    <h2>Introdução: A Evolução do Web Design</h2>
+    <p class="destaque">
+        Sim, ainda podemos usar tabelas em HTML! Porém, é fundamental entender <strong>quando</strong> e <strong>como</strong> usá-las corretamente. 
+        A web evoluiu muito desde seus primórdios, e entender essa evolução é essencial para criar sites modernos, acessíveis e bem estruturados.
+    </p>
+    <p class="destaque">
+        Nesta aula, vamos explorar a história do uso de tabelas na web, entender por que não devemos mais usá-las para layouts 
+        e aprender a utilizá-las corretamente para o propósito para o qual foram criadas: <strong>exibir dados tabulares</strong>.
+    </p>
+</section>
+<hr>
+
+<section id="antigamente" class="explicacao">
+    <h2>Antigamente: Layouts com Tabelas</h2>
+    <p class="destaque">
+        Nos primórdios da web (década de 1990 e início dos anos 2000), os desenvolvedores usavam tabelas HTML para criar layouts de páginas. 
+        Isso acontecia porque o CSS ainda era limitado e não havia outras opções eficientes para posicionar elementos na tela.
+    </p>
+    <p class="destaque">
+        <strong>Como funcionava:</strong> Os desenvolvedores criavam tabelas invisíveis (sem bordas) e usavam as células (<code>&lt;td&gt;</code>) 
+        para posicionar elementos como cabeçalhos, menus, conteúdos e rodapés. Cada seção do site ocupava uma célula da tabela.
+    </p>
+    
+    <h3>Exemplo de Layout Antigo (NÃO RECOMENDADO):</h3>
+    <div class="exemplo-layout-antigo">
+        <p class="destaque">
+            <strong>⚠️ Este é um exemplo de como NÃO fazer mais:</strong>
+        </p>
+        <table>
+            <tr>
+                <td colspan="2">
+                    Cabeçalho (Header)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Menu Lateral
+                </td>
+                <td>
+                    Conteúdo Principal
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Rodapé (Footer)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="destaque">
+        <strong>Problemas com essa abordagem:</strong>
+    </p>
+    <ul>
+        <li><strong>Código difícil de manter:</strong> Tabelas aninhadas criavam HTML muito complexo e difícil de entender</li>
+        <li><strong>Falta de semântica:</strong> Não havia significado claro para cada parte do layout</li>
+        <li><strong>Problemas de acessibilidade:</strong> Leitores de tela interpretavam tudo como dados tabulares</li>
+        <li><strong>Responsividade limitada:</strong> Era muito difícil adaptar layouts de tabela para diferentes tamanhos de tela</li>
+        <li><strong>SEO prejudicado:</strong> Motores de busca não conseguiam entender a estrutura do conteúdo</li>
+    </ul>
+</section>
+<hr>
+
+<section id="hoje" class="explicacao">
+    <h2>Hoje: Semântica e Estrutura Moderna</h2>
+    <p class="destaque">
+        Como já vimos em aulas anteriores, hoje utilizamos <strong>elementos semânticos HTML5</strong> para estruturar nossos sites. 
+        Esses elementos dão significado à cada parte do layout, tornando o código mais claro, acessível e fácil de manter.
+    </p>
+    
+    <h3>Exemplo de Layout Moderno (RECOMENDADO):</h3>
+    <div class="exemplo-layout-moderno">
+        <p class="destaque">
+            <strong>✅ Esta é a forma moderna e correta:</strong>
+        </p>
+        <header>
+            &lt;header&gt; Cabeçalho (Header) &lt;/header&gt;
+        </header>
+        <nav>
+            &lt;nav&gt; Menu de Navegação &lt;/nav&gt;
+        </nav>
+        <main>
+            &lt;main&gt; Conteúdo Principal &lt;/main&gt;
+        </main>
+        <aside>
+            &lt;aside&gt; Barra Lateral (Aside) &lt;/aside&gt;
+        </aside>
+        <footer>
+            &lt;footer&gt; Rodapé (Footer) &lt;/footer&gt;
+        </footer>
+    </div>
+
+    <p class="destaque">
+        <strong>Vantagens da abordagem moderna:</strong>
+    </p>
+    <ul>
+        <li><strong>Código limpo e semântico:</strong> Cada elemento tem um propósito claro</li>
+        <li><strong>Melhor acessibilidade:</strong> Leitores de tela entendem a estrutura do site</li>
+        <li><strong>Responsividade facilitada:</strong> CSS moderno (Flexbox, Grid) torna fácil adaptar para qualquer dispositivo</li>
+        <li><strong>SEO otimizado:</strong> Motores de busca compreendem melhor o conteúdo</li>
+        <li><strong>Manutenção simplificada:</strong> Código mais fácil de ler e modificar</li>
+    </ul>
+
+    <p class="destaque">
+        <strong>Elementos semânticos principais que já aprendemos:</strong>
+    </p>
+    <ul>
+        <li><code>&lt;header&gt;</code> - Cabeçalho da página ou seção</li>
+        <li><code>&lt;nav&gt;</code> - Menu de navegação</li>
+        <li><code>&lt;main&gt;</code> - Conteúdo principal</li>
+        <li><code>&lt;section&gt;</code> - Seção temática</li>
+        <li><code>&lt;article&gt;</code> - Artigo ou conteúdo independente</li>
+        <li><code>&lt;aside&gt;</code> - Conteúdo complementar (barra lateral)</li>
+        <li><code>&lt;footer&gt;</code> - Rodapé</li>
+    </ul>
+</section>
+<hr>
+
+<section id="quando-usar" class="explicacao">
+    <h2>Quando Usar Tabelas?</h2>
+    <p class="destaque">
+        Agora que entendemos que <strong>não devemos usar tabelas para layouts</strong>, vamos descobrir quando elas são realmente úteis e necessárias.
+    </p>
+    <p class="destaque">
+        <strong>Tabelas devem ser usadas APENAS para exibir dados tabulares</strong>, ou seja, informações organizadas em linhas e colunas, 
+        onde há uma relação clara entre os dados apresentados.
+    </p>
+
+    <h3>✅ Exemplos de quando usar tabelas:</h3>
+    <ul>
+        <li><strong>Planilhas de dados:</strong> Horários, preços, estatísticas</li>
+        <li><strong>Comparações:</strong> Comparar características de produtos ou serviços</li>
+        <li><strong>Calendários:</strong> Quando precisamos mostrar dias, semanas ou meses organizados</li>
+        <li><strong>Listas de dados estruturados:</strong> Inventários, catálogos, rankings</li>
+        <li><strong>Tabelas de resultados:</strong> Resultados de pesquisas, classificações</li>
+    </ul>
+
+    <h3>❌ Exemplos de quando NÃO usar tabelas:</h3>
+    <ul>
+        <li><strong>Layouts de página:</strong> Cabeçalho, menu, conteúdo, rodapé</li>
+        <lig> Use divs com CSS Grid ou Flexbox</li>
+        <li><strong>Listas de navegação:</strong> Use <code>&lt;nav&gt;</code> e <code>&lt;ul&gt;</code></li>
+    </ul>
+</section>
+<hr>><strong>Galeria de imagens:</strong> Use CSS Grid ou Flexbox</li>
+        <li><strong>Formulários:</strong> Use elementos de formulário semânticos</li>
+        <li><strong>Cards ou cartões:</stron
+
+<section id="estrutura" class="explicacao">
+    <h2>Estrutura Semântica de Tabelas</h2>
+    <p class="destaque">
+        Quando precisamos criar uma tabela, devemos usar uma estrutura semântica e bem organizada. 
+        Isso garante melhor acessibilidade e compreensão do conteúdo.
+    </p>
+
+    <h3>Elementos principais de uma tabela HTML:</h3>
+    <ul>
+        <li><code>&lt;table&gt;</code> - Container principal da tabela</li>
+        <li><code>&lt;caption&gt;</code> - Legenda/título da tabela (opcional, mas recomendado)</li>
+        <li><code>&lt;thead&gt;</code> - Cabeçalho da tabela (contém as colunas principais)</li>
+        <li><code>&lt;tbody&gt;</code> - Corpo da tabela (contém os dados principais)</li>
+        <li><code>&lt;tfoot&gt;</code> - Rodapé da tabela (para totais, notas, etc.)</li>
+        <li><code>&lt;tr&gt;</code> - Linha da tabela (table row)</li>
+        <li><code>&lt;th&gt;</code> - Célula de cabeçalho (table header)</li>
+        <li><code>&lt;td&gt;</code> - Célula de dados (table data)</li>
+    </ul>
+
+    <h3>Estrutura básica de uma tabela:</h3>
+            <pre><code>&lt;table&gt;
+    &lt;caption&gt;Título da Tabela&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+            &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+            &lt;th&gt;Cabeçalho 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dado 1&lt;/td&gt;
+            &lt;td&gt;Dado 2&lt;/td&gt;
+            &lt;td&gt;Dado 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dado 4&lt;/td&gt;
+            &lt;td&gt;Dado 5&lt;/td&gt;
+            &lt;td&gt;Dado 6&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Nota: Dados fictícios&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+    <p class="destaque">Resultado visual da estrutura acima:</p>
+    <div class="exemplo-tabela">
+        <table>
+            <caption>Título da Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Cabeçalho 1</th>
+                    <th>Cabeçalho 2</th>
+                    <th>Cabeçalho 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dado 1</td>
+                    <td>Dado 2</td>
+                    <td>Dado 3</td>
+                </tr>
+                <tr>
+                    <td>Dado 4</td>
+                    <td>Dado 5</td>
+                    <td>Dado 6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Nota: Dados fictícios</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <p class="destaque">
+        <strong>Dica importante:</strong> O atributo <code>colspan</code> permite que uma célula ocupe múltiplas colunas. 
+        No exemplo acima, a célula do rodapé ocupa 3 colunas.
+    </p>
+</section>
+<hr>
+
+<section id="exemplos" class="explicacao">
+    <h2>Exemplos Práticos</h2>
+    
+    <h3>Exemplo 1: Tabela de Preços</h3>
+    <p class="destaque">
+        Vamos criar uma tabela simples para exibir preços de produtos:
+    </p>
+    <div class="exemplo-tabela">
+        <table>
+            <caption>Preços de Produtos</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>Computador portátil 15 polegadas</td>
+                    <td>R$ 2.500,00</td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>Mouse sem fio ergonômico</td>
+                    <td>R$ 89,90</td>
+                </tr>
+                <tr>
+                    <td>Teclado</td>
+                    <td>Teclado mecânico RGB</td>
+                    <td>R$ 350,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="destaque">Código HTML do exemplo acima:</p>
+            <pre><code>&lt;table&gt;
+    &lt;caption&gt;Preços de Produtos&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Produto&lt;/th&gt;
+            &lt;th&gt;Descrição&lt;/th&gt;
+            &lt;th&gt;Preço&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Notebook&lt;/td&gt;
+            &lt;td&gt;Computador portátil 15 polegadas&lt;/td&gt;
+            &lt;td&gt;R$ 2.500,00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Mouse&lt;/td&gt;
+            &lt;td&gt;Mouse sem fio ergonômico&lt;/td&gt;
+            &lt;td&gt;R$ 89,90&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Teclado&lt;/td&gt;
+            &lt;td&gt;Teclado mecânico RGB&lt;/td&gt;
+            &lt;td&gt;R$ 350,00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<hr>
+    <h3>Exemplo 2: Tabela com Rodapé</h3>
+    <p class="destaque">
+        Vamos criar uma tabela com rodapé para mostrar totais:
+    </p>
+    <div class="exemplo-tabela">
+        <table>
+            <caption>Vendas do Mês</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unitário</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto A</td>
+                    <td>10</td>
+                    <td>R$ 50,00</td>
+                    <td>R$ 500,00</td>
+                </tr>
+                <tr>
+                    <td>Produto B</td>
+                    <td>5</td>
+                    <td>R$ 100,00</td>
+                    <td>R$ 500,00</td>
+                </tr>
+                <tr>
+                    <td>Produto C</td>
+                    <td>3</td>
+                    <td>R$ 200,00</td>
+                    <td>R$ 600,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Total Geral</strong></td>
+                    <td><strong>R$ 1.600,00</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <p class="destaque">Código HTML do exemplo acima:</p>
+            <pre><code>&lt;table&gt;
+    &lt;caption&gt;Vendas do Mês&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Produto&lt;/th&gt;
+            &lt;th&gt;Quantidade&lt;/th&gt;
+            &lt;th&gt;Valor Unitário&lt;/th&gt;
+            &lt;th&gt;Total&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Produto A&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;R$ 50,00&lt;/td&gt;
+            &lt;td&gt;R$ 500,00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Produto B&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;R$ 100,00&lt;/td&gt;
+            &lt;td&gt;R$ 500,00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Produto C&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;R$ 200,00&lt;/td&gt;
+            &lt;td&gt;R$ 600,00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;&lt;strong&gt;Total Geral&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;R$ 1.600,00&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+    <hr>
+
+    <section id="dicas" class="explicacao">
+        <h2>Dicas e Boas Práticas</h2>
+        
+        <h3>✅ O que fazer:</h3>
+        <ul>
+            <li><strong>Use <code>&lt;caption&gt;</code>:</strong> Sempre adicione uma legenda descritiva para sua tabela</li>
+            <li><strong>Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> e <code>&lt;tfoot&gt;</code>:</strong> Organize sua tabela semanticamente</li>
+            <li><strong>Use <code>&lt;th&gt;</code> para cabeçalhos:</strong> Diferencie cabeçalhos de dados comuns</li>
+            <li><strong>Mantenha tabelas simples:</strong> Evite tabelas muito complexas ou aninhadas</li>
+            <li><strong>Pense na responsividade:</strong> Em dispositivos móveis, considere alternativas como cards ou listas</li>
+            <li><strong>Use CSS para estilizar:</strong> Nunca use atributos HTML obsoletos como <code>border</code>, <code>cellpadding</code>, etc.</li>
+        </ul>
+
+        <h3>❌ O que evitar:</h3>
+        <ul>
+            <li><strong>Não use tabelas para layout:</strong> Use elementos semânticos e CSS moderno</li>
+            <li><strong>Não aninhe tabelas:</strong> Evite colocar tabelas dentro de células de outras tabelas</li>
+            <li><strong>Não use atributos obsoletos:</strong> Evite <code>border</code>, <code>cellpadding</code>, <code>cellspacing</code>, etc.</li>
+            <li><strong>Não crie tabelas vazias:</strong> Se não há dados para mostrar, não crie a tabela</li>
+            <li><strong>Não use tabelas para formulários:</strong> Use elementos de formulário semânticos</li>
+        </ul>
+
+        <h3>💡 Dica de Responsividade:</h3>
+        <p class="destaque">
+            Em dispositivos móveis, tabelas podem ser difíceis de visualizar. Considere usar CSS para transformar a tabela em cards 
+            ou usar scroll horizontal quando necessário. Sempre teste suas tabelas em diferentes tamanhos de tela para garantir uma boa experiência do usuário.
+        </p>
+
+        <h3>📚 Resumo da Aula:</h3>
+        <ul>
+            <li><strong>Antigamente:</strong> Tabelas eram usadas para criar layouts de páginas inteiras</li>
+            <li><strong>Hoje:</strong> Usamos elementos semânticos HTML5 (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, etc.) para layouts</li>
+            <li><strong>Quando usar tabelas:</strong> Apenas para exibir dados tabulares (informações organizadas em linhas e colunas)</li>
+            <li><strong>Estrutura semântica:</strong> Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> e <code>&lt;caption&gt;</code></li>
+            <li><strong>Responsividade:</strong> Sempre considere como a tabela aparecerá em dispositivos móveis</li>
+        </ul>
+    </section>
+</main>
+
+    <hr>
+    <nav class="proxima-aula">
+        <p>
+            <strong>Próxima Aula: <br>
+                <a href="treiner-m3-010.html">⬅ <strong>Anterior</strong></a> | 
+                <a href="treiner-m3-012.html"><strong>Próxima</strong> ➡</a>
+            </strong>
+        </p>
+    </nav>
+    <hr>
+
+    <footer class="creditos">
+        <h2>Créditos e Referências</h2>
+        <h3>Gustavo Guanabara</h3>
+        <p>Curso recomendado: 
+            <a href="https://www.cursoemvideo.com/curso/" target="_blank" rel="external noopener noreferrer">
+                <strong>CURSO EM VÍDEO com Gustavo Guanabara</strong>
+            </a>
+        </p>
+        <p>
+            Aulas referentes ao conteúdo acima →
+            <a href="https://youtu.be/9IF4xvg5rWI" target="_blank" rel="external noopener noreferrer"><strong>Aula no Curso em vídeo</strong></a>
+        </p>
+        <p>Aula prática com o professor Gustavo Guanabara: <a href="https://youtu.be/lIiZu-94PBk" target="_blank" rel="external noopener noreferrer"><strong>Aula Prática</strong></a></p>
+    </footer>
+    <hr>
+    <footer class="roda-pe">
+        <p>
+            © 2025 CodeBook FuriousOfNight. Todos os direitos reservados.
+            <a href="../politica.html"
+               onclick="sessionStorage.setItem('ultimaAula','m3-011')">
+               Política de Privacidade
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
